@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/payment_terms_dialog_payment_terms_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/all_payment_terms_text"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/payment_terms_dialog_100pc_checkBox"
+            android:layout_width="@dimen/width_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_22dp"
+            android:text="@string/payment_terms_dialog_100_deposit_text"
+            android:textColor="@color/menu_text_color"
+            app:layout_constraintEnd_toEndOf="@+id/payment_terms_dialog_payment_terms_text"
+            app:layout_constraintStart_toStartOf="@+id/payment_terms_dialog_payment_terms_text"
+            app:layout_constraintTop_toBottomOf="@+id/payment_terms_dialog_payment_terms_text" />
+
+        <CheckBox
+            android:id="@+id/payment_terms_dialog_50pc_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:text="@string/payment_terms_dialog_50_deposit_and_50_balance_on_delivery_text"
+            android:textColor="@color/menu_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/payment_terms_dialog_100pc_checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/payment_terms_dialog_100pc_checkBox" />
+
+        <CheckBox
+            android:id="@+id/payment_terms_dialog_0pc_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:text="@string/payment_terms_dialog_0_deposit_and_100_balance_on_delivery_text"
+            android:textColor="@color/menu_text_color"
+            app:layout_constraintStart_toStartOf="@+id/payment_terms_dialog_50pc_checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/payment_terms_dialog_50pc_checkBox" />
+
+        <TextView
+            android:id="@+id/payment_terms_dialog_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:layout_margin="@dimen/margin_30dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/all_cancel_text"
+            android:textSize="@dimen/text_size_18sp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:textColor="@color/deep_sky_blue"
+            app:layout_constraintEnd_toStartOf="@+id/payment_terms_dialog_ok_button"
+            app:layout_constraintTop_toBottomOf="@+id/payment_terms_dialog_0pc_checkBox"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/payment_terms_dialog_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/all_ok_text"
+            android:textSize="@dimen/text_size_18sp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:textColor="@color/deep_sky_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/payment_terms_dialog_cancel_button"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

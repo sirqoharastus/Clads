@@ -106,5 +106,19 @@
 
     <!-- Reset password verification screen-->
     <dimen name="imageview_width_34dp">34dp</dimen>
+    <dimen name="margin_34dp">34dp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="margin_46dp">46dp</dimen>
+    <dimen name="margin_35dp">35dp</dimen>
+    <dimen name="margin_56dp">56dp</dimen>
+    <dimen name="width_0dp">0dp</dimen>
+    <dimen name="margin_48dp">48dp</dimen>
+    <dimen name="width_200dp">200dp</dimen>
+    <dimen name="width_170dp">170dp</dimen>
+    <dimen name="margin_33dp">33dp</dimen>
+    <dimen name="elevation_20">20dp</dimen>
+    <dimen name="width_143dp">143dp</dimen>
+    <dimen name="height_50dp">50dp</dimen>
+    <dimen name="margin_39dp">39dp</dimen>
 
 </resources>

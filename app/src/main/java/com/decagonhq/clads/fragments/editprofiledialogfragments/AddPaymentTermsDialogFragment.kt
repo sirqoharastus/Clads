@@ -8,6 +8,7 @@ import androidx.fragment.app.DialogFragment
 import com.decagonhq.clads.databinding.AddPaymentOptionsDialogFragmentBinding
 
 class AddPaymentTermsDialogFragment: DialogFragment() {
+    // creating binding variable
     var _binding: AddPaymentOptionsDialogFragmentBinding? = null
     val binding get() = _binding!!
 
@@ -16,6 +17,7 @@ class AddPaymentTermsDialogFragment: DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //inflating the layout when view is created
         _binding = AddPaymentOptionsDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -23,6 +25,8 @@ class AddPaymentTermsDialogFragment: DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.addPaymentTermsDialogAddButton.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("payment", binding.addPaymentTermsDialogInputEdittext.text.toString())
             dismiss()
         }
     }

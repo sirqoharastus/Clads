@@ -8,6 +8,7 @@ import androidx.fragment.app.DialogFragment
 import com.decagonhq.clads.databinding.EditProfileWorkshopAddressDialogBinding
 
 class WorkAddressDialogFragment: DialogFragment() {
+    //declaring binding variable
     var _binding: EditProfileWorkshopAddressDialogBinding? = null
     val binding get() = _binding!!
 
@@ -16,6 +17,7 @@ class WorkAddressDialogFragment: DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //inflating layout when view is created
         _binding = EditProfileWorkshopAddressDialogBinding.inflate(inflater, container, false)
         return binding.root
     }

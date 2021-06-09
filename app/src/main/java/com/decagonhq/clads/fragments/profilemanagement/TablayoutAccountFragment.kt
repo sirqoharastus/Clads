@@ -11,6 +11,7 @@ import com.decagonhq.clads.databinding.FragmentTablayoutAccountBinding
 import com.decagonhq.clads.fragments.editprofiledialogfragments.*
 
 class TablayoutAccountFragment : Fragment() {
+    //declaring binding variables
     var _binding : FragmentTablayoutAccountBinding? = null
     val binding get() = _binding!!
     override fun onCreateView(
@@ -18,57 +19,39 @@ class TablayoutAccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //inflating layout when the view is created
         _binding = FragmentTablayoutAccountBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val intent = Intent()
-        binding.editProfileFirstNameTextview.setOnClickListener {
-            val firstNameDialogFragment = FirstNameDialogFragment()
-            firstNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.first_name_dialog_fragment))
-        }
+
+        //setting account profile values on click to inflate respective dialogs in the process
+
         binding.editProfileFirstNameValueTextview.setOnClickListener {
             val firstNameDialogFragment = FirstNameDialogFragment()
             firstNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.first_name_dialog_fragment))
-        }
-        binding.editProfileLastNameTextview.setOnClickListener {
-            val lastNameDialogFragment = LastNameDialogFragment()
-            lastNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.last_name_dialog_fragment))
         }
         binding.editProfileLastNameValue.setOnClickListener {
             val lastNameDialogFragment = LastNameDialogFragment()
             lastNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.last_name_dialog_fragment))
         }
-        binding.editProfileOtherNameTextview.setOnClickListener {
-            val otherNameDialogFragment = OtherNameDialogFragment()
-            otherNameDialogFragment.show(requireActivity().supportFragmentManager, "other name dialog fragment")
-        }
         binding.editProfileOtherNameValueTextview.setOnClickListener {
             val otherNameDialogFragment = OtherNameDialogFragment()
             otherNameDialogFragment.show(requireActivity().supportFragmentManager, "other name dialog fragment")
         }
-        binding.editProfileGenderTextview.setOnClickListener {
-            val genderDialogFragment = GenderDialogFragment()
-            genderDialogFragment.show(requireActivity().supportFragmentManager, "gender dialog button")
-        }
+
         binding.editProfileGenderValueTextview.setOnClickListener {
             val genderDialogFragment = GenderDialogFragment()
             genderDialogFragment.show(requireActivity().supportFragmentManager, "gender dialog button")
         }
-        binding.editProfileWorkAddressTextview.setOnClickListener {
-            val workAddressDialogFragment = WorkAddressDialogFragment()
-            workAddressDialogFragment.show(requireActivity().supportFragmentManager, "workshop address dialog")
-        }
+
         binding.editProfileWorkAddressValueTextview.setOnClickListener {
             val workAddressDialogFragment = WorkAddressDialogFragment()
             workAddressDialogFragment.show(requireActivity().supportFragmentManager, "workshop address dialog")
         }
-        binding.editProfileShowroomAddrressTextview.setOnClickListener {
-            val showroomAddressDialogFragment = ShowroomAddressDialogFragment()
-            showroomAddressDialogFragment.show(requireActivity().supportFragmentManager, "showroom address dilaog")
-        }
+
         binding.editProfileShowroomAddressValueTextview.setOnClickListener {
             val showroomAddressDialogFragment = ShowroomAddressDialogFragment()
             showroomAddressDialogFragment.show(requireActivity().supportFragmentManager, "showroom address dilaog")

@@ -31,11 +31,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_20dp"
-            android:layout_marginEnd="@dimen/margin_33dp"
+            android:layout_marginEnd="@dimen/margin_24dp"
             android:text="@string/payment_method_payment_terms_text"
             app:layout_constraintBottom_toBottomOf="@+id/payment_terms_textview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/payment_terms_textview" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -43,13 +43,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_50dp"
+            android:backgroundTint="@color/deep_sky_blue"
             android:elevation="@dimen/elevation_20"
+            app:tint="@color/white"
             android:src="@drawable/ic_add"
             app:backgroundTint="@color/white"
-            android:backgroundTint="@color/deep_sky_blue"
             app:layout_constraintEnd_toEndOf="@+id/payment_terms_text_textview"
-            app:layout_constraintHorizontal_bias="0.69"
-            app:layout_constraintStart_toStartOf="@+id/payment_terms_text_textview"
             app:layout_constraintTop_toBottomOf="@+id/payment_terms_text_textview" />
 
         <View

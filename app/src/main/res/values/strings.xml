@@ -161,7 +161,6 @@
     <string name="payment_options_dialog_cash_text">Cash</string>
     <string name="payment_options_dialog_vcash_text">VCash</string>
     <string name="payment_options_dialog_payoneer_text">Payoneer</string>
-    <string name="payment_options_dialog_vcash_text">VCash</string>
     <string name="payment_options_dialog_cancel_text">Cancel</string>
     <string name="payment_options_dialog_add_text">Add</string>
     <string name="all_payment_terms_text">Payment Terms</string>

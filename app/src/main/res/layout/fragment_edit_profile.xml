@@ -35,9 +35,9 @@
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/deep_sky_blue"
         app:tabInlineLabel="true"
-        app:tabMode="auto"
+        app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/deep_sky_blue"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1">
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

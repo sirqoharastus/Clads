@@ -39,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
+                android:buttonTint="@color/black"
                 android:text="@string/gender_dialog_femal_text"
                 android:textColor="@color/navy_blue"
                 android:textSize="@dimen/text_size_18sp" />

@@ -8,6 +8,7 @@ import androidx.fragment.app.DialogFragment
 import com.decagonhq.clads.databinding.EditProfileShowroomAddressDialogBinding
 
 class ShowroomAddressDialogFragment: DialogFragment() {
+    //declaring binding variables
     var _binding: EditProfileShowroomAddressDialogBinding? = null
     val binding get()= _binding!!
 
@@ -16,6 +17,7 @@ class ShowroomAddressDialogFragment: DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //inflating the layout when the view is created
         _binding = EditProfileShowroomAddressDialogBinding.inflate(inflater, container, false)
         return binding.root
     }

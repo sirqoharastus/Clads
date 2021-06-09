@@ -7,7 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentTablayoutAccountBinding
-import com.decagonhq.clads.fragments.editprofiledialogfragments.*
+import com.decagonhq.clads.fragments.editprofiledialogfragments.FirstNameDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.GenderDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.LastNameDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.OtherNameDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.ShowroomAddressDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.WorkAddressDialogFragment
 
 class TablayoutAccountFragment : Fragment() {
     // declaring binding variables

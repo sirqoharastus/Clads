@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.decagonhq.clads.databinding.AddPaymentOptionsDialogFragmentBinding
 
-class AddPaymentTermsDialogFragment: DialogFragment() {
+class AddPaymentTermsDialogFragment : DialogFragment() {
     // creating binding variable
     var _binding: AddPaymentOptionsDialogFragmentBinding? = null
     val binding get() = _binding!!
@@ -17,7 +17,7 @@ class AddPaymentTermsDialogFragment: DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //inflating the layout when view is created
+        // inflating the layout when view is created
         _binding = AddPaymentOptionsDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

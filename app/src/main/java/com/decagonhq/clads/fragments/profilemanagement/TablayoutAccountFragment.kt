@@ -1,6 +1,5 @@
 package com.decagonhq.clads.fragments.profilemanagement
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,15 +10,15 @@ import com.decagonhq.clads.databinding.FragmentTablayoutAccountBinding
 import com.decagonhq.clads.fragments.editprofiledialogfragments.*
 
 class TablayoutAccountFragment : Fragment() {
-    //declaring binding variables
-    var _binding : FragmentTablayoutAccountBinding? = null
+    // declaring binding variables
+    var _binding: FragmentTablayoutAccountBinding? = null
     val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //inflating layout when the view is created
+        // inflating layout when the view is created
         _binding = FragmentTablayoutAccountBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -27,7 +26,7 @@ class TablayoutAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //setting account profile values on click to inflate respective dialogs in the process
+        // setting account profile values on click to inflate respective dialogs in the process
 
         binding.editProfileFirstNameValueTextview.setOnClickListener {
             val firstNameDialogFragment = FirstNameDialogFragment()
@@ -56,7 +55,6 @@ class TablayoutAccountFragment : Fragment() {
             val showroomAddressDialogFragment = ShowroomAddressDialogFragment()
             showroomAddressDialogFragment.show(requireActivity().supportFragmentManager, "showroom address dilaog")
         }
-
     }
 
     override fun onDestroyView() {

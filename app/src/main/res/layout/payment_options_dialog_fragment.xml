@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_28dp"
             android:text="@string/payment_options_dialog_bank_deposit_naira_text"
+            android:buttonTint="@color/deep_sky_blue"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_payment_options_textview"
             app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_payment_options_textview" />
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:text="@string/payment_options_dialog_bank_deposit_usd_gbp_euro_text"
             android:layout_marginTop="@dimen/margin_10dp"
+            android:buttonTint="@color/deep_sky_blue"
             android:bufferType="normal"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_bank_deposit_checkbox"
@@ -51,6 +53,7 @@
             android:layout_height="wrap_content"
             android:text="@string/payment_options_dialog_cash_text"
             android:layout_marginTop="@dimen/margin_10dp"
+            android:buttonTint="@color/deep_sky_blue"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_foreign_bank_deposit_checkbox"
             app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_foreign_bank_deposit_checkbox" />
@@ -61,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_10dp"
             android:text="@string/payment_options_dialog_vcash_text"
+            android:buttonTint="@color/deep_sky_blue"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_cash_checkbox"
             app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_cash_checkbox" />
@@ -71,6 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_10dp"
             android:text="@string/payment_options_dialog_payoneer_text"
+            android:buttonTint="@color/deep_sky_blue"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_vcash_checkbox"
             app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_vcash_checkbox" />
@@ -81,6 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_10dp"
             android:text="@string/payment_options_dialog_vcash_text"
+            android:buttonTint="@color/deep_sky_blue"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_payoneer_checkbox"
             app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_payoneer_checkbox" />

@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
-                android:buttonTint="@color/black"
+                android:buttonTint="@color/deep_sky_blue"
                 android:text="@string/gender_dialog_femal_text"
                 android:textColor="@color/navy_blue"
                 android:textSize="@dimen/text_size_18sp" />
@@ -48,6 +48,7 @@
                 android:id="@+id/gender_dialog_male_radio_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/deep_sky_blue"
                 android:fontFamily="@font/poppins"
                 android:text="@string/gender_dialog_male_text"
                 android:textColor="@color/navy_blue"

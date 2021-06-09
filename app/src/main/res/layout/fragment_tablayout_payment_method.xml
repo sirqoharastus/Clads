@@ -42,14 +42,14 @@
             android:id="@+id/payment_methods_frament_fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_50dp"
+            android:layout_marginTop="52dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:elevation="@dimen/elevation_20"
-            app:tint="@color/white"
             android:src="@drawable/ic_add"
             app:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/payment_terms_text_textview"
-            app:layout_constraintTop_toBottomOf="@+id/payment_terms_text_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/payment_terms_text_textview"
+            app:tint="@color/white" />
 
         <View
             android:id="@+id/payment_methods_divider"

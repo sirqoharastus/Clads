@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.decagonhq.clads.databinding.EditProfileFirstNameDialogFragmentBinding
 
-class FirstNameDialogFragment: DialogFragment() {
-    //creating binding variables
+class FirstNameDialogFragment : DialogFragment() {
+    // creating binding variables
     var _binding: EditProfileFirstNameDialogFragmentBinding? = null
     val binding get() = _binding!!
     override fun onCreateView(
@@ -17,17 +17,17 @@ class FirstNameDialogFragment: DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //inflating the layout when view is created
+        // inflating the layout when view is created
         _binding = EditProfileFirstNameDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //declaring variables
+        // declaring variables
         val name = binding.firstNameDialogInputEdittext
         val okBtn = binding.firstNameDialogOkTextview
-        //setting ok button on click
+        // setting ok button on click
         okBtn.setOnClickListener {
             val intent = Intent()
             intent.putExtra("first name", name.text.toString())

@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_22dp"
             android:text="@string/payment_terms_dialog_100_deposit_text"
+            android:buttonTint="@color/deep_sky_blue"
             android:textColor="@color/menu_text_color"
             app:layout_constraintEnd_toEndOf="@+id/payment_terms_dialog_payment_terms_text"
             app:layout_constraintStart_toStartOf="@+id/payment_terms_dialog_payment_terms_text"
@@ -42,6 +43,7 @@
             android:layout_marginTop="@dimen/margin_15dp"
             android:text="@string/payment_terms_dialog_50_deposit_and_50_balance_on_delivery_text"
             android:textColor="@color/menu_text_color"
+            android:buttonTint="@color/deep_sky_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/payment_terms_dialog_100pc_checkBox"
@@ -54,6 +56,7 @@
             android:layout_marginTop="@dimen/margin_15dp"
             android:text="@string/payment_terms_dialog_0_deposit_and_100_balance_on_delivery_text"
             android:textColor="@color/menu_text_color"
+            android:buttonTint="@color/deep_sky_blue"
             app:layout_constraintStart_toStartOf="@+id/payment_terms_dialog_50pc_checkBox"
             app:layout_constraintTop_toBottomOf="@+id/payment_terms_dialog_50pc_checkBox" />
 

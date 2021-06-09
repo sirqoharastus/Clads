@@ -7,23 +7,23 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.decagonhq.clads.databinding.PaymentOptionsDialogFragmentBinding
 
-class PaymentOptionsDialogFragment: DialogFragment() {
-    //declaring binding variables
-    var _binding: PaymentOptionsDialogFragmentBinding? =null
+class PaymentOptionsDialogFragment : DialogFragment() {
+    // declaring binding variables
+    var _binding: PaymentOptionsDialogFragmentBinding? = null
     val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //inflating the layout when the view is created
+        // inflating the layout when the view is created
         _binding = PaymentOptionsDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //setting cancel button on click to dismiss the dialog
+        // setting cancel button on click to dismiss the dialog
         binding.paymentOptionsDialogCancelButton.setOnClickListener {
             dismiss()
         }

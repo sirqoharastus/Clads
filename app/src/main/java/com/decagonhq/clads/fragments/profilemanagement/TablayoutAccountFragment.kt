@@ -38,22 +38,22 @@ class TablayoutAccountFragment : Fragment() {
         }
         binding.editProfileOtherNameValueTextview.setOnClickListener {
             val otherNameDialogFragment = OtherNameDialogFragment()
-            otherNameDialogFragment.show(requireActivity().supportFragmentManager, "other name dialog fragment")
+            otherNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.other_name_dialog_text))
         }
 
         binding.editProfileGenderValueTextview.setOnClickListener {
             val genderDialogFragment = GenderDialogFragment()
-            genderDialogFragment.show(requireActivity().supportFragmentManager, "gender dialog button")
+            genderDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.gender_dialog_text))
         }
 
         binding.editProfileWorkAddressValueTextview.setOnClickListener {
             val workAddressDialogFragment = WorkAddressDialogFragment()
-            workAddressDialogFragment.show(requireActivity().supportFragmentManager, "workshop address dialog")
+            workAddressDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.worshop_address_text)git
         }
 
         binding.editProfileShowroomAddressValueTextview.setOnClickListener {
             val showroomAddressDialogFragment = ShowroomAddressDialogFragment()
-            showroomAddressDialogFragment.show(requireActivity().supportFragmentManager, "showroom address dilaog")
+            showroomAddressDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.showroom_address_dialog_text))
         }
     }
 

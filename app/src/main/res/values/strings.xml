@@ -167,4 +167,8 @@
     <string name="payment_terms_dialog_100_deposit_text">100% Deposit</string>
     <string name="payment_terms_dialog_50_deposit_and_50_balance_on_delivery_text">50% Deposit and 50% Balance on Delivery</string>
     <string name="payment_terms_dialog_0_deposit_and_100_balance_on_delivery_text">0% Deposit and 100% Balance on Delivery</string>
+    <string name="other_name_dialog_text">other name dialog fragment</string>
+    <string name="gender_dialog_text">gender dialog button</string>
+    <string name="worshop_address_text">workshop address dialog</string>
+    <string name="showroom_address_dialog_text">showroom address dilaog</string>
 </resources>

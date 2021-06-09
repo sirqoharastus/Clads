@@ -48,7 +48,7 @@ class TablayoutAccountFragment : Fragment() {
 
         binding.editProfileWorkAddressValueTextview.setOnClickListener {
             val workAddressDialogFragment = WorkAddressDialogFragment()
-            workAddressDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.worshop_address_text)
+            workAddressDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.worshop_address_text))
         }
 
         binding.editProfileShowroomAddressValueTextview.setOnClickListener {

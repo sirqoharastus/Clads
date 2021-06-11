@@ -11,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.activities.DashboardActivity
 import com.decagonhq.clads.databinding.FragmentLoginScreenBinding
@@ -61,13 +60,11 @@ class LoginScreenFragment : Fragment() {
                 )
             ) {
                 startActivity(Intent(requireContext(), DashboardActivity::class.java))
-
             } else {
                 when {
                     !LoginScreenFragmentValidator.validatePassword(password) -> passwordEditText.error = "Please input correct password"
 
                     !LoginScreenFragmentValidator.validateEmail(email) -> emailEditText.error = "Please input correct Email"
-
                 }
             }
         }

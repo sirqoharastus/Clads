@@ -113,4 +113,21 @@
     <string name="all_login">Login</string>
     <string name="reset_password_verification_fragment_new_password">New Password</string>
     <string name="reset_password_verification_fragment_confirm_new_password">Confirm New Password</string>
+    <string name="obioma_trianed_and_certified">Obioma Trianed and Certified?</string>
+    <string name="no_option">No</string>
+    <string name="yes_option">Yes</string>
+    <string name="defualt_delivery_lead_time">2 weeks</string>
+    <string name="save_changes_button_text">SAVE CHANGES</string>
+    <string name="cancel_button_text">CANCEL</string>
+    <string name="delivery_lead_time">Delivery lead time</string>
+    <string name="add_delivery_time">Add delivery time</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="ok">OK</string>
+    <string name="tool_bar_default_title">Hi,Ijeoma</string>
+    <string name="add_specialty">Add specialty</string>
+    <string name="add_button_text">Add</string>
+    <string name="add_specialty_textfield">Add Specialty</string>
+    <string name="edit_profile">Edit Profile</string>
 </resources>

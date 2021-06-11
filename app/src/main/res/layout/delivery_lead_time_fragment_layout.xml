@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/delivery_lead_time_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/delivery_lead_time_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:layout_marginBottom="@dimen/margin_24dp"
+        android:text="@string/cancel_button_text"
+        android:textColor="@color/deep_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delivery_lead_time_ok_button"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/delivery_lead_time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/delivery_lead_time"
+        android:textColor="@color/navy_blue"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintEnd_toEndOf="@+id/view8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_delivery_lead_time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_delivery_time"
+        android:textColor="@color/navy_blue"
+        app:layout_constraintEnd_toEndOf="@+id/view8"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view8"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_delivery_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        app:boxStrokeColor="@color/deep_sky_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_delivery_lead_time_text_view">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_delivery_time_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textColorHint="@color/grey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="@+id/add_delivery_input_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/add_delivery_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/add_delivery_input_layout">
+
+        <RadioButton
+            android:id="@+id/days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/deep_sky_blue"
+            android:drawableTint="@color/deep_sky_blue"
+            android:text="@string/days"
+            android:textColor="@color/navy_blue" />
+
+        <RadioButton
+            android:id="@+id/weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/deep_sky_blue"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="@string/weeks"
+            android:textColor="@color/navy_blue"
+            app:useMaterialThemeColors="false" />
+
+        <RadioButton
+            android:id="@+id/months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/deep_sky_blue"
+            android:buttonTint="@color/deep_sky_blue"
+            android:drawableTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="@string/months"
+            android:textColor="@color/navy_blue" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/delivery_lead_time_ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:fontFamily="@font/poppins"
+        android:text="@string/ok"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/delivery_lead_time_cancel_button" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="@dimen/margin_1dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/add_delivery_input_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/add_delivery_input_layout"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_lead_time_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

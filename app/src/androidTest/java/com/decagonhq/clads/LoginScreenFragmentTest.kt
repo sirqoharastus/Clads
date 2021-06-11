@@ -45,7 +45,7 @@ class LoginScreenFragmentTest {
         )
     }
 
-    // Testing for the visibility of the login with Google material button
+    // Testing for the visibility of the login with Google material drawer_edit_profile_button
     @Test
     fun `is_login_screen_fragment_loginWithGoogle_Material_button_visible`() {
         onView(withId(R.id.fragment_login_screen_login_with_google_material_button)).check(
@@ -75,7 +75,7 @@ class LoginScreenFragmentTest {
         )
     }
 
-    // Testing for the visibility of the login button
+    // Testing for the visibility of the login drawer_edit_profile_button
     @Test
     fun `is_login_screen_fragment_login_button_visible`() {
         onView(withId(R.id.fragment_login_screen_login_button)).check(matches(isDisplayed()))

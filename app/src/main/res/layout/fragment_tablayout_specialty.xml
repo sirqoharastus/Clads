@@ -1,14 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.profilemanagement.TablayoutSpecialtyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".fragments.profilemanagement.SpecialtyFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/specialty_recyclerView"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/add_new_specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/add"
+            android:elevation="@dimen/elevation_0dp"
+            android:fontFamily="@font/poppins_medium"
+            android:shadowColor="@color/white"
+            android:text="Add new specialty"
+            android:textAlignment="viewEnd"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_sky_blue"
+            android:textSize="@dimen/text_size_18sp"
+            app:iconGravity="start"
+            app:iconPadding="@dimen/padding_4dp"
+            app:layout_constraintEnd_toEndOf="@+id/specialty_recyclerView"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/specialty_recyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/specialty_recyclerView" />
+
+        <TextView
+            android:id="@+id/gender_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Gender Focus"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:lineHeight="@dimen/line_height_19sp" />
+
+        <CheckBox
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:paddingStart="@dimen/padding_0dp"
+            android:paddingLeft="@dimen/padding_0dp"
+            android:text="Male"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/gender_focus" />
+
+        <CheckBox
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="Female"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/male"
+            app:layout_constraintEnd_toStartOf="@+id/kids"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/male" />
+
+        <CheckBox
+            android:id="@+id/kids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="Kids"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/female"
+            app:layout_constraintEnd_toStartOf="@+id/unisex"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/female" />
+
+        <CheckBox
+            android:id="@+id/unisex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="Unisex"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/kids"
+            app:layout_constraintEnd_toEndOf="@+id/view2" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/specialty_recyclerView"
+            app:layout_constraintStart_toStartOf="@+id/specialty_recyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/add_new_specialty" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/male" />
+
+        <TextView
+            android:id="@+id/quality_assurance_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Quality Assurance"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/gender_focus"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <TextView
+            android:id="@+id/quality_assurance_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins"
+            android:text="Obioma trained and certified"
+            android:textAlignment="center"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/quality_assurance_header"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/quality_assurance_header"
+            app:layout_constraintTop_toBottomOf="@+id/quality_assurance_header" />
+
+        <TextView
+            android:id="@+id/quality_assurance_response"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:text="@string/yes_option"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/quality_assurance_content"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintHorizontal_bias="0.996"
+            app:layout_constraintStart_toEndOf="@+id/quality_assurance_content" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4"
+            app:layout_constraintTop_toBottomOf="@+id/quality_assurance_content" />
+
+        <TextView
+            android:id="@+id/measurements_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Measurement Options"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/view5"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <TextView
+            android:id="@+id/measurements_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins"
+            android:text="Visit us for your measurement"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/measurements_header"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/measurements_header"
+            app:layout_constraintTop_toBottomOf="@+id/measurements_header" />
+
+        <TextView
+            android:id="@+id/measurements_contents2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:fontFamily="@font/poppins"
+            android:text="Will accept self-measurement"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/measurements_content1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/measurements_content1"
+            app:layout_constraintTop_toBottomOf="@+id/measurements_content1" />
+
+        <CheckBox
+            android:id="@+id/measurements_content1_checkbox"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:buttonTint="@color/deep_sky_blue"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/measurements_content1"
+            app:layout_constraintTop_toBottomOf="@+id/measurements_header" />
+
+        <CheckBox
+            android:id="@+id/measurements_content2_checkbox"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25dp"
+            android:buttonTint="@color/deep_sky_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/measurements_contents2"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/measurements_contents2"
+            app:layout_constraintTop_toBottomOf="@+id/measurements_content1_checkbox"
+            app:layout_constraintVertical_bias="0.413" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/measurements_contents2"
+            app:layout_constraintTop_toBottomOf="@+id/measurements_content2_checkbox" />
+
+        <TextView
+            android:id="@+id/delivery_lead_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Delivery lead time"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/view6"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <TextView
+            android:id="@+id/delivery_time_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/defualt_delivery_lead_time"
+            android:textAlignment="center"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/delivery_lead_time"
+            app:layout_constraintEnd_toEndOf="@+id/measurements_content2_checkbox"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/delivery_lead_time" />
+
+        <Button
+            android:id="@+id/save_specialty_changes_button"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/layout_height_or_width"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:backgroundTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/save_changes_button_text"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintStart_toStartOf="@+id/view6"
+            app:layout_constraintTop_toBottomOf="@+id/delivery_lead_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+

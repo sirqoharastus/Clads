@@ -21,6 +21,7 @@ class OtherNameDialogFragment : DialogFragment() {
         _binding = EditProfileOtherNameDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     val otherNameDialogLiveData = MutableLiveData<String>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -22,6 +22,7 @@ class PaymentTermsDialogFragment : DialogFragment() {
         _binding = PaymentTermsDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     var paymentTermsLiveData = MutableLiveData<String>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -36,13 +37,16 @@ class PaymentTermsDialogFragment : DialogFragment() {
     private fun selectOption() {
         binding.paymentTermsRadioGroup.setOnCheckedChangeListener { group, checkedId ->
             if (checkedId == R.id.payment_terms_dialog_100pc_checkBox) {
-                paymentTermsLiveData.value = getString(R.string.payment_terms_dialog_fragment_100pc_deposit_text)
+                paymentTermsLiveData.value =
+                    getString(R.string.payment_terms_dialog_fragment_100pc_deposit_text)
                 this.dismiss()
             } else if (checkedId == R.id.payment_terms_dialog_50pc_checkBox) {
-                paymentTermsLiveData.value = getString(R.string.payment_terms_dialog_fragment_50pc_deposit_text)
+                paymentTermsLiveData.value =
+                    getString(R.string.payment_terms_dialog_fragment_50pc_deposit_text)
                 this.dismiss()
             } else if (checkedId == R.id.payment_terms_dialog_0pc_checkBox) {
-                paymentTermsLiveData.value = getString(R.string.payment_terms_dialog_fragment_0pc_deposit_text)
+                paymentTermsLiveData.value =
+                    getString(R.string.payment_terms_dialog_fragment_0pc_deposit_text)
                 this.dismiss()
             }
         }

@@ -21,6 +21,7 @@ class LastNameDialogFragment : DialogFragment() {
         _binding = EditProfileLastNameDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     var lastNameLiveData = MutableLiveData<String>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

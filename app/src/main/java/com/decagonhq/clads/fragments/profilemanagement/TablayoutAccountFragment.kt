@@ -32,6 +32,7 @@ class TablayoutAccountFragment : Fragment() {
         _binding = FragmentTablayoutAccountBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     fun getShowroomAddress(street: String, city: String, state: String) {
         binding.editProfileShowroomAddressValueTextview.text = "$street, $city, $state"
     }
@@ -46,7 +47,10 @@ class TablayoutAccountFragment : Fragment() {
 
         binding.editProfileFirstNameValueTextview.setOnClickListener {
             val firstNameDialogFragment = FirstNameDialogFragment()
-            firstNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.first_name_dialog_fragment))
+            firstNameDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.first_name_dialog_fragment)
+            )
             firstNameDialogFragment.firstNameLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -56,14 +60,20 @@ class TablayoutAccountFragment : Fragment() {
         }
         binding.editProfileLastNameValue.setOnClickListener {
             val lastNameDialogFragment = LastNameDialogFragment()
-            lastNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.last_name_dialog_fragment))
-            lastNameDialogFragment.lastNameLiveData.observe(viewLifecycleOwner,) {
+            lastNameDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.last_name_dialog_fragment)
+            )
+            lastNameDialogFragment.lastNameLiveData.observe(viewLifecycleOwner) {
                 binding.editProfileLastNameValue.text = it.toString()
             }
         }
         binding.editProfileOtherNameValueTextview.setOnClickListener {
             val otherNameDialogFragment = OtherNameDialogFragment()
-            otherNameDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.other_name_dialog_text))
+            otherNameDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.other_name_dialog_text)
+            )
             otherNameDialogFragment.otherNameDialogLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -74,7 +84,10 @@ class TablayoutAccountFragment : Fragment() {
 
         binding.editProfileGenderValueTextview.setOnClickListener {
             val genderDialogFragment = GenderDialogFragment()
-            genderDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.gender_dialog_text))
+            genderDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.gender_dialog_text)
+            )
             genderDialogFragment.genderLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -85,12 +98,18 @@ class TablayoutAccountFragment : Fragment() {
 
         binding.editProfileWorkAddressValueTextview.setOnClickListener {
             val workAddressDialogFragment = WorkAddressDialogFragment()
-            workAddressDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.worshop_address_text))
+            workAddressDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.worshop_address_text)
+            )
         }
 
         binding.editProfileShowroomAddressValueTextview.setOnClickListener {
             val showroomAddressDialogFragment = ShowroomAddressDialogFragment()
-            showroomAddressDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.showroom_address_dialog_text))
+            showroomAddressDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.showroom_address_dialog_text)
+            )
             showroomAddressDialogFragment.streetLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -106,8 +125,8 @@ class TablayoutAccountFragment : Fragment() {
 
         viewmodel.workshopAddressViewModel.observe(
             viewLifecycleOwner, {
-            binding.editProfileWorkAddressValueTextview.text = it
-        })
+                binding.editProfileWorkAddressValueTextview.text = it
+            })
 
     }
 

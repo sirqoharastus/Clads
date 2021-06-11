@@ -43,16 +43,25 @@ class TablayoutPaymentMethodFragment : Fragment() {
         // setting account profile values on click to inflate respective dialogs in the process
         paymentTextTermsTextView.setOnClickListener {
             val paymentTermsDialogFragment = PaymentTermsDialogFragment()
-            paymentTermsDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.payment_terms_dialog_fragment_payment_terms_dialog_fragment_text))
+            paymentTermsDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.payment_terms_dialog_fragment_payment_terms_dialog_fragment_text)
+            )
         }
         paymentOptionsTextTextview.setOnClickListener {
             val paymentOptionsDialogFragment = PaymentOptionsDialogFragment()
-            paymentOptionsDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.payment_options_dialog_fragment_payment_options_dialog_fragment_text))
+            paymentOptionsDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.payment_options_dialog_fragment_payment_options_dialog_fragment_text)
+            )
         }
         fab.setOnClickListener {
             val addPaymentOptionsDialogFragment = AddPaymentTermsDialogFragment()
-            addPaymentOptionsDialogFragment.show(requireActivity().supportFragmentManager, getString(
-                            R.string.add_payment_dialog_fragment_add_payment_dialog_fragment_text))
+            addPaymentOptionsDialogFragment.show(
+                requireActivity().supportFragmentManager, getString(
+                    R.string.add_payment_dialog_fragment_add_payment_dialog_fragment_text
+                )
+            )
         }
     }
 

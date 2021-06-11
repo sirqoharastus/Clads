@@ -21,6 +21,7 @@ class FirstNameDialogFragment : DialogFragment() {
         _binding = EditProfileFirstNameDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     var firstNameLiveData = MutableLiveData<String>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

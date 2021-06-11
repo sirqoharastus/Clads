@@ -21,21 +21,21 @@
 
         <ImageView
             android:id="@+id/fragment_clients_list_female_imageview"
-            android:layout_width="42dp"
-            android:layout_height="47dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="false"
             android:layout_marginLeft="@dimen/cornerRadius_5dp"
             android:layout_marginEnd="@dimen/cornerRadius_5dp"
-            android:layout_marginBottom="28dp"
+            android:layout_marginBottom="@dimen/margin_28dp"
             android:src="@drawable/fragment_clients_list_female_imageview" />
 
         <ImageView
             android:id="@+id/fragment_clients_list_male_imageview"
-            android:layout_width="42dp"
-            android:layout_height="47dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="@dimen/margin_5dp"
             android:layout_toEndOf="@id/fragment_clients_list_female_imageview"
             android:src="@drawable/fragment_clients_list_male_imageview" />
 
@@ -47,7 +47,7 @@
             android:layout_centerInParent="true"
             android:layout_centerHorizontal="false"
             android:layout_marginTop="@dimen/marginTop_22dp"
-            android:text="You have not added client yet" />
+            android:text="@string/fragment_clients_list_you_have_not_added_client_yet_text_view" />
 
     </RelativeLayout>
 
@@ -69,10 +69,10 @@
         android:id="@+id/fragment_clients_list_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="@dimen/margin_14dp"
+        tools:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteX="18dp"
         tools:listitem="@layout/fragment_clients_list_recyclerview_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

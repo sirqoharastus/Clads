@@ -6,37 +6,25 @@
     android:id="@+id/add_client_fragment_root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.profilemanagement.TablayoutClientAccountFragment">
+    tools:context=".fragments.profilemanagement.AddClientFragment">
 
     <com.google.android.material.tabs.TabLayout
-        style="@style/tab_layout_style"
         android:id="@+id/add_client_fragment_tab_layout"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/add_client_fragment_view_pager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"           app:tabMode="scrollable">
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/client_account" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/measurements" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/delivery_addresses" />
-    </com.google.android.material.tabs.TabLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabGravity="center"
+        app:tabMode="scrollable"/>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/add_client_fragment_view_pager"
-        android:layout_height="0dp"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="@dimen/margin_0dp"
+        android:paddingHorizontal="@dimen/margin_18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

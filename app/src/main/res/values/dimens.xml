@@ -62,6 +62,7 @@
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_17sp">17sp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
     <dimen name="text_size_22sp">22sp</dimen>
 
     <!-- Dimensions for padding-->
@@ -75,6 +76,7 @@
     <dimen name="padding_54dp">54dp</dimen>
 
     <dimen name="corner_radius_5dp">5dp</dimen>
+    <dimen name="corner_radius_20dp">20dp</dimen>
 
     <!-- Signup_email_layout_text_line_height or weight -->
     <dimen name="line_height_27sp">27sp</dimen>

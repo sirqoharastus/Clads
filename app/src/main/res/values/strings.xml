@@ -113,4 +113,26 @@
     <string name="all_login">Login</string>
     <string name="reset_password_verification_fragment_new_password">New Password</string>
     <string name="reset_password_verification_fragment_confirm_new_password">Confirm New Password</string>
+    <string name="fragment_dashboard_messages_text">Messages</string>
+    <string name="dashboard_messages_ola_machiavelli_text">Ola Machiavelli</string>
+    <string name="dashboard_notifications_bell">A notifications bell</string>
+    <string name="dashboard_messages_today_text">Today</string>
+    <string name="all_dashboard_messages">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</string>
+    <string name="home_fragment_clients_text">Clients</string>
+    <string name="home_fragment_client_name_ijeoma_ibukun_babangida">Ijeoma Ibukun Babangida</string>
+    <string name="home_fragment_client_card_balance">$ 23,481,000.00</string>
+    <string name="ola_machiavelli">Ola Machiavelli</string>
+    <string name="dashboard_recyclerview_location_lagos">Lagos</string>
+    <string name="messages_recyclerview_item_read_more_text">Read more</string>
+    <string name="messages_recyclerview_item_day_text">Today</string>
+    <string name="ijeoma_ibukun_babangida">Ijeoma Ibukun Babangida</string>
+    <string name="dashboard_home_wallet">Wallet</string>
+    <string name="dashboard_home_card_balance_23_481_000_00">$ 23, 481,000.00</string>
+    <string name="dashboard_home__text_view_all_details">View All Details</string>
+    <string name="dashboard_home_image_of_a_wallet">Image of a wallet</string>
+    <string name="dashboard_home_image_of_an_arrow">Image of an arrow</string>
+    <string name="dashboard_home_recyclerview_initials_om">OM</string>
+    <string name="string_dashboardhome_recyclerview_initials_om">OM</string>
+    <string name="dashboard_home_initials">OM</string>
+    <string name="dashboard_home_recyclerview_location_marker">Location marker</string>
 </resources>

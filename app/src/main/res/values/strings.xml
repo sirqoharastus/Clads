@@ -179,4 +179,9 @@
     <string name="payment_terms_dialog_fragment_payment_terms_dialog_fragment_text">payment terms dialog fragment</string>
     <string name="payment_options_dialog_fragment_payment_options_dialog_fragment_text">payment options dialog fragment</string>
     <string name="add_payment_dialog_fragment_add_payment_dialog_fragment_text">add payment dialog fragment</string>
+    <string name="edit_profile_fragment_account_text">Account</string>
+    <string name="edit_profile_fragment_specialty_text">Specialty</string>
+    <string name="edit_profile_fragment_payment_method_text">Payment method</string>
+    <string name="edit_profile_fragment_security_text">Security</string>
+    <string name="forgot_password_fragment_not_a_valid_email_text">Not a valid email</string>
 </resources>

@@ -101,9 +101,11 @@ class TablayoutAccountFragment : Fragment() {
 
         viewmodel.showroomAddressViewModel.observe(viewLifecycleOwner, {
             binding.editProfileShowroomAddressValueTextview.text = it
-        })
+        }
+        )
 
-        viewmodel.workshopAddressViewModel.observe(viewLifecycleOwner, {
+        viewmodel.workshopAddressViewModel.observe(
+            viewLifecycleOwner, {
             binding.editProfileWorkAddressValueTextview.text = it
         })
 

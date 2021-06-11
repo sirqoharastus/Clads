@@ -54,8 +54,6 @@ class TablayoutPaymentMethodFragment : Fragment() {
             addPaymentOptionsDialogFragment.show(requireActivity().supportFragmentManager, getString(
                             R.string.add_payment_dialog_fragment_add_payment_dialog_fragment_text))
         }
-
-
     }
 
     override fun onDestroyView() {

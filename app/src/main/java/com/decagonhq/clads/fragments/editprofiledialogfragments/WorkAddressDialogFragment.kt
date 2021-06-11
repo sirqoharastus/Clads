@@ -33,7 +33,7 @@ class WorkAddressDialogFragment : DialogFragment() {
         }
 
         binding.workshopAddressDialogOkTextview.setOnClickListener {
-            var street = binding.workshopAddressDialogStreetEdittext .text.toString()
+            var street = binding.workshopAddressDialogStreetEdittext.text.toString()
             var city = binding.workshopAddressDialogCityEdittext.text.toString()
             var state = binding.workshopAddressDialogStateEdittet.text.toString()
 

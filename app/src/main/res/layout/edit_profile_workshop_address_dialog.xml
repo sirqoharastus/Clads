@@ -4,14 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/workshop_address_layout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/showroom_address_dialog_showroom_address_textview"
+            android:id="@+id/workshop_address_dialog_workshop_address_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
@@ -25,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/showroom_address_dialog_street_edittext"
+            android:id="@+id/workshop_address_dialog_street_edittext"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/deep_sky_blue"
@@ -33,33 +34,33 @@
             android:layout_marginEnd="@dimen/margin_20dp"
             android:layout_marginTop="@dimen/margin_20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/showroom_address_dialog_showroom_address_textview"
-            app:layout_constraintTop_toBottomOf="@+id/showroom_address_dialog_showroom_address_textview" />
+            app:layout_constraintStart_toStartOf="@id/workshop_address_dialog_workshop_address_textview"
+            app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_workshop_address_textview" />
 
         <EditText
-            android:id="@+id/showroom_address_dialog_city_edittext"
+            android:id="@+id/workshop_address_dialog_city_edittext"
             android:layout_width="@dimen/width_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_20dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:hint="@string/all_city"
-            app:layout_constraintEnd_toEndOf="@+id/showroom_address_dialog_street_edittext"
-            app:layout_constraintStart_toStartOf="@id/showroom_address_dialog_street_edittext"
-            app:layout_constraintTop_toBottomOf="@+id/showroom_address_dialog_street_edittext" />
+            app:layout_constraintEnd_toEndOf="@+id/workshop_address_dialog_street_edittext"
+            app:layout_constraintStart_toStartOf="@id/workshop_address_dialog_street_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_street_edittext" />
 
         <EditText
-            android:id="@+id/showroom_address_dialog_state_edittet"
+            android:id="@+id/workshop_address_dialog_state_edittet"
             android:layout_width="@dimen/width_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_20dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:hint="@string/all_state_text"
-            app:layout_constraintEnd_toEndOf="@+id/showroom_address_dialog_city_edittext"
-            app:layout_constraintStart_toStartOf="@id/showroom_address_dialog_city_edittext"
-            app:layout_constraintTop_toBottomOf="@+id/showroom_address_dialog_city_edittext" />
+            app:layout_constraintEnd_toEndOf="@+id/workshop_address_dialog_city_edittext"
+            app:layout_constraintStart_toStartOf="@id/workshop_address_dialog_city_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_city_edittext" />
 
         <TextView
-            android:id="@+id/showroom_address_dialog_cancel_textview"
+            android:id="@+id/workshop_address_dialog_cancel_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_48dp"
@@ -69,20 +70,20 @@
             android:layout_marginEnd="@dimen/margin_20dp"
             android:textColor="@color/deep_sky_blue"
             android:textSize="@dimen/text_size_18sp"
-            app:layout_constraintEnd_toStartOf="@+id/showroom_address_dialog_ok_textview"
-            app:layout_constraintTop_toBottomOf="@+id/showroom_address_dialog_state_edittet"
+            app:layout_constraintEnd_toStartOf="@+id/workshop_address_dialog_ok_textview"
+            app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_state_edittet"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
-            android:id="@+id/showroom_address_dialog_ok_textview"
+            android:id="@+id/workshop_address_dialog_ok_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:text="@string/all_ok_text"
             android:textColor="@color/deep_sky_blue"
             android:textSize="@dimen/text_size_18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/showroom_address_dialog_cancel_textview"
-            app:layout_constraintEnd_toEndOf="@+id/showroom_address_dialog_state_edittet" />
+            app:layout_constraintBottom_toBottomOf="@+id/workshop_address_dialog_cancel_textview"
+            app:layout_constraintEnd_toEndOf="@+id/workshop_address_dialog_state_edittet" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

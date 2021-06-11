@@ -336,12 +336,12 @@
 
         <Button
             android:id="@+id/edit_profile_account_save_changes_button"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/width_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="@dimen/margin_60dp"
             android:backgroundTint="@color/deep_sky_blue"
-            android:maxWidth="200dp"
-            android:text="SAVE CHANGES"
+            android:maxWidth="@dimen/width_200dp"
+            android:text="@string/payment_options_fragment_save_changes_text"
             android:layout_marginBottom="@dimen/margin_30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/edit_profile_state_value_textview"

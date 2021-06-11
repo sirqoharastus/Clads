@@ -162,7 +162,7 @@
     <string name="payment_options_dialog_vcash_text">VCash</string>
     <string name="payment_options_dialog_payoneer_text">Payoneer</string>
     <string name="payment_options_dialog_cancel_text">Cancel</string>
-    <string name="payment_options_dialog_add_text">Add</string>
+    <string name="payment_options_dialog_add_text">ADD</string>
     <string name="all_payment_terms_text">Payment Terms</string>
     <string name="payment_terms_dialog_100_deposit_text">100% Deposit</string>
     <string name="payment_terms_dialog_50_deposit_and_50_balance_on_delivery_text">50% Deposit and 50% Balance on Delivery</string>
@@ -171,4 +171,12 @@
     <string name="gender_dialog_text">gender dialog button</string>
     <string name="worshop_address_text">workshop address dialog</string>
     <string name="showroom_address_dialog_text">showroom address dilaog</string>
+    <string name="gender_dialog_fragment_male_text">Male</string>
+    <string name="gender_dialog_fragment_female_text">Female</string>
+    <string name="payment_terms_dialog_fragment_100pc_deposit_text">100% Deposit</string>
+    <string name="payment_terms_dialog_fragment_50pc_deposit_text">50% Deposit and 50% balance on delivery</string>
+    <string name="payment_terms_dialog_fragment_0pc_deposit_text">0% deposit and 100% payment on delivery</string>
+    <string name="payment_terms_dialog_fragment_payment_terms_dialog_fragment_text">payment terms dialog fragment</string>
+    <string name="payment_options_dialog_fragment_payment_options_dialog_fragment_text">payment options dialog fragment</string>
+    <string name="add_payment_dialog_fragment_add_payment_dialog_fragment_text">add payment dialog fragment</string>
 </resources>

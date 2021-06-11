@@ -96,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:text="@string/payment_options_dialog_cancel_text"
+            android:text="@string/all_cancel_text"
             android:textSize="@dimen/text_size_20sp"
             android:layout_marginBottom="@dimen/margin_30dp"
             android:layout_marginTop="@dimen/margin_24dp"

@@ -25,8 +25,6 @@ class AddPaymentTermsDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.addPaymentTermsDialogAddButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putString("payment", binding.addPaymentTermsDialogInputEdittext.text.toString())
             dismiss()
         }
     }

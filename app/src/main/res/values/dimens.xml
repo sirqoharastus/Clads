@@ -121,5 +121,6 @@
     <dimen name="height_50dp">50dp</dimen>
     <dimen name="margin_39dp">39dp</dimen>
     <dimen name="width_150dp">150dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
 
 </resources>

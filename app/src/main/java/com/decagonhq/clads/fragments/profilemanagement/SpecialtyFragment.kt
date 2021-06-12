@@ -57,25 +57,25 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
         layoutManager.apply {
             orientation = LinearLayoutManager.VERTICAL
         }
-        fragmentTablayoutSpecialtyBinding.specialtyRecyclerView.apply {
+        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyRecyclerView.apply {
             this.layoutManager = layoutManager
             adapter = this@SpecialtyFragment.adapter
         }
 
-        fragmentTablayoutSpecialtyBinding.addNewSpecialtyButton.apply {
+        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyAddNewSpecialtyButton.apply {
             setOnClickListener {
                 DialogFragments.createFragment(R.layout.add_specialty_dialog_fragment_layout)
                     .show(requireActivity().supportFragmentManager, null)
             }
         }
 
-        fragmentTablayoutSpecialtyBinding.deliveryLeadTime.apply {
+        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyDeliveryLeadTime.apply {
             setOnClickListener {
                 DialogFragments.createFragment(R.layout.delivery_lead_time_fragment_layout)
                     .show(requireActivity().supportFragmentManager, null)
             }
         }
-        fragmentTablayoutSpecialtyBinding.qualityAssuranceContent.apply {
+        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyQualityAssuranceContentTextView.apply {
             setOnClickListener {
                 DialogFragments.createFragment(R.layout.obioma_trained_dialog_fragment_layout)
                     .show(requireActivity().supportFragmentManager, null)
@@ -102,14 +102,14 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
         viewModel.deliveryLeadTime.observe(
             viewLifecycleOwner,
             {
-                fragmentTablayoutSpecialtyBinding.deliveryTimeResponse.text = it
+                fragmentTablayoutSpecialtyBinding.fragmentSpeccialtyDeliveryTimeResponse.text = it
             }
         )
 
         viewModel.obiomaTrained.observe(
             requireActivity(),
             {
-                fragmentTablayoutSpecialtyBinding.qualityAssuranceResponse.text = it
+                fragmentTablayoutSpecialtyBinding.fragmentSpecialtyQualityAssuranceResponseTextView.text = it
             }
         )
     }

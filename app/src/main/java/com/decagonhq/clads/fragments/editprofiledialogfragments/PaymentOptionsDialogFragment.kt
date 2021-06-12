@@ -33,19 +33,19 @@ class PaymentOptionsDialogFragment : DialogFragment() {
 
         binding.paymentOptionsDialogFragmentOkButton.setOnClickListener {
             var myChoices = ""
-            if (binding.paymentOptionsDialogFragmentCashCheckbox.isChecked){
-                myChoices+=" Cash"
+            if (binding.paymentOptionsDialogFragmentCashCheckbox.isChecked) {
+                myChoices += " Cash"
             }
-            if (binding.paymentOptionsDialogFragmentBankDepositCheckbox.isChecked){
-                myChoices+= " Bank Deposit (Naira)"
+            if (binding.paymentOptionsDialogFragmentBankDepositCheckbox.isChecked) {
+                myChoices += " Bank Deposit (Naira)"
             }
-            if (binding.paymentOptionsDialogFragmentForeignBankDepositCheckbox.isChecked){
-                myChoices+= " Bank Deposit (USD, GBP, EUR)"
+            if (binding.paymentOptionsDialogFragmentForeignBankDepositCheckbox.isChecked) {
+                myChoices += " Bank Deposit (USD, GBP, EUR)"
             }
-            if (binding.paymentOptionsDialogFragmentPayoneerCheckbox.isChecked){
-                myChoices+= " Payoneer"
+            if (binding.paymentOptionsDialogFragmentPayoneerCheckbox.isChecked) {
+                myChoices += " Payoneer"
             }
-            if (binding.paymentOptionsDialogFragmentVcashCheckbox.isChecked){
+            if (binding.paymentOptionsDialogFragmentVcashCheckbox.isChecked) {
                 myChoices += " VCash"
             }
             paymentOptionsLiveData.value = myChoices

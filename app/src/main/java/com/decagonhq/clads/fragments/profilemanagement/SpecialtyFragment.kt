@@ -62,7 +62,7 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
             adapter = this@SpecialtyFragment.adapter
         }
 
-        fragmentTablayoutSpecialtyBinding.addNewSpecialty.apply {
+        fragmentTablayoutSpecialtyBinding.addNewSpecialtyButton.apply {
             setOnClickListener {
                 DialogFragments.createFragment(R.layout.add_specialty_dialog_fragment_layout)
                     .show(requireActivity().supportFragmentManager, null)

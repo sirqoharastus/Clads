@@ -30,6 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_30dp"
             android:layout_marginStart="@dimen/margin_30dp"
+            app:boxStrokeColor="@color/deep_sky_blue"
+            app:hintAnimationEnabled="false"
             android:layout_marginEnd="@dimen/margin_30dp"
             android:backgroundTint="@color/deep_sky_blue"
             app:counterEnabled="true"
@@ -41,6 +43,7 @@
                 android:id="@+id/edit_profile_state_dialog_fragment_input_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:fontFamily="@font/poppins"
                 android:hint="@string/all_state_text"
                 android:textSize="@dimen/text_size_18sp" />

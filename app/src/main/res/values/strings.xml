@@ -193,4 +193,6 @@
     <string name="edit_profile_fragment_ward_dialog_fragment_text">ward dialog fragment</string>
     <string name="edit_profile_fragment_local_government_dialog_fragment">local governmnet dialog fragment</string>
     <string name="edit_profile_fragment_state_dialog_fragment_text">state dialog fragment</string>
+    <string name="edit_profile_no_of_employees_value_text">No. of Employees</string>
+    <string name="all_address">Address</string>
 </resources>

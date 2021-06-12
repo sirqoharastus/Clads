@@ -32,6 +32,8 @@
             android:layout_marginStart="@dimen/margin_30dp"
             android:layout_marginEnd="@dimen/margin_30dp"
             android:backgroundTint="@color/deep_sky_blue"
+            app:boxStrokeColor="@color/deep_sky_blue"
+            app:hintAnimationEnabled="false"
             app:counterEnabled="true"
             app:counterMaxLength="100"
             app:layout_constraintStart_toStartOf="@+id/edit_profile_legal_status_dialog_fragment_textview"
@@ -41,6 +43,7 @@
                 android:id="@+id/edit_profile_legal_status_dialog_fragment_input_edittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:fontFamily="@font/poppins"
                 android:hint="@string/edit_profile_legal_status_dialog_fragment_legal_status_text"
                 android:textSize="@dimen/text_size_18sp" />

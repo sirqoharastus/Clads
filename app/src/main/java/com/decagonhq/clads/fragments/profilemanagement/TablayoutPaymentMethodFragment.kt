@@ -57,6 +57,9 @@ class TablayoutPaymentMethodFragment : Fragment() {
                 requireActivity().supportFragmentManager,
                 getString(R.string.payment_options_dialog_fragment_payment_options_dialog_fragment_text)
             )
+            paymentOptionsDialogFragment.paymentOptionsLiveData.observe(viewLifecycleOwner, {
+                binding.paymentOptionsTextTextview.text = it
+            })
         }
         fab.setOnClickListener {
             val addPaymentOptionsDialogFragment = AddPaymentTermsDialogFragment()

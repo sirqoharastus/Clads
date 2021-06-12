@@ -30,7 +30,7 @@ class FirstNameDialogFragment : DialogFragment() {
         val okBtn = binding.firstNameDialogOkTextview
         // setting ok button on click
         okBtn.setOnClickListener {
-            if (binding.firstNameDialogInputEdittext.text.toString() != null) {
+            if (binding.firstNameDialogInputEdittext.text.toString() != "") {
                 firstNameLiveData.value = binding.firstNameDialogInputEdittext.text.toString()
                 dismiss()
             }

@@ -30,10 +30,15 @@
             android:id="@+id/payment_terms_text_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_100dp"
             android:layout_marginEnd="@dimen/margin_24dp"
             android:maxWidth="@dimen/width_170dp"
+            android:fontFamily="@font/poppins"
+            android:textAlignment="viewEnd"
             android:text="@string/payment_method_payment_terms_text"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/payment_terms_textview"
             app:layout_constraintTop_toTopOf="@+id/payment_terms_textview" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -78,12 +83,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins"
             android:maxWidth="@dimen/width_143dp"
             android:text="@string/payment_methods_payment_options_text"
-            app:layout_constraintBottom_toBottomOf="@+id/payment_options_textview"
+            android:textAlignment="viewEnd"
             app:layout_constraintEnd_toEndOf="@+id/payment_methods_divider"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/payment_options_textview" />
+            app:layout_constraintStart_toEndOf="@+id/payment_options_textview"
+            app:layout_constraintTop_toTopOf="@+id/payment_options_textview" />
 
         <Button
             android:id="@+id/payment_methods_save_changes_button"

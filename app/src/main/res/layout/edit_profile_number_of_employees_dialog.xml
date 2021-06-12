@@ -31,6 +31,9 @@
             android:layout_marginTop="@dimen/margin_30dp"
             android:layout_marginEnd="@dimen/margin_30dp"
             android:layout_marginStart="@dimen/margin_30dp"
+
+            app:hintAnimationEnabled="false"
+            app:boxStrokeColor="@color/deep_sky_blue"
             android:backgroundTint="@color/navy_blue"
             app:counterEnabled="true"
             app:counterMaxLength="4"
@@ -42,6 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/edit_profile_age_dialog_fragment_age_text"
+                android:backgroundTint="@color/white"
                 android:inputType="number"
                 android:textSize="@dimen/text_size_18sp"
                 app:layout_constraintStart_toStartOf="@+id/edit_profile_age_dialog_fragment_textview"

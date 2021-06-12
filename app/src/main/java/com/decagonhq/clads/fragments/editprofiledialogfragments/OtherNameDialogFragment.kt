@@ -27,8 +27,10 @@ class OtherNameDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.firstNameDialogOkTextview.setOnClickListener {
-            otherNameDialogLiveData.value = binding.firstNameDialogInputEdittext.text.toString()
-            dismiss()
+            if (binding.firstNameDialogInputEdittext.text.toString() != "") {
+                otherNameDialogLiveData.value = binding.firstNameDialogInputEdittext.text.toString()
+                dismiss()
+            }
         }
 
         binding.firstNameDialogCancelTextview.setOnClickListener {

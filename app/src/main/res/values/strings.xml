@@ -145,4 +145,5 @@
     <string name="fragment_specialty_add_new_specialty_text">Add new specialty</string>
     <string name="fragment_specialty_quality_assurance_text">Quality Assurance</string>
     <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
+    <string name="fragment_specialty_measurement_options">Measurement Options</string>
 </resources>

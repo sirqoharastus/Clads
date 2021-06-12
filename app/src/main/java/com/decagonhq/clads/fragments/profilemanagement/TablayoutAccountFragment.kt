@@ -1,8 +1,6 @@
 package com.decagonhq.clads.fragments.profilemanagement
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,8 +11,14 @@ import com.decagonhq.clads.databinding.FragmentTablayoutAccountBinding
 import com.decagonhq.clads.fragments.editprofiledialogfragments.FirstNameDialogFragment
 import com.decagonhq.clads.fragments.editprofiledialogfragments.GenderDialogFragment
 import com.decagonhq.clads.fragments.editprofiledialogfragments.LastNameDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.LegalStatusDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.LocalGovernmentAreaDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.NameOfUnionDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.NumberOfEmployeesDialogFragment
 import com.decagonhq.clads.fragments.editprofiledialogfragments.OtherNameDialogFragment
 import com.decagonhq.clads.fragments.editprofiledialogfragments.ShowroomAddressDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.StateDialogFragment
+import com.decagonhq.clads.fragments.editprofiledialogfragments.WardDialogFragment
 import com.decagonhq.clads.fragments.editprofiledialogfragments.WorkAddressDialogFragment
 import com.decagonhq.clads.models.EditProfileViewmodel
 
@@ -37,7 +41,6 @@ class TablayoutAccountFragment : Fragment() {
         binding.editProfileShowroomAddressValueTextview.text = "$street, $city, $state"
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -102,6 +105,12 @@ class TablayoutAccountFragment : Fragment() {
                 requireActivity().supportFragmentManager,
                 getString(R.string.worshop_address_text)
             )
+            workAddressDialogFragment.workshopAddressLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileWorkAddressValueTextview.text = it
+                }
+            )
         }
 
         binding.editProfileShowroomAddressValueTextview.setOnClickListener {
@@ -110,7 +119,7 @@ class TablayoutAccountFragment : Fragment() {
                 requireActivity().supportFragmentManager,
                 getString(R.string.showroom_address_dialog_text)
             )
-            showroomAddressDialogFragment.streetLiveData.observe(
+            showroomAddressDialogFragment.showroomAddressLiveData.observe(
                 viewLifecycleOwner,
                 {
                     binding.editProfileShowroomAddressValueTextview.text = it
@@ -118,16 +127,81 @@ class TablayoutAccountFragment : Fragment() {
             )
         }
 
-        viewmodel.showroomAddressViewModel.observe(viewLifecycleOwner, {
-            binding.editProfileShowroomAddressValueTextview.text = it
+        binding.editProfileNumberOfEmployeesValueTextview.setOnClickListener {
+            val numberOfEmployeesDialogFragment = NumberOfEmployeesDialogFragment()
+            numberOfEmployeesDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(
+                    R.string.edit_profile_fragment_numner_of_employees_text
+                )
+            )
+            numberOfEmployeesDialogFragment.numberOfEmployeesLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileNumberOfEmployeesValueTextview.text = it
+                }
+            )
         }
-        )
 
-        viewmodel.workshopAddressViewModel.observe(
-            viewLifecycleOwner, {
-                binding.editProfileWorkAddressValueTextview.text = it
-            })
+        binding.editProfileLegalStatusValueTextview.setOnClickListener {
+            val legalStatusDialogFragment = LegalStatusDialogFragment()
+            legalStatusDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_legal_status_text))
+            legalStatusDialogFragment.legalStatusLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileLegalStatusValueTextview.text = it
+                }
+            )
+        }
 
+        binding.editProfileNameOfUnionValueTextview.setOnClickListener {
+            val nameOfUnionDialogFragment = NameOfUnionDialogFragment()
+            nameOfUnionDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_name_of_dialog_fragment_text))
+            nameOfUnionDialogFragment.nameOfUnionLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileNameOfUnionValueTextview.text = it
+                }
+            )
+        }
+
+        binding.editProfileWardValueTextview.setOnClickListener {
+            val wardDialogFragment = WardDialogFragment()
+            wardDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_ward_dialog_fragment_text))
+            wardDialogFragment.wardLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileWardValueTextview.text = it
+                }
+            )
+        }
+
+        binding.editProfileLocalGovernmentAreaValueTextview.setOnClickListener {
+            val localGovernmentAreaDialogFragment = LocalGovernmentAreaDialogFragment()
+            localGovernmentAreaDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(
+                    R.string.edit_profile_fragment_local_government_dialog_fragment
+                )
+            )
+            localGovernmentAreaDialogFragment.localGovernmentAreaLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileLocalGovernmentAreaValueTextview.text = it
+                }
+            )
+        }
+
+        binding.editProfileStateValueTextview.setOnClickListener {
+            val stateDialogFragment = StateDialogFragment()
+            stateDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_state_dialog_fragment_text))
+            stateDialogFragment.stateLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.editProfileShowroomAddressValueTextview.text = it
+                }
+            )
+        }
     }
 
     override fun onDestroyView() {

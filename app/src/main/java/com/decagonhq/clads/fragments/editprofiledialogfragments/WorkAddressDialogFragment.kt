@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import com.decagonhq.clads.databinding.EditProfileWorkshopAddressDialogBinding
 import com.decagonhq.clads.models.EditProfileViewmodel
@@ -25,19 +26,24 @@ class WorkAddressDialogFragment : DialogFragment() {
         return binding.root
     }
 
+    // initializing mutable livedata which is used to save edittext data for access
+    var workshopAddressLiveData = MutableLiveData<String>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewmodel = ViewModelProvider(this).get(EditProfileViewmodel::class.java)
         binding.workshopAddressDialogCancelTextview.setOnClickListener {
             dismiss()
         }
-
+        // getting data from edittext and saving them in the mutable live data
         binding.workshopAddressDialogOkTextview.setOnClickListener {
             var street = binding.workshopAddressDialogStreetEdittext.text.toString()
             var city = binding.workshopAddressDialogCityEdittext.text.toString()
             var state = binding.workshopAddressDialogStateEdittet.text.toString()
-
-            viewmodel.workshopAddressViewModel.value = "$street, $city, $state"
+            val address = "$street, $city, $state"
+            if (address != null) {
+                workshopAddressLiveData.value = address
+            }
             dismiss()
         }
     }

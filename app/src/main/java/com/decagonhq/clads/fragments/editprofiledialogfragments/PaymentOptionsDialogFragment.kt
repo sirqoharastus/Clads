@@ -21,6 +21,7 @@ class PaymentOptionsDialogFragment : DialogFragment() {
         return binding.root
     }
 
+    // initializing mutable livedata which is used to save edittext data for access
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // setting cancel button on click to dismiss the dialog

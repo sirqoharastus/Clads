@@ -30,14 +30,11 @@
             android:id="@+id/payment_terms_text_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_20dp"
-            android:maxWidth="@dimen/width_170dp"
             android:layout_marginEnd="@dimen/margin_24dp"
+            android:maxWidth="@dimen/width_170dp"
             android:text="@string/payment_method_payment_terms_text"
-            app:layout_constraintBottom_toBottomOf="@+id/payment_terms_textview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/payment_terms_textview" />
+            app:layout_constraintTop_toTopOf="@+id/payment_terms_textview" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/payment_methods_frament_fab"

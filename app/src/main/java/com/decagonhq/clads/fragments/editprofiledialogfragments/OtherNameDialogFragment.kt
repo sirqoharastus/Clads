@@ -22,6 +22,7 @@ class OtherNameDialogFragment : DialogFragment() {
         return binding.root
     }
 
+    // initializing mutable livedata which is used to save edittext data for access
     val otherNameDialogLiveData = MutableLiveData<String>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

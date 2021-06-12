@@ -23,7 +23,7 @@ class GenderDialogFragment : DialogFragment() {
         _binding = EditProfileGenderDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
-
+    // initializing mutable livedata which is used to save edittext data for access
     var genderLiveData = MutableLiveData<String>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

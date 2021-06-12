@@ -26,9 +26,9 @@ class ShowroomAddressDialogFragment : DialogFragment() {
         return binding.root
     }
 
-    var streetLiveData = MutableLiveData<String>()
-    var cityLiveData = MutableLiveData<String>()
-    var stateLiveData = MutableLiveData<String>()
+    // initializing mutable livedata which is used to save edittext data for access
+    var showroomAddressLiveData = MutableLiveData<String>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -38,7 +38,10 @@ class ShowroomAddressDialogFragment : DialogFragment() {
             val street = binding.showroomAddressDialogStreetEdittext.text.toString()
             val city = binding.showroomAddressDialogCityEdittext.text.toString()
             val state = binding.showroomAddressDialogStateEdittet.text.toString()
-            viewModel.showroomAddressViewModel.value = "$street, $city, $state"
+            val address = "$street, $city, $state"
+            if (address != "") {
+                showroomAddressLiveData.value = address
+            }
             dismiss()
         }
 

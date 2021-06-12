@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentTablayoutPaymentMethodBinding
 import com.decagonhq.clads.fragments.editprofiledialogfragments.AddPaymentTermsDialogFragment
@@ -32,8 +31,6 @@ class TablayoutPaymentMethodFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(EditProfileViewmodel::class.java)
-
         val fab = binding.paymentMethodsFramentFab
         val paymentTextTermsTextView = binding.paymentTermsTextTextview
         val paymentTermsTextview = binding.paymentTermsTextview
@@ -47,6 +44,12 @@ class TablayoutPaymentMethodFragment : Fragment() {
                 requireActivity().supportFragmentManager,
                 getString(R.string.payment_terms_dialog_fragment_payment_terms_dialog_fragment_text)
             )
+            paymentTermsDialogFragment.paymentTermsLiveData.observe(
+                viewLifecycleOwner,
+                {
+                    binding.paymentTermsTextTextview.text = it
+                }
+            )
         }
         paymentOptionsTextTextview.setOnClickListener {
             val paymentOptionsDialogFragment = PaymentOptionsDialogFragment()
@@ -58,7 +61,8 @@ class TablayoutPaymentMethodFragment : Fragment() {
         fab.setOnClickListener {
             val addPaymentOptionsDialogFragment = AddPaymentTermsDialogFragment()
             addPaymentOptionsDialogFragment.show(
-                requireActivity().supportFragmentManager, getString(
+                requireActivity().supportFragmentManager,
+                getString(
                     R.string.add_payment_dialog_fragment_add_payment_dialog_fragment_text
                 )
             )

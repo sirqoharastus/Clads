@@ -6,32 +6,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.MutableLiveData
-import com.decagonhq.clads.databinding.EditProfileLastNameDialogBinding
+import com.decagonhq.clads.databinding.EditProfileStateDialogFragmentLayoutBinding
 
-class LastNameDialogFragment : DialogFragment() {
-    // declaring binding variables
-    var _binding: EditProfileLastNameDialogBinding? = null
+class StateDialogFragment : DialogFragment() {
+    // initializing binding variables
+    var _binding: EditProfileStateDialogFragmentLayoutBinding? = null
     val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // inflating the layout when view is created
-        _binding = EditProfileLastNameDialogBinding.inflate(inflater, container, false)
+        // inflating the dialog layout when this view is created
+        _binding = EditProfileStateDialogFragmentLayoutBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     // initializing mutable livedata which is used to save edittext data for access
-    var lastNameLiveData = MutableLiveData<String>()
+    var stateLiveData = MutableLiveData<String>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.firstNameDialogOkTextview.setOnClickListener {
-            lastNameLiveData.value = binding.firstNameDialogInputEdittext.text.toString()
+
+        binding.editProfileStateDialogFragmentCancelTextview.setOnClickListener {
             dismiss()
         }
 
-        binding.firstNameDialogCancelTextview.setOnClickListener {
+        binding.editProfileStateDialogFragmentOkTextview.setOnClickListener {
+            val state = binding.editProfileStateDialogFragmentInputEdittext.text.toString()
+            if (state != "") {
+                stateLiveData.value = state
+            }
             dismiss()
         }
     }

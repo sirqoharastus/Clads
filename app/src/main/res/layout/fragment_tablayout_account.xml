@@ -192,12 +192,12 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile_showroom_addrress_textview"
             app:layout_constraintTop_toBottomOf="@id/edit_profile_showroom_address_value_textview" />
 
-        <EditText
+        <TextView
             android:id="@+id/edit_profile_number_of_employees_value_textview"
             android:layout_width="@dimen/width_0dp"
             android:layout_height="wrap_content"
             android:maxWidth="@dimen/width_200dp"
-            android:hint="@string/acount_fragment_number_of_employees_text"
+            android:text="@string/acount_fragment_number_of_employees_text"
             android:inputType="number"
             android:backgroundTint="@color/deep_sky_blue"
             android:textColor="@color/navy_blue"
@@ -217,12 +217,13 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile_number_of_employees_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_number_of_employees_textview" />
 
-        <EditText
+        <TextView
             android:id="@+id/edit_profile_legal_status_value_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxWidth="@dimen/width_200dp"
-            android:hint="@string/account_fragment_legal_status_text"
+            android:text="@string/account_fragment_legal_status_text"
+            android:textColor="@color/navy_blue"
             android:backgroundTint="@color/deep_sky_blue"
             android:textSize="@dimen/text_size_16sp"
             app:layout_constraintEnd_toEndOf="@+id/edit_profile_number_of_employees_value_textview"
@@ -252,12 +253,12 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile_union_membership_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_union_membership_textview" />
 
-        <EditText
+        <TextView
             android:id="@+id/edit_profile_name_of_union_value_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxWidth="@dimen/width_200dp"
-            android:hint="@string/account_fragment_name_of_union_text"
+            android:text="@string/account_fragment_name_of_union_text"
             android:backgroundTint="@color/deep_sky_blue"
             android:textColor="@color/navy_blue"
             android:textSize="@dimen/text_size_16sp"
@@ -276,11 +277,11 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile_name_of_union_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_name_of_union_value_textview" />
 
-        <EditText
+        <TextView
             android:id="@+id/edit_profile_ward_value_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/account_fragment_ward_text"
+            android:text="@string/account_fragment_ward_text"
             android:maxWidth="@dimen/width_200dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:textColor="@color/navy_blue"
@@ -300,11 +301,11 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile_ward_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_ward_value_textview" />
 
-        <EditText
+        <TextView
             android:id="@+id/edit_profile_local_government_area_value_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/account_fragment_lga_text"
+            android:text="@string/account_fragment_lga_text"
             android:backgroundTint="@color/deep_sky_blue"
             android:maxWidth="@dimen/width_200dp"
             android:textColor="@color/navy_blue"
@@ -323,11 +324,11 @@
             app:layout_constraintStart_toStartOf="@+id/edit_profile_local_government_area_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_local_government_area_value_textview" />
 
-        <EditText
+        <TextView
             android:id="@+id/edit_profile_state_value_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/all_state_text"
+            android:text="@string/all_state_text"
             android:backgroundTint="@color/deep_sky_blue"
             android:textColor="@color/navy_blue"
             android:textSize="@dimen/text_size_16sp"

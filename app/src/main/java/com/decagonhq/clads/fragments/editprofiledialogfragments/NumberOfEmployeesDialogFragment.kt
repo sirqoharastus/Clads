@@ -6,32 +6,38 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.MutableLiveData
-import com.decagonhq.clads.databinding.EditProfileLastNameDialogBinding
+import com.decagonhq.clads.databinding.EditProfileNumberOfEmployeesDialogBinding
 
-class LastNameDialogFragment : DialogFragment() {
-    // declaring binding variables
-    var _binding: EditProfileLastNameDialogBinding? = null
+class NumberOfEmployeesDialogFragment : DialogFragment() {
+    // initializing binding variables
+    var _binding: EditProfileNumberOfEmployeesDialogBinding? = null
     val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // inflating the layout when view is created
-        _binding = EditProfileLastNameDialogBinding.inflate(inflater, container, false)
+        // inflating the dialog layout when this view is created
+        _binding = EditProfileNumberOfEmployeesDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     // initializing mutable livedata which is used to save edittext data for access
-    var lastNameLiveData = MutableLiveData<String>()
+    var numberOfEmployeesLiveData = MutableLiveData<String>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.firstNameDialogOkTextview.setOnClickListener {
-            lastNameLiveData.value = binding.firstNameDialogInputEdittext.text.toString()
+
+        binding.editProfileAgeDialogFragmentCancelTextview.setOnClickListener {
             dismiss()
         }
 
-        binding.firstNameDialogCancelTextview.setOnClickListener {
+        binding.editProfileAgeDialogFragmentOkTextview.setOnClickListener {
+            val numberOfEmployees = binding.editProfileAgeDialogFragmentInputEdittext.text.toString()
+            if (numberOfEmployees != "") {
+                numberOfEmployeesLiveData.value = numberOfEmployees
+            }
             dismiss()
         }
     }

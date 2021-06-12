@@ -24,6 +24,7 @@ class AddPaymentTermsDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // setting payment terms ok button on click listener to dismiss dialog fragment
         binding.addPaymentTermsDialogAddButton.setOnClickListener {
             dismiss()
         }

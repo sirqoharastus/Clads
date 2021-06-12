@@ -184,4 +184,13 @@
     <string name="edit_profile_fragment_payment_method_text">Payment method</string>
     <string name="edit_profile_fragment_security_text">Security</string>
     <string name="forgot_password_fragment_not_a_valid_email_text">Not a valid email</string>
+    <string name="edit_profile_age_dialog_fragment_age_text">Age</string>
+    <string name="edit_profile_legal_status_dialog_fragment_legal_status_text">Legal Status</string>
+    <string name="edit_profile_name_of_union_dialog_fragment_name_of_union_text">Name of Union</string>
+    <string name="edit_profile_fragment_numner_of_employees_text">number of employees dialog</string>
+    <string name="edit_profile_fragment_legal_status_text">legal status dialog fragment</string>
+    <string name="edit_profile_fragment_name_of_dialog_fragment_text">name of union dialog fragment</string>
+    <string name="edit_profile_fragment_ward_dialog_fragment_text">ward dialog fragment</string>
+    <string name="edit_profile_fragment_local_government_dialog_fragment">local governmnet dialog fragment</string>
+    <string name="edit_profile_fragment_state_dialog_fragment_text">state dialog fragment</string>
 </resources>

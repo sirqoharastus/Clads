@@ -69,13 +69,13 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
             }
         }
 
-        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyDeliveryLeadTime.apply {
+        fragmentTablayoutSpecialtyBinding.fragmentSpeccialtyDeliveryTimeResponse.apply {
             setOnClickListener {
                 DialogFragments.createFragment(R.layout.delivery_lead_time_fragment_layout)
                     .show(requireActivity().supportFragmentManager, null)
             }
         }
-        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyQualityAssuranceContentTextView.apply {
+        fragmentTablayoutSpecialtyBinding.fragmentSpecialtyQualityAssuranceResponseTextView.apply {
             setOnClickListener {
                 DialogFragments.createFragment(R.layout.obioma_trained_dialog_fragment_layout)
                     .show(requireActivity().supportFragmentManager, null)

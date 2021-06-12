@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_dashboardhomeFragment_to_suscriptionFragment"
             app:destination="@id/suscriptionFragment" />
+        <action
+            android:id="@+id/action_dashboardhomeFragment_to_resourceFragment"
+            app:destination="@id/resourceFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardMessagesFragment"
@@ -103,4 +106,9 @@
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddDeliveryAddressFragment"
         android:label="Add Address"
         tools:layout="@layout/fragment_add_delivery_address" />
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
+        android:label="fragment_resource"
+        tools:layout="@layout/fragment_resource" />
 </navigation>

@@ -22,6 +22,7 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var dashBoardActivityBinding: ActivityDashboardBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         dashBoardActivityBinding = ActivityDashboardBinding.inflate(layoutInflater)
@@ -35,25 +36,15 @@ class DashboardActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
             when {
-                (destination.id == R.id.clientsListFragment) -> {
-                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
-                    dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.GONE
-                }
-                (destination.id == R.id.editProfileFragment) -> {
-                    dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.GONE
-                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.text = getString(R.string.tool_bar_default_title)
-                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
-                    dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.GONE
-                }
 
-                (destination.id == R.id.dashboardMediaFragment || destination.id == R.id.dashboardMessagesFragment) -> {
+                (destination.id != R.id.dashboardhomeFragment && destination.id != R.id.dashboardMediaFragment && destination.id != R.id.dashboardMessagesFragment) -> {
                     dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.GONE
                     dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.GONE
                     dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.visibility = View.GONE
                 }
-                else -> {
-                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.VISIBLE
 
+                else -> {
                     dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.VISIBLE
                     dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.VISIBLE
                     dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.visibility = View.VISIBLE
@@ -90,6 +81,10 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (R.id.logoutFragment == item.itemId) {
+            return false
+        }
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 

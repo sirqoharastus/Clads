@@ -12,6 +12,7 @@
         <item
             android:icon="@drawable/resources"
             android:title="Resources"
+            android:id="@+id/resourceFragment"
 
             />
         <item
@@ -23,6 +24,7 @@
         <item
             android:icon="@drawable/logout"
             android:title="Logout"
+            android:id="@+id/logoutFragment"
 
             />
 

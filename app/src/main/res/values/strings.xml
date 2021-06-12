@@ -2,9 +2,6 @@
     <string name="app_name">Clads</string>
 
 
-
-
-
     <!-- email signup fragment views texts -->
     <string name="email_sign_up_login_tag_line"> Lorem ipsum. ipsum sum</string>
 
@@ -15,7 +12,7 @@
 
 
     //string resources for fragment login screen
-=
+    =
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -30,7 +27,6 @@
     <string name="fragment_login_screen_login_with_google">Login with Google</string>
 
 
-
     <string name="sign_up_login_tag_line"> Lorem ipsum, ipsum sum</string>
 
 
@@ -42,7 +38,7 @@
     <string name="prompt_message">Hey Ijeoma, you are almost ready to start <br /> enjoying Obioma. Simply click the big blue<br />button below to verify your email address.</string>
 
 
-    <string name ="email_sign_up_fragment_create_account_text">Create an account</string>
+    <string name="email_sign_up_fragment_create_account_text">Create an account</string>
 
 
     <string name="verify_email_address">Verify Email Address</string>
@@ -74,12 +70,11 @@
     <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
 
-<!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
+    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
     <string name="signup_choices_fragment_login">Login</string>
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
     <string name="signup_login_fragment_sign_up">Sign up</string>
-
 
 
     <string-array name="email_sign_up_fragment_choose_account_category_array">
@@ -89,20 +84,20 @@
         <item>Client</item>
     </string-array>
 
-    <string name ="sign_up_email_title">Create an account</string>
-    <string name ="sign_up_email_description">Lets get to know you</string>
-    <string name ="sign_up_email_first_name">First Name</string>
-    <string name ="sign_up_email_last_name">Last Name</string>
-    <string name ="sign_up_email_other_name">Other Name</string>
-    <string name ="sign_up_email_email_address">Email Address</string>
-    <string name ="sign_up_email_password">Password</string>
-    <string name ="sign_up_email_confirm_password">Confirm Password</string>
+    <string name="sign_up_email_title">Create an account</string>
+    <string name="sign_up_email_description">Lets get to know you</string>
+    <string name="sign_up_email_first_name">First Name</string>
+    <string name="sign_up_email_last_name">Last Name</string>
+    <string name="sign_up_email_other_name">Other Name</string>
+    <string name="sign_up_email_email_address">Email Address</string>
+    <string name="sign_up_email_password">Password</string>
+    <string name="sign_up_email_confirm_password">Confirm Password</string>
     <string name="splash_screen_placeholder_text">Splash Screen</string>
     <string name="fragment_signup_choices_button_text">Signup with Google</string>
     <string name="signup_login_fragment_signup_button">Sign Up</string>
     <string name="reset_password_fragment_view_in_browser">view in browser</string>
     <string name="all_reset_password">Reset Password</string>
-    <string name="reset_password_fragment_click_reset_button">Hi,<br/> You’re almost there. To finish resetting your password, please click on the  reset button below</string>
+    <string name="reset_password_fragment_click_reset_button">Hi,<br /> You’re almost there. To finish resetting your password, please click on the  reset button below</string>
     <string name="reset_password_fragment_stay_in_touch">stay in touch</string>
     <string name="reset_password_fragment_email_sent_by_clads">email sent by clads</string>
     <string name="reset_password_fragment_copyright_text">copyright 2020. All Rights Reserved</string>
@@ -146,4 +141,5 @@
     <string name="fragment_specialty_quality_assurance_text">Quality Assurance</string>
     <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
     <string name="fragment_specialty_measurement_options">Measurement Options</string>
+    <string name="resource_fragment_resource_textview">Resource Fragment</string>
 </resources>

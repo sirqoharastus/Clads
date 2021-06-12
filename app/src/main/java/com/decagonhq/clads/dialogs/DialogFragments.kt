@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
@@ -63,7 +62,7 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
 
                 binding.addSpecialtyDialogFragmentSpecialtyNameEdittext.apply {
                     doOnTextChanged { text, start, before, count ->
-                        if (text?.length!! >= 5) {
+                        if (text?.length!! >= 1) {
                             binding.addSpecialtyDialogFragmentAddButton.apply {
                                 setBackgroundColor(
                                     resources.getColor(
@@ -89,21 +88,23 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
             }
 
             R.layout.delivery_lead_time_fragment_layout -> {
-                var durationType = ""
-                val binding = DeliveryLeadTimeFragmentLayoutBinding.bind(view)
 
-                binding.radioGroup.setOnCheckedChangeListener { radioGroup: RadioGroup, checkedId: Int ->
-                    durationType = ""
-                    durationType += view.findViewById<RadioButton>(checkedId).text.toString()
+                val binding = DeliveryLeadTimeFragmentLayoutBinding.bind(view)
+                var durationType = ""
+                binding.radioGroup.apply {
+                    setOnCheckedChangeListener { group, checkedId ->
+                        durationType = (findViewById<RadioButton>(group.checkedRadioButtonId)).text.toString()
+                    }
                 }
 
                 binding.deliveryLeadTimeOkButton.apply {
                     setOnClickListener {
-                        viewModel.addDeliveryTime(
-                            "${binding.addDeliveryTimeEditText.text} " +
-                                durationType
-                        )
-                        dismiss()
+                        if (durationType != "") {
+                            viewModel.addDeliveryTime(
+                                "${binding.addDeliveryTimeEditText.text} " + durationType
+                            )
+                            dismiss()
+                        }
                     }
                 }
 
@@ -112,7 +113,7 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
                 }
 
                 binding.addDeliveryTimeEditText.apply {
-                    doOnTextChanged { text, start, before, count ->
+                    doOnTextChanged { text, _, _, _ ->
                         if (text?.length!! > 0) {
 
                             binding.deliveryLeadTimeOkButton.apply {
@@ -122,7 +123,7 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
                                         resources.newTheme()
                                     )
                                 )
-                                isEnabled = true
+                                binding.deliveryLeadTimeOkButton.isEnabled = true
                             }
                         } else {
                             binding.deliveryLeadTimeOkButton.apply {
@@ -132,7 +133,7 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
                                         resources.newTheme()
                                     )
                                 )
-                                isEnabled = false
+                                binding.deliveryLeadTimeOkButton.isEnabled = false
                             }
                         }
                     }
@@ -141,11 +142,37 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
 
             R.layout.obioma_trained_dialog_fragment_layout -> {
                 val binding = ObiomaTrainedDialogFragmentLayoutBinding.bind(view)
+                var trained = ""
                 binding.obiomaTrainedRadioGroup.apply {
-                    setOnCheckedChangeListener { _, checkedId ->
-                        viewModel.obiomaTrained(view.findViewById<RadioButton>(checkedId).text.toString())
-                        dismiss()
+                    setOnCheckedChangeListener { group, checkedId ->
+                        binding.obiomaTrainedDialogFragmentOkButton.apply {
+                            isEnabled = true
+                            setTextColor(
+                                resources.getColor(
+                                    R.color.deep_sky_blue,
+                                    resources.newTheme()
+                                )
+                            )
+                        }
+                        if (group.checkedRadioButtonId == binding.obiomaCertifiedNoButton.id) {
+                            trained = binding.obiomaCertifiedNoButton.text.toString()
+                        } else if (group.checkedRadioButtonId == binding.obiomaCertifiedYesButton.id) {
+                            trained = binding.obiomaCertifiedYesButton.text.toString()
+                        }
                     }
+                }
+                binding.obiomaTrainedDialogFragmentOkButton.apply {
+                    setOnClickListener {
+
+                        if (trained != "") {
+                            viewModel.obiomaTrained(trained)
+                            dismiss()
+                        }
+                    }
+                }
+
+                binding.obiomaTrainedDialogCancelButton.setOnClickListener {
+                    dismiss()
                 }
             }
         }

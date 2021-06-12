@@ -1,7 +1,6 @@
 package com.decagonhq.clads.fragments.profilemanagement
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +10,14 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.decagonhq.clads.R
 import com.decagonhq.clads.adapters.SpecialtyListAdapter
-import com.decagonhq.clads.databinding.FragmentTablayoutSpecialtyBinding
+import com.decagonhq.clads.databinding.FragmentSpecialtyBinding
 import com.decagonhq.clads.dialogs.DialogFragments
 import com.decagonhq.clads.models.Specialty
 import com.decagonhq.clads.viewmodels.EditProfileViewModel
 
 class SpecialtyFragment : Fragment(), FragmentResultListener {
 
-    private lateinit var fragmentTablayoutSpecialtyBinding: FragmentTablayoutSpecialtyBinding
+    private lateinit var fragmentTablayoutSpecialtyBinding: FragmentSpecialtyBinding
     private lateinit var adapter: SpecialtyListAdapter
     private val viewModel: EditProfileViewModel by viewModels({ requireActivity() })
     override fun onCreateView(
@@ -27,7 +26,7 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        fragmentTablayoutSpecialtyBinding = FragmentTablayoutSpecialtyBinding.inflate(inflater)
+        fragmentTablayoutSpecialtyBinding = FragmentSpecialtyBinding.inflate(inflater)
         return fragmentTablayoutSpecialtyBinding.root
     }
 
@@ -37,7 +36,7 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
         setUpUI()
     }
 
-    fun setUpUI() {
+    private fun setUpUI() {
         adapter = SpecialtyListAdapter(
             requireActivity(),
             mutableListOf(
@@ -85,7 +84,7 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
     }
 
     override fun onFragmentResult(requestKey: String, result: Bundle) {
-        Log.i("got here", "ya Got here")
+
         adapter.updateList<Specialty>(
             Specialty(result.get("SPECIALTY") as String, false)
         )

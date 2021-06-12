@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/add_specialty_root_layout"
@@ -7,7 +8,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/add_specialty_dialog_fragment_add_specialty_edittext_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_44dp"
@@ -15,57 +16,57 @@
         android:fontFamily="@font/poppins"
         android:text="@string/add_specialty"
         android:textColor="@color/navy_blue"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/add_specialty_dialog_fragment_speciality_textInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/add_specialty_dialog_fragment_speciality_textInputLayout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-        app:layout_constraintTop_toBottomOf="@+id/add_specialty"
+        app:layout_constraintStart_toStartOf="@+id/add_specialty_dialog_fragment_speciality_textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/add_specialty_dialog_fragment_add_specialty_text_view"
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/add_specialty_dialog_fragment_speciality_textInputLayout"
         android:layout_width="@dimen/margin_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_24dp"
         android:layout_marginEnd="@dimen/margin_24dp"
         android:layout_marginBottom="@dimen/margin_30dp"
-        android:hint="Specialty name"
+        android:hint="@string/add_specialty_dialog_fragment_layout_specialty_name"
         android:paddingStart="@dimen/padding_0dp"
         app:boxStrokeColor="@color/deep_sky_blue"
-        app:counterEnabled="true"
-        app:counterMaxLength="100"
+        app:counterEnabled="@bool/true_option"
+        app:counterMaxLength="@integer/number_100"
         app:counterTextColor="@color/grey"
         app:hintTextColor="@color/grey"
-        app:layout_constraintBottom_toTopOf="@+id/add_specialty_button"
+        app:layout_constraintBottom_toTopOf="@+id/add_specialty_dialog_fragment_add_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/specialty_name"
+            android:id="@+id/add_specialty_dialog_fragment_specialty_name_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:fontFamily="@font/poppins"
-            android:maxLength="100"
+            android:maxLength="@integer/number_100"
             android:paddingStart="@dimen/padding_0dp"
             android:textColor="@color/drawer_menu_item_textcolor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/add_specialty_button"
+        android:id="@+id/add_specialty_dialog_fragment_add_button"
         android:layout_width="@dimen/margin_0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_24dp"
         android:backgroundTint="@color/grey"
-        android:enabled="false"
+        android:enabled="@bool/false_option"
         android:text="@string/add_button_text"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
-        app:layout_constraintStart_toStartOf="@+id/textInputLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/add_specialty_dialog_fragment_speciality_textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/add_specialty_dialog_fragment_speciality_textInputLayout" />
 
     <TextView
-        android:id="@+id/add_specialty"
+        android:id="@+id/add_specialty_dialog_fragment_add_specialty_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_40dp"
@@ -73,9 +74,9 @@
         android:text="@string/add_specialty_textfield"
         android:textColor="@color/navy_blue"
         android:textSize="@dimen/text_size_15sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/add_specialty_dialog_fragment_add_specialty_edittext_label"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/add_specialty_dialog_fragment_add_specialty_edittext_label"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

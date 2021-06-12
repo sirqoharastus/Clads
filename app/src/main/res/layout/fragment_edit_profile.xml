@@ -10,9 +10,9 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/edit_profile_layout"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margin_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/margin_60dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +21,8 @@
         app:tabIndicatorColor="@color/deep_sky_blue"
         app:tabIndicatorGravity="bottom"
         app:tabMode="auto"
-        app:tabPaddingEnd="15dp"
-        app:tabPaddingStart="30dp"
+        app:tabPaddingEnd="@dimen/margin_15dp"
+        app:tabPaddingStart="@dimen/padding_30dp"
         app:tabSelectedTextColor="@color/deep_sky_blue"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
         app:tabTextColor="@color/drawer_menu_item_textcolor">
@@ -50,8 +50,8 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/edit_profile_view_pager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="@dimen/margin_0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,10 +61,10 @@
     </androidx.viewpager2.widget.ViewPager2>
 
     <View
-        android:id="@+id/tabline"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="3dp"
+        android:id="@+id/fragment_edit_profile_tabline"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="@dimen/margin_1dp"
+        android:layout_marginStart="@dimen/margin_3dp"
         android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

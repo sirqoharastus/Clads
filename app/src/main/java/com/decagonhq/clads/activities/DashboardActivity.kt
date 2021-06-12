@@ -36,28 +36,28 @@ class DashboardActivity : AppCompatActivity() {
 
             when {
                 (destination.id == R.id.clientsListFragment) -> {
-                    dashBoardActivityBinding.appBarDashboard.toolBarNotificationIcon.visibility = View.GONE
-                    dashBoardActivityBinding.appBarDashboard.bottomNavigationView.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.GONE
                 }
                 (destination.id == R.id.editProfileFragment) -> {
-                    dashBoardActivityBinding.appBarDashboard.profileImageInToolbar.visibility = View.GONE
-                    dashBoardActivityBinding.appBarDashboard.toolBarTitle.text = getString(R.string.tool_bar_default_title)
-                    dashBoardActivityBinding.appBarDashboard.toolBarNotificationIcon.visibility = View.GONE
-                    dashBoardActivityBinding.appBarDashboard.bottomNavigationView.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.text = getString(R.string.tool_bar_default_title)
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.GONE
                 }
                 else -> {
-                    dashBoardActivityBinding.appBarDashboard.toolBarNotificationIcon.visibility = View.VISIBLE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.VISIBLE
 
-                    dashBoardActivityBinding.appBarDashboard.bottomNavigationView.visibility = View.VISIBLE
-                    dashBoardActivityBinding.appBarDashboard.profileImageInToolbar.visibility = View.VISIBLE
-                    dashBoardActivityBinding.appBarDashboard.toolBarTitle.visibility = View.VISIBLE
-                    dashBoardActivityBinding.appBarDashboard.toolBarNotificationIcon.visibility = View.VISIBLE
+                    dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.VISIBLE
+                    dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.VISIBLE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.visibility = View.VISIBLE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.VISIBLE
                 }
             }
         }
 
         val drawerLayout = dashBoardActivityBinding.drawerLayout
-        val navHeader = dashBoardActivityBinding.navView.getHeaderView(0)
+        val navHeader = dashBoardActivityBinding.dashboardActivityNavigationView.getHeaderView(0)
         navHeader.findViewById<ImageView>(R.id.close)
             .setOnClickListener {
                 drawerLayout.closeDrawer(Gravity.LEFT, true)
@@ -70,15 +70,15 @@ class DashboardActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             navController.graph, drawerLayout
         )
-        dashBoardActivityBinding.appBarDashboard.myToolbar.setupWithNavController(
+        dashBoardActivityBinding.dashboardActivityAppBar.myToolbar.setupWithNavController(
             navController,
             appBarConfiguration
         )
 
-        setSupportActionBar(dashBoardActivityBinding.appBarDashboard.myToolbar)
+        setSupportActionBar(dashBoardActivityBinding.dashboardActivityAppBar.myToolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        dashBoardActivityBinding.navView.setupWithNavController(navController)
-        dashBoardActivityBinding.appBarDashboard.bottomNavigationView.setupWithNavController(
+        dashBoardActivityBinding.dashboardActivityNavigationView.setupWithNavController(navController)
+        dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.setupWithNavController(
             navController
         )
     }

@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:inputType="number"
-            android:maxLength="3"
+            android:maxLength="@integer/number_3"
             android:textColorHint="@color/grey" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_24dp"
         android:orientation="horizontal"
-        android:weightSum="3"
+        android:weightSum="@integer/number_3"
         app:layout_constraintEnd_toEndOf="@+id/add_delivery_input_layout"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/add_delivery_input_layout"

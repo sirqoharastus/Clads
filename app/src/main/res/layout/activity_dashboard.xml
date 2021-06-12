@@ -12,7 +12,7 @@
 
 
   <include
-      android:id="@+id/app_bar_dashboard"
+      android:id="@+id/dashboard_activity_app_bar"
       layout="@layout/appbar_dashboard_content_layout"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
@@ -21,7 +21,7 @@
 
   <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
   <com.google.android.material.navigation.NavigationView
-      android:id="@+id/nav_view"
+      android:id="@+id/dashboard_activity_navigation_view"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_gravity="start"
@@ -33,13 +33,13 @@
       app:menu="@menu/drawermenu">
 
     <TextView
-        android:id="@+id/nav_drawer_app_version_text_view"
+        android:id="@+id/dashboard_activity_nav_drawer_app_version_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/margin_20dp"
-        android:layout_marginBottom="33dp"
-        android:text="version 1.0" />
+        android:layout_marginBottom="@dimen/margin_30dp"
+        android:text="@string/dashboard_activity_navigation_view_version_text" />
   </com.google.android.material.navigation.NavigationView>
 
 

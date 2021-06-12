@@ -92,7 +92,7 @@
         android:id="@+id/suscriptionFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.SuscriptionFragment"
         android:label="Subscription"
-        tools:layout="@layout/fragment_suscription" />
+        tools:layout="@layout/fragment_subscription" />
     <fragment
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddMeasurementFragment"

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.decagonhq.clads.databinding.FragmentTablayoutMeasurementBinding
+import com.decagonhq.clads.databinding.FragmentMeasurementBinding
 
 class MeasurementFragment : Fragment() {
 
@@ -15,6 +15,6 @@ class MeasurementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentTablayoutMeasurementBinding.inflate(inflater).root
+        return FragmentMeasurementBinding.inflate(inflater).root
     }
 }

@@ -49,11 +49,11 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
             R.layout.add_specialty_dialog_fragment_layout -> {
 
                 val binding = AddSpecialtyDialogFragmentLayoutBinding.bind(view)
-                binding.addSpecialtyButton.apply {
+                binding.addSpecialtyDialogFragmentAddButton.apply {
                     setOnClickListener {
                         viewModel.addSpecialty(
                             Specialty(
-                                binding.specialtyName.text.toString(),
+                                binding.addSpecialtyDialogFragmentSpecialtyNameEdittext.text.toString(),
                                 false
                             )
                         )
@@ -61,10 +61,10 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
                     }
                 }
 
-                binding.specialtyName.apply {
+                binding.addSpecialtyDialogFragmentSpecialtyNameEdittext.apply {
                     doOnTextChanged { text, start, before, count ->
                         if (text?.length!! >= 5) {
-                            binding.addSpecialtyButton.apply {
+                            binding.addSpecialtyDialogFragmentAddButton.apply {
                                 setBackgroundColor(
                                     resources.getColor(
                                         R.color.deep_sky_blue,
@@ -74,7 +74,7 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
                                 isEnabled = true
                             }
                         } else {
-                            binding.addSpecialtyButton.apply {
+                            binding.addSpecialtyDialogFragmentAddButton.apply {
                                 setBackgroundColor(
                                     resources.getColor(
                                         R.color.grey,

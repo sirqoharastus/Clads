@@ -45,6 +45,12 @@ class DashboardActivity : AppCompatActivity() {
                     dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
                     dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.GONE
                 }
+
+                (destination.id == R.id.dashboardMediaFragment || destination.id == R.id.dashboardMessagesFragment) -> {
+                    dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.visibility = View.GONE
+                }
                 else -> {
                     dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.VISIBLE
 

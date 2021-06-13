@@ -1,5 +1,6 @@
 package com.decagonhq.clads.fragments.authentication
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.decagonhq.clads.activities.DashboardActivity
 import com.decagonhq.clads.databinding.FragmentLoginScreenBinding
 import com.decagonhq.clads.utils.LoginScreenFragmentValidator
 import com.google.android.material.textfield.TextInputEditText
@@ -39,7 +41,7 @@ class LoginScreenFragment : Fragment() {
         passwordEditText = binding.fragmentLoginScreenPasswordTextInputEditText
         loginButton = binding.fragmentLoginScreenLoginButton
 
-        /* Onclick of the login button the user's input is converted to string and validated and if the user's
+        /* Onclick of the login drawer_edit_profile_button the user's input is converted to string and validated and if the user's
         *  input is correct the next fragment is launched else the user is notified which field is not
         * field properly
         */
@@ -51,6 +53,7 @@ class LoginScreenFragment : Fragment() {
                     password
                 )
             ) {
+                startActivity(Intent(requireContext(), DashboardActivity::class.java))
             } else {
                 when {
                     !LoginScreenFragmentValidator.validatePassword(password) -> Toast.makeText(

@@ -52,15 +52,6 @@ class DashboardHomeFragment : Fragment() {
         clientsRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         clientsRecyclerView.adapter = clientsAdapter
 
-        ActivityDashboardBinding.inflate(requireActivity().layoutInflater).bottomNavigationView
-            .apply {
-                Log.i("buttom navigation", "Got here")
-                setOnItemSelectedListener {
-                    Log.i("buttom navigation", "Got here")
-                    findNavController().navigate(R.id.action_dashboardhomeFragment_to_dashboardMessagesFragment)
-                    return@setOnItemSelectedListener false
-                }
-            }
     }
 
     private fun populateClient() {

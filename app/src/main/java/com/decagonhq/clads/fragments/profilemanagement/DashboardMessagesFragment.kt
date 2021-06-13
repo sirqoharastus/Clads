@@ -35,23 +35,16 @@ class DashboardMessagesFragment : Fragment() {
 
         val clientMessage = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
         messagesList = arrayListOf(
-            MessagesList("Ruth", "Unoka", "{$clientMessage}"),
-            MessagesList("Ezekiel", "Olufemi", "{$clientMessage}"),
-            MessagesList("Olufemi", "Ogundipe", "{$clientMessage}"),
-            MessagesList("Adebayo", "Kings", "{$clientMessage}"),
-            MessagesList("Abdul", "Salawu", "{$clientMessage}"),
-            MessagesList("Hope", "Omoruyi", "{$clientMessage}")
+            MessagesList("Ruth", "Unoka", clientMessage),
+            MessagesList("Olufemi", "Ogundipe", clientMessage),
+            MessagesList("Adebayo", "Kings", clientMessage),
+            MessagesList("Abdul", "Salawu", clientMessage),
+            MessagesList("Hope", "Omoruyi", clientMessage)
         )
-        // Recyclerview layout manager
+        // Recyclerview layout manage
         messageRecyclerView = binding.fragmentDashboardMessagesRecyclerview
         messagesListAdapter = MessagesListAdapter(messagesList)
         messageRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         messageRecyclerView.adapter = messagesListAdapter
-
-//        populateMessage()
     }
-    // Populate the message textview with messages
-//    private fun populateMessage() {
-//
-//    }
 }

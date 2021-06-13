@@ -2,17 +2,14 @@ package com.decagonhq.clads.fragments.profilemanagement
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.R
 import com.decagonhq.clads.adapters.HomeFragmentClientsRecyclerAdapter
-import com.decagonhq.clads.databinding.ActivityDashboardBinding
 import com.decagonhq.clads.databinding.FragmentDashboardHomeBinding
 import com.decagonhq.clads.models.ClientsList
 import com.github.mikephil.charting.components.XAxis
@@ -51,7 +48,6 @@ class DashboardHomeFragment : Fragment() {
         clientsAdapter = HomeFragmentClientsRecyclerAdapter(clientList)
         clientsRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         clientsRecyclerView.adapter = clientsAdapter
-
     }
 
     private fun populateClient() {

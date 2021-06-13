@@ -5,25 +5,25 @@
     <group android:checkableBehavior="single">
         <item
             android:icon="@drawable/clients"
-            android:title="Clients"
+            android:title="@string/drawer_layout_menu_clients_item_title"
             android:id="@+id/clientsListFragment"
             />
 
         <item
             android:icon="@drawable/resources"
-            android:title="Resources"
+            android:title="@string/drawer_layout_menu_resource_item_title"
             android:id="@+id/resourceFragment"
 
             />
         <item
             android:icon="@drawable/subscription"
-            android:title="Subscription"
+            android:title="@string/drawer_layout_menu_subscription_item_title"
             android:id="@+id/suscriptionFragment"
             />
 
         <item
             android:icon="@drawable/logout"
-            android:title="Logout"
+            android:title="@string/drawer_layout_menu_logout_item_title"
             android:id="@+id/logoutFragment"
 
             />

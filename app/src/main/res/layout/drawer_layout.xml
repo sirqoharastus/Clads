@@ -22,11 +22,11 @@
         app:srcCompat="@drawable/avatar" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/drawer_layout_profile_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_20dp"
-        android:text="Ijeoma Ibukun Babangida"
+        android:text="@string/drawer_layout_profile_name"
         android:textAlignment="center"
         android:textColor="@color/drawer_edit_profile_text_color"
         android:textSize="@dimen/text_size_14sp"
@@ -41,10 +41,10 @@
         android:layout_marginTop="@dimen/margin_20dp"
         android:backgroundTint="@color/deep_sky_blue"
         app:cornerRadius="@dimen/text_size_15sp"
-        android:text="Edit Profile"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:text="@string/drawer_layout_edit_profile_button"
+        app:layout_constraintEnd_toEndOf="@+id/drawer_layout_profile_name_text_view"
+        app:layout_constraintStart_toStartOf="@+id/drawer_layout_profile_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/drawer_layout_profile_name_text_view" />
 
     <View
         android:id="@+id/view"

@@ -29,13 +29,13 @@ class LoginScreenFragmentTest {
             launchFragmentInContainer(themeResId = R.style.Theme_MaterialComponents)
     }
 
-    // Testing for the visibility of the welcome Back textView
+    // Testing for the visibility of the welcome Back drawer_layout_profile_name_text_view
     @Test
     fun `is_login_screen_fragment_welcomeBack_textView_visible`() {
         onView(withId(R.id.fragment_login_screen_welcomeBack_text_view)).check(matches(isDisplayed()))
     }
 
-    // Testing for the visibility of the login to continue textView
+    // Testing for the visibility of the login to continue drawer_layout_profile_name_text_view
     @Test
     fun `is_login_screen_fragment_login_to_continue_textView_visible`() {
         onView(withId(R.id.fragment_login_screen_login_to_continue_text_view)).check(
@@ -81,19 +81,19 @@ class LoginScreenFragmentTest {
         onView(withId(R.id.fragment_login_screen_login_button)).check(matches(isDisplayed()))
     }
 
-    // Testing for the visibility of the NewUser textView
+    // Testing for the visibility of the NewUser drawer_layout_profile_name_text_view
     @Test
     fun `is_login_screen_fragment_newUser_textView_visible`() {
         onView(withId(R.id.fragment_login_screen_newUser_text_view)).check(matches(isDisplayed()))
     }
 
-    // Testing for the visibility of the signUp textView
+    // Testing for the visibility of the signUp drawer_layout_profile_name_text_view
     @Test
     fun `is_login_screen_fragment_signUp_textView_visible`() {
         onView(withId(R.id.fragment_login_screen_signup_text_view)).check(matches(isDisplayed()))
     }
 
-    // Testing for the visibility of the forgot password textView
+    // Testing for the visibility of the forgot password drawer_layout_profile_name_text_view
     @Test
     fun `is_login_screen_fragment_forgotPassword_textView_visible`() {
         onView(withId(R.id.fragment_login_screen_forgotPassword_text_view)).check(

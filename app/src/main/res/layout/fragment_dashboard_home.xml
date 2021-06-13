@@ -9,15 +9,16 @@
 
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margin_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="380dp"
-        android:text="Home Fragment"
+        android:text="@string/dashboard_home_fragment_text_view"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

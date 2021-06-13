@@ -142,4 +142,23 @@
     <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
     <string name="fragment_specialty_measurement_options">Measurement Options</string>
     <string name="resource_fragment_resource_textview">Resource Fragment</string>
+    <string name="drawer_layout_edit_profile_button">Edit Profile</string>
+    <string name="drawer_layout_profile_name">Ijeoma Ibukun Babangida</string>
+    <string name="fragment_add_client_client_account_text">Client Account</string>
+    <string name="fragment_add_client_client_measurement_text">Measurements</string>
+    <string name="fragment_add_client_client_delivery_address_text">Delivery Address</string>
+    <string name="fragment_client_list">Client List Fragment</string>
+    <string name="dashboard_home_fragment_text_view">Home Fragment</string>
+    <string name="fragment_edit_profile_specialty_fragment_text">Account</string>
+    <string name="fragment_edit_profile_account_fragment_text">Specialty</string>
+    <string name="fragment_edit_profile_payment_fragment_text">Payment Method</string>
+    <string name="fragment_edit_profile_security_fragment_text">Security</string>
+    <string name="fragment_suscription_text_view">Subscription Fragment</string>
+    <string name="drawer_layout_menu_subscription_item_title">Subscription</string>
+    <string name="drawer_layout_menu_resource_item_title">Resources</string>
+    <string name="drawer_layout_menu_clients_item_title">Clients</string>
+    <string name="drawer_layout_menu_logout_item_title">Logout</string>
+    <string name="bottom_navigation_menu_home_item_title">Home</string>
+    <string name="bottom_navigation_menu_media_item_title">Media</string>
+    <string name="bottom_navigation_menu_messages_item_title">Messages</string>
 </resources>

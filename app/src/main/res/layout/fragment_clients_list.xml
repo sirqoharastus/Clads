@@ -9,9 +9,9 @@
 
 
     <TextView
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margin_0dp"
         android:layout_height="wrap_content"
-        android:text="Client List Fragment"
+        android:text="@string/fragment_client_list"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -8,7 +8,7 @@
 
 
     <com.google.android.material.tabs.TabLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/margin_10dp"
         android:layout_height="wrap_content"
         app:flow_wrapMode="chain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,19 +23,19 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Client Account">
+            android:text="@string/fragment_add_client_client_account_text">
         </com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Measurements">
+            android:text="@string/fragment_add_client_client_measurement_text">
         </com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delivery Address">
+            android:text="@string/fragment_add_client_client_delivery_address_text">
         </com.google.android.material.tabs.TabItem>
 
 

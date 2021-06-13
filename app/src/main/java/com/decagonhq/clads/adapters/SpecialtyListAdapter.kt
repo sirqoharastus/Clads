@@ -13,12 +13,12 @@ class SpecialtyListAdapter(val context: Activity, var specialityList: MutableLis
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialtyListViewHolder {
 
-        return SpecialtyListViewHolder(SpecialtyListLayoutBinding.inflate(context.layoutInflater).specialty)
+        return SpecialtyListViewHolder(SpecialtyListLayoutBinding.inflate(context.layoutInflater).specialtyListLayout)
     }
 
     override fun onBindViewHolder(holder: SpecialtyListViewHolder, position: Int) {
 
-        holder.itemView.findViewById<CheckBox>(R.id.specialty_checkbox).apply {
+        holder.itemView.findViewById<CheckBox>(R.id.specialty_list_layout_specialty_checkbox).apply {
             text = specialityList[holder.adapterPosition].specialty
         }
     }

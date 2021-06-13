@@ -30,22 +30,28 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account"></com.google.android.material.tabs.TabItem>
+            android:text="@string/fragment_edit_profile_specialty_fragment_text">
+
+        </com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Specialty"></com.google.android.material.tabs.TabItem>
+            android:text="@string/fragment_edit_profile_account_fragment_text">
+
+        </com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Payment Method"></com.google.android.material.tabs.TabItem>
+            android:text="@string/fragment_edit_profile_payment_fragment_text"></com.google.android.material.tabs.TabItem>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Security"></com.google.android.material.tabs.TabItem>
+            android:text="@string/fragment_edit_profile_security_fragment_text">
+
+        </com.google.android.material.tabs.TabItem>
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2

@@ -121,4 +121,11 @@ dependencies {
 
     // Library to use gif Images
     implementation "pl.droidsonroids.gif:android-gif-drawable:$versions.gif_version"
+
+    // Library to use graph
+    implementation "com.github.PhilJay:MPAndroidChart:v2.2.2"
+
+    // library for circle drawable
+    implementation "com.amulyakhare:com.amulyakhare.textdrawable:$versions.amulyakhare_version"
+
 }

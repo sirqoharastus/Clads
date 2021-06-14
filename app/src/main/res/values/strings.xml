@@ -2,9 +2,6 @@
     <string name="app_name">Clads</string>
 
 
-
-
-
     <!-- email signup fragment views texts -->
     <string name="email_sign_up_login_tag_line"> Lorem ipsum. ipsum sum</string>
 
@@ -15,9 +12,6 @@
 
 
     //string resources for fragment login screen
-=
-
-
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_login_screen_welcome_back">Welcome back</string>
     <string name="fragment_login_screen_login_to_continue">Login to continue</string>
@@ -28,7 +22,6 @@
     <string name="fragment_login_screen_signup_for_free">SignUp for free</string>
     <string name="fragment_login_screen_forgot_password">Forgot Password?</string>
     <string name="fragment_login_screen_login_with_google">Login with Google</string>
-
 
 
     <string name="sign_up_login_tag_line"> Lorem ipsum, ipsum sum</string>
@@ -42,7 +35,7 @@
     <string name="prompt_message">Hey Ijeoma, you are almost ready to start <br /> enjoying Obioma. Simply click the big blue<br />button below to verify your email address.</string>
 
 
-    <string name ="email_sign_up_fragment_create_account_text">Create an account</string>
+    <string name="email_sign_up_fragment_create_account_text">Create an account</string>
 
 
     <string name="verify_email_address">Verify Email Address</string>
@@ -74,12 +67,11 @@
     <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
 
-<!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
+    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
     <string name="signup_choices_fragment_login">Login</string>
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
     <string name="signup_login_fragment_sign_up">Sign up</string>
-
 
 
     <string-array name="email_sign_up_fragment_choose_account_category_array">
@@ -89,20 +81,20 @@
         <item>Client</item>
     </string-array>
 
-    <string name ="sign_up_email_title">Create an account</string>
-    <string name ="sign_up_email_description">Lets get to know you</string>
-    <string name ="sign_up_email_first_name">First Name</string>
-    <string name ="sign_up_email_last_name">Last Name</string>
-    <string name ="sign_up_email_other_name">Other Name</string>
-    <string name ="sign_up_email_email_address">Email Address</string>
-    <string name ="sign_up_email_password">Password</string>
-    <string name ="sign_up_email_confirm_password">Confirm Password</string>
+    <string name="sign_up_email_title">Create an account</string>
+    <string name="sign_up_email_description">Lets get to know you</string>
+    <string name="sign_up_email_first_name">First Name</string>
+    <string name="sign_up_email_last_name">Last Name</string>
+    <string name="sign_up_email_other_name">Other Name</string>
+    <string name="sign_up_email_email_address">Email Address</string>
+    <string name="sign_up_email_password">Password</string>
+    <string name="sign_up_email_confirm_password">Confirm Password</string>
     <string name="splash_screen_placeholder_text">Splash Screen</string>
     <string name="fragment_signup_choices_button_text">Signup with Google</string>
     <string name="signup_login_fragment_signup_button">Sign Up</string>
     <string name="reset_password_fragment_view_in_browser">view in browser</string>
     <string name="all_reset_password">Reset Password</string>
-    <string name="reset_password_fragment_click_reset_button">Hi,<br/> You’re almost there. To finish resetting your password, please click on the  reset button below</string>
+    <string name="reset_password_fragment_click_reset_button">Hi,<br /> You’re almost there. To finish resetting your password, please click on the  reset button below</string>
     <string name="reset_password_fragment_stay_in_touch">stay in touch</string>
     <string name="reset_password_fragment_email_sent_by_clads">email sent by clads</string>
     <string name="reset_password_fragment_copyright_text">copyright 2020. All Rights Reserved</string>
@@ -195,4 +187,82 @@
     <string name="edit_profile_fragment_state_dialog_fragment_text">state dialog fragment</string>
     <string name="edit_profile_no_of_employees_value_text">No. of Employees</string>
     <string name="all_address">Address</string>
+    <string name="fragment_dashboard_messages_text">Messages</string>
+    <string name="dashboard_messages_ola_machiavelli_text">Ola Machiavelli</string>
+    <string name="dashboard_notifications_bell">A notifications bell</string>
+    <string name="dashboard_messages_today_text">Today</string>
+    <string name="all_dashboard_messages">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</string>
+    <string name="home_fragment_clients_text">Clients</string>
+    <string name="home_fragment_client_name_ijeoma_ibukun_babangida">Ijeoma Ibukun Babangida</string>
+    <string name="home_fragment_client_card_balance">$ 23,481,000.00</string>
+    <string name="ola_machiavelli">Ola Machiavelli</string>
+    <string name="dashboard_recyclerview_location_lagos">Lagos</string>
+    <string name="messages_recyclerview_item_read_more_text">Read more</string>
+    <string name="messages_recyclerview_item_day_text">Today</string>
+    <string name="ijeoma_ibukun_babangida">Ijeoma Ibukun Babangida</string>
+    <string name="dashboard_home_wallet">Wallet</string>
+    <string name="dashboard_home_card_balance_23_481_000_00">$ 23, 481,000.00</string>
+    <string name="dashboard_home__text_view_all_details">View All Details</string>
+    <string name="dashboard_home_image_of_a_wallet">Image of a wallet</string>
+    <string name="dashboard_home_image_of_an_arrow">Image of an arrow</string>
+    <string name="dashboard_home_recyclerview_initials_om">OM</string>
+    <string name="string_dashboardhome_recyclerview_initials_om">OM</string>
+    <string name="dashboard_home_initials">OM</string>
+    <string name="dashboard_home_recyclerview_location_marker">Location marker</string>
+
+    <string name="obioma_trianed_and_certified">Obioma Trianed and Certified?</string>
+    <string name="no_option">No</string>
+    <string name="yes_option">Yes</string>
+    <string name="defualt_delivery_lead_time">2 weeks</string>
+    <string name="save_changes_button_text">SAVE CHANGES</string>
+    <string name="cancel_button_text">CANCEL</string>
+    <string name="delivery_lead_time">Delivery lead time</string>
+    <string name="add_delivery_time">Add delivery time</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="ok">OK</string>
+    <string name="tool_bar_default_title">Hi,Ijeoma</string>
+    <string name="add_specialty">Add specialty</string>
+    <string name="add_button_text">Add</string>
+    <string name="add_specialty_textfield">Add Specialty</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="dashboard_activity_navigation_view_version_text">version 1.0</string>
+    <string name="specialty_list_layout_checkbox">CheckBox</string>
+    <string name="messages_fragment">Messages Fragment</string>
+    <string name="add_specialty_dialog_fragment_layout_specialty_name">Specialty name</string>
+    <string name="fragment_specialty_kid_checkbox_text">Kids</string>
+    <string name="fragment_specialty_unisex_checkbox_text">Unisex</string>
+    <string name="fragment_specialty_will_accept_self_measurement_checkbox_text">Will accept self-measurement</string>
+    <string name="fragment_specialty_delivery_lead_time_checkbox_text">Delivery lead time</string>
+    <string name="fragment_specialty_visit_us_for_your_measurement_checkbox_text">Visit us for your measurement</string>
+    <string name="fragment_specialty_female_checkbox_text">Female</string>
+    <string name="fragment_specialty_male_checkbox_text">Male</string>
+    <string name="fragment_specialty_gender_focus_text">Gender Focus</string>
+    <string name="fragment_specialty_add_new_specialty_text">Add new specialty</string>
+    <string name="fragment_specialty_quality_assurance_text">Quality Assurance</string>
+    <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
+    <string name="fragment_specialty_measurement_options">Measurement Options</string>
+    <string name="resource_fragment_resource_textview">Resource Fragment</string>
+    <string name="drawer_layout_edit_profile_button">Edit Profile</string>
+    <string name="drawer_layout_profile_name">Ijeoma Ibukun Babangida</string>
+    <string name="fragment_add_client_client_account_text">Client Account</string>
+    <string name="fragment_add_client_client_measurement_text">Measurements</string>
+    <string name="fragment_add_client_client_delivery_address_text">Delivery Address</string>
+    <string name="fragment_client_list">Client List Fragment</string>
+    <string name="dashboard_home_fragment_text_view">Home Fragment</string>
+    <string name="fragment_edit_profile_specialty_fragment_text">Account</string>
+    <string name="fragment_edit_profile_account_fragment_text">Specialty</string>
+    <string name="fragment_edit_profile_payment_fragment_text">Payment Method</string>
+    <string name="fragment_edit_profile_security_fragment_text">Security</string>
+    <string name="fragment_suscription_text_view">Subscription Fragment</string>
+    <string name="drawer_layout_menu_subscription_item_title">Subscription</string>
+    <string name="drawer_layout_menu_resource_item_title">Resources</string>
+    <string name="drawer_layout_menu_clients_item_title">Clients</string>
+    <string name="drawer_layout_menu_logout_item_title">Logout</string>
+    <string name="bottom_navigation_menu_home_item_title">Home</string>
+    <string name="bottom_navigation_menu_media_item_title">Media</string>
+    <string name="bottom_navigation_menu_messages_item_title">Messages</string>
+    <string name="fragment_messages_message_text_view">Messages</string>
+
 </resources>

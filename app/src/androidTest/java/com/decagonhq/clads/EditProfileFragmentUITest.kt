@@ -41,7 +41,7 @@ class EditProfileFragmentUITest {
 
     @Test
     fun is_tablayout_displayed() {
-        onView(withId(R.id.edit_profile_tablayout)).check(matches(isDisplayed()))
+        onView(withId(R.id.fragment_edit_profile_tablayout)).check(matches(isDisplayed()))
     }
 
     @Test

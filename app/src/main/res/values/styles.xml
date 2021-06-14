@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <style name="SplashScreenLoading_">
-            <item name="android:textSize">@dimen/text_size_16sp</item>
-            <item name="android:textColor">@color/loading_color</item>
-            <item name="android:gravity">top</item>
-        </style>
+    <style name="SplashScreenLoading_">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@color/loading_color</item>
+        <item name="android:gravity">top</item>
+    </style>
+
+    <!-- Toolbar custom style -->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
 </resources>

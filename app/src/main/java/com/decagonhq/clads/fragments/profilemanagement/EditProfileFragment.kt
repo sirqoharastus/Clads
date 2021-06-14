@@ -6,13 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.R
-import com.decagonhq.clads.adapters.EditProfileViewpagerAdapter
+import com.decagonhq.clads.adapters.EditProfileViewPagerAdapter
 import com.decagonhq.clads.databinding.FragmentEditProfileBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class EditProfileFragment : Fragment() {
     var _binding: FragmentEditProfileBinding? = null
     val binding get() = _binding!!
+
+    private lateinit var editProfileBinding: FragmentEditProfileBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,13 +23,27 @@ class EditProfileFragment : Fragment() {
     ): View? {
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
         return binding.root
+        // Inflate the layout for this fragment
+
+        editProfileBinding = FragmentEditProfileBinding.inflate(inflater)
+        return editProfileBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val viewpager = binding.editProfileViewpager2
-        val tablayout = binding.editProfileTablayout
-        val adapter = EditProfileViewpagerAdapter(requireActivity().supportFragmentManager, lifecycle)
+        setUpUI()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setUpUI() {
+
+        val viewpager = binding.fragmentEditProfileViewPager
+        val tablayout = binding.fragmentEditProfileTablayout
+        val adapter = EditProfileViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
         viewpager.adapter = adapter
         TabLayoutMediator(tablayout, viewpager) { tab, position ->
             when (position) {
@@ -37,10 +53,5 @@ class EditProfileFragment : Fragment() {
                 3 -> tab.text = getString(R.string.edit_profile_fragment_security_text)
             }
         }.attach()
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

@@ -7,54 +7,60 @@
     android:layout_height="match_parent"
     tools:context=".fragments.profilemanagement.EditProfileFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/edit_profile_toolbar"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/fragment_edit_profile_edit_profile_textview"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/all_edit_profile_text"
+        android:textColor="@color/navy_blue"
+        android:textSize="@dimen/text_size_22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:text="@string/all_edit_profile_text"
-            android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_22sp"
-            android:textStyle="bold" />
-
-    </androidx.appcompat.widget.Toolbar>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/edit_profile_tablayout"
+        android:id="@+id/fragment_edit_profile_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/edit_profile_toolbar"
-        app:layout_constraintTop_toBottomOf="@id/edit_profile_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_profile_edit_profile_textview"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/deep_sky_blue"
+        app:tabIndicatorGravity="bottom"
         app:tabInlineLabel="true"
-        app:tabMode="scrollable"
+        app:tabMode="auto"
+        app:tabPaddingEnd="@dimen/margin_15dp"
+        app:tabPaddingStart="@dimen/padding_30dp"
         app:tabSelectedTextColor="@color/deep_sky_blue"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium">
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:tabTextColor="@color/drawer_menu_item_textcolor">
+
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile_account_text" />
+            android:text="@string/edit_profile_account_text"></com.google.android.material.tabs.TabItem>
+
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile_specialty_text" />
+            android:text="@string/edit_profile_specialty_text"></com.google.android.material.tabs.TabItem>
+
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile_payment_method_text" />
+            android:text="@string/edit_profile_payment_method_text"></com.google.android.material.tabs.TabItem>
+
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -62,13 +68,22 @@
             android:text="@string/edit_profile_security_text" />
     </com.google.android.material.tabs.TabLayout>
 
+
+
+
+
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/edit_profile_viewpager2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/fragment_edit_profile_view_pager"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="@dimen/margin_0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_profile_tablayout" />
+        app:layout_constraintTop_toBottomOf="@id/fragment_edit_profile_tablayout">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

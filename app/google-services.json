@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "1003656661343",
-    "project_id": "clads-team-b-1622387247291",
-    "storage_bucket": "clads-team-b-1622387247291.appspot.com"
+    "project_number": "525232674561",
+    "project_id": "clads-316316",
+    "storage_bucket": "clads-316316.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1003656661343:android:ed720964ea20d2744f0eea",
+        "mobilesdk_app_id": "1:525232674561:android:83bff9d72f7db3b5caed00",
         "android_client_info": {
           "package_name": "com.decagonhq.clads"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1003656661343-3l6e8tl7ri324pearg74iii34qo8akj4.apps.googleusercontent.com",
+          "client_id": "525232674561-10iuvisduhg0ebrjgksg0cpd7mdlr0nj.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.decagonhq.clads",
-            "certificate_hash": "43b4bb86d6b0f7ec56f42db4ecc2be89a14e3d16"
+            "certificate_hash": "8d99172d9525d435be4cfed734cd713a58162b9e"
           }
         },
         {
-          "client_id": "1003656661343-bhegsjoveb0q4eb2vf2fcbotpp812qhq.apps.googleusercontent.com",
+          "client_id": "525232674561-jqs92483fpb2j2dv6qustgik08rkkoiu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD1kllBouO2gevqxXbJj0rDnamvTNxSk30"
+          "current_key": "AIzaSyCS234o2uL8UrV3-fntFl7zNLz4ssv7ks8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1003656661343-bhegsjoveb0q4eb2vf2fcbotpp812qhq.apps.googleusercontent.com",
+              "client_id": "525232674561-jqs92483fpb2j2dv6qustgik08rkkoiu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

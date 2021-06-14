@@ -35,10 +35,6 @@ class DashboardActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id) as NavHostFragment
         navController = navHostFragment.findNavController()
 
-        /** Get reference of the bottom navigation view with the binding layout,
-         set setOnItemSelectedListener such that when each menu item is clicked, we set the nav controller to navigate to the desired fragment.
-         Finally, return true for each action.
-         * */
         val bottomNav = dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView
         bottomNav.setupWithNavController(navController)
         bottomNav.setOnItemSelectedListener { item ->

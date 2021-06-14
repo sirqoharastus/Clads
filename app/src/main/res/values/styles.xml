@@ -84,5 +84,4 @@
         <item name="android:textSize">@dimen/text_size_20sp</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
     </style>
->>>>>>> c54bb1f58f0a3069c878ebaf23aa72bf0f4bb56d
 </resources>

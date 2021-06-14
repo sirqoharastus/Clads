@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.decagonhq.clads.databinding.FragmentTablayoutDeliveryAddressListBinding
+import com.decagonhq.clads.databinding.FragmentResourceBinding
 
-class TablayoutDeliveryAddressListFragment : Fragment() {
+class ResourceFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,6 +15,6 @@ class TablayoutDeliveryAddressListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentTablayoutDeliveryAddressListBinding.inflate(inflater).root
+        return FragmentResourceBinding.inflate(inflater).root
     }
 }

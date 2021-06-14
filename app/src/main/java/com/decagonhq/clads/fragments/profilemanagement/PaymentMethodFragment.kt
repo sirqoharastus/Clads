@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.decagonhq.clads.databinding.FragmentTablayoutMeasurementBinding
+import com.decagonhq.clads.databinding.FragmentPaymentMethodBinding
 
-class TablayoutMeasurementFragment : Fragment() {
+class PaymentMethodFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,6 +15,6 @@ class TablayoutMeasurementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentTablayoutMeasurementBinding.inflate(inflater).root
+        return FragmentPaymentMethodBinding.inflate(inflater).root
     }
 }

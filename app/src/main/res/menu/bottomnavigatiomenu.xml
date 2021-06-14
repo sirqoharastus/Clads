@@ -2,17 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
         android:icon="@drawable/home"
-        android:title="Home" />
+        android:title="@string/bottom_navigation_menu_home_item_title"
+        android:id="@id/dashboardhomeFragment"
+        />
     <item
-        android:id="@+id/media"
         android:icon="@drawable/media"
-        android:title="Media"
+        android:title="@string/bottom_navigation_menu_media_item_title"
+        android:id="@+id/dashboardMediaFragment"
 
         />
     <item
-        android:id="@+id/message"
         android:icon="@drawable/notification"
-        android:title="Messages" />
+        android:title="@string/bottom_navigation_menu_messages_item_title"
+        android:id="@+id/dashboardMessagesFragment"
+        />
 </menu>

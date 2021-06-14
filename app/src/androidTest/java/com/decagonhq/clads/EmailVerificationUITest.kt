@@ -75,7 +75,7 @@ class EmailVerificationUITest {
         )
     }
 
-    // test if verify email button is displayed
+    // test if verify email drawer_edit_profile_button is displayed
     @Test
     fun is_verify_email_address_button_in_view() {
         onView(withId(R.id.email_verification_fragment_verify_email_address_button)).check(
@@ -105,7 +105,7 @@ class EmailVerificationUITest {
         )
     }
 
-    // test to confirm if verification button is displayed
+    // test to confirm if verification drawer_edit_profile_button is displayed
     @Test
     fun is_email_verification_button_in_view() {
         onView(withId(R.id.email_verification_fragment_verify_email_address_button)).check(
@@ -115,7 +115,7 @@ class EmailVerificationUITest {
         )
     }
 
-    // test the verify email button if it navigates to the login fragment
+    // test the verify email drawer_edit_profile_button if it navigates to the login fragment
     @Test
     fun does_verify_button_navigate_to_login_fragment() {
         val navController = Mockito.mock(NavController::class.java)

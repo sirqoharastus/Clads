@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.decagonhq.clads.databinding.FragmentSuscriptionBinding
+import com.decagonhq.clads.databinding.FragmentSubscriptionBinding
 
 class SuscriptionFragment : Fragment() {
 
@@ -15,6 +15,6 @@ class SuscriptionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentSuscriptionBinding.inflate(inflater).root
+        return FragmentSubscriptionBinding.inflate(inflater).root
     }
 }

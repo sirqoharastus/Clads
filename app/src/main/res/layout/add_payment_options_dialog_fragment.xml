@@ -25,31 +25,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/add_payment_terms_dialog_add_payment_terms_textview_lower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_46dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/add_payment_terms_add_payment_terms_text_lowercase"
-            android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_16sp"
-            app:layout_constraintStart_toStartOf="@+id/add_payment_options_dialog_add_payment_textview"
-            app:layout_constraintTop_toBottomOf="@+id/add_payment_options_dialog_add_payment_textview" />
-
 
         <EditText
             android:id="@+id/add_payment_terms_dialog_input_edittext"
             android:layout_width="@dimen/margin_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_15dp"
             android:layout_marginEnd="@dimen/margin_20dp"
             android:backgroundTint="@color/deep_sky_blue"
-            android:hint="@string/add_payment_terms_payment_terms_text"
+            android:layout_marginTop="@dimen/margin_30dp"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/add_payment_terms_dialog_add_payment_terms_textview_lower"
-            app:layout_constraintTop_toBottomOf="@+id/add_payment_terms_dialog_add_payment_terms_textview_lower" />
+            app:layout_constraintStart_toStartOf="@+id/add_payment_options_dialog_add_payment_textview"
+            app:layout_constraintTop_toBottomOf="@+id/add_payment_options_dialog_add_payment_textview" />
 
         <Button
             android:id="@+id/add_payment_terms_dialog_add_button"

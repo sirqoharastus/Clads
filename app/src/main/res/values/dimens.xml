@@ -123,5 +123,6 @@
     <dimen name="width_150dp">150dp</dimen>
     <dimen name="margin_60dp">60dp</dimen>
     <dimen name="height_0dp">0dp</dimen>
+    <dimen name="text_width_150sp">150sp</dimen>
 
 </resources>

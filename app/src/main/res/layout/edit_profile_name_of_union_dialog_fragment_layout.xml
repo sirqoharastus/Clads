@@ -46,7 +46,6 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/poppins"
-                android:hint="@string/account_fragment_name_of_union_text"
                 android:textSize="@dimen/text_size_18sp" />
 
         </com.google.android.material.textfield.TextInputLayout>

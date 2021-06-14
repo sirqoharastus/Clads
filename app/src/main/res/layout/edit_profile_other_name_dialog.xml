@@ -24,28 +24,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/first_name_dialog_smaller_other_name_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_50dp"
-            android:text="@string/all_other_name_text"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/navy_blue"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/first_name_dialog_other_name_textview"
-            app:layout_constraintTop_toBottomOf="@+id/first_name_dialog_other_name_textview" />
-
         <EditText
             android:id="@+id/first_name_dialog_input_edittext"
             android:layout_width="@dimen/margin_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_15dp"
             android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_30dp"
             android:backgroundTint="@color/deep_sky_blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/first_name_dialog_smaller_other_name_textview"
-            app:layout_constraintTop_toBottomOf="@+id/first_name_dialog_smaller_other_name_textview" />
+            app:layout_constraintStart_toStartOf="@+id/first_name_dialog_other_name_textview"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_dialog_other_name_textview" />
 
         <TextView
             android:id="@+id/first_name_dialog_cancel_textview"

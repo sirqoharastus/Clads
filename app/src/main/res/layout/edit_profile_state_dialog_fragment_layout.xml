@@ -45,7 +45,6 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/poppins"
-                android:hint="@string/all_state_text"
                 android:textSize="@dimen/text_size_18sp" />
 
         </com.google.android.material.textfield.TextInputLayout>

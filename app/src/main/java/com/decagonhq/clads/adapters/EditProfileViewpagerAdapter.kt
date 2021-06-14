@@ -16,6 +16,7 @@ class EditProfileViewPagerAdapter(fm: FragmentManager, lifeCycle: Lifecycle) : F
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
+
             0 -> {
                 AccountFragment()
             }

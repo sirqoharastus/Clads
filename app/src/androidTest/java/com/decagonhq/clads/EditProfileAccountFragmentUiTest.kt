@@ -63,5 +63,4 @@ class EditProfileAccountFragmentUiTest {
     fun is_showroom_address_textview_displayed() {
         onView(withId(R.id.edit_profile_showroom_addrress_textview)).check(matches(isDisplayed()))
     }
-
 }

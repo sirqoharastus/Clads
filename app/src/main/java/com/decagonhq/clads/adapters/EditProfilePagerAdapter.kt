@@ -9,14 +9,13 @@ import com.decagonhq.clads.fragments.profilemanagement.PaymentMethodFragment
 import com.decagonhq.clads.fragments.profilemanagement.SecurityFragment
 import com.decagonhq.clads.fragments.profilemanagement.SpecialtyFragment
 
-class EditProfileViewPagerAdapter(fm: FragmentManager, lifeCycle: Lifecycle) : FragmentStateAdapter(fm, lifeCycle) {
+class EditProfilePagerAdapter(fm: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fm, lifecycle) {
     override fun getItemCount(): Int {
         return 4
     }
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-
             0 -> {
                 AccountFragment()
             }
@@ -28,7 +27,6 @@ class EditProfileViewPagerAdapter(fm: FragmentManager, lifeCycle: Lifecycle) : F
             }
             else -> {
                 SecurityFragment()
-
             }
         }
     }

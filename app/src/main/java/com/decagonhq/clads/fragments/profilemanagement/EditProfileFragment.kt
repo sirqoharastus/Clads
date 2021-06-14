@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.R
-import com.decagonhq.clads.adapters.EditProfileViewPagerAdapter
+import com.decagonhq.clads.adapters.EditProfilePagerAdapter
 import com.decagonhq.clads.databinding.FragmentEditProfileBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -40,7 +40,7 @@ class EditProfileFragment : Fragment() {
 
         val viewpager = binding.fragmentEditProfileViewPager
         val tablayout = binding.fragmentEditProfileTablayout
-        val adapter = EditProfileViewPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
+        val adapter = EditProfilePagerAdapter(requireActivity().supportFragmentManager, lifecycle)
         viewpager.adapter = adapter
         TabLayoutMediator(tablayout, viewpager) { tab, position ->
             when (position) {

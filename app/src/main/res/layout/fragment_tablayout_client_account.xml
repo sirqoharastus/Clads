@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".fragments.profilemanagement.TablayoutClientAccountFragment">
+    tools:context=".fragments.profilemanagement.ClientAccountFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -90,9 +90,7 @@
             android:gravity="top|left"
             android:hint="@string/fragment_client_account_delivery_address_hint_text_edit_text"
             android:inputType="textMultiLine"
-            android:lines="8"
-            android:maxLines="10"
-            android:minLines="5"
+            android:minLines="3"
             android:scrollbars="vertical"
             android:textColorHint="@color/navy_blue"
             android:textDirection="ltr" />

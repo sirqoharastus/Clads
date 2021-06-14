@@ -80,4 +80,9 @@ class ClientsListFragment : Fragment() {
             noClientText.isVisible = false
         }
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

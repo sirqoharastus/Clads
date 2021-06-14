@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.databinding.FragmentTablayoutMeasurementBinding
 
-class TablayoutMeasurementFragment : Fragment() {
+class MeasurementFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

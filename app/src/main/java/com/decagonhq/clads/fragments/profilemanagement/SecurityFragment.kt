@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.databinding.FragmentTablayoutSecurityBinding
 
-class TablayoutSecurityFragment : Fragment() {
+class SecurityFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

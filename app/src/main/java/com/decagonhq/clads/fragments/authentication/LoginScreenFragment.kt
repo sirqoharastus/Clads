@@ -18,7 +18,6 @@ import com.decagonhq.clads.utils.LoginScreenFragmentValidator
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginScreenFragment : Fragment() {
-
     private lateinit var emailEditText: TextInputEditText
     private lateinit var passwordEditText: TextInputEditText
     private lateinit var newUserTextview: TextView
@@ -47,6 +46,7 @@ class LoginScreenFragment : Fragment() {
         loginButton = binding.fragmentLoginScreenLoginButton
         newUserTextview = binding.fragmentLoginScreenNewUserTextView
         textSpan()
+
         /* Onclick of the login button the user's input is converted to string and validated and if the user's
         *  input is correct the next fragment is launched else the user is notified which field is not
         * field properly
@@ -70,16 +70,16 @@ class LoginScreenFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
     // this function is used to programmatically change the color style of a text in the layout file
     private fun textSpan() {
         val spannableString = SpannableString("New User? SignUp for free")
         val fcolor = ForegroundColorSpan(Color.WHITE)
         spannableString.setSpan(fcolor, 10, 25, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
         newUserTextview.text = spannableString
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

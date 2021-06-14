@@ -28,7 +28,7 @@ class ResetPassword : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         /**
-         *setting reset password button on clicklistener
+         *setting reset password drawer_edit_profile_button on clicklistener
          * validating the passwords to check if they are the same
          * setting the action to navigate to the next fragment if the passwords are the same
          */

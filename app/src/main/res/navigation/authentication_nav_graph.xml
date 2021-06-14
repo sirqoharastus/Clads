@@ -24,6 +24,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_signup_login_fragment_to_fragment_login_screen"
+            app:destination="@id/fragment_login_screen" />
     </fragment>
     <fragment
         android:id="@+id/signup_choices_fragment"

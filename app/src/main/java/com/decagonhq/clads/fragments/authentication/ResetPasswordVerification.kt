@@ -28,7 +28,7 @@ class ResetPasswordVerification : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // setting reset password button on clicklistener
+        // setting reset password drawer_edit_profile_button on clicklistener
         binding.resetPasswordVerificationFragmentResetPasswordButton.setOnClickListener {
             findNavController().navigate(R.id.action_resetPasswordVerification_to_resetPassword)
         }

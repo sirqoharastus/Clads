@@ -51,7 +51,7 @@
             android:fontFamily="@font/poppins_medium"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:text="@string/fragment_login_screen_login_with_google"
-            android:textAllCaps="false"
+            android:textAllCaps="@bool/false_option"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_14sp"
             app:cornerRadius="@dimen/corner_radius_5dp"
@@ -90,12 +90,12 @@
             android:layout_marginStart="@dimen/margin_18dp"
             android:layout_marginTop="@dimen/margin_23dp"
             android:layout_marginEnd="@dimen/margin_18dp"
-            android:ems="10"
+            android:ems="@integer/number_10"
             android:hint="@string/fragment_login_screen_password"
             android:textColorHint="@color/white"
             app:boxStrokeColor="@color/white"
             app:hintTextColor="@color/white"
-            app:passwordToggleEnabled="true"
+            app:passwordToggleEnabled="@bool/true_option"
             app:passwordToggleTint="@color/grey">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -117,7 +117,7 @@
             android:background="@drawable/login_screen_custom_button_shape"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/fragment_login_screen_login"
-            android:textAllCaps="false"
+            android:textAllCaps="@bool/false_option"
             android:textColor="@color/deep_sky_blue"
             android:textSize="@dimen/text_size_16sp"
             app:backgroundTint="@color/white" />

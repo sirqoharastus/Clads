@@ -2,11 +2,11 @@
 <resources>
 
     <!-- Dimensions for margins-->
-    <dimen name="margin_0dp">0dp</dimen>
-    <dimen name="margin_1dp">1dp</dimen>
+
+
     <dimen name="margin_2dp">2dp</dimen>
     <dimen name="margin_3dp">3dp</dimen>
-    <dimen name="margin_4dp">4dp</dimen>
+
     <dimen name="margin_5dp">5dp</dimen>
     <dimen name="margin_6dp">6dp</dimen>
     <dimen name="margin_7dp">7dp</dimen>
@@ -63,6 +63,7 @@
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_17sp">17sp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
     <dimen name="text_size_22sp">22sp</dimen>
 
     <!-- Dimensions for padding-->
@@ -76,6 +77,7 @@
     <dimen name="padding_54dp">54dp</dimen>
 
     <dimen name="corner_radius_5dp">5dp</dimen>
+    <dimen name="corner_radius_20dp">20dp</dimen>
 
     <!-- Signup_email_layout_text_line_height or weight -->
     <dimen name="line_height_27sp">27sp</dimen>
@@ -98,6 +100,9 @@
     <dimen name="layout_height_or_width_27dp">27dp</dimen>
     <dimen name="layout_height_or_width_57dp">57dp</dimen>
     <dimen name="layout_height_or_width_60dp">60dp</dimen>
+    <dimen name="layout_height_or_width_40dp">40dp</dimen>
+    <dimen name="layout_height_or_width_100dp">100dp</dimen>
+    <dimen name="layout_height_or_width_51dp">51dp</dimen>
 
     <!-- Signup_email_layout_bias -->
     <dimen name="bias_0">0.0</dimen>
@@ -107,11 +112,60 @@
     <dimen name="bias_0.50">0.50</dimen>
     <dimen name="bias_0.70">0.70</dimen>
     <dimen name="dimen_50">50dp</dimen>
+    <dimen name="bias_0.9">0.9</dimen>
 
     <!-- Reset password verification screen-->
     <dimen name="imageview_width_34dp">34dp</dimen>
     <dimen name="margin_53dp">53dp</dimen>
     <dimen name="marginTop_22dp">22dp</dimen>
     <dimen name="cornerRadius_5dp">5dp</dimen>
+
+    <dimen name="margin_34dp">34dp</dimen>
+    <dimen name="margin_46dp">46dp</dimen>
+    <dimen name="margin_35dp">35dp</dimen>
+    <dimen name="margin_56dp">56dp</dimen>
+    <dimen name="width_0dp">0dp</dimen>
+    <dimen name="margin_48dp">48dp</dimen>
+    <dimen name="width_200dp">200dp</dimen>
+    <dimen name="width_170dp">170dp</dimen>
+    <dimen name="margin_33dp">33dp</dimen>
+    <dimen name="elevation_20">20dp</dimen>
+    <dimen name="width_143dp">143dp</dimen>
+    <dimen name="height_50dp">50dp</dimen>
+    <dimen name="margin_39dp">39dp</dimen>
+    <dimen name="width_150dp">150dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="height_0dp">0dp</dimen>
+    <dimen name="text_width_150sp">150sp</dimen>
+
+    <dimen name="layout_margin_20dp">20dp</dimen>
+    <dimen name="layout_margin_32dp">32dp</dimen>
+    <dimen name="margin_0dp">0dp</dimen>
+    <dimen name="margin_1dp">1dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+
+    <dimen name="elevation_0dp">0dp</dimen>
+    <dimen name="padding_4dp">4dp</dimen>
+    <dimen name="line_height_19sp">19sp</dimen>
+
+    <dimen name="layout_height_or_width">50dp</dimen>
+    <dimen name="margin_113dp">113dp</dimen>
+    <dimen name="margin_63dp">63dp</dimen>
+    <dimen name="margin_54dp">54dp</dimen>
+    <dimen name="padding_30dp">30dp</dimen>
+    <dimen name="margin_118dp">118dp</dimen>
+
+
+
+0
+    <integer name="number_0">0</integer>
+    <integer name="number_1">1</integer>
+    <integer name="number_3">3</integer>
+    <integer name="number_100">100</integer>
+    <integer name="number_10">10</integer>
+
+    <bool name="false_option">false</bool>
+    <bool name="true_option">true</bool>
+
 
 </resources>

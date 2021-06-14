@@ -8,6 +8,22 @@
     android:backgroundTint="@color/deep_sky_blue"
     tools:context=".fragments.profilemanagement.AddClientFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_add_client_add_client_text_view"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:textColor="@color/navy_blue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="@dimen/text_size_20_sp"
+        app:layout_constraintBottom_toTopOf="@id/add_client_fragment_tab_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/add_client_fragment_tab_layout"
         android:layout_width="match_parent"
@@ -15,20 +31,36 @@
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/add_client_fragment_view_pager"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:tabGravity="center"
         app:tabIndicatorColor="@color/deep_sky_blue"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/deep_sky_blue"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1" />
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_add_client_client_account_text"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_add_client_client_measurement_text"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_add_client_client_delivery_address_text"/>
+    </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/add_client_fragment_view_pager"
         android:layout_width="@dimen/margin_0dp"
-        android:layout_height="@dimen/margin_0dp"
+        android:layout_height="wrap_content"
+
         android:paddingHorizontal="@dimen/margin_18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/add_client_fragment_tab_layout" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deep_sky_blue"
-    tools:context=".SignupEmailFragment">
+    tools:context=".fragments.authentication.SignupEmailFragment">
 
     <TextView
         android:id="@+id/signup_email_fragment_title_text_view"
@@ -85,9 +85,9 @@
                 android:id="@+id/email_sign_up_fragment_firstname_text_input_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
+                android:layout_marginStart="@dimen/margin_18dp"
                 android:layout_marginTop="@dimen/margin_30dp"
-                android:layout_marginEnd="18dp"
+                android:layout_marginEnd="@dimen/margin_18dp"
                 android:hint="@string/email_sign_up_fragment_firstname_hint_text"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="@color/deep_sky_blue"
@@ -118,7 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_18dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/margin_30dp"
                 android:layout_marginEnd="@dimen/margin_18dp"
                 android:hint="@string/email_sign_up_fragment_lastname_hint_text"
                 android:textColorHint="@android:color/white"
@@ -201,7 +201,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email_sign_up_fragment_email_address_text_input_edit_text"
                     android:layout_width="match_parent"
-                    android:layout_height="51dp"
+                    android:layout_height="@dimen/layout_height_or_width_51dp"
                     android:background="@color/deep_sky_blue"
                     android:fontFamily="@font/roboto_medium"
                     android:hint="@string/email_sign_up_fragment_email_address_hint_text"
@@ -219,7 +219,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_18dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/margin_30dp"
                 android:fontFamily="@font/poppins"
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeErrorColor="@color/error"
@@ -326,7 +326,7 @@
                 android:layout_width="@dimen/layout_height_or_width_0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_18dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/margin_30dp"
                 android:layout_marginEnd="@dimen/margin_18dp"
                 android:height="@dimen/layout_height_or_width_60dp"
                 android:backgroundTint="@color/white"

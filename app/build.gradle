@@ -124,4 +124,10 @@ dependencies {
     // library to create circular text view
     implementation "com.karumi:dexter:$versions.dexter"
     implementation "com.amulyakhare:com.amulyakhare.textdrawable:$versions.text_drawable"
+    // Library to use graph
+    implementation "com.github.PhilJay:MPAndroidChart:v2.2.2"
+
+    // library for circle drawable
+    implementation "com.amulyakhare:com.amulyakhare.textdrawable:$versions.amulyakhare_version"
+
 }

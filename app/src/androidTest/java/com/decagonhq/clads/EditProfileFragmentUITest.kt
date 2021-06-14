@@ -36,16 +36,11 @@ class EditProfileFragmentUITest {
 
     @Test
     fun is_viewpager_displayed() {
-        onView(withId(R.id.edit_profile_viewpager2)).check(matches(isDisplayed()))
+        onView(withId(R.id.fragment_edit_profile_view_pager)).check(matches(isDisplayed()))
     }
 
     @Test
     fun is_tablayout_displayed() {
         onView(withId(R.id.fragment_edit_profile_tablayout)).check(matches(isDisplayed()))
-    }
-
-    @Test
-    fun is_toolbar_displayed() {
-        onView(withId(R.id.edit_profile_toolbar)).check(matches(isDisplayed()))
     }
 }

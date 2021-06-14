@@ -10,7 +10,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.decagonhq.clads.fragments.profilemanagement.TablayoutAccountFragment
+import com.decagonhq.clads.fragments.profilemanagement.AccountFragment
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,8 +22,8 @@ class EditProfileAccountFragmentUiTest {
     @Before
     fun setUp() {
         val navController = Mockito.mock(NavController::class.java)
-        val scenario: FragmentScenario<TablayoutAccountFragment> = launchFragmentInContainer(themeResId = R.style.Theme_Clads) {
-            TablayoutAccountFragment().also { fragment ->
+        val scenario: FragmentScenario<AccountFragment> = launchFragmentInContainer(themeResId = R.style.Theme_Clads) {
+            AccountFragment().also { fragment ->
                 fragment.viewLifecycleOwnerLiveData.observeForever { viewLifecycleOwner ->
                     if (viewLifecycleOwner != null) {
                         Navigation.setViewNavController(fragment.requireView(), navController)

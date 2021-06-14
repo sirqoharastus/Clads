@@ -24,9 +24,6 @@ class EditProfileFragment : Fragment() {
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
         return binding.root
         // Inflate the layout for this fragment
-
-        editProfileBinding = FragmentEditProfileBinding.inflate(inflater)
-        return editProfileBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

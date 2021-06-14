@@ -27,6 +27,7 @@ class EditProfileViewPagerAdapter(fm: FragmentManager, lifeCycle: Lifecycle) : F
             }
             else -> {
                 SecurityFragment()
+
             }
         }
     }

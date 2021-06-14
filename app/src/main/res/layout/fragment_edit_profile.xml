@@ -40,26 +40,26 @@
         app:tabPaddingEnd="@dimen/margin_15dp"
         app:tabPaddingStart="@dimen/padding_30dp"
         app:tabSelectedTextColor="@color/deep_sky_blue"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:tabTextColor="@color/drawer_menu_item_textcolor">
 
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile_account_text"></com.google.android.material.tabs.TabItem>
+            android:text="@string/edit_profile_account_text" />
 
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile_specialty_text"></com.google.android.material.tabs.TabItem>
+            android:text="@string/edit_profile_specialty_text" />
 
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/edit_profile_payment_method_text"></com.google.android.material.tabs.TabItem>
+            android:text="@string/edit_profile_payment_method_text" />
 
 
         <com.google.android.material.tabs.TabItem

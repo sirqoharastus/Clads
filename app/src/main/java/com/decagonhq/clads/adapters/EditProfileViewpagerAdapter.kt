@@ -8,8 +8,8 @@ import com.decagonhq.clads.fragments.profilemanagement.AccountFragment
 import com.decagonhq.clads.fragments.profilemanagement.PaymentMethodFragment
 import com.decagonhq.clads.fragments.profilemanagement.SecurityFragment
 import com.decagonhq.clads.fragments.profilemanagement.SpecialtyFragment
-
-class EditProfileViewPagerAdapter(fm: FragmentManager, lifeCycle: Lifecycle) : FragmentStateAdapter(fm, lifeCycle) {
+class EditProfileViewPagerAdapter(fm: FragmentManager, lifeCycle: Lifecycle) :
+    FragmentStateAdapter(fm, lifeCycle) {
     override fun getItemCount(): Int {
         return 4
     }

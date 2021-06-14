@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/first_name_dialog_other_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name_dialog_first_name_text"
+            android:layout_marginTop="@dimen/margin_35dp"
+            android:fontFamily="@font/poppins"
+            android:layout_margin="@dimen/margin_20dp"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/first_name_dialog_input_edittext"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/first_name_dialog_other_name_textview"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_dialog_other_name_textview" />
+
+        <TextView
+            android:id="@+id/first_name_dialog_cancel_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_56dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/all_cancel_text"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:layout_marginEnd="@dimen/margin_40dp"
+            android:textColor="@color/deep_sky_blue"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintEnd_toStartOf="@+id/first_name_dialog_ok_textview"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_dialog_input_edittext"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/first_name_dialog_ok_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/all_ok_text"
+            android:textColor="@color/deep_sky_blue"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/first_name_dialog_cancel_textview"
+            app:layout_constraintEnd_toEndOf="@+id/first_name_dialog_input_edittext" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

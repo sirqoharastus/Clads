@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/add_payment_options_dialog_add_payment_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_34dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/add_payment_terms_dialog_add_payment_terms_text"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/add_payment_terms_dialog_input_edittext"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:backgroundTint="@color/deep_sky_blue"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/add_payment_options_dialog_add_payment_textview"
+            app:layout_constraintTop_toBottomOf="@+id/add_payment_options_dialog_add_payment_textview" />
+
+        <Button
+            android:id="@+id/add_payment_terms_dialog_add_button"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:backgroundTint="@color/deep_sky_blue"
+            android:text="@string/add_payment_terms_dialog_add_text"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/add_payment_terms_dialog_input_edittext"
+            app:layout_constraintStart_toStartOf="@+id/add_payment_terms_dialog_input_edittext"
+            app:layout_constraintTop_toBottomOf="@+id/add_payment_terms_dialog_input_edittext" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

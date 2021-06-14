@@ -1,14 +1,16 @@
 package com.decagonhq.clads.activities
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.onNavDestinationSelected
@@ -27,6 +29,29 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         dashBoardActivityBinding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(dashBoardActivityBinding.root)
+
+        // Get reference of the nav host container id
+        // and set it to navController with findNavController method
+        val navHostFragment = supportFragmentManager.findFragmentById(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id) as NavHostFragment
+        navController = navHostFragment.findNavController()
+
+        val bottomNav = dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView
+        bottomNav.setupWithNavController(navController)
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.dashboardhomeFragment -> {
+                    findNavController(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id).navigate(R.id.dashboardhomeFragment)
+                }
+                R.id.dashboardMediaFragment -> {
+                    findNavController(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id).navigate(R.id.dashboardMediaFragment)
+                }
+                R.id.dashboardMessagesFragment -> {
+                    findNavController(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id).navigate(R.id.dashboardMessagesFragment)
+                }
+            }
+            true
+        }
+
         setUpUI()
     }
 
@@ -62,11 +87,11 @@ class DashboardActivity : AppCompatActivity() {
         val navHeader = dashBoardActivityBinding.dashboardActivityNavigationView.getHeaderView(0)
         navHeader.findViewById<ImageView>(R.id.close)
             .setOnClickListener {
-                drawerLayout.closeDrawer(Gravity.LEFT, true)
+                drawerLayout.closeDrawer(GravityCompat.START, true)
             }
 
         navHeader.findViewById<Button>(R.id.drawer_edit_profile_button).setOnClickListener {
-            drawerLayout.closeDrawer(Gravity.LEFT, true)
+            drawerLayout.closeDrawer(GravityCompat.START, true)
             navController.navigate(R.id.action_dashboardhomeFragment_to_editProfileFragment)
         }
         appBarConfiguration = AppBarConfiguration(

@@ -13,8 +13,8 @@
 
     <fragment
         android:id="@+id/dashboardhomeFragment"
-        android:name="com.decagonhq.clads.fragments.DashboardHomeFragment"
-        android:label="Home"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.DashboardHomeFragment"
+        android:label="fragment_dashboard_home"
         tools:layout="@layout/fragment_dashboard_home" >
         <action
             android:id="@+id/action_dashboardhomeFragment_to_clientsListFragment"

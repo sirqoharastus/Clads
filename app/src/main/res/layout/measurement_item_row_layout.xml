@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_add_measurement_item_row_layout_linear_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10dp"
+    android:background="@drawable/measurement_recycler_view_item_background"
+    android:baselineAligned="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_14dp">
+
+    <TextView
+        android:id="@+id/measurement_item_row_layout_measurement_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/measurement_name"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14sp"
+        android:layout_gravity="end"
+        />
+
+    <TextView
+        android:id="@+id/measurement_item_row_layout_measurement_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1411"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_gravity="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14sp"
+        />
+
+    <ImageView
+        android:id="@+id/measurement_item_row_layout_delete_measurement_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_5dp"
+        android:clickable="true"
+        android:src="@drawable/add_delivery_address_row_layout_delete_image_view"
+        android:layout_marginStart="@dimen/margin_10dp"
+         />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

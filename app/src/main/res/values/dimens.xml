@@ -106,5 +106,8 @@
 
     <!-- Reset password verification screen-->
     <dimen name="imageview_width_34dp">34dp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
 
 </resources>

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.databinding.FragmentTablayoutSpecialtyBinding
 
-class TablayoutSpecialtyFragment : Fragment() {
+class SpecialtyFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_24dp"
+    tools:context=".fragments.profilemanagement.DeliveryAddressListFragment">
+
+
+    <TextView
+        android:id="@+id/delivery_address_list_fragment_no_delivery_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppins"
+        android:text="There is no delivery address for this client"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/jffakfjbfba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="52dp"
+        android:text="Hello World"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delivery_address_list_fragment_add_address_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/deep_sky_blue"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/margin_18dp"
+        android:text="Add Address"
+        android:textAllCaps="false"
+        android:textFontWeight="700"
+        android:textSize="@dimen/text_size_12sp"
+        app:cornerRadius="@dimen/margin_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delivery_address_list_fragment_no_delivery_address_text_view"
+        app:layout_constraintVertical_bias="0.24" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/delivery_address_add_floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/deep_sky_blue"
+        android:clickable="true"
+        android:contentDescription="This floating action button adds a new address"
+        android:elevation="@dimen/margin_12dp"
+        android:visibility="gone"
+        android:padding="@dimen/margin_20dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/white"
+        app:elevation="@dimen/margin_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.918" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

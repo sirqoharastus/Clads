@@ -5,4 +5,6 @@
             <item name="android:textColor">@color/loading_color</item>
             <item name="android:gravity">top</item>
         </style>
+
+
 </resources>

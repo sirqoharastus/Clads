@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.decagonhq.clads.databinding.FragmentTablayoutClientAccountBinding
+import com.decagonhq.clads.databinding.FragmentTablayoutMeasurementBinding
 
-class TablayoutClientAccountFragment : Fragment() {
+class MeasurementFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,6 +15,6 @@ class TablayoutClientAccountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentTablayoutClientAccountBinding.inflate(inflater).root
+        return FragmentTablayoutMeasurementBinding.inflate(inflater).root
     }
 }

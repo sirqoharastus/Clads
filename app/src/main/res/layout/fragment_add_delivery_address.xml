@@ -1,15 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_30dp"
     tools:context=".fragments.profilemanagement.AddDeliveryAddressFragment">
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/add_delivery_address_fragment_add_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:lineHeight="@dimen/margin_30dp"
+        android:text="@string/add_address"
+        android:textColor="@color/navy_blue"
+        android:textFontWeight="700"
+        android:textSize="@dimen/text_size_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_delivery_address_fragment_add_delivery_address_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
 
+    <TextView
+        android:id="@+id/add_delivery_address_fragment_add_delivery_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/add_delivery_address"
+        android:textColor="@color/menu_text_color"
+        android:textFontWeight="500"
+        android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_delivery_address_fragment_add_address_text_view" />
+
+    <TextView
+        android:id="@+id/add_delivery_address_fragment_delivery_address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/delivery_address"
+        android:textColor="@color/navy_blue"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_delivery_address_fragment_add_delivery_address_text_view" />
+
+    <EditText
+        android:id="@+id/add_delivery_address_fragment_enter_delivery_address_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/deep_sky_blue"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/enter_delivery_address"
+        android:lineHeight="@dimen/margin_24dp"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintBottom_toTopOf="@+id/add_delivery_address_city_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_delivery_address_fragment_delivery_address_text_view"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <EditText
+        android:id="@+id/add_delivery_address_city_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/deep_sky_blue"
+        android:fontFamily="@font/roboto"
+        android:hint="City"
+        android:lineHeight="@dimen/margin_24dp"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintTop_toBottomOf="@id/add_delivery_address_fragment_enter_delivery_address_edit_text"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_delivery_address_save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/deep_sky_blue"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textFontWeight="700"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_delivery_address_fragment_add_address_text_view"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_delivery_address_fragment_text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/add_delivery_address_save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/add_delivery_address_city_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/add_delivery_address_city_edit_text"
+        app:layout_constraintVertical_bias="0.0">
+
+        <AutoCompleteTextView
+            android:id="@+id/add_delivery_address_fragment_state_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="State" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

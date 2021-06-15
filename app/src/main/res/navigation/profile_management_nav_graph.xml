@@ -3,22 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profile_management_nav_graph"
-    app:startDestination="@id/addMeasurementFragment">
+    app:startDestination="@id/dashboardhomeFragment">
 
     <activity
         android:id="@+id/dashboard_activity"
         android:name="com.decagonhq.clads.activities.DashboardActivity"
-        android:label="activity_dashboard"
+        android:label="Profile"
         tools:layout="@layout/activity_dashboard" />
 
     <fragment
         android:id="@+id/dashboardhomeFragment"
-        android:name="com.decagonhq.clads.fragments.DashboardHomeFragment"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.DashboardHomeFragment"
         android:label="fragment_dashboard_home"
         tools:layout="@layout/fragment_dashboard_home" >
         <action
             android:id="@+id/action_dashboardhomeFragment_to_clientsListFragment"
             app:destination="@id/clientsListFragment" />
+
         <action
             android:id="@+id/action_dashboardhomeFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
@@ -31,6 +32,9 @@
         <action
             android:id="@+id/action_dashboardhomeFragment_to_suscriptionFragment"
             app:destination="@id/suscriptionFragment" />
+        <action
+            android:id="@+id/action_dashboardhomeFragment_to_resourceFragment"
+            app:destination="@id/resourceFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardMessagesFragment"
@@ -43,6 +47,8 @@
         <action
             android:id="@+id/action_dashboardMessagesFragment_to_dashboardhomeFragment"
             app:destination="@id/dashboardhomeFragment" />
+
+
     </fragment>
     <fragment
         android:id="@+id/dashboardMediaFragment"
@@ -60,7 +66,8 @@
         android:id="@+id/editProfileFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.EditProfileFragment"
         android:label="Edit Profile"
-        tools:layout="@layout/fragment_edit_profile" />
+        tools:layout="@layout/fragment_edit_profile">
+    </fragment>
     <fragment
         android:id="@+id/clientsListFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.ClientsListFragment"
@@ -82,35 +89,17 @@
             android:id="@+id/action_addClientFragment_to_deliveryAddressListFragment2"
             app:destination="@id/deliveryAddressListFragment2" />
     </fragment>
+
     <fragment
         android:id="@+id/suscriptionFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.SuscriptionFragment"
         android:label="Subscription"
-        tools:layout="@layout/fragment_suscription" />
+        tools:layout="@layout/fragment_subscription" />
     <fragment
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddMeasurementFragment"
         android:label="Add Measurement"
         tools:layout="@layout/fragment_add_measurement" >
-        <action
-            android:id="@+id/action_addMeasurementFragment_to_addMeasurementDialogFragment"
-            app:destination="@id/addMeasurementDialogFragment" />
-        <argument
-            android:name="clientMeasurement"
-            app:argType="com.decagonhq.clads.utils.MeasurementData"
-            app:nullable="true"
-            android:defaultValue="@null" />
-        <action
-            android:id="@+id/action_addMeasurementFragment_to_editMeasurementDialogFragment"
-            app:destination="@id/editMeasurementDialogFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/addMeasurementDialogFragment"
-        android:name="com.decagonhq.clads.fragments.profilemanagement.AddMeasurementDialogFragment"
-        android:label="AddMeasurementDialogFragment" >
-        <action
-            android:id="@+id/action_addMeasurementDialogFragment_to_addMeasurementFragment"
-            app:destination="@id/addMeasurementFragment" />
     </fragment>
     <fragment
         android:id="@+id/addDeliveryAddressFragment"
@@ -129,16 +118,11 @@
         <action
             android:id="@+id/action_deliveryAddressListFragment2_to_addDeliveryAddressFragment"
             app:destination="@id/addDeliveryAddressFragment" />
-        <argument
-            android:name="ClientAddress"
-            app:argType="com.decagonhq.clads.utils.AddressData" />
     </fragment>
-    <dialog
-        android:id="@+id/editMeasurementDialogFragment"
-        android:name="com.decagonhq.clads.fragments.profilemanagement.EditMeasurementDialogFragment"
-        android:label="EditMeasurementDialogFragment" >
-        <action
-            android:id="@+id/action_editMeasurementDialogFragment_to_addMeasurementFragment"
-            app:destination="@id/addMeasurementFragment" />
-    </dialog>
+
+    <fragment
+        android:id="@+id/resourceFragment"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
+        android:label="fragment_resource"
+        tools:layout="@layout/fragment_resource" />
 </navigation>

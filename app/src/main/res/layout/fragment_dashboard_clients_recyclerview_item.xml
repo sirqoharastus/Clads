@@ -1,0 +1,69 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/margin_1dp">
+
+    <ImageView
+        android:id="@+id/home_fragment_client_initial_textview"
+        android:layout_width="@dimen/margin_30dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginBottom="@dimen/margin_8dp"
+
+        android:contentDescription="@string/dashboard_home_initials"
+        android:text="@string/string_dashboardhome_recyclerview_initials_om"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/clients_recycler_view_item_client_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:text="@string/ola_machiavelli"
+        android:textSize="@dimen/text_size_12sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/dashboard_messages_text"
+        android:textFontWeight="400"
+        app:layout_constraintBottom_toBottomOf="@+id/home_fragment_client_initial_textview"
+        app:layout_constraintStart_toEndOf="@+id/home_fragment_client_initial_textview"
+        app:layout_constraintTop_toTopOf="@+id/home_fragment_client_initial_textview" />
+
+    <ImageView
+        android:id="@+id/clients_recycler_view_item_location_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_9dp"
+        android:contentDescription="@string/dashboard_home_recyclerview_location_marker"
+        android:src="@drawable/messages_recyclerview_pin_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/clients_recycler_view_item_location_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:text="@string/dashboard_recyclerview_location_lagos"
+        android:textSize="@dimen/text_size_10sp"
+        android:fontFamily="@font/poppins"
+        android:textFontWeight="400"
+        app:layout_constraintBottom_toBottomOf="@+id/clients_recycler_view_item_location_image_view"
+        app:layout_constraintStart_toEndOf="@+id/clients_recycler_view_item_location_image_view"
+        app:layout_constraintTop_toTopOf="@+id/clients_recycler_view_item_location_image_view" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".75" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

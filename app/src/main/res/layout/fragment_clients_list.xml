@@ -1,15 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.profilemanagement.ClientsListFragment">
 
 
+    <ImageView
+        android:id="@+id/fragment_clients_list_female_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/fragment_clients_list_female_imageview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/fragment_clients_list_male_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_toEndOf="@id/fragment_clients_list_female_imageview"
+        android:src="@drawable/fragment_clients_list_male_imageview"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_clients_list_female_imageview"
+        app:layout_constraintStart_toEndOf="@+id/fragment_clients_list_female_imageview"
+        app:layout_constraintTop_toTopOf="@+id/fragment_clients_list_female_imageview"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
+        android:id="@+id/fragment_clients_list_you_have_not_added_client_yet_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fragment_clients_list_male_imageview"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/margin_18dp"
+        android:text="@string/fragment_clients_list_you_have_not_added_client_yet_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_clients_list_male_imageview"
+        app:layout_constraintStart_toStartOf="@+id/fragment_clients_list_female_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_clients_list_female_imageview" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_client_list_floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="@dimen/margin_30dp"
+        android:layout_marginBottom="@dimen/margin_45dp"
+        android:backgroundTint="@color/deep_sky_blue"
+        android:src="@drawable/floating_action_button_add_icon"
+        app:elevation="@dimen/margin_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_clients_list_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/fragment_clients_list_recyclerview_layout"
+        tools:visibility="gone" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

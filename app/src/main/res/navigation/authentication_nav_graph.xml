@@ -24,6 +24,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_signup_login_fragment_to_fragment_login_screen"
+            app:destination="@id/fragment_login_screen" />
     </fragment>
     <fragment
         android:id="@+id/signup_choices_fragment"
@@ -60,9 +63,9 @@
 
     </fragment>
     <fragment
+        android:label="fragment_login_screen"
         android:id="@+id/fragment_login_screen"
         android:name="com.decagonhq.clads.fragments.authentication.LoginScreenFragment"
-        android:label="fragment_login"
         tools:layout="@layout/fragment_login_screen" >
         <action
             android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
@@ -79,6 +82,7 @@
         tools:layout="@layout/fragment_email_verification" >
         <action
             android:id="@+id/action_emailVerificationFragment_to_loginFragment"
+            app:destination="@id/fragment_login_screen" />
             app:destination="@id/fragment_login_screen" />
     </fragment>
 
@@ -109,6 +113,12 @@
         <action
             android:id="@+id/action_resetPassword_to_loginFragment"
             app:destination="@id/fragment_login_screen" />
+            app:destination="@id/fragment_login_screen" />
     </fragment>
-    <fragment android:id="@+id/placeholder" />
+    <fragment android:id="@+id/placeholder" >
+        <action
+            android:id="@+id/action_placeholder_to_loginScreenFragment"
+            app:destination="@id/fragment_login_screen" />
+    </fragment>
+
 </navigation>

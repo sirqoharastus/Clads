@@ -1,19 +1,13 @@
 package com.decagonhq.clads.adapters
 
 import android.view.LayoutInflater
-import android.view.OrientationEventListener
 import android.view.View
 import android.view.ViewGroup
-
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.R
 import com.decagonhq.clads.utils.MeasurementData
-import java.math.BigDecimal
-import java.util.function.UnaryOperator
 
 class MeasurementAdapter(
     var measurementList: ArrayList<MeasurementData>,
@@ -24,17 +18,16 @@ class MeasurementAdapter(
 
     var list = arrayListOf<MeasurementData>()
 
-    inner class MeasurementViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+    inner class MeasurementViewHolder(itemView: View) :
+        RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
         val measurementNameTextView: TextView =
             itemView.findViewById(R.id.measurement_item_row_layout_measurement_name_text_view)
         val measurementValueTextView: TextView =
             itemView.findViewById(R.id.measurement_item_row_layout_measurement_value_text_view)
 
-
         val delete: ImageView =
             itemView.findViewById(R.id.measurement_item_row_layout_delete_measurement_image_view)
-
 
         init {
             itemView.setOnClickListener(this)
@@ -54,7 +47,6 @@ class MeasurementAdapter(
             measurementNameTextView.text = measurement[adapterPosition].measurementValue
             notifyDataSetChanged()
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MeasurementViewHolder {
@@ -63,7 +55,7 @@ class MeasurementAdapter(
         return MeasurementViewHolder(view)
     }
 
-    //function to add new measurement to the list and update the adapter
+    // function to add new measurement to the list and update the adapter
     fun addNewMeasurement(measurement: MeasurementData) {
         measurementList.add(0, measurement)
         notifyDataSetChanged()
@@ -81,7 +73,6 @@ class MeasurementAdapter(
         notifyDataSetChanged()
     }
 
-
     override fun onBindViewHolder(holder: MeasurementViewHolder, position: Int) {
         val currentItem = measurementList[position]
 
@@ -97,22 +88,16 @@ class MeasurementAdapter(
         }
     }
 
-
     override fun getItemCount() = measurementList.size
 
-    //interface for the click to edit(measurement click) and the delete
+    // interface for the click to edit(measurement click) and the delete
     interface OnItemClickListener {
         fun onMeasurementClick(position: Int, measurementList: ArrayList<MeasurementData>)
         fun onDeleteCLick(position: Int, measurementList: ArrayList<MeasurementData>)
     }
 
-
     fun updateList(measurement: ArrayList<MeasurementData>) {
         list.addAll(measurement)
         notifyDataSetChanged()
     }
-
 }
-
-
-

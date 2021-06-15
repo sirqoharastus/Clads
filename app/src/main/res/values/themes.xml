@@ -1,9 +1,9 @@
- <resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Clads" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/deep_sky_blue</item>
         <item name="colorPrimaryVariant">@color/deep_sky_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,27 +12,38 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/deep_sky_blue</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/deep_sky_blue</item>
     </style>
 
 
+    <!-- Customize your theme here. -->
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+        <item name="android:statusBarColor">@color/deep_sky_blue</item>
+    </style>
 
-        <!-- Customize your theme here. -->
-        <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-            <item name="android:windowBackground">@drawable/splash_screen_background</item>
-            <item name="android:statusBarColor">@color/deep_sky_blue</item>
-       </style>
+    <!--  To make the view lager when active  -->
+    <style name="BottomNavigationViewActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">13sp</item>
+        <item name="android:iconTint">@color/deep_sky_blue</item>
+    </style>
 
-     <!--  To make the view lager when active  -->
-     <style name="BottomNavigationViewActive" parent="@style/TextAppearance.AppCompat.Caption">
-         <item name="android:textSize">13sp</item>
-         <item name="android:iconTint">@color/deep_sky_blue</item>
-     </style>
+    <!--  To increase the size of the text  -->
+    <style name="BottomNavigationViewInActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:iconTint">@color/grey</item>
 
-     <!--  To increase the size of the text  -->
-     <style name="BottomNavigationViewInActive" parent="@style/TextAppearance.AppCompat.Caption">
-         <item name="android:textSize">10sp</item>
-         <item name="android:iconTint">@color/grey</item>
+    </style>
+    <!-- fragment client account Style for the radio button -->
+    <style name="RadioButtonStyle" parent="Theme.MaterialComponents.Light">
+        <item name="colorAccent">@android:color/holo_blue_bright</item>
+        <item name="android:textColorPrimary">@android:color/holo_blue_bright</item>
+    </style>
+
+
+     <style name="TabLayoutDesign" parent="TextAppearance.Design.Tab">
+
+         <item name="android:textSize" >20sp</item>
 
      </style>
 

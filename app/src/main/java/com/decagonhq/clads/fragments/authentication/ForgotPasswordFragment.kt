@@ -40,7 +40,7 @@ class ForgotPasswordFragment : Fragment() {
             ) {
                 findNavController().navigate(R.id.action_forgotPasswordFragment_to_resetPasswordVerification)
             } else {
-                Toast.makeText(requireContext(), "Not a valid email", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.forgot_password_fragment_not_a_valid_email_text), Toast.LENGTH_SHORT).show()
             }
         }
     }

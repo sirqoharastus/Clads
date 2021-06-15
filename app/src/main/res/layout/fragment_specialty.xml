@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="@bool/true_option"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".fragments.profilemanagement.SpecialtyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_specialty_recyclerView"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/fragment_specialty_add_new_specialty_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/add"
+            android:elevation="@dimen/elevation_0dp"
+            android:fontFamily="@font/poppins_medium"
+            android:shadowColor="@color/white"
+            android:text="@string/fragment_specialty_add_new_specialty_text"
+            android:textAlignment="viewEnd"
+            android:textAllCaps="false"
+            android:textColor="@color/deep_sky_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:iconGravity="start"
+            app:iconPadding="@dimen/padding_4dp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_recyclerView"
+            app:layout_constraintHorizontal_bias="0.978"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_recyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_recyclerView" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_gender_focus_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/fragment_specialty_gender_focus_text"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragmant_specialty_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragmant_specialty_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragmant_specialty_view"
+            app:lineHeight="@dimen/line_height_19sp" />
+
+        <CheckBox
+            android:id="@+id/fragment_specialty_male_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:paddingStart="@dimen/padding_0dp"
+            android:paddingLeft="@dimen/padding_0dp"
+            android:text="@string/fragment_specialty_male_checkbox_text"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintStart_toStartOf="@+id/fragmant_specialty_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_gender_focus_text_view" />
+
+        <CheckBox
+            android:id="@+id/fragment_specialty_female_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fragment_specialty_female_checkbox_text"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_specialty_male_checkbox"
+            app:layout_constraintEnd_toStartOf="@+id/fragemtn_specialty_kids_checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_specialty_male_checkbox" />
+
+        <CheckBox
+            android:id="@+id/fragemtn_specialty_kids_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fragment_specialty_kid_checkbox_text"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_specialty_female_checkbox"
+            app:layout_constraintEnd_toStartOf="@+id/fragment_specialty_unisex_checkbox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fragment_specialty_female_checkbox" />
+
+        <CheckBox
+            android:id="@+id/fragment_specialty_unisex_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:buttonTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fragment_specialty_unisex_checkbox_text"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragemtn_specialty_kids_checkbox"
+            app:layout_constraintEnd_toEndOf="@+id/fragmant_specialty_view" />
+
+        <View
+            android:id="@+id/fragmant_specialty_view"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_8dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_recyclerView"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_recyclerView"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_add_new_specialty_button" />
+
+        <View
+            android:id="@+id/fragment_specialty_view2"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/fragmant_specialty_view"
+            app:layout_constraintStart_toStartOf="@+id/fragmant_specialty_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_male_checkbox" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_quality_assurance_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/fragment_specialty_quality_assurance_text"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_gender_focus_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_view2" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_quality_assurance_content_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fragment_specialty_obioma_trained_and_certified_text"
+            android:textAlignment="center"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_quality_assurance_header_text_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_quality_assurance_header_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_quality_assurance_header_text_view" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_quality_assurance_response_text_view"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:text="@string/yes_option"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_specialty_quality_assurance_content_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view2"
+            app:layout_constraintHorizontal_bias="0.996"
+            app:layout_constraintStart_toEndOf="@+id/fragment_specialty_quality_assurance_content_text_view" />
+
+        <View
+            android:id="@+id/fragment_specialty_view3"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view2"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_view2"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_quality_assurance_content_text_view" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_measurements_header_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/fragment_specialty_measurement_options"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_view3"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_view3" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_measurements_content1_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fragment_specialty_visit_us_for_your_measurement_checkbox_text"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_measurements_header_text_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_measurements_header_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_measurements_header_text_view" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_measurements_contents2_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/fragment_specialty_will_accept_self_measurement_checkbox_text"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_measurements_content1_text_view"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_measurements_content1_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_measurements_content1_text_view" />
+
+        <CheckBox
+            android:id="@+id/fragment_specialty_measurements_content1_checkbox"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:buttonTint="@color/deep_sky_blue"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/fragment_specialty_measurements_content1_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_measurements_header_text_view" />
+
+        <CheckBox
+            android:id="@+id/fragment_specialty_measurements_content2_checkbox"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_25dp"
+            android:buttonTint="@color/deep_sky_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_specialty_measurements_contents2_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/fragment_specialty_measurements_contents2_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_measurements_content1_checkbox"
+            app:layout_constraintVertical_bias="0.413" />
+
+        <View
+            android:id="@+id/fragment_specialty_view4"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:background="@color/grey"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view3"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_measurements_contents2_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_measurements_content2_checkbox" />
+
+        <TextView
+            android:id="@+id/fragment_specialty_delivery_lead_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/fragment_specialty_delivery_lead_time_checkbox_text"
+            android:textColor="@color/navy_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_view4"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_view4" />
+
+        <TextView
+            android:id="@+id/fragment_speccialty_delivery_time_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/defualt_delivery_lead_time"
+            android:textAlignment="center"
+            android:textColor="@color/drawer_menu_item_textcolor"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_specialty_delivery_lead_time"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_measurements_content2_checkbox"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/fragment_specialty_delivery_lead_time" />
+
+        <Button
+            android:id="@+id/fragment_specialty_save_specialty_changes_button"
+            android:layout_width="@dimen/margin_0dp"
+            android:layout_height="@dimen/margin_48dp"
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:layout_marginBottom="@dimen/margin_40dp"
+            android:backgroundTint="@color/deep_sky_blue"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/save_changes_button_text"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/fragment_specialty_view4"
+            app:layout_constraintStart_toStartOf="@+id/fragment_specialty_view4"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_specialty_delivery_lead_time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+

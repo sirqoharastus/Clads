@@ -8,11 +8,8 @@
     <!-- loading TextView -->
     <string name="splash_screen_loading_text">Loading...</string>
 
-    <!-- Clads TextView -->
-
 
     //string resources for fragment login screen
-    =
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -20,12 +17,11 @@
     <string name="fragment_login_screen_login_to_continue">Login to continue</string>
     <string name="fragment_login_screen_email_address">Email Address</string>
     <string name="fragment_login_screen_password">Password</string>
-    <string name="fragment_login_screen_login">Login</string>
-    <string name="fragment_login_screen_new_user">New User?</string>
+    <string name="fragment_login_screen_login"><b>Login</b></string>
+    <string name="fragment_login_screen_new_user">New User? SignUp for free</string>
     <string name="fragment_login_screen_signup_for_free">SignUp for free</string>
     <string name="fragment_login_screen_forgot_password">Forgot Password?</string>
-    <string name="fragment_login_screen_login_with_google">Login with Google</string>
-
+    <string name="fragment_login_screen_login_with_google">Sign in with Google</string>
 
     <string name="sign_up_login_tag_line"> Lorem ipsum, ipsum sum</string>
 
@@ -66,7 +62,6 @@
     <string name="signup_choices_fragment_signup_with_google">Signup with Google</string>
     <string name="signup_choices_fragment_sign_up_with_email">Sign up with email</string>
     <string name="signup_choices_fragment_sign_up_with_phone_number">Sign up with phone number</string>
-
     <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
 
@@ -117,10 +112,6 @@
     <string name="add_measurement">Add Measurement</string>
     <string name="name">Name</string>
     <string name="full_length">Full length</string>
-    <string name="add_measurement">Add Measurement</string>
-    <string name="edit_measurement">Edit Measurement</string>
-    <string name="name">Name</string>
-    <string name="full_length">Full length</string>
     <string name="_1411">1411</string>
     <string name="measurement_name">Measurement Name</string>
 
@@ -164,4 +155,191 @@
     </string-array>
 
 
+    <string name="fragment_clients_list_you_have_not_added_client_yet_text">You have not added client yet</string>
+    <string name="fragment_client_account_name_edit_text_hint">Name</string>
+    <string name="fragment_client_account_phone_number_edit_text_hint">Phone Number</string>
+    <string name="fragment_client_account_email_address_edit_text_hint">Email Address</string>
+    <string name="fragment_clients_list_recyclerview_layout_circular_image_text">ab</string>
+    <string name="fragment_clients_list_recyclerview_layout_first_name_text">FirstName</string>
+    <string name="fragment_clients_list_recyclerview_layout_last_name_text">LastName</string>
+    <string name="fragment_clients_list_recyclerview_layout_location_text">Lagos</string>
+    <string name="client_account">Client Account</string>
+    <string name="add_client">Add Client</string>
+    <string name="measurements">Measurement</string>
+    <string name="delivery_addresses">Delivery Addresses</string>
+    <string name="fragment_tablayout_account_name_edit_text">Name</string>
+    <string name="fragment_tablayout_client_account_phone_number_edit_text">Phone Number</string>
+    <string name="fragment_tablayout_client_account_email_address_hint_edit_text">Email Address</string>
+    <string name="fragment_tablayout_client_account_gender_text_view">Gender</string>
+    <string name="fragment_tablayout_client_account_male_hint_radio_button_text">Male</string>
+    <string name="fragment_client_account_radion_female_text">Female</string>
+    <string name="fragment_client_account_delivery_address_hint_text_edit_text">Delivery Address</string>
+    <string name="fragment_client_account_next_button_text">Next</string>
+    <string name="fragment_clients_list_you_have_not_added_client_yet_text_view">You have not added client yet</string>
+    <string name="first_name_dialog_fragment">first name dialog fragment</string>
+    <string name="last_name_dialog_fragment">last name dialog fragment</string>
+    <string name="add_payment_terms_dialog_add_payment_terms_text">Add Payment Terms</string>
+    <string name="add_payment_terms_add_payment_terms_text_lowercase">Add payment terms</string>
+    <string name="add_payment_terms_payment_terms_text">Payment terms</string>
+    <string name="add_payment_terms_dialog_add_text">Add</string>
+    <string name="first_name_dialog_first_name_text">First name</string>
+    <string name="all_cancel_text">CANCEL</string>
+    <string name="all_ok_text">OK</string>
+    <string name="all_gender_text">Gender</string>
+    <string name="gender_dialog_femal_text">Female</string>
+    <string name="gender_dialog_male_text">Male</string>
+    <string name="all_last_name_text">Last name</string>
+    <string name="all_other_name_text">Other name</string>
+    <string name="all_showroom_address_text">Showroom Address</string>
+    <string name="all_street_text">Street</string>
+    <string name="all_city">City</string>
+    <string name="all_state_text">State</string>
+    <string name="all_workshop_address_text">Workshop Address</string>
+    <string name="all_edit_profile_text">Edit Profile</string>
+    <string name="edit_profile_account_text">Account</string>
+    <string name="edit_profile_specialty_text">Specialty</string>
+    <string name="edit_profile_payment_method_text">Payment Method</string>
+    <string name="edit_profile_security_text">Security</string>
+    <string name="account_fragment_tap_to_change_picture_text">Tap to change picture</string>
+    <string name="account_fragment_number_of_employees_apprentices_text">Number of Employees/ Apprentices</string>
+    <string name="acount_fragment_number_of_employees_text">Number of employees</string>
+    <string name="account_fragment_legal_status_text">Legal Status</string>
+    <string name="account_fragment_union_membership_text">UNION MEMBERSHIP</string>
+    <string name="account_fragment_name_of_union_text">Name of Union</string>
+    <string name="account_fragment_ward_text">Ward</string>
+    <string name="account_fragment_local_government_area_text">Local Government Area</string>
+    <string name="account_fragment_lga_text">LGA</string>
+    <string name="payment_method_payment_terms_text">Payment Terms</string>
+    <string name="payment_methods_payment_options_text">Payment Options</string>
+    <string name="payment_options_fragment_save_changes_text">Save Changes</string>
+    <string name="security_fragment_verified_information_text">Verified information</string>
+    <string name="all_phone_number_text">Phone Number</string>
+    <string name="security_fragment_0700000000_text">0700000000</string>
+    <string name="secutity_fragment_password_text">Password</string>
+    <string name="security_fragment_change_password_text">Change Password</string>
+    <string name="security_fragment_old_password_text">Old Password</string>
+    <string name="security_fragment_new_password_text">New Password</string>
+    <string name="payment_options_dialog_bank_deposit_naira_text">Bank Deposit (Naira)</string>
+    <string name="payment_options_dialog_bank_deposit_usd_gbp_euro_text">Bank Deposit (USD, GBP, Euro)</string>
+    <string name="payment_options_dialog_cash_text">Cash</string>
+    <string name="payment_options_dialog_vcash_text">VCash</string>
+    <string name="payment_options_dialog_payoneer_text">Payoneer</string>
+    <string name="payment_options_dialog_cancel_text">Cancel</string>
+    <string name="payment_options_dialog_add_text">ADD</string>
+    <string name="all_payment_terms_text">Payment Terms</string>
+    <string name="payment_terms_dialog_100_deposit_text">100% Deposit</string>
+    <string name="payment_terms_dialog_50_deposit_and_50_balance_on_delivery_text">50% Deposit and 50% Balance on Delivery</string>
+    <string name="payment_terms_dialog_0_deposit_and_100_balance_on_delivery_text">0% Deposit and 100% Balance on Delivery</string>
+    <string name="other_name_dialog_text">other name dialog fragment</string>
+    <string name="gender_dialog_text">gender dialog button</string>
+    <string name="worshop_address_text">workshop address dialog</string>
+    <string name="showroom_address_dialog_text">showroom address dilaog</string>
+    <string name="gender_dialog_fragment_male_text">Male</string>
+    <string name="gender_dialog_fragment_female_text">Female</string>
+    <string name="payment_terms_dialog_fragment_100pc_deposit_text">100% Deposit</string>
+    <string name="payment_terms_dialog_fragment_50pc_deposit_text">50% Deposit and 50% balance on delivery</string>
+    <string name="payment_terms_dialog_fragment_0pc_deposit_text">0% deposit and 100% payment on delivery</string>
+    <string name="payment_terms_dialog_fragment_payment_terms_dialog_fragment_text">payment terms dialog fragment</string>
+    <string name="payment_options_dialog_fragment_payment_options_dialog_fragment_text">payment options dialog fragment</string>
+    <string name="add_payment_dialog_fragment_add_payment_dialog_fragment_text">add payment dialog fragment</string>
+    <string name="edit_profile_fragment_account_text">Account</string>
+    <string name="edit_profile_fragment_specialty_text">Specialty</string>
+    <string name="edit_profile_fragment_payment_method_text">Payment method</string>
+    <string name="edit_profile_fragment_security_text">Security</string>
+    <string name="forgot_password_fragment_not_a_valid_email_text">Not a valid email</string>
+    <string name="edit_profile_age_dialog_fragment_age_text">Age</string>
+    <string name="edit_profile_legal_status_dialog_fragment_legal_status_text">Legal Status</string>
+    <string name="edit_profile_name_of_union_dialog_fragment_name_of_union_text">Name of Union</string>
+    <string name="edit_profile_fragment_numner_of_employees_text">number of employees dialog</string>
+    <string name="edit_profile_fragment_legal_status_text">legal status dialog fragment</string>
+    <string name="edit_profile_fragment_name_of_dialog_fragment_text">name of union dialog fragment</string>
+    <string name="edit_profile_fragment_ward_dialog_fragment_text">ward dialog fragment</string>
+    <string name="edit_profile_fragment_local_government_dialog_fragment">local governmnet dialog fragment</string>
+    <string name="edit_profile_fragment_state_dialog_fragment_text">state dialog fragment</string>
+    <string name="edit_profile_no_of_employees_value_text">No. of Employees</string>
+    <string name="all_address">Address</string>
+    <string name="fragment_dashboard_messages_text">Messages</string>
+    <string name="dashboard_messages_ola_machiavelli_text">Ola Machiavelli</string>
+    <string name="dashboard_notifications_bell">A notifications bell</string>
+    <string name="dashboard_messages_today_text">Today</string>
+    <string name="all_dashboard_messages">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</string>
+    <string name="home_fragment_clients_text">Clients</string>
+    <string name="home_fragment_client_name_ijeoma_ibukun_babangida">Ijeoma Ibukun Babangida</string>
+    <string name="home_fragment_client_card_balance">$ 23,481,000.00</string>
+    <string name="ola_machiavelli">Ola Machiavelli</string>
+    <string name="dashboard_recyclerview_location_lagos">Lagos</string>
+    <string name="messages_recyclerview_item_read_more_text">Read more</string>
+    <string name="messages_recyclerview_item_day_text">Today</string>
+    <string name="ijeoma_ibukun_babangida">Ijeoma Ibukun Babangida</string>
+    <string name="dashboard_home_wallet">Wallet</string>
+    <string name="dashboard_home_card_balance_23_481_000_00">$ 23, 481,000.00</string>
+    <string name="dashboard_home__text_view_all_details">View All Details</string>
+    <string name="dashboard_home_image_of_a_wallet">Image of a wallet</string>
+    <string name="dashboard_home_image_of_an_arrow">Image of an arrow</string>
+    <string name="dashboard_home_recyclerview_initials_om">OM</string>
+    <string name="string_dashboardhome_recyclerview_initials_om">OM</string>
+    <string name="dashboard_home_initials">OM</string>
+    <string name="dashboard_home_recyclerview_location_marker">Location marker</string>
+
+    <string name="obioma_trianed_and_certified">Obioma Trianed and Certified?</string>
+    <string name="no_option">No</string>
+    <string name="yes_option">Yes</string>
+    <string name="defualt_delivery_lead_time">2 weeks</string>
+    <string name="save_changes_button_text">SAVE CHANGES</string>
+    <string name="cancel_button_text">CANCEL</string>
+    <string name="delivery_lead_time">Delivery lead time</string>
+    <string name="add_delivery_time">Add delivery time</string>
+    <string name="days">Days</string>
+    <string name="weeks">Weeks</string>
+    <string name="months">Months</string>
+    <string name="ok">OK</string>
+    <string name="tool_bar_default_title">Hi,Ijeoma</string>
+    <string name="add_specialty">Add specialty</string>
+    <string name="add_button_text">Add</string>
+    <string name="add_specialty_textfield">Add Specialty</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="dashboard_activity_navigation_view_version_text">version 1.0</string>
+    <string name="specialty_list_layout_checkbox">CheckBox</string>
+    <string name="messages_fragment">Messages Fragment</string>
+    <string name="add_specialty_dialog_fragment_layout_specialty_name">Specialty name</string>
+    <string name="fragment_specialty_kid_checkbox_text">Kids</string>
+    <string name="fragment_specialty_unisex_checkbox_text">Unisex</string>
+    <string name="fragment_specialty_will_accept_self_measurement_checkbox_text">Will accept self-measurement</string>
+    <string name="fragment_specialty_delivery_lead_time_checkbox_text">Delivery lead time</string>
+    <string name="fragment_specialty_visit_us_for_your_measurement_checkbox_text">Visit us for your measurement</string>
+    <string name="fragment_specialty_female_checkbox_text">Female</string>
+    <string name="fragment_specialty_male_checkbox_text">Male</string>
+    <string name="fragment_specialty_gender_focus_text">Gender Focus</string>
+    <string name="fragment_specialty_add_new_specialty_text">Add new specialty</string>
+    <string name="fragment_specialty_quality_assurance_text">Quality Assurance</string>
+    <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
+    <string name="fragment_specialty_measurement_options">Measurement Options</string>
+    <string name="resource_fragment_resource_textview">Resource Fragment</string>
+    <string name="drawer_layout_edit_profile_button">Edit Profile</string>
+    <string name="drawer_layout_profile_name">Ijeoma Ibukun Babangida</string>
+    <string name="fragment_add_client_client_account_text">Client Account</string>
+    <string name="fragment_add_client_client_measurement_text">Measurements</string>
+    <string name="fragment_add_client_client_delivery_address_text">Delivery Address</string>
+    <string name="fragment_client_list">Client List Fragment</string>
+    <string name="dashboard_home_fragment_text_view">Home Fragment</string>
+    <string name="fragment_edit_profile_specialty_fragment_text">Account</string>
+    <string name="fragment_edit_profile_account_fragment_text">Specialty</string>
+    <string name="fragment_edit_profile_payment_fragment_text">Payment Method</string>
+    <string name="fragment_edit_profile_security_fragment_text">Security</string>
+    <string name="fragment_suscription_text_view">Subscription Fragment</string>
+    <string name="drawer_layout_menu_subscription_item_title">Subscription</string>
+    <string name="drawer_layout_menu_resource_item_title">Resources</string>
+    <string name="drawer_layout_menu_clients_item_title">Clients</string>
+    <string name="drawer_layout_menu_logout_item_title">Logout</string>
+    <string name="bottom_navigation_menu_home_item_title">Home</string>
+    <string name="bottom_navigation_menu_media_item_title">Media</string>
+    <string name="bottom_navigation_menu_messages_item_title">Messages</string>
+    <string name="fragment_messages_message_text_view">Messages</string>
+    <string name="fragment_add_client_add_client_text_view">Add Client</string>
+    <string name="edit_measurement">Edit Measurement</string>
+    <string name="_47">47</string>
+    <string name="fragment_edit_measurement_dialog_save_button">Save</string>
+    <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
+    <string name="save_button_text">Save</string>
+    <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
 </resources>

@@ -8,5 +8,3 @@ class MeasurementData(
     var measurementName: String,
     var measurementValue: String
 ) : Parcelable
-
-

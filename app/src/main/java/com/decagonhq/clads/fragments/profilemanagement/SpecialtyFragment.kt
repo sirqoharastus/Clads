@@ -1,5 +1,4 @@
 package com.decagonhq.clads.fragments.profilemanagement
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.decagonhq.clads.R
 import com.decagonhq.clads.adapters.SpecialtyListAdapter
+import com.decagonhq.clads.databinding.FragmentResourceBinding
 import com.decagonhq.clads.databinding.FragmentSpecialtyBinding
 import com.decagonhq.clads.dialogs.DialogFragments
 import com.decagonhq.clads.models.Specialty
@@ -26,6 +26,7 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        return FragmentResourceBinding.inflate(inflater).root
         fragmentTablayoutSpecialtyBinding = FragmentSpecialtyBinding.inflate(inflater)
         return fragmentTablayoutSpecialtyBinding.root
     }

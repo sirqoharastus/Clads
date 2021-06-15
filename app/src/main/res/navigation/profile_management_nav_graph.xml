@@ -81,7 +81,7 @@
     <fragment
         android:id="@+id/addClientFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddClientFragment"
-        android:label="{title}"
+        android:label="Add Client"
         tools:layout="@layout/fragment_add_client" >
         <action
             android:id="@+id/action_addClientFragment_to_addDeliveryAddressFragment"

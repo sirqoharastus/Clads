@@ -15,6 +15,7 @@ class MeasurementFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return FragmentMeasurementBinding.inflate(inflater).root
     }
 }

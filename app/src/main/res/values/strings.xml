@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name">Clads</string>
 
-
     <!-- email signup fragment views texts -->
     <string name="email_sign_up_login_tag_line"> Lorem ipsum. ipsum sum</string>
 
     <!-- loading TextView -->
     <string name="splash_screen_loading_text">Loading...</string>
-
-    <!-- Clads TextView -->
 
 
     //string resources for fragment login screen
@@ -17,11 +14,11 @@
     <string name="fragment_login_screen_login_to_continue">Login to continue</string>
     <string name="fragment_login_screen_email_address">Email Address</string>
     <string name="fragment_login_screen_password">Password</string>
-    <string name="fragment_login_screen_login">Login</string>
-    <string name="fragment_login_screen_new_user">New User?</string>
+    <string name="fragment_login_screen_login"><b>Login</b></string>
+    <string name="fragment_login_screen_new_user">New User? SignUp for free</string>
     <string name="fragment_login_screen_signup_for_free">SignUp for free</string>
     <string name="fragment_login_screen_forgot_password">Forgot Password?</string>
-    <string name="fragment_login_screen_login_with_google">Login with Google</string>
+    <string name="fragment_login_screen_login_with_google">Sign in with Google</string>
 
 
     <string name="sign_up_login_tag_line"> Lorem ipsum, ipsum sum</string>
@@ -64,11 +61,6 @@
     <string name="signup_choices_fragment_sign_up_with_email">Sign up with email</string>
     <string name="signup_choices_fragment_sign_up_with_phone_number">Sign up with phone number</string>
 
-    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
-
-
-    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
-
     <string name="signup_choices_fragment_login">Login</string>
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
     <string name="signup_login_fragment_sign_up">Sign up</string>
@@ -105,6 +97,27 @@
     <string name="all_login">Login</string>
     <string name="reset_password_verification_fragment_new_password">New Password</string>
     <string name="reset_password_verification_fragment_confirm_new_password">Confirm New Password</string>
+    <string name="fragment_clients_list_you_have_not_added_client_yet_text">You have not added client yet</string>
+    <string name="fragment_client_account_name_edit_text_hint">Name</string>
+    <string name="fragment_client_account_phone_number_edit_text_hint">Phone Number</string>
+    <string name="fragment_client_account_email_address_edit_text_hint">Email Address</string>
+    <string name="fragment_clients_list_recyclerview_layout_circular_image_text">ab</string>
+    <string name="fragment_clients_list_recyclerview_layout_first_name_text">FirstName</string>
+    <string name="fragment_clients_list_recyclerview_layout_last_name_text">LastName</string>
+    <string name="fragment_clients_list_recyclerview_layout_location_text">Lagos</string>
+    <string name="client_account">Client Account</string>
+    <string name="add_client">Add Client</string>
+    <string name="measurements">Measurement</string>
+    <string name="delivery_addresses">Delivery Addresses</string>
+    <string name="fragment_tablayout_account_name_edit_text">Name</string>
+    <string name="fragment_tablayout_client_account_phone_number_edit_text">Phone Number</string>
+    <string name="fragment_tablayout_client_account_email_address_hint_edit_text">Email Address</string>
+    <string name="fragment_tablayout_client_account_gender_text_view">Gender</string>
+    <string name="fragment_tablayout_client_account_male_hint_radio_button_text">Male</string>
+    <string name="fragment_client_account_radion_female_text">Female</string>
+    <string name="fragment_client_account_delivery_address_hint_text_edit_text">Delivery Address</string>
+    <string name="fragment_client_account_next_button_text">Next</string>
+    <string name="fragment_clients_list_you_have_not_added_client_yet_text_view">You have not added client yet</string>
     <string name="first_name_dialog_fragment">first name dialog fragment</string>
     <string name="last_name_dialog_fragment">last name dialog fragment</string>
     <string name="add_payment_terms_dialog_add_payment_terms_text">Add Payment Terms</string>
@@ -264,5 +277,5 @@
     <string name="bottom_navigation_menu_media_item_title">Media</string>
     <string name="bottom_navigation_menu_messages_item_title">Messages</string>
     <string name="fragment_messages_message_text_view">Messages</string>
-
+    <string name="fragment_add_client_add_client_text_view">Add Client</string>
 </resources>

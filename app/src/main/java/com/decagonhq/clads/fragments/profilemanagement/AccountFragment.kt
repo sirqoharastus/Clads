@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentAccountBinding
+import com.decagonhq.clads.databinding.FragmentClientAccountBinding
 import com.decagonhq.clads.dialogs.FirstNameDialogFragment
 import com.decagonhq.clads.dialogs.GenderDialogFragment
 import com.decagonhq.clads.dialogs.LastNameDialogFragment
@@ -34,6 +35,8 @@ class AccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
+        return FragmentClientAccountBinding.inflate(inflater).root
 
         // inflating layout when the view is created
         _binding = FragmentAccountBinding.inflate(inflater, container, false)

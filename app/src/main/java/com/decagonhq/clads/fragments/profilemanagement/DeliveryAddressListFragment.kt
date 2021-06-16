@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentDeliveryAddressListBinding
-import com.decagonhq.clads.viewModel.ClientAddressViewModel
+import com.decagonhq.clads.viewmodels.ClientAddressViewModel
 
 class DeliveryAddressListFragment : Fragment() {
 

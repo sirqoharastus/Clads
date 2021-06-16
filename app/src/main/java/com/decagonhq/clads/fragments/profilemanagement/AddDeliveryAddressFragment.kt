@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentAddDeliveryAddressBinding
 import com.decagonhq.clads.utils.AddressData
-import com.decagonhq.clads.viewModel.ClientAddressViewModel
+import com.decagonhq.clads.viewmodels.ClientAddressViewModel
 
 class AddDeliveryAddressFragment : Fragment() {
 

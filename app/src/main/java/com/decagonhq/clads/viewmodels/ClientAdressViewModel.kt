@@ -1,4 +1,4 @@
-package com.decagonhq.clads.viewModel
+package com.decagonhq.clads.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

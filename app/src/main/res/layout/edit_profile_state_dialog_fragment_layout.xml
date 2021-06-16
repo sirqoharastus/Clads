@@ -19,7 +19,7 @@
             android:fontFamily="@font/poppins"
             android:text="@string/all_state_text"
             android:textColor="@color/deep_sky_blue"
-            android:textSize="@dimen/text_size_18sp"
+            android:textSize="@dimen/text_size_15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/poppins"
-                android:textSize="@dimen/text_size_18sp" />
+                android:textSize="@dimen/text_size_14sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -53,12 +53,12 @@
             android:id="@+id/edit_profile_state_dialog_fragment_cancel_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20dp"
             android:layout_marginBottom="@dimen/margin_30dp"
             android:fontFamily="@font/poppins"
-            android:layout_marginEnd="@dimen/margin_20dp"
             android:text="@string/all_cancel_text"
             android:textColor="@color/deep_sky_blue"
-            android:textSize="@dimen/text_size_18sp"
+            android:textSize="@dimen/text_size_15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/edit_profile_state_dialog_fragment_ok_textview"
             app:layout_constraintTop_toTopOf="@+id/edit_profile_state_dialog_fragment_ok_textview" />
@@ -72,7 +72,7 @@
             android:fontFamily="@font/poppins"
             android:text="@string/all_ok_text"
             android:textColor="@color/deep_sky_blue"
-            android:textSize="@dimen/text_size_18sp"
+            android:textSize="@dimen/text_size_15sp"
             app:layout_constraintEnd_toEndOf="@+id/edit_profile_state_dialog_fragment_text_input_layout"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_state_dialog_fragment_text_input_layout" />
 

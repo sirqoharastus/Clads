@@ -19,6 +19,7 @@ class LegalStatusDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // inflating the dialog layout when the view is created
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
         _binding = EditProfileLegalStatusDialogFragmentLayoutBinding.inflate(inflater, container, false)
         return binding.root
     }

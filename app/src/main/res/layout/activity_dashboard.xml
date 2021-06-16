@@ -10,7 +10,6 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-
   <include
       android:id="@+id/dashboard_activity_app_bar"
       layout="@layout/appbar_dashboard_content_layout"

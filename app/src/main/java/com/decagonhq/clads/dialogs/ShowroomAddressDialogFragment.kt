@@ -8,13 +8,13 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import com.decagonhq.clads.databinding.EditProfileShowroomAddressDialogBinding
-import com.decagonhq.clads.models.EditProfileViewmodel
+import com.decagonhq.clads.viewmodels.AccontViewModel
 
 class ShowroomAddressDialogFragment : DialogFragment() {
     // declaring binding variables
     var _binding: EditProfileShowroomAddressDialogBinding? = null
     val binding get() = _binding!!
-    lateinit var viewModel: EditProfileViewmodel
+    lateinit var viewModel: AccontViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +22,7 @@ class ShowroomAddressDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // inflating the layout when the view is created
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
         _binding = EditProfileShowroomAddressDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -32,7 +33,7 @@ class ShowroomAddressDialogFragment : DialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(requireActivity()).get(EditProfileViewmodel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(AccontViewModel::class.java)
 
         binding.showroomAddressDialogOkTextview.setOnClickListener {
             val street = binding.showroomAddressDialogStreetEdittext.text.toString()

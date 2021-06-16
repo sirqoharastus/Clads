@@ -6,6 +6,7 @@
             <item name="android:gravity">top</item>
         </style>
 
+
     <style name="add_client_fragment_add_client_text_View">
         <item name="android:layout_marginTop">@dimen/dimen_44_dp</item>
         <item name="android:layout_marginLeft">@dimen/margin_27dp</item>

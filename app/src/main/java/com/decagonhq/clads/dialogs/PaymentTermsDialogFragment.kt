@@ -19,6 +19,7 @@ class PaymentTermsDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // inflating the layout when the view is created
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
         _binding = PaymentTermsDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

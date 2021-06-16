@@ -40,7 +40,7 @@
         app:tabPaddingEnd="@dimen/margin_15dp"
         app:tabPaddingStart="@dimen/padding_30dp"
         app:tabSelectedTextColor="@color/deep_sky_blue"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Body2"
         app:tabTextColor="@color/drawer_menu_item_textcolor">
 
 

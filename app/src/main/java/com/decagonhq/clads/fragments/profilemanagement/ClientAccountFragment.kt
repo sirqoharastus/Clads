@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.databinding.FragmentClientAccountBinding
+
 class ClientAccountFragment : Fragment() {
 
     override fun onCreateView(

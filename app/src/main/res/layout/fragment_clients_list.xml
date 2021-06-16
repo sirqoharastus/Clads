@@ -45,7 +45,6 @@
         android:layout_marginTop="@dimen/margin_18dp"
         android:text="@string/fragment_clients_list_you_have_not_added_client_yet_text_view"
         app:layout_constraintEnd_toEndOf="@+id/fragment_clients_list_male_imageview"
-        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="@+id/fragment_clients_list_female_imageview"
         app:layout_constraintTop_toBottomOf="@+id/fragment_clients_list_female_imageview" />
 

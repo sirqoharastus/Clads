@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentAccountBinding
-import com.decagonhq.clads.databinding.FragmentClientAccountBinding
 import com.decagonhq.clads.dialogs.FirstNameDialogFragment
 import com.decagonhq.clads.dialogs.GenderDialogFragment
 import com.decagonhq.clads.dialogs.LastNameDialogFragment
@@ -21,14 +20,14 @@ import com.decagonhq.clads.dialogs.ShowroomAddressDialogFragment
 import com.decagonhq.clads.dialogs.StateDialogFragment
 import com.decagonhq.clads.dialogs.WardDialogFragment
 import com.decagonhq.clads.dialogs.WorkAddressDialogFragment
-import com.decagonhq.clads.models.EditProfileViewmodel
+import com.decagonhq.clads.viewmodels.AccontViewModel
 
 class AccountFragment : Fragment() {
 
     // declaring binding variables
     var _binding: FragmentAccountBinding? = null
     val binding get() = _binding!!
-    private lateinit var viewmodel: EditProfileViewmodel
+    private lateinit var viewmodel: AccontViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,8 +35,6 @@ class AccountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentClientAccountBinding.inflate(inflater).root
-
         // inflating layout when the view is created
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         return binding.root
@@ -50,7 +47,7 @@ class AccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel = ViewModelProvider(this).get(EditProfileViewmodel::class.java)
+        viewmodel = ViewModelProvider(this).get(AccontViewModel::class.java)
 
         // setting account profile values on click to inflate respective dialogs in the process
 

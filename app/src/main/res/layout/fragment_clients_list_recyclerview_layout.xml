@@ -39,7 +39,7 @@
             android:id="@+id/fragment_clients_list_recyclerview_layout_last_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/margin_8dp"
             android:text="@string/fragment_clients_list_recyclerview_layout_last_name_text"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/fragment_clients_list_recyclerview_layout_first_name_text_view"
@@ -50,7 +50,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
             android:src="@drawable/fragment_clients_list_recyclerview_layout_location_icon4"
             app:layout_constraintBottom_toBottomOf="@+id/fragment_client_list_recyclerview_layout_location_text_view"
             app:layout_constraintEnd_toStartOf="@+id/fragment_client_list_recyclerview_layout_location_text_view"

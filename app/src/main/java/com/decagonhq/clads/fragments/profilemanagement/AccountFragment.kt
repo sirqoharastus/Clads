@@ -1,11 +1,19 @@
 package com.decagonhq.clads.fragments.profilemanagement
 
+import android.Manifest.permission.ACCESS_MEDIA_LOCATION
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.media.MediaBrowserServiceCompat.RESULT_OK
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentAccountBinding
 import com.decagonhq.clads.dialogs.FirstNameDialogFragment
@@ -28,6 +36,8 @@ class AccountFragment : Fragment() {
     var _binding: FragmentAccountBinding? = null
     val binding get() = _binding!!
     private lateinit var viewmodel: EditProfileViewmodel
+    private val permissionRequestCode = 100
+    lateinit var imageUri: Uri
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -148,7 +158,10 @@ class AccountFragment : Fragment() {
 
         binding.editProfileLegalStatusValueTextview.setOnClickListener {
             val legalStatusDialogFragment = LegalStatusDialogFragment()
-            legalStatusDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_legal_status_text))
+            legalStatusDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_legal_status_text)
+            )
             legalStatusDialogFragment.legalStatusLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -159,7 +172,10 @@ class AccountFragment : Fragment() {
 
         binding.editProfileNameOfUnionValueTextview.setOnClickListener {
             val nameOfUnionDialogFragment = NameOfUnionDialogFragment()
-            nameOfUnionDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_name_of_dialog_fragment_text))
+            nameOfUnionDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_name_of_dialog_fragment_text)
+            )
             nameOfUnionDialogFragment.nameOfUnionLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -170,7 +186,10 @@ class AccountFragment : Fragment() {
 
         binding.editProfileWardValueTextview.setOnClickListener {
             val wardDialogFragment = WardDialogFragment()
-            wardDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_ward_dialog_fragment_text))
+            wardDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_ward_dialog_fragment_text)
+            )
             wardDialogFragment.wardLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -197,13 +216,76 @@ class AccountFragment : Fragment() {
 
         binding.editProfileStateValueTextview.setOnClickListener {
             val stateDialogFragment = StateDialogFragment()
-            stateDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_state_dialog_fragment_text))
+            stateDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_state_dialog_fragment_text)
+            )
             stateDialogFragment.stateLiveData.observe(
                 viewLifecycleOwner,
                 {
-                    binding.editProfileShowroomAddressValueTextview.text = it
+                    binding.editProfileStateTextview.text = it
                 }
             )
+        }
+
+        binding.editProfileAccountTabChangePictureTextview.setOnClickListener {
+            pickImage()
+        }
+    }
+
+    fun checkPermissions() {
+        val requestCode = 100
+        if (ActivityCompat.checkSelfPermission(
+                requireActivity().applicationContext,
+                android.Manifest.permission.ACCESS_MEDIA_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this.requireActivity(),
+                arrayOf(ACCESS_MEDIA_LOCATION),
+                requestCode
+            )
+        }
+    }
+
+    private fun pickImage() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        startActivityForResult(intent, 100)
+    }
+
+    private fun pickImage2() {
+        val intent = Intent().setType("image/*").setAction(Intent.ACTION_GET_CONTENT)
+        startActivityForResult(Intent.createChooser(intent, "Select New Profile Picture"), 100)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == permissionRequestCode && resultCode == AppCompatActivity.RESULT_OK && data != null) {
+            val selectedPhotoUri = data.data
+            binding.editProfileAccountTabImageview.setImageURI(selectedPhotoUri)
+//            imageUri = data.data!!
+//
+//            CropImage.activity()
+//                .setGuidelines(CropImageView.Guidelines.ON)
+//                .setAspectRatio(1, 1)
+//                .start(this.requireActivity())
+//        }
+//
+//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+//            val result = CropImage.getActivityResult(data)
+//
+//            if (resultCode == RESULT_OK) {
+//                val resultUri = result.uri
+//                try {
+//                    val bitmap = MediaStore.Images.Media.getBitmap(
+//                        requireActivity().contentResolver,
+//                        resultUri
+//                    )
+//                    binding.editProfileAccountTabImageview.setImageBitmap(bitmap)
+//                } catch (e: Exception) {
+//                    e.printStackTrace()
+//                }
+//            }
         }
     }
 

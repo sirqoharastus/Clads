@@ -128,4 +128,10 @@ dependencies {
     // library for circle drawable
     implementation "com.amulyakhare:com.amulyakhare.textdrawable:$versions.amulyakhare_version"
 
+    ///ArthurHub Image Croper
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
 }

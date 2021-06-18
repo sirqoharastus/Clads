@@ -24,50 +24,34 @@
             android:id="@+id/action_dashboardhomeFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
         <action
-            android:id="@+id/action_dashboardhomeFragment_to_dashboardMediaFragment"
-            app:destination="@id/dashboardMediaFragment" />
-        <action
-            android:id="@+id/action_dashboardhomeFragment_to_dashboardMessagesFragment"
-            app:destination="@id/dashboardMessagesFragment" />
-        <action
             android:id="@+id/action_dashboardhomeFragment_to_suscriptionFragment"
             app:destination="@id/suscriptionFragment" />
         <action
             android:id="@+id/action_dashboardhomeFragment_to_resourceFragment"
             app:destination="@id/resourceFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/dashboardMessagesFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.DashboardMessagesFragment"
         android:label="Messages"
-        tools:layout="@layout/fragment_dashboard_messages" >
-        <action
-            android:id="@+id/action_dashboardMessagesFragment_to_dashboardMediaFragment"
-            app:destination="@id/dashboardMediaFragment" />
-        <action
-            android:id="@+id/action_dashboardMessagesFragment_to_dashboardhomeFragment"
-            app:destination="@id/dashboardhomeFragment" />
+        tools:layout="@layout/fragment_dashboard_messages" />
 
-
-    </fragment>
     <fragment
         android:id="@+id/dashboardMediaFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.DashboardMediaFragment"
-        android:label="Media"
-        tools:layout="@layout/fragment_dashboard_media" >
+        android:label="Photo Gallery"
+        tools:layout="@layout/fragment_dashboard_media">
         <action
-            android:id="@+id/action_dashboardMediaFragment_to_dashboardhomeFragment"
-            app:destination="@id/dashboardhomeFragment" />
-        <action
-            android:id="@+id/action_dashboardMediaFragment_to_dashboardMessagesFragment"
-            app:destination="@id/dashboardMessagesFragment" />
+            android:id="@+id/action_dashboardMediaFragment_to_mediaDetailFragment"
+            app:destination="@id/mediaDetailFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.EditProfileFragment"
         android:label="Edit Profile"
         tools:layout="@layout/fragment_edit_profile">
-
     </fragment>
     <fragment
         android:id="@+id/clientsListFragment"
@@ -111,4 +95,11 @@
         android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
         android:label="fragment_resource"
         tools:layout="@layout/fragment_resource" />
+    <fragment
+        android:id="@+id/mediaDetailFragment"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.MediaDetailFragment"
+        android:label="fragment_media_detail"
+        tools:layout="@layout/fragment_media_detail" >
+        <argument android:name="imageUri" />
+    </fragment>
 </navigation>

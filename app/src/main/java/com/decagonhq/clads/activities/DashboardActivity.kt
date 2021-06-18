@@ -71,7 +71,7 @@ class DashboardActivity : AppCompatActivity() {
                 (destination.id == R.id.dashboardMediaFragment || destination.id == R.id.dashboardMessagesFragment) -> {
                     dashBoardActivityBinding.dashboardActivityAppBar.profileImageInToolbar.visibility = View.GONE
                     dashBoardActivityBinding.dashboardActivityAppBar.toolBarNotificationIcon.visibility = View.GONE
-                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.visibility = View.GONE
+                    dashBoardActivityBinding.dashboardActivityAppBar.toolBarTitle.visibility = View.VISIBLE
                     dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView.visibility = View.VISIBLE
                 }
                 else -> {
@@ -111,7 +111,6 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         if (R.id.logoutFragment == item.itemId) {
             return false
         }
@@ -119,7 +118,6 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }

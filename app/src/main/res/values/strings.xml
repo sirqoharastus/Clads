@@ -8,21 +8,20 @@
     <!-- loading TextView -->
     <string name="splash_screen_loading_text">Loading...</string>
 
-    <!-- Clads TextView -->
-
 
     //string resources for fragment login screen
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_login_screen_welcome_back">Welcome back</string>
     <string name="fragment_login_screen_login_to_continue">Login to continue</string>
     <string name="fragment_login_screen_email_address">Email Address</string>
     <string name="fragment_login_screen_password">Password</string>
-    <string name="fragment_login_screen_login">Login</string>
-    <string name="fragment_login_screen_new_user">New User?</string>
+    <string name="fragment_login_screen_login"><b>Login</b></string>
+    <string name="fragment_login_screen_new_user">New User? SignUp for free</string>
     <string name="fragment_login_screen_signup_for_free">SignUp for free</string>
     <string name="fragment_login_screen_forgot_password">Forgot Password?</string>
-    <string name="fragment_login_screen_login_with_google">Login with Google</string>
-
+    <string name="fragment_login_screen_login_with_google">Sign in with Google</string>
 
     <string name="sign_up_login_tag_line"> Lorem ipsum, ipsum sum</string>
 
@@ -63,7 +62,6 @@
     <string name="signup_choices_fragment_signup_with_google">Signup with Google</string>
     <string name="signup_choices_fragment_sign_up_with_email">Sign up with email</string>
     <string name="signup_choices_fragment_sign_up_with_phone_number">Sign up with phone number</string>
-
     <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
 
@@ -75,7 +73,6 @@
 
 
     <string-array name="email_sign_up_fragment_choose_account_category_array">
-
         <item>Tailor</item>
         <item>Weaver</item>
         <item>Client</item>
@@ -105,6 +102,80 @@
     <string name="all_login">Login</string>
     <string name="reset_password_verification_fragment_new_password">New Password</string>
     <string name="reset_password_verification_fragment_confirm_new_password">Confirm New Password</string>
+    <string name="there_are_no_measurements_for_this_client">There are no measurements for this client</string>
+    <string name="measurement_value_default">12</string>
+    <string name="measurement">Measurement</string>
+    <string name="add_address">Add Address</string>
+    <string name="add_delivery_address">Add Delivery Address</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="enter_delivery_address">Enter Delivery Address</string>
+    <string name="add_measurement">Add Measurement</string>
+    <string name="name">Name</string>
+    <string name="full_length">Full length</string>
+    <string name="_1411">1411</string>
+    <string name="measurement_name">Measurement Name</string>
+
+    <string-array name="states_array">
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa-Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayelsa</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Cross River</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Enugu</item>
+        <item>Gombe</item>
+        <item>Imo</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Katsina</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nassarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+        <item>Taraba</item>
+        <item>FCT/Abuja</item>
+    </string-array>
+
+
+    <string name="fragment_clients_list_you_have_not_added_client_yet_text">You have not added client yet</string>
+    <string name="fragment_client_account_name_edit_text_hint">Name</string>
+    <string name="fragment_client_account_phone_number_edit_text_hint">Phone Number</string>
+    <string name="fragment_client_account_email_address_edit_text_hint">Email Address</string>
+    <string name="fragment_clients_list_recyclerview_layout_circular_image_text">ab</string>
+    <string name="fragment_clients_list_recyclerview_layout_first_name_text">FirstName</string>
+    <string name="fragment_clients_list_recyclerview_layout_last_name_text">LastName</string>
+    <string name="fragment_clients_list_recyclerview_layout_location_text">Lagos</string>
+    <string name="client_account">Client Account</string>
+    <string name="add_client">Add Client</string>
+    <string name="measurements">Measurement</string>
+    <string name="delivery_addresses">Delivery Addresses</string>
+    <string name="fragment_tablayout_account_name_edit_text">Name</string>
+    <string name="fragment_tablayout_client_account_phone_number_edit_text">Phone Number</string>
+    <string name="fragment_tablayout_client_account_email_address_hint_edit_text">Email Address</string>
+    <string name="fragment_tablayout_client_account_gender_text_view">Gender</string>
+    <string name="fragment_tablayout_client_account_male_hint_radio_button_text">Male</string>
+    <string name="fragment_client_account_radion_female_text">Female</string>
+    <string name="fragment_client_account_delivery_address_hint_text_edit_text">Delivery Address</string>
+    <string name="fragment_client_account_next_button_text">Next</string>
+    <string name="fragment_clients_list_you_have_not_added_client_yet_text_view">You have not added client yet</string>
     <string name="first_name_dialog_fragment">first name dialog fragment</string>
     <string name="last_name_dialog_fragment">last name dialog fragment</string>
     <string name="add_payment_terms_dialog_add_payment_terms_text">Add Payment Terms</string>
@@ -264,5 +335,18 @@
     <string name="bottom_navigation_menu_media_item_title">Media</string>
     <string name="bottom_navigation_menu_messages_item_title">Messages</string>
     <string name="fragment_messages_message_text_view">Messages</string>
-
+    <string name="dashboard_media_fragment_no_photo">You have no photo in your gallery</string>
+    <string name="fragment_add_client_add_client_text_view">Add Client</string>
+    <string name="edit_measurement">Edit Measurement</string>
+    <string name="_47">47</string>
+    <string name="fragment_edit_measurement_dialog_save_button">Save</string>
+    <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
+    <string name="save_button_text">Save</string>
+    <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
+    <string name="photo_gallery_recycler_view">Photo Gallery Recycler View</string>
+    <string name="no_photo_icon">No photo icon</string>
+    <string name="dashboard_media_fragment_menu_share">Share</string>
+    <string name="dashboard_media_fragment_menu_edit">Edit</string>
+    <string name="dashboard_media_fragment_menu_delete">Delete</string>
+    <string name="image_detail_view_description">Image Detail view</string>
 </resources>

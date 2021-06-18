@@ -1,0 +1,70 @@
+package com.decagonhq.clads.adapters
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.decagonhq.clads.databinding.PhotoRecyclerViewItemBinding
+import com.decagonhq.clads.fragments.profilemanagement.DashboardMediaFragmentDirections
+import com.decagonhq.clads.models.Photo
+
+class MediaFragmentPhotoAdapter(
+    private val list: List<Photo>,
+//    private val context: DashboardMediaFragment
+) : RecyclerView.Adapter<MediaFragmentPhotoAdapter.ViewHolder>() {
+
+    class ViewHolder(val binding: PhotoRecyclerViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        var photoImage = binding.photoRecyclerviewImageview
+        var photoCaption = binding.photoRecyclerviewCaption
+
+        fun bindView(item: Photo) {
+            photoCaption.text = item.caption
+
+            Glide.with(binding.root.context)
+                .load(item.uri)
+                .into(photoImage)
+
+            binding.photoRecyclerviewImageview.setOnClickListener {
+                val imageUri = item.uri.toString()
+                // use actions to pass data from one fragment to the other
+                val action =
+                    DashboardMediaFragmentDirections.actionDashboardMediaFragmentToMediaDetailFragment(imageUri)
+                itemView.findNavController().navigate(action)
+            }
+        }
+    }
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val binding = PhotoRecyclerViewItemBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        val item = list[position]
+        holder.bindView(item)
+
+//        Glide.with(holder.binding.root.context)
+//            .load(list[position].uri)
+//            .into(holder.photoImage)
+//
+//        holder.itemView.apply {
+//            with(holder) {
+//                with(list[position]) {
+//                    photoCaption.text = caption
+//                }
+//            }
+//        }
+    }
+
+    override fun getItemCount(): Int = list.size
+}

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".di.CladsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Clads">
 
-        <activity android:name=".activities.DashboardActivity">
+        <activity android:name="com.decagonhq.clads.ui.activities.DashboardActivity">
         </activity>
 
-        <activity android:name=".activities.SplashScreenActivity"
+        <activity android:name="com.decagonhq.clads.ui.activities.SplashScreenActivity"
             android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,11 +27,19 @@
 
 
 
-        <activity android:name=".activities.CladsActivity">
+        <activity android:name="com.decagonhq.clads.ui.activities.AuthActivity">
+
+            <nav-graph android:value="@navigation/authentication_nav_graph">
+            </nav-graph>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:host="mobile.clad.com.ng" android:scheme="http">
+                </data>
+                <data android:host="mobile.clad.com.ng" android:scheme="https">
+                </data>
             </intent-filter>
         </activity>
 

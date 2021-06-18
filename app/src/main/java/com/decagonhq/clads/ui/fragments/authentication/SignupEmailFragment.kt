@@ -1,7 +1,6 @@
 package com.decagonhq.clads.ui.fragments.authentication
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -63,20 +62,8 @@ class SignupEmailFragment : Fragment() {
                 if (validateFields()) {
 
                     userRegistrationViewModel.registerUser(
-                        User(
-                            category = "Tailor",
-                            deliveryAddress = "address",
-                            email = "jonesbenklins@gmail.com",
-                            firstName = "Jones",
-                            lastName = "Omoyibo",
-                            password = "Benklins",
-                            phoneNumber = "08168105123",
-                            role = "Tailor",
-                            gender = "male",
-                            country = "Nigeria",
-                        )
+                        createUser()
                     )
-                    Log.i("Retrofit Request", "Gat here")
                 }
             }
         }
@@ -197,10 +184,27 @@ class SignupEmailFragment : Fragment() {
                     }
 
                     is Resource.Failure -> {
-                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT)
+                            .show()
                     }
                 }
             }
         )
+    }
+
+    private fun createUser(): User {
+
+        val user = User(
+            binding.emailSignUpFragmentAccountCategoryAutoTextView.text.toString(),
+            "address",
+            binding.emailSignUpFragmentEmailAddressTextInputEditText.text.toString(),
+            binding.emailSignUpFragmentFirstnameTextInputEditText.text.toString(),
+            binding.emailSignUpFragmentLastnameTextInputEditText.text.toString(),
+            binding.emailSignUpFragmentPasswordTextInputEditText.text.toString(),
+            "08168105123",
+            "Tailor",
+            "Nigeria"
+        )
+        return user
     }
 }

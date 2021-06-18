@@ -44,7 +44,9 @@ class SignupChoicesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.fragmentSignupChoicesTextviewHaveAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_signup_choices_fragment_to_fragment_login_screen)
         }
+
         binding.fragmentSignupChoicesButtonWithEmail.apply {
             setOnClickListener {
                 findNavController().navigate(R.id.action_signupChoicesFragment_to_signupEmailFragment)

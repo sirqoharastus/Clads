@@ -62,9 +62,25 @@ class SignupEmailFragment : Fragment() {
                 if (validateFields()) {
 
                     userRegistrationViewModel.registerUser(
-                        createUser()
+                        User(
+                            category = "Tailor",
+                            deliveryAddress = "address",
+                            email = "Jonesbenklins@gmail.com",
+                            firstName ="Jones",
+                            lastName = "Omoyibo",
+                            password =  "Benklins123",
+                            phoneNumber = "08168105123",
+                            role = "Tailor",
+                            gender="Nigeria")
                     )
+
                 }
+            }
+        }
+
+        binding.emailSignUpFragmentLoginTextView.apply {
+            setOnClickListener{
+                findNavController().navigate(R.id.action_signup_email_fragment_to_fragment_login_screen)
             }
         }
 
@@ -184,27 +200,22 @@ class SignupEmailFragment : Fragment() {
                     }
 
                     is Resource.Failure -> {
-                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT)
-                            .show()
+                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
         )
     }
 
-    private fun createUser(): User {
+//    private fun createUser() = User(
+//            category = "Tailor",
+//            deliveryAddress = "address",
+//            email = "Jonesbenklins@gmail.com",
+//            firstName ="Jones",
+//            lastName = "Omoyibo",
+//            password =  "Benklins@123",
+//            phoneNumber = "08168105123",
+//            role = "Tailor",
+//            gender="Nigeria")
 
-        val user = User(
-            binding.emailSignUpFragmentAccountCategoryAutoTextView.text.toString(),
-            "address",
-            binding.emailSignUpFragmentEmailAddressTextInputEditText.text.toString(),
-            binding.emailSignUpFragmentFirstnameTextInputEditText.text.toString(),
-            binding.emailSignUpFragmentLastnameTextInputEditText.text.toString(),
-            binding.emailSignUpFragmentPasswordTextInputEditText.text.toString(),
-            "08168105123",
-            "Tailor",
-            "Nigeria"
-        )
-        return user
-    }
 }

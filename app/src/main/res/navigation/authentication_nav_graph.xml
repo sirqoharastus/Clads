@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_signupChoicesFragment_to_signupEmailFragment"
             app:destination="@id/signup_email_fragment" />
+        <action
+            android:id="@+id/action_signup_choices_fragment_to_fragment_login_screen"
+            app:destination="@id/fragment_login_screen" />
     </fragment>
     <fragment
         android:id="@+id/signup_email_fragment"
@@ -45,6 +48,9 @@
         <action
             android:id="@+id/action_signupEmailFragment_to_emailVerificationFragment"
             app:destination="@id/email_verification_fragment" />
+        <action
+            android:id="@+id/action_signup_email_fragment_to_fragment_login_screen"
+            app:destination="@id/fragment_login_screen" />
     </fragment>
     <fragment
         android:id="@+id/signup_google_fragment"
@@ -77,6 +83,9 @@
             android:id="@+id/email_confirmation"
             app:uri="mobile.clads.com.ng/email_confirmation">
         </deepLink>
+        <action
+            android:id="@+id/action_fragment_login_screen_to_signup_choices_fragment"
+            app:destination="@id/signup_choices_fragment" />
     </fragment>
 
     <fragment

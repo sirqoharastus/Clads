@@ -78,8 +78,9 @@
     <string name="Passwords_do_not_match">Passwords do not match</string>
     <string name= "address">Address</string>
     <string name="phone_number">08168105123</string>
-    <string name="Role">Tailor</string>
-    <string name="Country">Nigeria</string>
+    <string name="role">Tailor</string>
+    <string name="country">Nigeria</string>
+    <string name="gender">male</string>
 
 
 

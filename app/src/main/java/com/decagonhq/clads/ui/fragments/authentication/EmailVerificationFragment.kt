@@ -35,7 +35,11 @@ class EmailVerificationFragment : Fragment() {
         binding.emailVerificationFragmentVerifyEmailAddressButton.setOnClickListener {
 
             val intent = Intent(Intent.ACTION_MAIN)
-            intent.addCategory(Intent.CATEGORY_APP_EMAIL)
+            intent.apply {
+                addCategory(Intent.CATEGORY_APP_EMAIL)
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
+
             startActivity(Intent.createChooser(intent, "Email"))
             // findNavController().navigate(R.id.action_emailVerificationFragment_to_loginFragment)
         }

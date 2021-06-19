@@ -7,9 +7,10 @@ import javax.inject.Inject
 class Repository @Inject constructor(private val userRegistrationService: UserRegistrationServiceApi) :
     BaseRepository() {
 
-    // change later to Couroutine properly
     suspend fun registerUser(user: User) = safeApiCall {
 
         userRegistrationService.registerUser(user)
     }
+
+
 }

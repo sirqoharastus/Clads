@@ -62,16 +62,7 @@ class SignupEmailFragment : Fragment() {
                 if (validateFields()) {
 
                     userRegistrationViewModel.registerUser(
-                        User(
-                            category = "Tailor",
-                            deliveryAddress = "address",
-                            email = "Jonesbenklins@gmail.com",
-                            firstName ="Jones",
-                            lastName = "Omoyibo",
-                            password =  "Benklins123",
-                            phoneNumber = "08168105123",
-                            role = "Tailor",
-                            gender="Nigeria")
+                        createUser()
                     )
 
                 }
@@ -79,7 +70,7 @@ class SignupEmailFragment : Fragment() {
         }
 
         binding.emailSignUpFragmentLoginTextView.apply {
-            setOnClickListener{
+            setOnClickListener {
                 findNavController().navigate(R.id.action_signup_email_fragment_to_fragment_login_screen)
             }
         }
@@ -120,7 +111,7 @@ class SignupEmailFragment : Fragment() {
         when {
             (!SignUpEmailFragmentValidator.nameValidator(binding.emailSignUpFragmentFirstnameTextInputEditText.text.toString())) -> {
                 binding.emailSignUpFragmentFirstnameTextInputLayout.error =
-                    "Field is empty or invalid name format entered"
+                    resources.getString(R.string.Field_is_empty_or_invalid_name_format_entered)
                 isFieldValidated = false
             }
             else -> {
@@ -130,7 +121,7 @@ class SignupEmailFragment : Fragment() {
 
         if (!SignUpEmailFragmentValidator.nameValidator(binding.emailSignUpFragmentLastnameTextInputEditText.text.toString())) {
             binding.emailSignUpFragmentLastnameTextInputLayout.error =
-                "Field is empty or invalid name format entered"
+                resources.getString(R.string.Field_is_empty_or_invalid_name_format_entered)
             isFieldValidated = false
         }
 
@@ -139,14 +130,14 @@ class SignupEmailFragment : Fragment() {
             )
         ) {
             binding.emailSignUpFragmentEmailAddressTextInputLayout.error =
-                "Field is empty or Invalid email address entered"
+                resources.getString(R.string.Field_is_empty_or_Invalid_email_address_entered)
             isFieldValidated = false
         }
 
         if (!SignUpEmailFragmentValidator.accountCategoryValidator(binding.emailSignUpFragmentAccountCategoryAutoTextView.text.toString())) {
 
             binding.emailSignUpFragmentAccountCategoryTextInputLayout.error =
-                "Select an account type"
+                resources.getString(R.string.Select_an_account_type)
             isFieldValidated = false
         }
 
@@ -155,7 +146,7 @@ class SignupEmailFragment : Fragment() {
             )
         ) {
             binding.emailSignUpFragmentPasswordTextInputLayout.error =
-                "Password must not be less than 6 characters"
+                resources.getString(R.string.Password_must_not_be_less_than_6_characters)
             binding.emailSignUpFragmentPasswordTextInputLayout.errorIconDrawable = null
             isFieldValidated = false
         }
@@ -165,7 +156,7 @@ class SignupEmailFragment : Fragment() {
             )
         ) {
             binding.emailSignUpFragmentConfirmPasswordTextInputLayout.error =
-                "Password must not be less than 6 characters"
+                resources.getString(R.string.Password_must_not_be_less_than_6_characters)
             binding.emailSignUpFragmentConfirmPasswordTextInputLayout.errorIconDrawable = null
             isFieldValidated = false
         }
@@ -178,7 +169,7 @@ class SignupEmailFragment : Fragment() {
         ) {
 
             binding.emailSignUpFragmentConfirmPasswordTextInputLayout.error =
-                "Passwords do not match"
+                resources.getString(R.string.Passwords_do_not_match)
             binding.emailSignUpFragmentConfirmPasswordTextInputLayout.errorIconDrawable = null
             isFieldValidated = false
         }
@@ -200,22 +191,25 @@ class SignupEmailFragment : Fragment() {
                     }
 
                     is Resource.Failure -> {
-                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT)
+                            .show()
                     }
                 }
             }
         )
     }
 
-//    private fun createUser() = User(
-//            category = "Tailor",
-//            deliveryAddress = "address",
-//            email = "Jonesbenklins@gmail.com",
-//            firstName ="Jones",
-//            lastName = "Omoyibo",
-//            password =  "Benklins@123",
-//            phoneNumber = "08168105123",
-//            role = "Tailor",
-//            gender="Nigeria")
+    private fun createUser() = User(
+        category = binding.emailSignUpFragmentAccountCategoryAutoTextView.text.toString(),
+        deliveryAddress = resources.getString(R.string.delivery_address),
+        email = binding.emailSignUpFragmentEmailAddressTextInputEditText.text.toString(),
+        firstName = binding.emailSignUpFragmentFirstnameTextInputEditText.text.toString(),
+        lastName = binding.emailSignUpFragmentLastnameTextInputEditText.text.toString(),
+        password = binding.emailSignUpFragmentPasswordTextInputEditText.text.toString(),
+        phoneNumber = resources.getString(R.string.phone_number),
+        role = resources.getString(R.string.role),
+        gender = resources.getString(R.string.gender),
+        country = resources.getString(R.string.country),
+    )
 
 }

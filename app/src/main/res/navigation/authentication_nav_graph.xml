@@ -35,19 +35,19 @@
         tools:layout="@layout/fragment_signup_choices" >
         <action
             android:id="@+id/action_signupChoicesFragment_to_signupEmailFragment"
-            app:destination="@id/signup_email_fragment" />
+            app:destination="@id/signup_email_fragment"/>
         <action
             android:id="@+id/action_signup_choices_fragment_to_fragment_login_screen"
-            app:destination="@id/fragment_login_screen" />
+            app:destination="@id/fragment_login_screen"/>
     </fragment>
     <fragment
         android:id="@+id/signup_email_fragment"
         android:name="com.decagonhq.clads.ui.fragments.authentication.SignupEmailFragment"
         android:label="fragment_signup_email"
-        tools:layout="@layout/fragment_signup_email" >
+        tools:layout="@layout/fragment_signup_email">
         <action
             android:id="@+id/action_signupEmailFragment_to_emailVerificationFragment"
-            app:destination="@id/email_verification_fragment" />
+            app:destination="@id/email_verification_fragment"/>
         <action
             android:id="@+id/action_signup_email_fragment_to_fragment_login_screen"
             app:destination="@id/fragment_login_screen" />
@@ -81,7 +81,7 @@
             app:destination="@id/placeholder" />
         <deepLink
             android:id="@+id/email_confirmation"
-            app:uri="mobile.clads.com.ng/email_confirmation">
+            app:uri="clads-service.herokuapp.com/api/v1/confirm">
         </deepLink>
         <action
             android:id="@+id/action_fragment_login_screen_to_signup_choices_fragment"
@@ -95,7 +95,6 @@
         tools:layout="@layout/fragment_email_verification" >
         <action
             android:id="@+id/action_emailVerificationFragment_to_loginFragment"
-            app:destination="@id/fragment_login_screen" />
             app:destination="@id/fragment_login_screen" />
     </fragment>
 

@@ -7,9 +7,8 @@ import retrofit2.HttpException
 import retrofit2.Response
 
 abstract class BaseRepository {
-    suspend fun <T> safeApiCall(
-        apiCall: suspend () -> T
-    ): Resource<T> {
+
+    suspend fun <T> safeApiCall(apiCall: suspend () -> T): Resource<T> {
         return withContext(Dispatchers.IO) {
             try {
                 Resource.Success(apiCall.invoke())
@@ -31,4 +30,5 @@ abstract class BaseRepository {
             }
         }
     }
+
 }

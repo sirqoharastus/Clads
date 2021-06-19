@@ -49,7 +49,6 @@ class LoginScreenFragment : Fragment() {
         newUserTextview = binding.fragmentLoginScreenNewUserTextView
         textSpan()
 
-
         /* Onclick of the login button the user's input is converted to string and validated and if the user's
         *  input is correct the next fragment is launched else the user is notified which field is not
         * field properly
@@ -72,13 +71,13 @@ class LoginScreenFragment : Fragment() {
             }
         }
 
-        newUserTextview.setOnClickListener{
+        newUserTextview.setOnClickListener {
 
             findNavController().navigate(R.id.action_fragment_login_screen_to_signup_choices_fragment)
         }
 
         binding.fragmentLoginScreenForgotPasswordTextView.apply {
-            setOnClickListener{
+            setOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
             }
         }

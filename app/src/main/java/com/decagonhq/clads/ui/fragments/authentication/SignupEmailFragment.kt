@@ -64,7 +64,6 @@ class SignupEmailFragment : Fragment() {
                     userRegistrationViewModel.registerUser(
                         createUser()
                     )
-
                 }
             }
         }
@@ -211,5 +210,4 @@ class SignupEmailFragment : Fragment() {
         gender = resources.getString(R.string.gender),
         country = resources.getString(R.string.country),
     )
-
 }

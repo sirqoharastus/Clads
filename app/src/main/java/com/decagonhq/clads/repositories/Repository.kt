@@ -11,6 +11,4 @@ class Repository @Inject constructor(private val userRegistrationService: UserRe
 
         userRegistrationService.registerUser(user)
     }
-
-
 }

@@ -6,44 +6,40 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.R
-import com.decagonhq.clads.databinding.FragmentTablayoutPaymentMethodBinding
+import com.decagonhq.clads.databinding.FragmentPaymentMethodBinding
 import com.decagonhq.clads.dialogs.AddPaymentTermsDialogFragment
 import com.decagonhq.clads.dialogs.PaymentOptionsDialogFragment
 import com.decagonhq.clads.dialogs.PaymentTermsDialogFragment
-import com.decagonhq.clads.models.EditProfileViewmodel
+import com.decagonhq.clads.viewmodels.AccontViewModel
 
 class PaymentMethodFragment : Fragment() {
-    // declaring binding variables
-    var _binding: FragmentTablayoutPaymentMethodBinding? = null
+    var _binding: FragmentPaymentMethodBinding? = null
     val binding get() = _binding!!
-    lateinit var viewModel: EditProfileViewmodel
+    lateinit var viewModel: AccontViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // inflating layout when the view is created
-        _binding = FragmentTablayoutPaymentMethodBinding.inflate(inflater, container, false)
+        _binding = FragmentPaymentMethodBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val fab = binding.paymentMethodsFramentFab
-        val paymentTextTermsTextView = binding.paymentTermsTextTextview
-        val paymentTermsTextview = binding.paymentTermsTextview
+        val paymentTermsTextTextview = binding.paymentTermsTextTextview
         val paymentOptionsTextTextview = binding.paymentOptionsTextTextview
-        val paymentOptionsTextview = binding.paymentOptionsTextview
 
-        // setting account profile values on click to inflate respective dialogs in the process
-        paymentTextTermsTextView.setOnClickListener {
+        paymentTermsTextTextview.setOnClickListener {
             val paymentTermsDialogFragment = PaymentTermsDialogFragment()
-            paymentTermsDialogFragment.show(
-                requireActivity().supportFragmentManager,
-                getString(R.string.payment_terms_dialog_fragment_payment_terms_dialog_fragment_text)
-            )
+            paymentTermsDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.payment_terms_dialog_fragment_payment_terms_dialog_fragment_text))
+
             paymentTermsDialogFragment.paymentTermsLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -51,12 +47,10 @@ class PaymentMethodFragment : Fragment() {
                 }
             )
         }
+
         paymentOptionsTextTextview.setOnClickListener {
             val paymentOptionsDialogFragment = PaymentOptionsDialogFragment()
-            paymentOptionsDialogFragment.show(
-                requireActivity().supportFragmentManager,
-                getString(R.string.payment_options_dialog_fragment_payment_options_dialog_fragment_text)
-            )
+            paymentOptionsDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.payment_options_dialog_fragment_payment_options_dialog_fragment_text))
             paymentOptionsDialogFragment.paymentOptionsLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -64,14 +58,10 @@ class PaymentMethodFragment : Fragment() {
                 }
             )
         }
+
         fab.setOnClickListener {
-            val addPaymentOptionsDialogFragment = AddPaymentTermsDialogFragment()
-            addPaymentOptionsDialogFragment.show(
-                requireActivity().supportFragmentManager,
-                getString(
-                    R.string.add_payment_dialog_fragment_add_payment_dialog_fragment_text
-                )
-            )
+            val addPaymentDialogFragment = AddPaymentTermsDialogFragment()
+            addPaymentDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.add_payment_dialog_fragment_add_payment_dialog_fragment_text))
         }
     }
 

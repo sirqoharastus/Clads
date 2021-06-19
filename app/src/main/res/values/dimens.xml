@@ -11,6 +11,7 @@
     <dimen name="margin_6dp">6dp</dimen>
     <dimen name="margin_7dp">7dp</dimen>
     <dimen name="margin_8dp">8dp</dimen>
+
     <dimen name="margin_9dp">9dp</dimen>
     <dimen name="margin_10dp">10dp</dimen>
     <dimen name="margin_11dp">11dp</dimen>
@@ -62,7 +63,6 @@
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_17sp">17sp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
-    <dimen name="text_size_20sp">20sp</dimen>
     <dimen name="text_size_22sp">22sp</dimen>
 
     <!-- Dimensions for padding-->
@@ -102,15 +102,25 @@
     <dimen name="layout_height_or_width_40dp">40dp</dimen>
     <dimen name="layout_height_or_width_100dp">100dp</dimen>
     <dimen name="layout_height_or_width_51dp">51dp</dimen>
+    <dimen name="layout_height_or_width_200dp">200dp</dimen>
 
     <!-- Signup_email_layout_bias -->
     <dimen name="bias_0">0.0</dimen>
+    <dimen name="weight_sum_2">2</dimen>
+    <dimen name="weight_sum_1">2</dimen>
     <dimen name="bias_0.49">0.49</dimen>
     <dimen name="bias_0.50">0.50</dimen>
     <dimen name="bias_0.70">0.70</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="bias_0.9">0.9</dimen>
 
     <!-- Reset password verification screen-->
     <dimen name="imageview_width_34dp">34dp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="margin_53dp">53dp</dimen>
+    <dimen name="marginTop_22dp">22dp</dimen>
+    <dimen name="cornerRadius_5dp">5dp</dimen>
 
     <dimen name="margin_34dp">34dp</dimen>
     <dimen name="margin_46dp">46dp</dimen>
@@ -149,7 +159,7 @@
 
 
 
-0
+
     <integer name="number_0">0</integer>
     <integer name="number_1">1</integer>
     <integer name="number_3">3</integer>

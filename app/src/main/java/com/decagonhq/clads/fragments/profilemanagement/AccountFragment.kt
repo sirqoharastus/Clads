@@ -9,6 +9,8 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
@@ -28,23 +30,24 @@ import com.decagonhq.clads.dialogs.ShowroomAddressDialogFragment
 import com.decagonhq.clads.dialogs.StateDialogFragment
 import com.decagonhq.clads.dialogs.WardDialogFragment
 import com.decagonhq.clads.dialogs.WorkAddressDialogFragment
-import com.decagonhq.clads.models.EditProfileViewmodel
+import com.decagonhq.clads.viewmodels.AccontViewModel
+import java.util.jar.Manifest
 
 class AccountFragment : Fragment() {
 
     // declaring binding variables
     var _binding: FragmentAccountBinding? = null
     val binding get() = _binding!!
-    private lateinit var viewmodel: EditProfileViewmodel
     private val permissionRequestCode = 100
     lateinit var imageUri: Uri
+    private lateinit var viewmodel: AccontViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        // Inflate the layout for this fragment
         // inflating layout when the view is created
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         return binding.root
@@ -57,7 +60,7 @@ class AccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel = ViewModelProvider(this).get(EditProfileViewmodel::class.java)
+        viewmodel = ViewModelProvider(this).get(AccontViewModel::class.java)
 
         // setting account profile values on click to inflate respective dialogs in the process
 
@@ -229,23 +232,60 @@ class AccountFragment : Fragment() {
         }
 
         binding.editProfileAccountTabChangePictureTextview.setOnClickListener {
-            pickImage()
+            if (checkPermission2()){
+                pickImage()
+            }
+            else {
+                requestPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE, "ACCESS MEDIA", 100)
+
+            }
+
         }
     }
 
-    fun checkPermissions() {
-        val requestCode = 100
-        if (ActivityCompat.checkSelfPermission(
-                requireActivity().applicationContext,
-                android.Manifest.permission.ACCESS_MEDIA_LOCATION
-            ) != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this.requireActivity(),
-                arrayOf(ACCESS_MEDIA_LOCATION),
-                requestCode
-            )
+
+
+    private fun requestPermission(permission: String, name: String, requestCode: Int) {
+        when {
+            shouldShowRequestPermissionRationale(permission) -> showDialog(permission, name, requestCode)
+            else -> ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), requestCode)
         }
+    }
+
+    private fun showDialog(permission: String, name: String, requestCode: Int) {
+        val builder = AlertDialog.Builder(requireActivity())
+        builder.apply {
+            setMessage("Permission to access your $name is required to use this app")
+            setTitle("Permission required")
+            setPositiveButton("OK") { dialog, which ->
+                ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), requestCode)
+            }
+        }
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        fun innerCheck(name: String) {
+            if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(requireActivity(), "Permission not granted", Toast.LENGTH_SHORT).show()
+            } else {
+                pickImage()
+                Toast.makeText(requireActivity(), "Permission granted", Toast.LENGTH_SHORT).show()
+            }
+        }
+        when (requestCode) {
+            100 -> innerCheck("calls")
+        }
+    }
+
+
+    fun checkPermission2(): Boolean{
+        return ActivityCompat.checkSelfPermission(requireActivity().applicationContext, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
     }
 
     private fun pickImage() {
@@ -263,29 +303,7 @@ class AccountFragment : Fragment() {
         if (requestCode == permissionRequestCode && resultCode == AppCompatActivity.RESULT_OK && data != null) {
             val selectedPhotoUri = data.data
             binding.editProfileAccountTabImageview.setImageURI(selectedPhotoUri)
-//            imageUri = data.data!!
-//
-//            CropImage.activity()
-//                .setGuidelines(CropImageView.Guidelines.ON)
-//                .setAspectRatio(1, 1)
-//                .start(this.requireActivity())
-//        }
-//
-//        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
-//            val result = CropImage.getActivityResult(data)
-//
-//            if (resultCode == RESULT_OK) {
-//                val resultUri = result.uri
-//                try {
-//                    val bitmap = MediaStore.Images.Media.getBitmap(
-//                        requireActivity().contentResolver,
-//                        resultUri
-//                    )
-//                    binding.editProfileAccountTabImageview.setImageBitmap(bitmap)
-//                } catch (e: Exception) {
-//                    e.printStackTrace()
-//                }
-//            }
+
         }
     }
 

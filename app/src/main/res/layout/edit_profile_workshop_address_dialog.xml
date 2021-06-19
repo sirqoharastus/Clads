@@ -15,24 +15,25 @@
             android:id="@+id/workshop_address_dialog_workshop_address_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="@dimen/margin_34dp"
             android:fontFamily="@font/poppins"
             android:text="@string/all_workshop_address_text"
             android:textColor="@color/navy_blue"
-            android:layout_marginTop="@dimen/margin_34dp"
-            android:layout_marginStart="@dimen/margin_20dp"
-            android:textSize="@dimen/text_size_22sp"
+            android:textSize="@dimen/text_size_15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/workshop_address_dialog_street_edittext"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/margin_0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:hint="@string/all_street_text"
-            android:layout_marginEnd="@dimen/margin_20dp"
-            android:layout_marginTop="@dimen/margin_20dp"
+            android:textSize="@dimen/text_size_14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/workshop_address_dialog_workshop_address_textview"
             app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_workshop_address_textview" />
@@ -44,6 +45,7 @@
             android:layout_marginTop="@dimen/margin_20dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:hint="@string/all_city"
+            android:textSize="@dimen/text_size_14sp"
             app:layout_constraintEnd_toEndOf="@+id/workshop_address_dialog_street_edittext"
             app:layout_constraintStart_toStartOf="@id/workshop_address_dialog_street_edittext"
             app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_street_edittext" />
@@ -55,6 +57,7 @@
             android:layout_marginTop="@dimen/margin_20dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:hint="@string/all_state_text"
+            android:textSize="@dimen/text_size_14sp"
             app:layout_constraintEnd_toEndOf="@+id/workshop_address_dialog_city_edittext"
             app:layout_constraintStart_toStartOf="@id/workshop_address_dialog_city_edittext"
             app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_city_edittext" />
@@ -64,15 +67,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_48dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_30dp"
             android:fontFamily="@font/poppins"
             android:text="@string/all_cancel_text"
-            android:layout_marginBottom="@dimen/margin_30dp"
-            android:layout_marginEnd="@dimen/margin_20dp"
             android:textColor="@color/deep_sky_blue"
-            android:textSize="@dimen/text_size_18sp"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/workshop_address_dialog_ok_textview"
-            app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_state_edittet"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/workshop_address_dialog_state_edittet" />
 
         <TextView
             android:id="@+id/workshop_address_dialog_ok_textview"
@@ -81,7 +84,7 @@
             android:fontFamily="@font/poppins"
             android:text="@string/all_ok_text"
             android:textColor="@color/deep_sky_blue"
-            android:textSize="@dimen/text_size_18sp"
+            android:textSize="@dimen/text_size_15sp"
             app:layout_constraintBottom_toBottomOf="@+id/workshop_address_dialog_cancel_textview"
             app:layout_constraintEnd_toEndOf="@+id/workshop_address_dialog_state_edittet" />
 

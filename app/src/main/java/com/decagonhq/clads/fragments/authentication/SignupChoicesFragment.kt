@@ -46,7 +46,6 @@ class SignupChoicesFragment : Fragment() {
 
         binding.fragmentSignupChoicesTextviewHaveAccount.setOnClickListener {
         }
-
         binding.fragmentSignupChoicesButtonWithEmail.apply {
             setOnClickListener {
                 findNavController().navigate(R.id.action_signupChoicesFragment_to_signupEmailFragment)

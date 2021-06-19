@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_measurement_dialog_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".dialogs.EditMeasurementDialogFragment">
+
+    <TextView
+        android:id="@+id/add_measurement_fragment_add_measurement_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/margin_24dp"
+        android:text="@string/edit_measurement"
+        android:textColor="@color/navy_blue"
+        android:textFontWeight="700"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_measurement_fragment_add_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/text_size_18sp"
+        android:text="@string/name"
+        android:textColor="@color/navy_blue"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/add_measurement_fragment_add_measurement_text_view" />
+
+    <EditText
+        android:id="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:backgroundTint="@color/navy_blue"
+        android:hint="@string/full_length"
+        android:inputType="text"
+        android:textColor="@color/menu_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_measurement_fragment_add_name_text_view" />
+
+    <TextView
+        android:id="@+id/edit_measurement_fragment_edit_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_28dp"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/margin_18dp"
+        android:text="@string/edit_measurement"
+        android:textColor="@color/navy_blue"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/edit_measurement_fragment_measurement_name_edit_text" />
+
+    <EditText
+        android:id="@+id/edit_measurement_dialog_fragment_measurement_value_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:backgroundTint="@color/navy_blue"
+        android:fontFamily="@font/roboto"
+        android:hint="@string/_47"
+        android:inputType="number"
+        android:lineHeight="@dimen/margin_24dp"
+        android:textColor="@color/menu_text_color"
+        android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintStart_toStartOf="@+id/edit_measurement_fragment_measurement_name_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/edit_measurement_fragment_edit_text_view" />
+
+    <Button
+        android:id="@+id/edit_measurement_dialog_fragment_save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginBottom="@dimen/margin_20dp"
+        android:background="@drawable/login_screen_custom_button_shape"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/fragment_edit_measurement_dialog_save_button"
+        android:textSize="@dimen/text_size_15sp"
+        app:backgroundTint="@color/deep_sky_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_measurement_dialog_fragment_measurement_value_edit_text"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_measurement_dialog_fragment_measurement_value_edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/edit_measurement_dialog_fragment_measurement_value_edit_text"
+        app:layout_constraintVertical_bias="0.133" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

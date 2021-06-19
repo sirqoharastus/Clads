@@ -19,18 +19,18 @@
             android:fontFamily="@font/poppins"
             android:text="@string/payment_methods_payment_options_text"
             android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_20sp"
+            android:textSize="@dimen/text_size_18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <CheckBox
             android:id="@+id/payment_options_dialog_fragment_bank_deposit_checkbox"
-            android:layout_width="@dimen/width_0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_28dp"
-            android:text="@string/payment_options_dialog_bank_deposit_naira_text"
             android:buttonTint="@color/deep_sky_blue"
+            android:text="@string/payment_options_dialog_bank_deposit_naira_text"
             android:textColor="@color/menu_text_color"
             app:layout_constraintStart_toStartOf="@+id/payment_options_dialog_fragment_payment_options_textview"
             app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_payment_options_textview" />
@@ -95,26 +95,28 @@
             android:id="@+id/payment_options_dialog_cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="@string/all_cancel_text"
-            android:textSize="@dimen/text_size_18sp"
-            android:layout_marginBottom="@dimen/margin_30dp"
             android:layout_marginTop="@dimen/margin_24dp"
             android:layout_marginEnd="@dimen/margin_39dp"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/all_cancel_text"
             android:textColor="@color/deep_sky_blue"
+            android:textSize="@dimen/text_size_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/payment_options_dialog_fragment_ok_button"
-            app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_vcash2_checkbox"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/payment_options_dialog_fragment_vcash2_checkbox" />
 
         <TextView
             android:id="@+id/payment_options_dialog_fragment_ok_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="@string/payment_options_dialog_add_text"
-            android:textSize="@dimen/text_size_18sp"
             android:layout_marginEnd="@dimen/margin_32dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/payment_options_dialog_add_text"
             android:textColor="@color/deep_sky_blue"
+            android:textSize="@dimen/text_size_15sp"
             app:layout_constraintBottom_toBottomOf="@+id/payment_options_dialog_cancel_button"
             app:layout_constraintEnd_toEndOf="parent" />
 

@@ -8,13 +8,13 @@ import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import com.decagonhq.clads.databinding.EditProfileWorkshopAddressDialogBinding
-import com.decagonhq.clads.models.EditProfileViewmodel
+import com.decagonhq.clads.viewmodels.AccontViewModel
 
 class WorkAddressDialogFragment : DialogFragment() {
     // declaring binding variable
     var _binding: EditProfileWorkshopAddressDialogBinding? = null
     val binding get() = _binding!!
-    lateinit var viewmodel: EditProfileViewmodel
+    lateinit var viewmodel: AccontViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,6 +22,7 @@ class WorkAddressDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // inflating layout when view is created
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
         _binding = EditProfileWorkshopAddressDialogBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -31,7 +32,7 @@ class WorkAddressDialogFragment : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel = ViewModelProvider(this).get(EditProfileViewmodel::class.java)
+        viewmodel = ViewModelProvider(this).get(AccontViewModel::class.java)
         binding.workshopAddressDialogCancelTextview.setOnClickListener {
             dismiss()
         }

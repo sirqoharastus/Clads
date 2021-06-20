@@ -64,14 +64,14 @@
     <fragment
         android:id="@+id/addClientFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddClientFragment"
-        android:label="{title}"
+        android:label="Add Client"
         tools:layout="@layout/fragment_add_client" >
-        <action
-            android:id="@+id/action_addClientFragment_to_addDeliveryAddressFragment"
-            app:destination="@id/addDeliveryAddressFragment" />
         <action
             android:id="@+id/action_addClientFragment_to_addMeasurementFragment"
             app:destination="@id/addMeasurementFragment" />
+        <action
+            android:id="@+id/action_addClientFragment_to_deliveryAddressListFragment2"
+            app:destination="@id/deliveryAddressListFragment2" />
     </fragment>
 
     <fragment
@@ -83,12 +83,27 @@
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddMeasurementFragment"
         android:label="Add Measurement"
-        tools:layout="@layout/fragment_add_measurement" />
+        tools:layout="@layout/fragment_add_measurement" >
+    </fragment>
     <fragment
         android:id="@+id/addDeliveryAddressFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddDeliveryAddressFragment"
-        android:label="Add Address"
-        tools:layout="@layout/fragment_add_delivery_address" />
+        android:label="fragment_add_delivery_address"
+        tools:layout="@layout/fragment_add_delivery_address" >
+        <action
+            android:id="@+id/action_addDeliveryAddressFragment_to_deliveryAddressListFragment2"
+            app:destination="@id/deliveryAddressListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryAddressListFragment2"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.DeliveryAddressListFragment"
+        android:label="fragment_delivery_address_list"
+        tools:layout="@layout/fragment_delivery_address_list" >
+        <action
+            android:id="@+id/action_deliveryAddressListFragment2_to_addDeliveryAddressFragment"
+            app:destination="@id/addDeliveryAddressFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/resourceFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"

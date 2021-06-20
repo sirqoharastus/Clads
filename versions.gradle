@@ -18,6 +18,8 @@ ext.versions = [
         firebase_auth_version   : "21.0.1",
         mokito_version         : "2.24.5",
         gif_version            : "1.2.22",
+        text_drawable            : "1.0.1",
+        dexter            : "6.2.2",
         philjay_version        : "v2.2.2",
         amulyakhare_version   : "1.0.1"
 ]

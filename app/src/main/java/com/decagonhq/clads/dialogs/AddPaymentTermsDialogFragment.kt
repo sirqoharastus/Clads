@@ -12,6 +12,12 @@ class AddPaymentTermsDialogFragment : DialogFragment() {
     var _binding: AddPaymentOptionsDialogFragmentBinding? = null
     val binding get() = _binding!!
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

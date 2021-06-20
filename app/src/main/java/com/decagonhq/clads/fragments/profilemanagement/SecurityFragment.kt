@@ -15,6 +15,7 @@ class SecurityFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return FragmentSecurityBinding.inflate(inflater).root
     }
 }

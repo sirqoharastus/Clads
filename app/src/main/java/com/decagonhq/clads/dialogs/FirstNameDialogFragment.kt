@@ -18,6 +18,7 @@ class FirstNameDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // inflating the layout when view is created
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
         _binding = EditProfileFirstNameDialogFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }

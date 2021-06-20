@@ -1,9 +1,9 @@
-package com.decagonhq.clads.models
+package com.decagonhq.clads.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class EditProfileViewmodel : ViewModel() {
+class AccontViewModel : ViewModel() {
 
     var showroomAddressViewModel = MutableLiveData<String>()
     var workshopAddressViewModel = MutableLiveData<String>()

@@ -302,7 +302,6 @@
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/grey"
                 app:errorContentDescription="@string/sign_up_email_confirm_password__error_message"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_sign_up_fragment_password_text_input_layout"
@@ -373,7 +372,6 @@
                 app:layout_constraintStart_toStartOf="@+id/email_sign_up_fragment_sign_up_button"
                 app:layout_constraintTop_toBottomOf="@+id/email_sign_up_fragment_sign_up_button"
                 app:layout_constraintVertical_bias="0.14999998" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

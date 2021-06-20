@@ -20,7 +20,6 @@ class DialogFragments private constructor(private var layoutId: Int) : DialogFra
     private val viewModel: EditProfileViewModel by viewModels({ requireActivity() })
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
     }
 

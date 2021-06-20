@@ -19,6 +19,7 @@ class WardDialogFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // inflating the layout when this view is created
+        setStyle(STYLE_NO_TITLE, android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth)
         _binding = EditProfileWardDialogFragmentLayoutBinding.inflate(inflater, container, false)
         return binding.root
     }

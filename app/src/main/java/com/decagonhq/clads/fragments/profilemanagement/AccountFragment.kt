@@ -20,21 +20,21 @@ import com.decagonhq.clads.dialogs.ShowroomAddressDialogFragment
 import com.decagonhq.clads.dialogs.StateDialogFragment
 import com.decagonhq.clads.dialogs.WardDialogFragment
 import com.decagonhq.clads.dialogs.WorkAddressDialogFragment
-import com.decagonhq.clads.models.EditProfileViewmodel
+import com.decagonhq.clads.viewmodels.AccontViewModel
 
 class AccountFragment : Fragment() {
 
     // declaring binding variables
     var _binding: FragmentAccountBinding? = null
     val binding get() = _binding!!
-    private lateinit var viewmodel: EditProfileViewmodel
+    private lateinit var viewmodel: AccontViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        // Inflate the layout for this fragment
         // inflating layout when the view is created
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         return binding.root
@@ -47,7 +47,7 @@ class AccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel = ViewModelProvider(this).get(EditProfileViewmodel::class.java)
+        viewmodel = ViewModelProvider(this).get(AccontViewModel::class.java)
 
         // setting account profile values on click to inflate respective dialogs in the process
 

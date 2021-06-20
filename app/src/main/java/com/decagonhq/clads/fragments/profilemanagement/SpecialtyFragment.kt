@@ -20,12 +20,13 @@ class SpecialtyFragment : Fragment(), FragmentResultListener {
     private lateinit var fragmentTablayoutSpecialtyBinding: FragmentSpecialtyBinding
     private lateinit var adapter: SpecialtyListAdapter
     private val viewModel: EditProfileViewModel by viewModels({ requireActivity() })
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment return FragmentResourceBinding.inflate(inflater).root
         fragmentTablayoutSpecialtyBinding = FragmentSpecialtyBinding.inflate(inflater)
         return fragmentTablayoutSpecialtyBinding.root
     }

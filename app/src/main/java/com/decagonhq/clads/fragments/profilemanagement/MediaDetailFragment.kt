@@ -33,23 +33,6 @@ class MediaDetailFragment : Fragment() {
     private val binding
         get() = _binding!!
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        Log.d("ONCREATE OPTIONS", "onOptions: ")
-        inflater.inflate(R.menu.media_fragment_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
-    }
-
-    // Defines actions for toolbar menu options
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Log.d("MENU", "onOptionsItemSelected: ")
-        when (item.itemId) {
-            R.id.dashboard_media_fragment_menu_share -> sharePhoto()
-            R.id.dashboard_media_fragment_menu_edit -> editPhoto()
-            R.id.dashboard_media_fragment_menu_delete -> deletePhoto()
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -57,12 +40,24 @@ class MediaDetailFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentMediaDetailBinding.inflate(inflater, container, false)
-        Log.d("ONCREATE DETAIL", "onCREATEVIEW: ")
         photo = args.imageUri.toUri()
         photoImageView = binding.mediaDetailFragmentImageView
         setHasOptionsMenu(true)
-
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.media_fragment_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.dashboard_media_fragment_menu_share -> sharePhoto()
+            R.id.dashboard_media_fragment_menu_edit -> editPhoto()
+            R.id.dashboard_media_fragment_menu_delete -> deletePhoto()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun sharePhoto() {

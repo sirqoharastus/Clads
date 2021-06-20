@@ -107,14 +107,14 @@
     <fragment
         android:id="@+id/resourceFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
-        android:label="fragment_resource"
+        android:label="Resources"
         tools:layout="@layout/fragment_resource" />
 
     <fragment
         android:id="@+id/mediaDetailFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.MediaDetailFragment"
-        android:label="fragment_media_detail"
-        tools:layout="@layout/fragment_media_detail" >
+        android:label="Image"
+        tools:layout="@layout/fragment_media_detail">
         <argument android:name="imageUri" />
         <action
             android:id="@+id/action_mediaDetailFragment_to_dashboardMediaFragment"

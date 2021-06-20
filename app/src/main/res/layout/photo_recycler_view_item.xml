@@ -2,32 +2,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/margin_5dp"
     android:clickable="true"
+    android:background="@color/light_sky_blue"
     android:clipToPadding="false"
     android:focusable="true"
-    android:padding="@dimen/padding_5dp">
+    android:padding="@dimen/padding_10dp">
 
     <ImageView
         android:id="@+id/photo_recyclerview_imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        tools:src="@drawable/tailor_photo"
-        android:adjustViewBounds="true" />
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/tailor_photo" />
 
     <TextView
         android:id="@+id/photo_recyclerview_caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_89dp"
         android:layout_below="@+id/photo_recyclerview_imageview"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_centerInParent="true"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="20sp"
+        android:textStyle="bold"
         tools:text="Fine Man Suit" />
 
 </RelativeLayout>

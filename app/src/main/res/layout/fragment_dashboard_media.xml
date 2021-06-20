@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.profilemanagement.DashboardMediaFragment">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/dashboard_media_fragment_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         app:layout_constraintBottom_toBottomOf="@+id/dashboard_media_fragment_photo_recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -9,15 +9,14 @@ import com.decagonhq.clads.databinding.PhotoRecyclerViewItemBinding
 import com.decagonhq.clads.fragments.profilemanagement.DashboardMediaFragmentDirections
 import com.decagonhq.clads.models.Photo
 
-class MediaFragmentPhotoAdapter(
-    private val list: List<Photo>,
-//    private val context: DashboardMediaFragment
-) : RecyclerView.Adapter<MediaFragmentPhotoAdapter.ViewHolder>() {
+class MediaFragmentPhotoAdapter(private val list: List<Photo>) :
+    RecyclerView.Adapter<MediaFragmentPhotoAdapter.ViewHolder>() {
 
-    class ViewHolder(val binding: PhotoRecyclerViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(val binding: PhotoRecyclerViewItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-        var photoImage = binding.photoRecyclerviewImageview
-        var photoCaption = binding.photoRecyclerviewCaption
+        private var photoImage = binding.photoRecyclerviewImageview
+        private var photoCaption = binding.photoRecyclerviewCaption
 
         fun bindView(item: Photo) {
             photoCaption.text = item.caption
@@ -29,8 +28,8 @@ class MediaFragmentPhotoAdapter(
             binding.photoRecyclerviewImageview.setOnClickListener {
                 val imageUri = item.uri.toString()
                 // use actions to pass data from one fragment to the other
-                val action =
-                    DashboardMediaFragmentDirections.actionDashboardMediaFragmentToMediaDetailFragment(imageUri)
+                val action = DashboardMediaFragmentDirections
+                    .actionDashboardMediaFragmentToMediaDetailFragment(imageUri)
                 itemView.findNavController().navigate(action)
             }
         }
@@ -52,18 +51,6 @@ class MediaFragmentPhotoAdapter(
 
         val item = list[position]
         holder.bindView(item)
-
-//        Glide.with(holder.binding.root.context)
-//            .load(list[position].uri)
-//            .into(holder.photoImage)
-//
-//        holder.itemView.apply {
-//            with(holder) {
-//                with(list[position]) {
-//                    photoCaption.text = caption
-//                }
-//            }
-//        }
     }
 
     override fun getItemCount(): Int = list.size

@@ -19,6 +19,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.decagonhq.clads.adapters.MediaFragmentPhotoAdapter
 import com.decagonhq.clads.databinding.FragmentDashboardMediaBinding
 import com.decagonhq.clads.models.Photo
+import com.decagonhq.clads.utils.PhotoProvider.CAPTION
+import com.decagonhq.clads.utils.PhotoProvider.SELECT_IMAGE_REQUEST_CODE
+import com.decagonhq.clads.utils.PhotoProvider.photosProvidersList
 
 class DashboardMediaFragment : Fragment() {
 
@@ -26,7 +29,6 @@ class DashboardMediaFragment : Fragment() {
     private val binding
         get() = _binding!!
 
-    private val SELECT_IMAGE_REQUEST_CODE = 100
     private lateinit var imageUri: Uri
     private lateinit var photoGalleryRecyclerAdapter: MediaFragmentPhotoAdapter
     private lateinit var noPhotoImage: FrameLayout
@@ -65,7 +67,11 @@ class DashboardMediaFragment : Fragment() {
             if (checkPermission()) {
                 selectImageFromGallery()
             } else {
-                requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, "ACCESS MEDIA", SELECT_IMAGE_REQUEST_CODE)
+                requestPermission(
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    "ACCESS MEDIA",
+                    SELECT_IMAGE_REQUEST_CODE
+                )
             }
         }
     }
@@ -78,11 +84,18 @@ class DashboardMediaFragment : Fragment() {
             )
     }
 
-    private fun requestPermission(permission: String, name: String, requestCode: Int) {
-        when {
-            shouldShowRequestPermissionRationale(permission) -> showDialog(permission, name, requestCode)
-            else -> ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), requestCode)
-        }
+    private fun requestPermission(
+        permission: String,
+        name: String,
+        requestCode: Int
+    ) = when {
+        shouldShowRequestPermissionRationale(permission) -> showDialog(
+            permission,
+            name,
+            requestCode
+        )
+        else ->
+            ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), requestCode)
     }
 
     private fun selectImageFromGallery() {
@@ -91,18 +104,9 @@ class DashboardMediaFragment : Fragment() {
         startActivityForResult(imageIntent, SELECT_IMAGE_REQUEST_CODE)
     }
 
-    fun selectMultipleImagesFromGallery() {
-        val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.type = "image/*"
-        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-        startActivityForResult(intent, SELECT_IMAGE_REQUEST_CODE)
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK && requestCode == SELECT_IMAGE_REQUEST_CODE) {
             imageUri = data?.data!!
-            val CAPTION = "Beautiful Outfits"
             val photo = Photo(
                 imageUri,
                 CAPTION
@@ -140,33 +144,17 @@ class DashboardMediaFragment : Fragment() {
         builder.apply {
             setMessage("Permission to access your $name is required to use this app")
             setTitle("Permission required")
-            setPositiveButton("OK") { dialog, which ->
-                ActivityCompat.requestPermissions(requireActivity(), arrayOf(permission), requestCode)
+            setPositiveButton("OK") { _, _ ->
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(permission),
+                    requestCode
+                )
             }
         }
         val dialog: AlertDialog = builder.create()
         dialog.show()
     }
-
-//    fun getAllImages() {
-//        imageList.clear()
-//        val cursor: Cursor? = requireActivity().contentResolver.query(
-//            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-//            null,
-//            null,
-//            null,
-//            null
-//        )
-//        if (cursor != null) {
-//            while (cursor.moveToNext()) {
-//                val absolutePathOfImage: String =
-//                    cursor.getString(cursor.getColumnIndex(MediaStore.MediaColumns.DATA))
-//                val imageModel = Photo(image = absolutePathOfImage, "Beautiful Fashion")
-//                imageList.add(imageModel)
-//            }
-//        }
-//        cursor?.close()
-//    }
 
     private fun showToast(msg: String) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
@@ -177,5 +165,3 @@ class DashboardMediaFragment : Fragment() {
         _binding = null
     }
 }
-
-var photosProvidersList: ArrayList<Photo> = arrayListOf()

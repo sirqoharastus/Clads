@@ -349,4 +349,5 @@
     <string name="dashboard_media_fragment_menu_edit">Edit</string>
     <string name="dashboard_media_fragment_menu_delete">Delete</string>
     <string name="image_detail_view_description">Image Detail view</string>
+    <string name="share_with">"Share with "</string>
 </resources>

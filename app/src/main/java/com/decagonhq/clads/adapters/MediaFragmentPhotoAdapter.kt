@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.PhotoRecyclerViewItemBinding
 import com.decagonhq.clads.fragments.profilemanagement.DashboardMediaFragmentDirections
 import com.decagonhq.clads.models.Photo

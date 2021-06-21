@@ -44,6 +44,20 @@
         <action
             android:id="@+id/action_dashboardMediaFragment_to_mediaDetailFragment"
             app:destination="@id/mediaDetailFragment" />
+        <action
+            android:id="@+id/action_dashboardMediaFragment_to_mediaUploadFragment"
+            app:destination="@id/mediaUploadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mediaUploadFragment"
+        android:name="com.decagonhq.clads.fragments.profilemanagement.MediaUploadFragment"
+        android:label="Photo Gallery"
+        tools:layout="@layout/fragment_media_upload">
+        <argument android:name="imageUri" />
+        <action
+            android:id="@+id/action_mediaUploadFragment_to_dashboardMediaFragment"
+            app:destination="@id/dashboardMediaFragment" />
     </fragment>
 
     <fragment

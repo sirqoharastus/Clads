@@ -14,12 +14,14 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.checkSelfPermission
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.decagonhq.clads.adapters.MediaFragmentPhotoAdapter
 import com.decagonhq.clads.databinding.FragmentDashboardMediaBinding
 import com.decagonhq.clads.models.Photo
-import com.decagonhq.clads.utils.PhotoProvider.CAPTION
+import com.decagonhq.clads.utils.DataListener
 import com.decagonhq.clads.utils.PhotoProvider.SELECT_IMAGE_REQUEST_CODE
 import com.decagonhq.clads.utils.PhotoProvider.photosProvidersList
 
@@ -48,9 +50,29 @@ class DashboardMediaFragment : Fragment() {
 
         noPhotoImage = binding.dashboardMediaFragmentFrameLayout
 
+        findNavController()
+            .currentBackStackEntry?.savedStateHandle?.getLiveData<Bundle>("IMAGE_KEY")
+            ?.observe(viewLifecycleOwner) {
+                val imageName = it.getString("IMAGE_NAME_BUNDLE_KEY")
+                val imageData = it.getString("IMAGE_DATA_BUNDLE_KEY")
+                imageUri = imageData!!.toUri()
+                val photo =
+                    Photo(imageUri, imageName)
+                if (DataListener.imageListener.value == true) {
+                    photosProvidersList.add(photo)
+                    photoGalleryRecyclerAdapter.notifyDataSetChanged()
+                }
+                binding.apply {
+                    noPhotoImage.visibility = View.INVISIBLE
+                    dashboardMediaFragmentPhotoRecyclerView.visibility = View.VISIBLE
+                }
+            }
+
         binding.apply {
+            dashboardMediaFragmentPhotoRecyclerView.visibility = View.VISIBLE
             dashboardMediaFragmentPhotoRecyclerView.apply {
-                photoGalleryRecyclerAdapter = MediaFragmentPhotoAdapter(photosProvidersList)
+                photoGalleryRecyclerAdapter =
+                    MediaFragmentPhotoAdapter(photosProvidersList)
                 adapter = photoGalleryRecyclerAdapter
                 layoutManager = GridLayoutManager(requireContext(), 2)
                 photoGalleryRecyclerAdapter.notifyDataSetChanged()
@@ -84,11 +106,7 @@ class DashboardMediaFragment : Fragment() {
             )
     }
 
-    private fun requestPermission(
-        permission: String,
-        name: String,
-        requestCode: Int
-    ) = when {
+    private fun requestPermission(permission: String, name: String, requestCode: Int) = when {
         shouldShowRequestPermissionRationale(permission) -> showDialog(
             permission,
             name,
@@ -106,12 +124,13 @@ class DashboardMediaFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == RESULT_OK && requestCode == SELECT_IMAGE_REQUEST_CODE) {
+
             imageUri = data?.data!!
-            val photo = Photo(
-                imageUri,
-                CAPTION
-            )
-            photosProvidersList.add(photo)
+            val imageData = imageUri.toString()
+            val action =
+                DashboardMediaFragmentDirections
+                    .actionDashboardMediaFragmentToMediaUploadFragment(imageData)
+            findNavController().navigate(action)
             if (photosProvidersList.isNotEmpty()) {
                 noPhotoImage.visibility = View.INVISIBLE
                 photoGalleryRecyclerAdapter.notifyDataSetChanged()

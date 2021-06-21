@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentMediaDetailBinding
 import com.decagonhq.clads.models.Photo
+import com.decagonhq.clads.utils.DataListener
 import com.decagonhq.clads.utils.PhotoProvider.CAPTION
 import com.decagonhq.clads.utils.PhotoProvider.SELECT_IMAGE_REQUEST_CODE
 import com.decagonhq.clads.utils.PhotoProvider.photosProvidersList
@@ -43,6 +44,17 @@ class MediaDetailFragment : Fragment() {
         photoImageView = binding.mediaDetailFragmentImageView
         setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        photoImageView = binding.mediaDetailFragmentImageView
+        DataListener.imageListener.value = false
+
+        Glide.with(this)
+            .load(photo)
+            .into(photoImageView)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -101,15 +113,7 @@ class MediaDetailFragment : Fragment() {
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-        photoImageView = binding.mediaDetailFragmentImageView
-
-        Glide.with(this)
-            .load(photo)
-            .into(photoImageView)
-    }
 
     override fun onDestroy() {
         super.onDestroy()

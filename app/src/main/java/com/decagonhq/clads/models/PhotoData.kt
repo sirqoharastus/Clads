@@ -3,8 +3,8 @@ package com.decagonhq.clads.models
 import android.net.Uri
 
 data class Photo(
-    var uri: Uri,
-    var caption: String
+    var uri: Uri?,
+    var caption: String?
 )
 
 data class PhotoData(

@@ -71,12 +71,27 @@
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
     <string name="signup_login_fragment_sign_up">Sign up</string>
 
+    <string name="Field_is_empty_or_invalid_name_format_entered">Field is empty or invalid name format entered</string>
+    <string name="Field_is_empty_or_Invalid_email_address_entered">Field is empty or Invalid email address entered</string>
+    <string name="Select_an_account_type">Select_an_account_type</string>
+    <string name="Password_must_not_be_less_than_6_characters">Password must not be less than 6 characters</string>
+    <string name="Passwords_do_not_match">Passwords do not match</string>
+    <string name= "address">Address</string>
+    <string name="phone_number">08168105123</string>
+    <string name="role">Tailor</string>
+    <string name="country">Nigeria</string>
+    <string name="gender">male</string>
+
+
 
     <string-array name="email_sign_up_fragment_choose_account_category_array">
         <item>Tailor</item>
         <item>Weaver</item>
         <item>Client</item>
     </string-array>
+
+
+
 
     <string name="sign_up_email_title">Create an account</string>
     <string name="sign_up_email_description">Lets get to know you</string>
@@ -342,4 +357,10 @@
     <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
     <string name="save_button_text">Save</string>
     <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
+    <string name="login_fragment_progress_bar_text">progress bar</string>
+    <string name="login_frament_login_token_text">loginToken</string>
+    <string name="login_fragment_login_successful_text">Login Successful</string>
+    <string name="login_fragment_login_successful_text">Login Successful</string>
+    <string name="login_fragment_invalid_email_and_password_text">Invalid Email and password combination</string>
+    <string name="login_fragment_email_does_not_exist_text">Email does not exist in database</string>
 </resources>

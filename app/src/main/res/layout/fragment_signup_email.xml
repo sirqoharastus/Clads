@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deep_sky_blue"
-    tools:context=".fragments.authentication.SignupEmailFragment">
+    tools:context=".ui.fragments.authentication.SignupEmailFragment">
 
     <TextView
         android:id="@+id/signup_email_fragment_title_text_view"
@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/deep_sky_blue"
-        tools:context=".fragments.authentication.SignupEmailFragment">
+        tools:context=".ui.fragments.authentication.SignupEmailFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -221,12 +221,13 @@
                 android:layout_marginHorizontal="@dimen/margin_18dp"
                 android:layout_marginTop="@dimen/margin_30dp"
                 android:fontFamily="@font/poppins"
+                app:boxBackgroundMode="filled"
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeErrorColor="@color/error"
+                app:endIconTint="@color/white"
                 app:errorIconTint="@color/grey"
                 app:errorTextColor="@color/grey"
                 app:hintTextColor="@color/white"
-                app:boxBackgroundMode="filled"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_sign_up_fragment_other_name_text_input_layout">
@@ -302,6 +303,8 @@
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/grey"
                 app:errorContentDescription="@string/sign_up_email_confirm_password__error_message"
+                app:errorIconTint="@color/grey"
+                app:errorTextColor="@color/grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_sign_up_fragment_password_text_input_layout"
@@ -316,8 +319,7 @@
                     android:inputType="textPassword"
                     android:paddingStart="@dimen/padding_0dp"
                     android:textColor="@color/white"
-                    android:textCursorDrawable="@color/white">
-                </com.google.android.material.textfield.TextInputEditText>
+                    android:textCursorDrawable="@color/white"></com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -342,7 +344,7 @@
 
 
             <TextView
-                android:id="@+id/email_sign_up_fragment_already_have_an_account_text_view"
+                android:id="@+id/email_sign_up_fragment_login_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_5dp"
@@ -351,13 +353,14 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_15sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/email_sign_up_fragment_login_text_view"
+                app:layout_constraintBottom_toBottomOf="@+id/email_sign_up_fragment_already_have_an_account_text_view"
                 app:layout_constraintEnd_toEndOf="@+id/email_sign_up_fragment_sign_up_button"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/email_sign_up_fragment_login_text_view" />
+                app:layout_constraintStart_toEndOf="@+id/email_sign_up_fragment_already_have_an_account_text_view" />
 
             <TextView
-                android:id="@+id/email_sign_up_fragment_login_text_view"
+
+                android:id="@+id/email_sign_up_fragment_already_have_an_account_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_5dp"

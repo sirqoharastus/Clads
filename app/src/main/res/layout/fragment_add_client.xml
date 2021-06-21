@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/deep_sky_blue"
-    tools:context=".fragments.profilemanagement.AddClientFragment">
+    tools:context=".ui.fragments.profilemanagement.AddClientFragment">
 
 
     <TextView

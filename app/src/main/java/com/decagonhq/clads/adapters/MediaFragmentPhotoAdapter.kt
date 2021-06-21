@@ -6,7 +6,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.decagonhq.clads.databinding.PhotoRecyclerViewItemBinding
-import com.decagonhq.clads.fragments.profilemanagement.DashboardMediaFragmentDirections
+import com.decagonhq.clads.ui.fragments.profilemanagement.DashboardMediaFragmentDirections
 import com.decagonhq.clads.models.Photo
 
 class MediaFragmentPhotoAdapter(private val list: List<Photo>) :

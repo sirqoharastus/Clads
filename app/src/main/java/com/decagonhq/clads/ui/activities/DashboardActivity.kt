@@ -135,7 +135,7 @@ class DashboardActivity : AppCompatActivity() {
                     toolbarTitle.visibility = View.INVISIBLE
                     toolbarProfileImage.visibility = View.INVISIBLE
                     toolbarNotificationIcon.visibility = View.GONE
-                    bottomNav.visibility = View.VISIBLE
+                    bottomNav.visibility = View.GONE
                 }
             }
         }

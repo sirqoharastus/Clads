@@ -1,9 +1,11 @@
 package com.decagonhq.clads.ui.fragments.profilemanagement
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -46,6 +48,8 @@ class MediaUploadFragment : Fragment() {
 
         /*click the send fab to send photo and name of photo back to media fragment*/
         sendPhoto.setOnClickListener {
+
+            hideKeyboard()
             val imageName = binding.mediaUploadFragmentPhotoEditText.text.toString()
             val imageData = args.imageUri
 
@@ -61,6 +65,11 @@ class MediaUploadFragment : Fragment() {
                 findNavController().popBackStack()
             }
         }
+    }
+
+    fun hideKeyboard() {
+        val inputManager = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputManager.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
     override fun onDestroy() {

@@ -56,8 +56,7 @@ class DashboardMediaFragment : Fragment() {
                 val imageName = it.getString("IMAGE_NAME_BUNDLE_KEY")
                 val imageData = it.getString("IMAGE_DATA_BUNDLE_KEY")
                 imageUri = imageData!!.toUri()
-                val photo =
-                    Photo(imageUri, imageName)
+                val photo = Photo(imageUri, imageName)
                 if (DataListener.imageListener.value == true) {
                     photosProvidersList.add(photo)
                     photoGalleryRecyclerAdapter.notifyDataSetChanged()

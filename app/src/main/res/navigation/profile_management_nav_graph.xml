@@ -130,10 +130,14 @@
         android:label="Image"
         tools:layout="@layout/fragment_media_detail">
         <argument android:name="imageUri" />
+        <argument
+            android:name="imageCaption"
+            app:argType="string" />
         <action
             android:id="@+id/action_mediaDetailFragment_to_dashboardMediaFragment"
             app:destination="@id/dashboardMediaFragment"
             app:popUpTo="@id/dashboardMediaFragment"
             app:popUpToInclusive="true" />
+
     </fragment>
 </navigation>

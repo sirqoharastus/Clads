@@ -20,7 +20,6 @@ import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentMediaDetailBinding
 import com.decagonhq.clads.models.Photo
 import com.decagonhq.clads.utils.DataListener
-import com.decagonhq.clads.utils.PhotoProvider.CAPTION
 import com.decagonhq.clads.utils.PhotoProvider.SELECT_IMAGE_REQUEST_CODE
 import com.decagonhq.clads.utils.PhotoProvider.photosProvidersList
 
@@ -28,6 +27,7 @@ class MediaDetailFragment : Fragment() {
 
     private val args: MediaDetailFragmentArgs by navArgs()
     private lateinit var photo: Uri
+    private lateinit var photoDescription: String
     private lateinit var photoImageView: ImageView
     private var _binding: FragmentMediaDetailBinding? = null
     private val binding
@@ -41,6 +41,7 @@ class MediaDetailFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentMediaDetailBinding.inflate(inflater, container, false)
         photo = args.imageUri.toUri()
+        photoDescription = args.imageCaption
         photoImageView = binding.mediaDetailFragmentImageView
         setHasOptionsMenu(true)
         return binding.root
@@ -81,7 +82,7 @@ class MediaDetailFragment : Fragment() {
 
     private fun editPhoto() {
 
-        val photoData = Photo(photo, CAPTION)
+        val photoData = Photo(photo, photoDescription)
         photosProvidersList.remove(photoData)
         val imageIntent = Intent(Intent.ACTION_PICK)
         imageIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -91,7 +92,7 @@ class MediaDetailFragment : Fragment() {
 
     private fun deletePhoto() {
 
-        val photoData = Photo(photo, CAPTION)
+        val photoData = Photo(photo, photoDescription)
         photosProvidersList.remove(photoData)
 
         val action = MediaDetailFragmentDirections
@@ -103,7 +104,7 @@ class MediaDetailFragment : Fragment() {
 
         if (resultCode == Activity.RESULT_OK && requestCode == SELECT_IMAGE_REQUEST_CODE) {
             photo = data?.data!!
-            val photoData = Photo(photo, CAPTION)
+            val photoData = Photo(photo, photoDescription)
 
             Glide.with(this)
                 .load(photo)

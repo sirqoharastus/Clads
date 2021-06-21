@@ -27,9 +27,10 @@ class MediaFragmentPhotoAdapter(private val list: List<Photo>) :
 
             binding.photoRecyclerviewImageview.setOnClickListener {
                 val imageUri = item.uri.toString()
+                val imageCaption = item.caption
                 // use actions to pass data from one fragment to the other
                 val action = DashboardMediaFragmentDirections
-                    .actionDashboardMediaFragmentToMediaDetailFragment(imageUri)
+                    .actionDashboardMediaFragmentToMediaDetailFragment(imageUri, imageCaption?: "")
                 itemView.findNavController().navigate(action)
             }
         }

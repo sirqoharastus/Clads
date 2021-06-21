@@ -38,10 +38,12 @@ class MediaUploadFragment : Fragment() {
         sendPhoto = binding.mediaUploadFragmentSendFab
         val photoView = binding.mediaUploadFragmentPhotoImageView
         val photo = args.imageUri
+
         /*load the image sent from media fragment*/
         Glide.with(this)
             .load(photo)
             .into(photoView)
+
         /*click the send fab to send photo and name of photo back to media fragment*/
         sendPhoto.setOnClickListener {
             val imageName = binding.mediaUploadFragmentPhotoEditText.text.toString()
@@ -59,5 +61,10 @@ class MediaUploadFragment : Fragment() {
                 findNavController().popBackStack()
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

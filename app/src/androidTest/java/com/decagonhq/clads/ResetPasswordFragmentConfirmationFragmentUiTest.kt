@@ -10,7 +10,7 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
-import com.decagonhq.clads.fragments.authentication.ResetPasswordVerification
+import com.decagonhq.clads.ui.fragments.authentication.ResetPasswordVerification
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

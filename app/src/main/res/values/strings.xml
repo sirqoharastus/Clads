@@ -71,12 +71,27 @@
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
     <string name="signup_login_fragment_sign_up">Sign up</string>
 
+    <string name="Field_is_empty_or_invalid_name_format_entered">Field is empty or invalid name format entered</string>
+    <string name="Field_is_empty_or_Invalid_email_address_entered">Field is empty or Invalid email address entered</string>
+    <string name="Select_an_account_type">Select_an_account_type</string>
+    <string name="Password_must_not_be_less_than_6_characters">Password must not be less than 6 characters</string>
+    <string name="Passwords_do_not_match">Passwords do not match</string>
+    <string name= "address">Address</string>
+    <string name="phone_number">08168105123</string>
+    <string name="role">Tailor</string>
+    <string name="country">Nigeria</string>
+    <string name="gender">male</string>
+
+
 
     <string-array name="email_sign_up_fragment_choose_account_category_array">
         <item>Tailor</item>
         <item>Weaver</item>
         <item>Client</item>
     </string-array>
+
+
+
 
     <string name="sign_up_email_title">Create an account</string>
     <string name="sign_up_email_description">Lets get to know you</string>

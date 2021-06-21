@@ -342,4 +342,16 @@
     <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
     <string name="save_button_text">Save</string>
     <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
+    <string name="resources_fragment_video_thumbnail">Image thumbnail of a video</string>
+    <string name="resources_recyclerview_text">How to perfectly sew adire</string>
+    <string name="resources_fragment_timestamp">1 hour 30 mins</string>
+    <string name="resource_video_clock_image_description">Image of a clock</string>
+    <string name="resource_article_image_description">Image of an Article</string>
+    <string name="resource_article_text_title">Stitching neatly</string>
+    <string name="resource_article_text_author">By Nathan Maro</string>
+    <string name="fragment_resources_text">Resources</string>
+    <string name="fragement_resources_text">Resources</string>
+    <string name="resources_all_videos_text">Videos</string>
+    <string name="resources_view_all_text">View all</string>
+    <string name="resources_article_publications_text">Article/Publications</string>
 </resources>

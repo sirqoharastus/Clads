@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="@dimen/margin_10dp"
+    android:layout_marginStart="@dimen/margin_30dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/resources_all_video_cardview"
+        android:layout_width="136dp"
+        android:layout_height="@dimen/width_200dp"
+        app:cardCornerRadius="@dimen/margin_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/resources_all_video_recyclerview_exoplayer_playerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/resources_fragment_video_thumbnail"
+                android:src="@drawable/home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.2"
+                android:src="@drawable/resources_fragment_video_thumbnail_overlay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/resource_fragment_video_playbutton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/resources_all_video_recyclerview_exoplayer_playerview"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/resource_recyclerview_sewing_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:lineHeight="16dp"
+        android:text="@string/resources_recyclerview_text"
+        android:textColor="@color/menu_text_color"
+        android:textFontWeight="400"
+        app:layout_constraintEnd_toEndOf="@+id/resources_all_video_cardview"
+        app:layout_constraintStart_toStartOf="@+id/resources_all_video_cardview"
+        app:layout_constraintTop_toBottomOf="@+id/resources_all_video_cardview" />
+
+    <ImageView
+        android:id="@+id/resource_recyclerview_clock_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_resource_recyclerview_clock_image"
+        android:contentDescription="Image of a clock"
+        app:layout_constraintStart_toStartOf="@+id/resource_recyclerview_sewing_textview"
+        app:layout_constraintTop_toTopOf="@+id/resources_videos_recyclerview_item_textview" />
+
+    <TextView
+        android:id="@+id/resources_videos_recyclerview_item_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/poppins"
+        android:paddingBottom="20dp"
+        android:text="@string/resources_fragment_timestamp"
+        android:textColor="@color/menu_text_color"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_10sp"
+        app:layout_constraintEnd_toEndOf="@+id/resource_recyclerview_sewing_textview"
+        app:layout_constraintStart_toEndOf="@+id/resource_recyclerview_clock_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/resource_recyclerview_sewing_textview" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

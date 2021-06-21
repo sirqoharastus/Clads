@@ -122,7 +122,21 @@
 
     <fragment
         android:id="@+id/resourceFragment"
-        android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
+        android:name="com.decagonhq.clads.fragments.resourcesmanagement.ResourceFragment"
         android:label="fragment_resource"
-        tools:layout="@layout/fragment_resource" />
+        tools:layout="@layout/fragment_resource" >
+        <action
+            android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"
+            app:destination="@id/resourcesAllVideosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resourcesVideosAndArticlesFragment"
+        android:name="com.decagonhq.clads.fragments.resourcesmanagement.ResourcesVideosAndArticlesFragment"
+        android:label="fragment_resources_videos_and_articles"
+        tools:layout="@layout/fragment_resources_videos_and_articles" />
+    <fragment
+        android:id="@+id/resourcesAllVideosFragment"
+        android:name="com.decagonhq.clads.fragments.resourcesmanagement.ResourcesAllVideosFragment"
+        android:label="fragment_resources_all_videos"
+        tools:layout="@layout/fragment_resources_all_videos" />
 </navigation>

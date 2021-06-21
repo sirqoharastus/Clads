@@ -6,8 +6,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.decagonhq.clads.databinding.PhotoRecyclerViewItemBinding
-import com.decagonhq.clads.ui.fragments.profilemanagement.DashboardMediaFragmentDirections
 import com.decagonhq.clads.models.Photo
+import com.decagonhq.clads.ui.fragments.profilemanagement.DashboardMediaFragmentDirections
 
 class MediaFragmentPhotoAdapter(private val list: List<Photo>) :
     RecyclerView.Adapter<MediaFragmentPhotoAdapter.ViewHolder>() {
@@ -30,7 +30,7 @@ class MediaFragmentPhotoAdapter(private val list: List<Photo>) :
                 val imageCaption = item.caption
                 // use actions to pass data from one fragment to the other
                 val action = DashboardMediaFragmentDirections
-                    .actionDashboardMediaFragmentToMediaDetailFragment(imageUri, imageCaption?: "")
+                    .actionDashboardMediaFragmentToMediaDetailFragment(imageUri, imageCaption ?: "")
                 itemView.findNavController().navigate(action)
             }
         }

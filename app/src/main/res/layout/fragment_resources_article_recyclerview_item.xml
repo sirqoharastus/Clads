@@ -10,7 +10,7 @@
         android:layout_width="106dp"
         android:layout_height="140dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/resources_article_background"
+        android:background="@drawable/ic_resources_article_image1"
         android:contentDescription="@string/resource_article_image_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"

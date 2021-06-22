@@ -36,5 +36,12 @@ class ResourcesArticlesAdapter(var articleList: ArrayList<ArticleView>) : Recycl
         }
     }
 
-    override fun getItemCount(): Int = articleList.size
+    private var articleLimit = 5
+    override fun getItemCount(): Int {
+        return if (articleList.size > articleLimit) {
+            articleLimit
+        } else {
+            articleList.size
+        }
+    }
 }

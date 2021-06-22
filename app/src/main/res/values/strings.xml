@@ -377,6 +377,5 @@
     <string name="image_detail_view_description">Image Detail view</string>
     <string name="share_with">"Share with "</string>
     <string name="photo_description">Enter photo description</string>
-    <string name="fragment_resources_clock_image">Image of a clock</string>
 
 </resources>

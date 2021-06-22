@@ -37,5 +37,12 @@ class ResourcesVideosAdapter(private var videoList: ArrayList<VideoView>) : Recy
         }
     }
 
-    override fun getItemCount(): Int = videoList.size
+    private var videoLimit = 5
+    override fun getItemCount(): Int {
+        return if (videoList.size > videoLimit) {
+            videoLimit
+        } else {
+            videoList.size
+        }
+    }
 }

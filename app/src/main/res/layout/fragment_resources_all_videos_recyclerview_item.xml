@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_resource_recyclerview_clock_image"
-        android:contentDescription="@string/fragment_resources_clock_image"
+        android:contentDescription="Image of a clock"
         app:layout_constraintStart_toStartOf="@+id/resource_recyclerview_sewing_textview"
         app:layout_constraintTop_toTopOf="@+id/resources_videos_recyclerview_item_textview" />
 

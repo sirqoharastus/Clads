@@ -6,7 +6,7 @@
             <item name="android:gravity">top</item>
         </style>
 
-
+    <string name="media_url_mp4">https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4</string>
     <style name="add_client_fragment_add_client_text_View">
         <item name="android:layout_marginTop">@dimen/dimen_44_dp</item>
         <item name="android:layout_marginLeft">@dimen/margin_27dp</item>

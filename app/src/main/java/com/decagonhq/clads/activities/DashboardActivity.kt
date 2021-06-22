@@ -30,6 +30,7 @@ class DashboardActivity : AppCompatActivity() {
         dashBoardActivityBinding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(dashBoardActivityBinding.root)
 
+
         // Get reference of the nav host container id
         // and set it to navController with findNavController method
         val navHostFragment = supportFragmentManager.findFragmentById(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id) as NavHostFragment

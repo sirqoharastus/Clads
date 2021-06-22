@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintLayout"
+    android:theme="@style/PlayVideoFragment"
+    tools:context=".fragments.resourcemanagement.ViewIndividualVideoWithExoplayerScreenFragment">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/playerView"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="238dp"
+        app:resize_mode="fill"
+        android:fitsSystemWindows="@bool/true_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_view_individual_video_with_exoplayer_video_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_15dp"
+        android:layout_marginTop="@dimen/margin_7dp"
+        android:text="@string/view_individual_video_screen_recyclerview_how_to_perfectly_sew_adire_text"
+        android:textColor="@color/navy_blue"
+        app:layout_constraintStart_toStartOf="@+id/playerView"
+        app:layout_constraintTop_toBottomOf="@+id/playerView" />
+
+    <TextView
+        android:id="@+id/fragment_view_individual_video_with_exoplayer_video_date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_view_individual_video_with_exoplayer_video_date_text"
+        android:textColor="@color/menu_text_color"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_view_individual_video_with_exoplayer_video_title_text_view"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="@+id/fragment_view_individual_video_with_exoplayer_video_title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_view_individual_video_with_exoplayer_video_title_text_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_view_individual_video_with_exoplayer_screen_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_0dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_marginTop="@dimen/margin_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_view_individual_video_with_exoplayer_video_date_text_view"
+        tools:listitem="@layout/view_individual_video_screen_recyclerview_adapter_layout" />
+
+    <ProgressBar
+        android:id="@+id/fragment_view_individual_video_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.110000014" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profile_management_nav_graph"
-    app:startDestination="@id/dashboardhomeFragment">
+    app:startDestination="@id/resourceFragment">
 
     <activity
         android:id="@+id/dashboard_activity"
@@ -99,8 +99,7 @@
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddMeasurementFragment"
         android:label="Add Measurement"
-        tools:layout="@layout/fragment_add_measurement" >
-    </fragment>
+        tools:layout="@layout/fragment_add_measurement" />
     <fragment
         android:id="@+id/addDeliveryAddressFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddDeliveryAddressFragment"
@@ -124,5 +123,14 @@
         android:id="@+id/resourceFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
         android:label="fragment_resource"
-        tools:layout="@layout/fragment_resource" />
+        tools:layout="@layout/fragment_resource" >
+        <action
+            android:id="@+id/action_resourceFragment_to_viewIndividualVideoWithExoplayerScreenFragment"
+            app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewIndividualVideoWithExoplayerScreenFragment"
+        android:name="com.decagonhq.clads.fragments.resourcemanagement.ViewIndividualVideoWithExoplayerScreenFragment"
+        android:label="fragment_view_individual_video_with_exoplayer_screen"
+        tools:layout="@layout/fragment_view_individual_video_with_exoplayer_screen" />
 </navigation>

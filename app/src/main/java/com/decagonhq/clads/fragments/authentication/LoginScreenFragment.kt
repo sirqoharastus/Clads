@@ -2,6 +2,7 @@ package com.decagonhq.clads.fragments.authentication
 
 import android.content.Intent
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -11,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.decagonhq.clads.activities.DashboardActivity
 import com.decagonhq.clads.databinding.FragmentLoginScreenBinding
@@ -37,9 +39,9 @@ class LoginScreenFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // getting the reference of the user input edit text
         emailEditText = binding.fragmentLoginScreenEmailAddressTextInputEditText
         passwordEditText = binding.fragmentLoginScreenPasswordTextInputEditText
@@ -51,7 +53,6 @@ class LoginScreenFragment : Fragment() {
         *  input is correct the next fragment is launched else the user is notified which field is not
         * field properly
         */
-
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
@@ -68,7 +69,10 @@ class LoginScreenFragment : Fragment() {
                 }
             }
         }
+
+
     }
+
 
     // this function is used to programmatically change the color style of a text in the layout file
     private fun textSpan() {

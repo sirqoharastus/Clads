@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_resource_recyclerview_clock_image"
-        android:contentDescription="Image of a clock"
+        android:contentDescription="@string/fragment_resources_clock_image"
         app:layout_constraintStart_toStartOf="@+id/resource_recyclerview_sewing_textview"
         app:layout_constraintTop_toTopOf="@+id/resources_videos_recyclerview_item_textview" />
 
@@ -86,7 +86,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="7dp"
         android:fontFamily="@font/poppins"
-        android:paddingBottom="20dp"
+        android:paddingBottom="@dimen/margin_5dp"
         android:text="@string/resources_fragment_timestamp"
         android:textColor="@color/menu_text_color"
         android:textFontWeight="400"

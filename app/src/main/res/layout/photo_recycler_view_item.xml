@@ -24,11 +24,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/photo_recyclerview_imageview"
-        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:padding="@dimen/padding_4dp"
         android:layout_centerInParent="true"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="@dimen/text_size_16sp"
+        android:textAlignment="center"
         tools:text="Fine Man Suit" />
 
 </RelativeLayout>

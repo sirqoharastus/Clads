@@ -308,7 +308,7 @@
     <string name="weeks">Weeks</string>
     <string name="months">Months</string>
     <string name="ok">OK</string>
-    <string name="tool_bar_default_title">Hi,Ijeoma</string>
+    <string name="tool_bar_default_title">Hi, Ijeoma</string>
     <string name="add_specialty">Add specialty</string>
     <string name="add_button_text">Add</string>
     <string name="add_specialty_textfield">Add Specialty</string>
@@ -350,6 +350,7 @@
     <string name="bottom_navigation_menu_media_item_title">Media</string>
     <string name="bottom_navigation_menu_messages_item_title">Messages</string>
     <string name="fragment_messages_message_text_view">Messages</string>
+    <string name="dashboard_media_fragment_no_photo">You have no photo in your gallery</string>
     <string name="fragment_add_client_add_client_text_view">Add Client</string>
     <string name="edit_measurement">Edit Measurement</string>
     <string name="_47">47</string>
@@ -357,4 +358,12 @@
     <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
     <string name="save_button_text">Save</string>
     <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
+    <string name="photo_gallery_recycler_view">Photo Gallery Recycler View</string>
+    <string name="no_photo_icon">No photo icon</string>
+    <string name="dashboard_media_fragment_menu_share">Share</string>
+    <string name="dashboard_media_fragment_menu_edit">Edit</string>
+    <string name="dashboard_media_fragment_menu_delete">Delete</string>
+    <string name="image_detail_view_description">Image Detail view</string>
+    <string name="share_with">"Share with "</string>
+    <string name="photo_description">Enter photo description</string>
 </resources>

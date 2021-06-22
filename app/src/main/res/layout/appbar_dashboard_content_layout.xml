@@ -14,6 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- app:menu="@menu/media_fragment_menu"-->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/my_toolbar"
             android:layout_width="match_parent"
@@ -96,7 +97,5 @@
         app:menu="@menu/bottomnavigatiomenu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

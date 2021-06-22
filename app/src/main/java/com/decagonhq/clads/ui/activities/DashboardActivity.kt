@@ -131,6 +131,12 @@ class DashboardActivity : AppCompatActivity() {
                     toolbarNotificationIcon.visibility = View.INVISIBLE
                     bottomNav.visibility = View.VISIBLE
                 }
+                R.id.mediaDetailFragment -> {
+                    toolbarTitle.visibility = View.VISIBLE
+                    toolbarProfileImage.visibility = View.INVISIBLE
+                    toolbarNotificationIcon.visibility = View.GONE
+                    bottomNav.visibility = View.GONE
+                }
                 else -> {
                     toolbarTitle.visibility = View.INVISIBLE
                     toolbarProfileImage.visibility = View.INVISIBLE

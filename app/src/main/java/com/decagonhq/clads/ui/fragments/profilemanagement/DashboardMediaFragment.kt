@@ -130,6 +130,7 @@ class DashboardMediaFragment : Fragment() {
                 DashboardMediaFragmentDirections
                     .actionDashboardMediaFragmentToMediaUploadFragment(imageData)
             findNavController().navigate(action)
+            DataListener.imageListener.value = false
             if (photosProvidersList.isNotEmpty()) {
                 noPhotoImage.visibility = View.INVISIBLE
                 photoGalleryRecyclerAdapter.notifyDataSetChanged()

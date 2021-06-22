@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".fragments.profilemanagement.ClientAccountFragment">
+    tools:context=".ui.fragments.profilemanagement.ClientAccountFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

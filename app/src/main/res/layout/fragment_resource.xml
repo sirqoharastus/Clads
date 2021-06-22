@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="700"
-    tools:context=".fragments.resourcesmanagement.ResourceFragment">
+    tools:context=".ui.fragments.resourcesmanagement.ResourceFragment">
 
     <TextView
         android:id="@+id/resources_text_textview"
@@ -103,7 +103,6 @@
                 tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/fragment_resources_article_recyclerview_item"
                 tools:orientation="horizontal" />
-            <!--                tools:listitem="@layout/fragment_resources_article_recyclerview_item" />-->
 
             <TextView
                 android:id="@+id/resources_view_all_bottom_textview"

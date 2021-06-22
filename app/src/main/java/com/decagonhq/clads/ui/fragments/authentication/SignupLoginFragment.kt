@@ -1,11 +1,9 @@
 package com.decagonhq.clads.ui.fragments.authentication
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagonhq.clads.R
@@ -34,11 +32,6 @@ class SignupLoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val sharedPref = sharedPreferenceManager.loadFromSharedPreference("loginToken")
-        if (sharedPref != null) {
-            Log.d("sharedPref", sharedPref)
-        }
-        Toast.makeText(requireContext(), "$sharedPref", Toast.LENGTH_SHORT).show()
         binding.fragmentSignupSignupButton.setOnClickListener {
             val action =
                 SignupLoginFragmentDirections.actionSignupLoginFragmentToSignupChoicesFragment()

@@ -360,7 +360,6 @@
     <string name="login_fragment_progress_bar_text">progress bar</string>
     <string name="login_frament_login_token_text">loginToken</string>
     <string name="login_fragment_login_successful_text">Login Successful</string>
-    <string name="login_fragment_login_successful_text">Login Successful</string>
     <string name="login_fragment_invalid_email_and_password_text">Invalid Email and password combination</string>
     <string name="login_fragment_email_does_not_exist_text">Email does not exist in database</string>
 </resources>

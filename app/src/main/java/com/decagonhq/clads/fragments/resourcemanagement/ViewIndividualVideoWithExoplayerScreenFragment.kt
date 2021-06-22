@@ -4,17 +4,21 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Build
 import android.os.Bundle
-import android.view.*
-import android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.WindowInsets
+import android.view.WindowInsetsController
+import android.view.WindowManager
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.R
-import com.decagonhq.clads.activities.DashboardActivity
 import com.decagonhq.clads.adapters.ViewIndividualVideoAdapter
 import com.decagonhq.clads.databinding.FragmentViewIndividualVideoWithExoplayerScreenBinding
+import com.decagonhq.clads.ui.activities.DashboardActivity
 import com.decagonhq.clads.utils.DummyDataGenerator
 import com.decagonhq.clads.utils.ViewIndividualVideoClickListner
 import com.google.android.exoplayer2.MediaItem
@@ -26,9 +30,11 @@ import com.google.android.exoplayer2.util.MimeTypes
 
 /**
  * If you've found an error or have a feedback in this code, please contact me at
- *  @paulndibe92@gmail.com
+ *  paulndibe92@gmail.com
  */
-class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventListener,
+class ViewIndividualVideoWithExoplayerScreenFragment :
+    Fragment(),
+    Player.EventListener,
     ViewIndividualVideoClickListner {
 
     private var _binding: FragmentViewIndividualVideoWithExoplayerScreenBinding? = null
@@ -45,9 +51,9 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
     private val viewIndividualVideoWithExoplayerRecyclerviewAdapter =
         ViewIndividualVideoAdapter(this)
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -66,8 +72,6 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
         exoplayerView = binding.playerView
         exoplayerProgressBar = binding.fragmentViewIndividualVideoProgressBar
         rootViewGroup = binding.constraintLayout
-
-
     }
 
     // Initializing the Exoplayer and recyclerview in the on start lifecycle
@@ -80,7 +84,6 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
     override fun onPause() {
         super.onPause()
         releasePlayer()
-
     }
 
     // Releasing the Exoplayer instance in the on stop lifecycle so as to free up system resources
@@ -88,7 +91,6 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
         super.onStop()
         releasePlayer()
     }
-
 
     /**
      * Initializing the Exoplayer and recyclerview in the on resume lifecycle and
@@ -141,7 +143,6 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
         viewIndividualVideoWithExoplayerRecyclerviewAdapter.setVideoResources(DummyDataGenerator.videoRecources)
         viewIndividualVideoWithExoplayerRecyclerView.adapter =
             viewIndividualVideoWithExoplayerRecyclerviewAdapter
-
     }
 
     /**
@@ -178,10 +179,9 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
                             WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
                     }
 
-
                     rootViewGroup?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 }
 
                 Build.VERSION.SDK_INT > 10 -> {
@@ -189,20 +189,20 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
                     // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
                     // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                     it.window.decorView.systemUiVisibility = (
-                            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                                    // Set the content to appear under the system bars so that the
-                                    // content doesn't resize when the system bars hide and show.
-                                    or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                                    // Hide the nav bar and status bar
-                                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                                    or View.SYSTEM_UI_FLAG_FULLSCREEN
-                                    or View.SYSTEM_UI_FLAG_LOW_PROFILE
-                            )
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            // Set the content to appear under the system bars so that the
+                            // content doesn't resize when the system bars hide and show.
+                            or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            // Hide the nav bar and status bar
+                            or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            or View.SYSTEM_UI_FLAG_FULLSCREEN
+                            or View.SYSTEM_UI_FLAG_LOW_PROFILE
+                        )
                     rootViewGroup?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                     (it as? AppCompatActivity)?.supportActionBar?.hide()
                 }
                 else -> {
@@ -237,5 +237,4 @@ class ViewIndividualVideoWithExoplayerScreenFragment : Fragment(), Player.EventL
         simpleExoPlayer?.playWhenReady = true
         simpleExoPlayer?.play()
     }
-
 }

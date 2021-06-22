@@ -12,8 +12,7 @@ class ViewIndividualVideoAdapter(private val listener: ViewIndividualVideoClickL
     RecyclerView.Adapter<ViewIndividualVideoAdapter.ViewIndividualVideoViewHolder>() {
 
     inner class ViewIndividualVideoViewHolder(var binding: ViewIndividualVideoScreenRecyclerviewAdapterLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-    }
+        RecyclerView.ViewHolder(binding.root)
 
     // This will hold the list of videos to be recycled in the recyclerview
     private var videoResources = mutableListOf<VideoResources>()
@@ -31,7 +30,8 @@ class ViewIndividualVideoAdapter(private val listener: ViewIndividualVideoClickL
             ViewIndividualVideoScreenRecyclerviewAdapterLayoutBinding.inflate(
                 LayoutInflater.from(
                     parent.context
-                ), parent, false
+                ),
+                parent, false
             )
         )
     }
@@ -64,5 +64,4 @@ class ViewIndividualVideoAdapter(private val listener: ViewIndividualVideoClickL
     override fun getItemCount(): Int {
         return videoResources.size
     }
-
 }

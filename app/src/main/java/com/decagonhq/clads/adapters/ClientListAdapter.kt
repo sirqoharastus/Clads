@@ -13,7 +13,7 @@ class ClientListAdapter : RecyclerView.Adapter<ClientListAdapter.ClientListViewH
 
     private var clients = mutableListOf<ClientDetailsDataClass>()
     // this function is responsible for setting up the list to be displayed in the recyclerview
-     fun setClientData(clients: MutableList<ClientDetailsDataClass>) {
+    fun setClientData(clients: MutableList<ClientDetailsDataClass>) {
         this.clients = clients
     }
     inner class ClientListViewHolder(val binding: FragmentClientsListRecyclerviewLayoutBinding) :

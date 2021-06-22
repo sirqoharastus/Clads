@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
 
-    tools:context=".fragments.profilemanagement.AddDeliveryAddressFragment">
+    tools:context=".ui.fragments.profilemanagement.AddDeliveryAddressFragment">
 
 
     <TextView

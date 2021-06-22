@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:backgroundTint="@color/white"
     android:fontFamily="@font/poppins"
-    android:paddingHorizontal="@dimen/padding_54dp"
+    android:paddingHorizontal="@dimen/padding_10dp"
     android:paddingVertical="@dimen/padding_10dp"
     android:text="@string/all_tailor"
     android:textColor="@color/navy_blue"

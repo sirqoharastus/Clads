@@ -86,7 +86,6 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="7dp"
         android:fontFamily="@font/poppins"
-        android:paddingBottom="20dp"
         android:text="@string/resources_fragment_timestamp"
         android:textColor="@color/menu_text_color"
         android:textFontWeight="400"

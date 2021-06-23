@@ -18,18 +18,25 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.ActivityDashboardBinding
+import com.decagonhq.clads.utils.SharedPreferenceManager
+import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var dashBoardActivityBinding: ActivityDashboardBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
+    private lateinit var navigationView: NavigationView
+    @Inject
+    lateinit var sharedPreferenceManager: SharedPreferenceManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         dashBoardActivityBinding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(dashBoardActivityBinding.root)
-
         // Get reference of the nav host container id
         // and set it to navController with findNavController method
         val navHostFragment = supportFragmentManager.findFragmentById(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id) as NavHostFragment
@@ -53,6 +60,20 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         setUpUI()
+
+        navigationView = dashBoardActivityBinding.dashboardActivityNavigationView
+        navigationView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.logoutFragment -> {
+                    sharedPreferenceManager.clearSharedPreference()
+                    this.finish()
+                    return@setNavigationItemSelectedListener true
+                }
+                else -> {
+                    return@setNavigationItemSelectedListener true
+                }
+            }
+        }
     }
 
     private fun setUpUI() {

@@ -183,7 +183,7 @@ class LoginScreenFragment : Fragment() {
                             is Resource.Success -> {
                                 if (it.value.status == 200) {
                                     val tokenFromEndpoint = it.value.payload
-                                    sharedPreferenceManager.saveToSharedPreference("token", tokenFromEndpoint)
+                                    sharedPreferenceManager.saveToSharedPreference(getString(R.string.login_frament_login_token_text), tokenFromEndpoint)
                                     Toast.makeText(
                                         requireContext(),
                                         tokenFromEndpoint,

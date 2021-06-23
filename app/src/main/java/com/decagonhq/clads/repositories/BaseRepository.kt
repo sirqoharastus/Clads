@@ -5,6 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 import retrofit2.Response
+import java.io.IOException
 
 abstract class BaseRepository {
 
@@ -15,11 +16,11 @@ abstract class BaseRepository {
             } catch (throwable: Throwable) {
                 when (throwable) {
                     is HttpException -> {
-                        val t = throwable.response()?.errorBody()?.charStream()
+//                        val t = throwable.response()?.errorBody()?.charStream()
                         val code = throwable.code()
                         Resource.Failure(
                             false,
-                            throwable.code(),
+                            code,
                             throwable.response() as Response<Any>
                         )
                     }

@@ -131,10 +131,9 @@ dependencies {
     implementation "com.amulyakhare:com.amulyakhare.textdrawable:$versions.amulyakhare_version"
 
     // Exoplayer library
-
-
     implementation "com.google.android.exoplayer:exoplayer-core:$versions.exoplayer_version"
     implementation "com.google.android.exoplayer:exoplayer-dash:$versions.exoplayer_version"
     implementation "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayer_version"
-
+    // exoplayer
+    implementation "com.google.android.exoplayer:exoplayer:$versions.exoplayer_version"
 }

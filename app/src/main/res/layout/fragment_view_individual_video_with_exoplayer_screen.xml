@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/constraintLayout"
     android:theme="@style/PlayVideoFragment"
-    tools:context=".fragments.resourcemanagement.ViewIndividualVideoWithExoplayerScreenFragment">
+    tools:context=".ui.fragments.resourcesmanagement.ViewIndividualVideoWithExoplayerScreenFragment">
 
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/playerView"

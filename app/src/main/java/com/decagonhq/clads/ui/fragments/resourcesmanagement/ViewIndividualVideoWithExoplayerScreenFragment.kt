@@ -1,4 +1,4 @@
-package com.decagonhq.clads.fragments.resourcemanagement
+package com.decagonhq.clads.ui.fragments.resourcesmanagement
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -34,7 +34,7 @@ import com.google.android.exoplayer2.util.MimeTypes
  */
 class ViewIndividualVideoWithExoplayerScreenFragment :
     Fragment(),
-    Player.EventListener,
+    Player.Listener,
     ViewIndividualVideoClickListner {
 
     private var _binding: FragmentViewIndividualVideoWithExoplayerScreenBinding? = null
@@ -236,5 +236,10 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
         simpleExoPlayer?.setMediaItem(mediaItem)
         simpleExoPlayer?.playWhenReady = true
         simpleExoPlayer?.play()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

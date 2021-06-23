@@ -120,9 +120,18 @@
 
     <fragment
         android:id="@+id/resourceFragment"
-        android:label="Resources"
-        android:name="com.decagonhq.clads.ui.fragments.profilemanagement.ResourceFragment"
-        tools:layout="@layout/fragment_resource" />
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourceFragment"
+        android:label="fragment_resource"
+        tools:layout="@layout/fragment_resource" >
+        <action
+            android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"
+            app:destination="@id/resourcesAllVideosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resourcesAllVideosFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourcesAllVideosFragment"
+        android:label="fragment_resources_all_videos"
+        tools:layout="@layout/fragment_resources_all_videos" />
 
     <fragment
         android:id="@+id/mediaDetailFragment"
@@ -140,4 +149,5 @@
             app:popUpToInclusive="true" />
 
     </fragment>
+
 </navigation>

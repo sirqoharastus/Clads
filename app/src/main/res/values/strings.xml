@@ -62,10 +62,7 @@
     <string name="signup_choices_fragment_signup_with_google">Signup with Google</string>
     <string name="signup_choices_fragment_sign_up_with_email">Sign up with email</string>
     <string name="signup_choices_fragment_sign_up_with_phone_number">Sign up with phone number</string>
-    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
-
-    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
     <string name="signup_choices_fragment_login">Login</string>
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
@@ -358,6 +355,20 @@
     <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
     <string name="save_button_text">Save</string>
     <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
+
+    <string name="resources_fragment_video_thumbnail">Image thumbnail of a video</string>
+    <string name="resources_recyclerview_text">How to perfectly sew adire</string>
+    <string name="resources_fragment_timestamp">1 hour 30 mins</string>
+    <string name="resource_video_clock_image_description">Image of a clock</string>
+    <string name="resource_article_image_description">Image of an Article</string>
+    <string name="resource_article_text_title">Stitching neatly</string>
+    <string name="resource_article_text_author">By Nathan Maro</string>
+    <string name="fragment_resources_text">Resources</string>
+    <string name="fragement_resources_text">Resources</string>
+    <string name="resources_all_videos_text">Videos</string>
+    <string name="resources_view_all_text">View all</string>
+    <string name="resources_article_publications_text">Article/Publications</string>
+
     <string name="photo_gallery_recycler_view">Photo Gallery Recycler View</string>
     <string name="no_photo_icon">No photo icon</string>
     <string name="dashboard_media_fragment_menu_share">Share</string>
@@ -366,4 +377,5 @@
     <string name="image_detail_view_description">Image Detail view</string>
     <string name="share_with">"Share with "</string>
     <string name="photo_description">Enter photo description</string>
+
 </resources>

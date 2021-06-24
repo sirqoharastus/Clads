@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.util.MimeTypes
+import java.lang.Exception
 
 /**
  * If you've found an error or have a feedback in this code, please contact me at
@@ -40,6 +42,7 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
 
     private var _binding: FragmentViewIndividualVideoWithExoplayerScreenBinding? = null
     val binding get() = _binding!!
+
 
     private val args: ViewIndividualVideoWithExoplayerScreenFragmentArgs by navArgs()
     private lateinit var viewIndividualVideoWithExoplayerRecyclerView: RecyclerView
@@ -98,13 +101,15 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
         releasePlayer()
     }
 
+
+
     /**
      * Initializing the Exoplayer and recyclerview in the on resume lifecycle and
      * making the screen go edge to edge
      */
     override fun onResume() {
         super.onResume()
-        setFullscreen(activity as DashboardActivity)
+//        setFullscreen(activity as DashboardActivity)
         if (simpleExoPlayer == null) {
             initializePlayer()
         }
@@ -168,61 +173,6 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
     }
 
     /**
-     * Checking the API level and making the fragment go Edge to Edge
-     */
-    @Suppress("DEPRECATION")
-    @SuppressLint("ObsoleteSdkInt")
-    private fun setFullscreen(activity: Activity?) {
-        activity?.let {
-            when {
-                /*I added this case below. And the view looks very weird. Why??*/
-                Build.VERSION.SDK_INT >= 30 -> {
-                    it.window.setDecorFitsSystemWindows(false)
-                    val controller: WindowInsetsController? = it.window.insetsController
-                    controller?.let { insetsController ->
-                        insetsController.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-                        insetsController.systemBarsBehavior =
-                            WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-                    }
-
-                    rootViewGroup?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                }
-
-                Build.VERSION.SDK_INT > 10 -> {
-                    // Enables regular immersive mode.
-                    // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
-                    // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                    it.window.decorView.systemUiVisibility = (
-                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                            // Set the content to appear under the system bars so that the
-                            // content doesn't resize when the system bars hide and show.
-                            or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            // Hide the nav bar and status bar
-                            or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            or View.SYSTEM_UI_FLAG_FULLSCREEN
-                            or View.SYSTEM_UI_FLAG_LOW_PROFILE
-                        )
-                    rootViewGroup?.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    (it as? AppCompatActivity)?.supportActionBar?.hide()
-                }
-                else -> {
-                    it.window
-                        .setFlags(
-                            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                            WindowManager.LayoutParams.FLAG_FULLSCREEN
-                        )
-                }
-            }
-        }
-    }
-
-    /**
      * Displaying a progress bar when the playback state is Buffering
      * and removing it when the video starts to play
      */
@@ -246,6 +196,7 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
 
     override fun onDestroy() {
         super.onDestroy()
+//        releaseFullScreen(activity as DashboardActivity)
         _binding = null
     }
 }

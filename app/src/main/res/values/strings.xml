@@ -327,7 +327,7 @@
     <string name="fragment_specialty_quality_assurance_text">Quality Assurance</string>
     <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
     <string name="fragment_specialty_measurement_options">Measurement Options</string>
-    <string name="resource_fragment_resource_textview">Resource Fragment</string>
+    <string name="resource_fragment_resource_textview">Resource</string>
     <string name="drawer_layout_edit_profile_button">Edit Profile</string>
     <string name="drawer_layout_profile_name">Ijeoma Ibukun Babangida</string>
     <string name="fragment_add_client_client_account_text">Client Account</string>
@@ -380,4 +380,5 @@
     <string name="image_detail_view_description">Image Detail view</string>
     <string name="share_with">"Share with "</string>
     <string name="photo_description">Enter photo description</string>
+    <string name="image_of_a_clock">Image of a clock</string>
 </resources>

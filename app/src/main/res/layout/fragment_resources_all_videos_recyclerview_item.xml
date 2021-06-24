@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_marginTop="@dimen/margin_22dp"
-    android:layout_marginStart="@dimen/margin_30dp"
+    android:layout_marginStart="@dimen/margin_16dp"
+    android:layout_marginEnd="@dimen/margin_16dp"
     android:layout_marginBottom="@dimen/margin_10dp"
     android:orientation="vertical"
     android:layout_height="wrap_content">
@@ -61,7 +62,7 @@
         android:id="@+id/resource_recyclerview_sewing_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
         android:fontFamily="@font/poppins_medium"
         android:lineHeight="16dp"
         android:text="@string/resources_recyclerview_text"
@@ -76,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_resource_recyclerview_clock_image"
-        android:contentDescription="Image of a clock"
+        android:contentDescription="@string/image_of_a_clock"
         app:layout_constraintStart_toStartOf="@+id/resource_recyclerview_sewing_textview"
         app:layout_constraintTop_toTopOf="@+id/resources_videos_recyclerview_item_textview" />
 
@@ -84,8 +85,8 @@
         android:id="@+id/resources_videos_recyclerview_item_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_7dp"
         android:fontFamily="@font/poppins"
         android:paddingBottom="@dimen/margin_5dp"
         android:text="@string/resources_fragment_timestamp"

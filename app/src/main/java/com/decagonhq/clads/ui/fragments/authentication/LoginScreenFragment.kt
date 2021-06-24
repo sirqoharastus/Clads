@@ -41,7 +41,6 @@ class LoginScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // getting the reference of the user input edit text
         emailEditText = binding.fragmentLoginScreenEmailAddressTextInputEditText
         passwordEditText = binding.fragmentLoginScreenPasswordTextInputEditText
@@ -53,7 +52,6 @@ class LoginScreenFragment : Fragment() {
         *  input is correct the next fragment is launched else the user is notified which field is not
         * field properly
         */
-
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()

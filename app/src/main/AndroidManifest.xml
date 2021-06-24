@@ -14,8 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Clads">
-
-        <activity android:name="com.decagonhq.clads.ui.activities.DashboardActivity">
+        <activity android:name="com.decagonhq.clads.ui.activities.DashboardActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode">
         </activity>
 
         <activity android:name="com.decagonhq.clads.ui.activities.SplashScreenActivity"

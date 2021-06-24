@@ -27,7 +27,7 @@
             app:destination="@id/suscriptionFragment" />
         <action
             android:id="@+id/action_dashboardhomeFragment_to_resourceFragment"
-            app:destination="@id/resourceFragment" />
+            app:destination="@id/resource" />
     </fragment>
 
     <fragment
@@ -97,8 +97,7 @@
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.AddMeasurementFragment"
         android:label="Add Measurement"
-        tools:layout="@layout/fragment_add_measurement" >
-    </fragment>
+        tools:layout="@layout/fragment_add_measurement" />
     <fragment
         android:id="@+id/addDeliveryAddressFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.AddDeliveryAddressFragment"
@@ -119,19 +118,36 @@
     </fragment>
 
     <fragment
-        android:id="@+id/resourceFragment"
+        android:id="@+id/resource"
         android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourceFragment"
         android:label="fragment_resource"
         tools:layout="@layout/fragment_resource" >
+        <action
+            android:id="@+id/action_resourceFragment_to_viewIndividualVideoWithExoplayerScreenFragment"
+            app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />
         <action
             android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"
             app:destination="@id/resourcesAllVideosFragment" />
     </fragment>
     <fragment
+        android:id="@+id/viewIndividualVideoWithExoplayerScreenFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ViewIndividualVideoWithExoplayerScreenFragment"
+        android:label="fragment_view_individual_video_with_exoplayer_screen"
+        tools:layout="@layout/fragment_view_individual_video_with_exoplayer_screen" >
+        <argument
+            android:name="videoUrl"
+            app:argType="string" />
+    </fragment>
+
+<fragment
         android:id="@+id/resourcesAllVideosFragment"
         android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourcesAllVideosFragment"
         android:label="fragment_resources_all_videos"
-        tools:layout="@layout/fragment_resources_all_videos" />
+        tools:layout="@layout/fragment_resources_all_videos" >
+    <action
+        android:id="@+id/action_resourcesAllVideosFragment_to_viewIndividualVideoWithExoplayerScreenFragment"
+        app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />
+</fragment>
 
     <fragment
         android:id="@+id/mediaDetailFragment"
@@ -149,5 +165,4 @@
             app:popUpToInclusive="true" />
 
     </fragment>
-
-</navigation>
+    </navigation>

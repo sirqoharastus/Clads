@@ -133,7 +133,11 @@
         android:id="@+id/viewIndividualVideoWithExoplayerScreenFragment"
         android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ViewIndividualVideoWithExoplayerScreenFragment"
         android:label="fragment_view_individual_video_with_exoplayer_screen"
-        tools:layout="@layout/fragment_view_individual_video_with_exoplayer_screen" />
+        tools:layout="@layout/fragment_view_individual_video_with_exoplayer_screen" >
+        <argument
+            android:name="videoUrl"
+            app:argType="string" />
+    </fragment>
 
 <fragment
         android:id="@+id/resourcesAllVideosFragment"

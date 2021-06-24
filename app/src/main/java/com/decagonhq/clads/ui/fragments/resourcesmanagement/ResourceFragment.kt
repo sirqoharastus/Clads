@@ -12,8 +12,9 @@ import com.decagonhq.clads.adapters.ResourcesArticlesAdapter
 import com.decagonhq.clads.adapters.ResourcesVideosAdapter
 import com.decagonhq.clads.databinding.FragmentResourceBinding
 import com.decagonhq.clads.utils.ResourcesDummyData
+import com.decagonhq.clads.utils.ViewIndividualVideoClickListner
 
-class ResourceFragment : Fragment() {
+class ResourceFragment : Fragment(), ViewIndividualVideoClickListner {
 
     private var _binding: FragmentResourceBinding? = null
     private val binding get() = _binding!!
@@ -29,7 +30,7 @@ class ResourceFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentResourceBinding.inflate(inflater, container, false)
         return binding.root
@@ -40,14 +41,16 @@ class ResourceFragment : Fragment() {
 
         // Layout manager for video recyclerview item
         exoplayerRecyclerview = binding.resourcesVideosRecyclerview
-        videoListAdapter = ResourcesVideosAdapter(ResourcesDummyData.videoList)
-        exoplayerRecyclerview.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        videoListAdapter = ResourcesVideosAdapter(ResourcesDummyData.videoList, this)
+        exoplayerRecyclerview.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         exoplayerRecyclerview.adapter = videoListAdapter
 
         // Layout manager for article recyclerview item
         articlerRecyclerView = binding.resourcesArticleRecyclerview
         articleListAdapter = ResourcesArticlesAdapter(ResourcesDummyData.articleList)
-        articlerRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        articlerRecyclerView.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         articlerRecyclerView.adapter = articleListAdapter
 
         // Action to navigate to view all videos fragment from videos & articles fragment
@@ -57,6 +60,13 @@ class ResourceFragment : Fragment() {
             findNavController().navigate(action)
         }
     }
+
+
+    override fun onItemClicked(videoUrl: String) {
+        val action = ResourceFragmentDirections.actionResourceFragmentToViewIndividualVideoWithExoplayerScreenFragment(videoUrl)
+        findNavController().navigate(action)
+    }
+
 
     override fun onDestroy() {
         super.onDestroy()

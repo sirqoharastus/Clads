@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentResourcesAllVideosRecyclerviewItemBinding
 import com.decagonhq.clads.models.VideoView
+import com.decagonhq.clads.utils.ViewIndividualVideoClickListner
 
-class ResourcesAllVideosAdapter(private var allVideoList: ArrayList<VideoView>) : RecyclerView.Adapter<ResourcesAllVideosAdapter.AllVideoViewHolder>() {
+class ResourcesAllVideosAdapter(private var allVideoList: ArrayList<VideoView>, private var listener: ViewIndividualVideoClickListner) : RecyclerView.Adapter<ResourcesAllVideosAdapter.AllVideoViewHolder>() {
 
     inner class AllVideoViewHolder(var binding: FragmentResourcesAllVideosRecyclerviewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -33,6 +34,11 @@ class ResourcesAllVideosAdapter(private var allVideoList: ArrayList<VideoView>) 
                     allVideoTag.text = videoTitle
                 }
             }
+        }
+
+        holder.binding.resourcesAllVideoCardview.setOnClickListener {
+            val videoUrl = allVideoList[position].videoUrl
+            listener.onItemClicked(videoUrl)
         }
     }
 

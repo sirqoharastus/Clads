@@ -13,6 +13,7 @@ import android.view.WindowManager
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.R
@@ -40,6 +41,7 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
     private var _binding: FragmentViewIndividualVideoWithExoplayerScreenBinding? = null
     val binding get() = _binding!!
 
+    private val args: ViewIndividualVideoWithExoplayerScreenFragmentArgs by navArgs()
     private lateinit var viewIndividualVideoWithExoplayerRecyclerView: RecyclerView
     private var simpleExoPlayer: SimpleExoPlayer? = null
     private var exoplayerView: PlayerView? = null
@@ -48,6 +50,8 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
     private var rootViewGroup: ViewGroup? = null
     private lateinit var exoplayerProgressBar: ProgressBar
     private var playbackPosition: Long = 0
+
+    private lateinit var  videoUrl:String
     private val viewIndividualVideoWithExoplayerRecyclerviewAdapter =
         ViewIndividualVideoAdapter(this)
 
@@ -67,6 +71,8 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        videoUrl = args.videoUrl
 
         // Getting the reference of the views in the layout
         exoplayerView = binding.playerView
@@ -127,7 +133,7 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
             .setMimeType(MimeTypes.APPLICATION_MPD)
             .build()
 
-        val mediaItem = MediaItem.fromUri(getString(R.string.media_url_mp4))
+        val mediaItem = MediaItem.fromUri(videoUrl)
         val secondMediaItem = MediaItem.fromUri(getString(R.string.media_url_mp3))
 
         simpleExoPlayer!!.setMediaItem(mediaItem)
@@ -231,8 +237,8 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
      * When a video item from the recyclerview is click, that video is loaded to
      * the exoplayer and the exoplayer plays the video at that position
      */
-    override fun onItemClicked(VideoUrl: String) {
-        var mediaItem = MediaItem.fromUri(VideoUrl)
+    override fun onItemClicked(videoUrl: String) {
+        var mediaItem = MediaItem.fromUri(videoUrl)
         simpleExoPlayer?.setMediaItem(mediaItem)
         simpleExoPlayer?.playWhenReady = true
         simpleExoPlayer?.play()

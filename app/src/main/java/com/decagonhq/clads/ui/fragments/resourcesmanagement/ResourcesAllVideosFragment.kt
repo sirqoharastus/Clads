@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.adapters.ResourcesAllVideosAdapter
 import com.decagonhq.clads.databinding.FragmentResourcesAllVideosBinding
 import com.decagonhq.clads.utils.ResourcesDummyData
+import com.decagonhq.clads.utils.ViewIndividualVideoClickListner
 
-class ResourcesAllVideosFragment : Fragment() {
+class ResourcesAllVideosFragment : Fragment(), ViewIndividualVideoClickListner {
 
     private var _binding: FragmentResourcesAllVideosBinding? = null
     private val binding get() = _binding!!
@@ -34,7 +36,7 @@ class ResourcesAllVideosFragment : Fragment() {
 
         // Layout manager for all video recyclerview fragment
         resourcesAllVideoRecyclerView = binding.resourcesAllVideosRecyclerview
-        allVideoListAdapter = ResourcesAllVideosAdapter(ResourcesDummyData.videoList)
+        allVideoListAdapter = ResourcesAllVideosAdapter(ResourcesDummyData.videoList, this)
         resourcesAllVideoRecyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
         resourcesAllVideoRecyclerView.adapter = allVideoListAdapter
     }
@@ -42,5 +44,11 @@ class ResourcesAllVideosFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    override fun onItemClicked(videoUrl: String) {
+        val action = ResourcesAllVideosFragmentDirections.actionResourcesAllVideosFragmentToViewIndividualVideoWithExoplayerScreenFragment(videoUrl)
+        findNavController().navigate(action)
+
     }
 }

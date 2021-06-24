@@ -118,30 +118,28 @@
     </fragment>
 
     <fragment
-        android:id="@+id/resource"
-        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourceFragment"
-        android:label="fragment_resource"
-        tools:layout="@layout/fragment_resource" />
-    <fragment
         android:id="@+id/articlesFragment"
-        android:name="com.decagonhq.clads.fragments.resourcemanagement.ArticlesFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ArticlesFragment"
         android:label="fragment_articles"
         tools:layout="@layout/fragment_articles" />
     <fragment
         android:id="@+id/readArticlesFragment"
-        android:name="com.decagonhq.clads.fragments.resourcemanagement.ReadArticlesFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ReadArticlesFragment"
         android:label="fragment_read_articles"
         tools:layout="@layout/fragment_read_articles" />
 
-
-
-<!--        <action-->
-<!--            android:id="@+id/action_resourceFragment_to_viewIndividualVideoWithExoplayerScreenFragment"-->
-<!--            app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />-->
-<!--        <action-->
-<!--            android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"-->
-<!--            app:destination="@id/resourcesAllVideosFragment" />-->
-<!--    </fragment>-->
+    <fragment
+        android:id="@+id/resource"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourceFragment"
+        android:label="fragment_resource"
+        tools:layout="@layout/fragment_resource" >
+        <action
+            android:id="@+id/action_resourceFragment_to_viewIndividualVideoWithExoplayerScreenFragment"
+            app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />
+        <action
+            android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"
+            app:destination="@id/resourcesAllVideosFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/viewIndividualVideoWithExoplayerScreenFragment"

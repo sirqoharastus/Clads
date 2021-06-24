@@ -1,4 +1,4 @@
-package com.decagonhq.clads.fragments.resourcemanagement
+package com.decagonhq.clads.ui.fragments.resourcesmanagement
 
 import android.os.Bundle
 import android.view.LayoutInflater

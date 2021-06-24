@@ -1,4 +1,4 @@
-package com.decagonhq.clads.fragments.resourcemanagement
+package com.decagonhq.clads.ui.fragments.resourcesmanagement
 
 import android.annotation.SuppressLint
 import android.os.Bundle

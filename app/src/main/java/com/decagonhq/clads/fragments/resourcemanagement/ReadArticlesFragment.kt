@@ -34,7 +34,6 @@ class ReadArticlesFragment : Fragment() {
 
         webView.webViewClient = WebViewClient()
 
-
 //        webView.webViewClient = object : WebViewClient() {}
         webView.loadUrl("https://www.google.com")
         webView.settings.javaScriptEnabled = true

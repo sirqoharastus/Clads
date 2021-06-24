@@ -12,7 +12,7 @@
         <item
             android:icon="@drawable/resources"
             android:title="@string/drawer_layout_menu_resource_item_title"
-            android:id="@+id/resourceFragment"
+            android:id="@+id/resource"
 
             />
         <item

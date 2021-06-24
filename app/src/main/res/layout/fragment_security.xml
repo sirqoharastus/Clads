@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:isScrollContainer="true"
-    tools:context=".fragments.profilemanagement.SecurityFragment">
+    tools:context=".ui.fragments.profilemanagement.SecurityFragment">
 
     <TextView
         android:id="@+id/security_fragment_verified_information_textview"

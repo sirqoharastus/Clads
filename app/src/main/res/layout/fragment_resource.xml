@@ -1,17 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.profilemanagement.ResourceFragment">
-
+    android:layout_weight="700"
+    tools:context=".ui.fragments.resourcesmanagement.ResourceFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/resource_fragment_resource_textview"
         android:id="@+id/resources_fragment_text_view"
-        />
+        android:text="@string/resource_fragment_resource_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/navy_blue"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resources_fragment_text_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_20dp">
+
+            <TextView
+                android:id="@+id/resources_videos_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/resources_all_videos_text"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="@dimen/text_size_13sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/resources_videos_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resources_videos_textview"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/fragment_resources_video_recyclerview_item"
+                tools:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/resources_view_all_top_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/resources_view_all_text"
+                android:textColor="@color/deep_sky_blue"
+                android:textFontWeight="400"
+                android:textSize="@dimen/text_size_12sp"
+                app:layout_constraintStart_toStartOf="@id/resources_videos_recyclerview"
+                app:layout_constraintTop_toBottomOf="@id/resources_videos_recyclerview" />
+
+            <TextView
+                android:id="@+id/resources_article_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/resources_article_publications_text"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="@dimen/text_size_13sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@id/resources_view_all_top_textview"
+                app:layout_constraintTop_toBottomOf="@id/resources_view_all_top_textview" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/resources_article_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resources_article_textview"
+                tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/fragment_resources_article_recyclerview_item"
+                tools:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/resources_view_all_bottom_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/resources_view_all_text"
+                android:textColor="@color/deep_sky_blue"
+                android:textFontWeight="400"
+                android:textSize="@dimen/text_size_12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/resources_article_recyclerview"
+                app:layout_constraintTop_toBottomOf="@id/resources_article_recyclerview" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

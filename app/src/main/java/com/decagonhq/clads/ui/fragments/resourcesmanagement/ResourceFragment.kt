@@ -61,12 +61,10 @@ class ResourceFragment : Fragment(), ViewIndividualVideoClickListner {
         }
     }
 
-
     override fun onItemClicked(videoUrl: String) {
         val action = ResourceFragmentDirections.actionResourceFragmentToViewIndividualVideoWithExoplayerScreenFragment(videoUrl)
         findNavController().navigate(action)
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

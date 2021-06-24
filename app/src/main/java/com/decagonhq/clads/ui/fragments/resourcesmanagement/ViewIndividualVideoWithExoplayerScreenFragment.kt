@@ -1,18 +1,10 @@
 package com.decagonhq.clads.ui.fragments.resourcesmanagement
 
-import android.annotation.SuppressLint
-import android.app.Activity
-import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowInsets
-import android.view.WindowInsetsController
-import android.view.WindowManager
 import android.widget.ProgressBar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.decagonhq.clads.R
 import com.decagonhq.clads.adapters.ViewIndividualVideoAdapter
 import com.decagonhq.clads.databinding.FragmentViewIndividualVideoWithExoplayerScreenBinding
-import com.decagonhq.clads.ui.activities.DashboardActivity
 import com.decagonhq.clads.utils.DummyDataGenerator
 import com.decagonhq.clads.utils.ViewIndividualVideoClickListner
 import com.google.android.exoplayer2.MediaItem
@@ -28,8 +19,6 @@ import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.ui.PlayerView
-import com.google.android.exoplayer2.util.MimeTypes
-import java.lang.Exception
 
 /**
  * If you've found an error or have a feedback in this code, please contact me at
@@ -43,8 +32,10 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
     private var _binding: FragmentViewIndividualVideoWithExoplayerScreenBinding? = null
     val binding get() = _binding!!
 
-
+    // intercepting arguments arguments comming from resources fragment
     private val args: ViewIndividualVideoWithExoplayerScreenFragmentArgs by navArgs()
+
+    //
     private lateinit var viewIndividualVideoWithExoplayerRecyclerView: RecyclerView
     private var simpleExoPlayer: SimpleExoPlayer? = null
     private var exoplayerView: PlayerView? = null
@@ -53,15 +44,16 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
     private var rootViewGroup: ViewGroup? = null
     private lateinit var exoplayerProgressBar: ProgressBar
     private var playbackPosition: Long = 0
+    private lateinit var videoUrl: String
 
-    private lateinit var  videoUrl:String
+    // Instantiating the adapter class
     private val viewIndividualVideoWithExoplayerRecyclerviewAdapter =
         ViewIndividualVideoAdapter(this)
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentViewIndividualVideoWithExoplayerScreenBinding.inflate(
@@ -75,6 +67,10 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        /**
+         * the arguments from the resources fragment is a string video url
+         * the video url is to be used by the exoplayer to loaded the particular video
+         */
         videoUrl = args.videoUrl
 
         // Getting the reference of the views in the layout
@@ -101,15 +97,12 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
         releasePlayer()
     }
 
-
-
     /**
      * Initializing the Exoplayer and recyclerview in the on resume lifecycle and
      * making the screen go edge to edge
      */
     override fun onResume() {
         super.onResume()
-//        setFullscreen(activity as DashboardActivity)
         if (simpleExoPlayer == null) {
             initializePlayer()
         }
@@ -133,11 +126,8 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
         }
 
         exoplayerView!!.player = simpleExoPlayer
-        val mediaItem1 = MediaItem.Builder()
-            .setUri(getString(R.string.media_url_mp4))
-            .setMimeType(MimeTypes.APPLICATION_MPD)
-            .build()
 
+        // building the data source with video url
         val mediaItem = MediaItem.fromUri(videoUrl)
         val secondMediaItem = MediaItem.fromUri(getString(R.string.media_url_mp3))
 
@@ -147,6 +137,7 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
         simpleExoPlayer?.seekTo(currentWindow, playbackPosition)
         simpleExoPlayer?.prepare()
 
+        // initializing recyclerview
         var layoutManager = GridLayoutManager(requireContext(), 2)
         viewIndividualVideoWithExoplayerRecyclerView =
             binding.fragmentViewIndividualVideoWithExoplayerScreenRecyclerView
@@ -194,9 +185,9 @@ class ViewIndividualVideoWithExoplayerScreenFragment :
         simpleExoPlayer?.play()
     }
 
+    // setting the _binding class to null
     override fun onDestroy() {
         super.onDestroy()
-//        releaseFullScreen(activity as DashboardActivity)
         _binding = null
     }
 }

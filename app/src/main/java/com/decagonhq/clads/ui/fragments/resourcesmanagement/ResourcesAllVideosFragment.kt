@@ -49,6 +49,5 @@ class ResourcesAllVideosFragment : Fragment(), ViewIndividualVideoClickListner {
     override fun onItemClicked(videoUrl: String) {
         val action = ResourcesAllVideosFragmentDirections.actionResourcesAllVideosFragmentToViewIndividualVideoWithExoplayerScreenFragment(videoUrl)
         findNavController().navigate(action)
-
     }
 }

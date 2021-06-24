@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profile_management_nav_graph"
-    app:startDestination="@id/dashboardhomeFragment">
+    app:startDestination="@id/articlesFragment">
 
     <activity
         android:id="@+id/dashboard_activity"
@@ -99,8 +99,7 @@
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddMeasurementFragment"
         android:label="Add Measurement"
-        tools:layout="@layout/fragment_add_measurement" >
-    </fragment>
+        tools:layout="@layout/fragment_add_measurement" />
     <fragment
         android:id="@+id/addDeliveryAddressFragment"
         android:name="com.decagonhq.clads.fragments.profilemanagement.AddDeliveryAddressFragment"
@@ -125,4 +124,14 @@
         android:name="com.decagonhq.clads.fragments.profilemanagement.ResourceFragment"
         android:label="fragment_resource"
         tools:layout="@layout/fragment_resource" />
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.decagonhq.clads.fragments.resourcemanagement.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/readArticlesFragment"
+        android:name="com.decagonhq.clads.fragments.resourcemanagement.ReadArticlesFragment"
+        android:label="fragment_read_articles"
+        tools:layout="@layout/fragment_read_articles" />
 </navigation>

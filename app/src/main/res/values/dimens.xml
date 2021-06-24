@@ -156,8 +156,7 @@
     <dimen name="margin_54dp">54dp</dimen>
     <dimen name="padding_30dp">30dp</dimen>
     <dimen name="margin_118dp">118dp</dimen>
-
-
+    <dimen name="recycler_view_height">574dp</dimen>
 
 
     <integer name="number_0">0</integer>

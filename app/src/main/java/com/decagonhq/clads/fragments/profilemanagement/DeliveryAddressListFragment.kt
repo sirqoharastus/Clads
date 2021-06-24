@@ -45,7 +45,8 @@ class DeliveryAddressListFragment : Fragment() {
 
         // to open the add delivery address fragment
         binding.deliveryAddressListFragmentAddAddressButton.setOnClickListener {
-            findNavController().navigate(R.id.addDeliveryAddressFragment)
+           findNavController().navigate(R.id.addDeliveryAddressFragment)
+
         }
     }
 }

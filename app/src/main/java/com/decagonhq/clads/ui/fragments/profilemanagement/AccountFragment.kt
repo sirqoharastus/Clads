@@ -1,11 +1,15 @@
 package com.decagonhq.clads.ui.fragments.profilemanagement
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.media.MediaBrowserServiceCompat.RESULT_OK
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.FragmentAccountBinding
 import com.decagonhq.clads.ui.dialogs.FirstNameDialogFragment
@@ -27,6 +31,8 @@ class AccountFragment : Fragment() {
     // declaring binding variables
     var _binding: FragmentAccountBinding? = null
     val binding get() = _binding!!
+    private val permissionRequestCode = 100
+    lateinit var imageUri: Uri
     private lateinit var viewmodel: AccontViewModel
 
     override fun onCreateView(
@@ -48,7 +54,10 @@ class AccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewmodel = ViewModelProvider(this).get(AccontViewModel::class.java)
-
+        setUpUi()
+    }
+    // hadles the behaviour of the UI
+    fun setUpUi() {
         // setting account profile values on click to inflate respective dialogs in the process
 
         binding.editProfileFirstNameValueTextview.setOnClickListener {
@@ -148,7 +157,10 @@ class AccountFragment : Fragment() {
 
         binding.editProfileLegalStatusValueTextview.setOnClickListener {
             val legalStatusDialogFragment = LegalStatusDialogFragment()
-            legalStatusDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_legal_status_text))
+            legalStatusDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_legal_status_text)
+            )
             legalStatusDialogFragment.legalStatusLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -159,7 +171,10 @@ class AccountFragment : Fragment() {
 
         binding.editProfileNameOfUnionValueTextview.setOnClickListener {
             val nameOfUnionDialogFragment = NameOfUnionDialogFragment()
-            nameOfUnionDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_name_of_dialog_fragment_text))
+            nameOfUnionDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_name_of_dialog_fragment_text)
+            )
             nameOfUnionDialogFragment.nameOfUnionLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -170,7 +185,10 @@ class AccountFragment : Fragment() {
 
         binding.editProfileWardValueTextview.setOnClickListener {
             val wardDialogFragment = WardDialogFragment()
-            wardDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_ward_dialog_fragment_text))
+            wardDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_ward_dialog_fragment_text)
+            )
             wardDialogFragment.wardLiveData.observe(
                 viewLifecycleOwner,
                 {
@@ -197,13 +215,34 @@ class AccountFragment : Fragment() {
 
         binding.editProfileStateValueTextview.setOnClickListener {
             val stateDialogFragment = StateDialogFragment()
-            stateDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.edit_profile_fragment_state_dialog_fragment_text))
+            stateDialogFragment.show(
+                requireActivity().supportFragmentManager,
+                getString(R.string.edit_profile_fragment_state_dialog_fragment_text)
+            )
             stateDialogFragment.stateLiveData.observe(
                 viewLifecycleOwner,
                 {
-                    binding.editProfileShowroomAddressValueTextview.text = it
+                    binding.editProfileStateTextview.text = it
                 }
             )
+        }
+
+        binding.editProfileAccountTabChangePictureTextview.setOnClickListener {
+            pickImage2()
+        }
+    }
+
+    // Starts an activity for picking image
+    private fun pickImage2() {
+        val intent = Intent().setType("image/*").setAction(Intent.ACTION_GET_CONTENT)
+        startActivityForResult(Intent.createChooser(intent, "Select New Profile Picture"), 100)
+    }
+    // handles the result from the pick image activity
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == permissionRequestCode && resultCode == AppCompatActivity.RESULT_OK && data != null) {
+            val selectedPhotoUri = data.data
+            binding.editProfileAccountTabImageview.setImageURI(selectedPhotoUri)
         }
     }
 

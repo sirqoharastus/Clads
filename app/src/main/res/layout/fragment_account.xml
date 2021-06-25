@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/edit_profile_account_tab_imageview"
             android:layout_width="@dimen/margin_100dp"
             android:layout_height="@dimen/margin_100dp"
@@ -51,9 +51,9 @@
             android:layout_marginStart="@dimen/margin_20dp"
             android:layout_marginTop="@dimen/margin_30dp"
             android:fontFamily="@font/poppins"
+            android:textSize="@dimen/text_size_15sp"
             android:text="@string/first_name_dialog_first_name_text"
             android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_15sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/account_fragment_divider" />
@@ -267,9 +267,9 @@
 
         <TextView
             android:id="@+id/edit_profile_legal_status_value_textview"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/margin_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_15dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:fontFamily="@font/poppins"
             android:maxWidth="@dimen/width_200dp"
@@ -277,12 +277,8 @@
             android:textAlignment="viewEnd"
             android:textColor="@color/menu_text_color"
             android:textSize="@dimen/text_size_14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_profile_legal_status_textview"
-            app:layout_constraintEnd_toEndOf="@+id/edit_profile_number_of_employees_value_textview"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/edit_profile_legal_status_textview"
-            app:layout_constraintTop_toTopOf="@+id/edit_profile_legal_status_textview"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_legal_status_textview"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_legal_status_textview" />
 
         <TextView
             android:id="@+id/edit_profile_union_membership_textview"
@@ -291,11 +287,11 @@
             android:layout_marginTop="@dimen/margin_30dp"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/account_fragment_union_membership_text"
-            android:textColor="@color/navy_blue"
+            android:textColor="@color/grey_text"
             android:textSize="@dimen/text_size_15sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="@+id/edit_profile_legal_status_textview"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_legal_status_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_legal_status_value_textview" />
 
         <TextView
             android:id="@+id/edit_profile_name_of_union_textview"
@@ -312,35 +308,33 @@
 
         <TextView
             android:id="@+id/edit_profile_name_of_union_value_textview"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_10dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:fontFamily="@font/poppins"
             android:maxWidth="@dimen/width_200dp"
+            android:layout_marginTop="@dimen/margin_15dp"
             android:text="@string/account_fragment_name_of_union_text"
             android:textAlignment="viewEnd"
             android:textColor="@color/menu_text_color"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_name_of_union_textview"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_name_of_union_textview"
             android:textSize="@dimen/text_size_14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_profile_name_of_union_textview"
-            app:layout_constraintEnd_toEndOf="@+id/edit_profile_legal_status_value_textview"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/edit_profile_name_of_union_textview"
-            app:layout_constraintTop_toTopOf="@+id/edit_profile_name_of_union_textview"
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/edit_profile_ward_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_30dp"
             android:fontFamily="@font/poppins"
             android:text="@string/account_fragment_ward_text"
+            android:layout_marginTop="@dimen/margin_30dp"
             android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_16sp"
+            android:textSize="@dimen/text_size_15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/edit_profile_name_of_union_textview"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_name_of_union_textview" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_name_of_union_value_textview" />
 
         <TextView
             android:id="@+id/edit_profile_ward_value_textview"
@@ -365,7 +359,7 @@
             android:fontFamily="@font/poppins"
             android:text="@string/account_fragment_local_government_area_text"
             android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_16sp"
+            android:textSize="@dimen/text_size_15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/edit_profile_ward_value_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_ward_value_textview" />
@@ -393,25 +387,25 @@
             android:fontFamily="@font/poppins"
             android:text="@string/all_state_text"
             android:textColor="@color/navy_blue"
-            android:textSize="@dimen/text_size_16sp"
+            android:textSize="@dimen/text_size_15sp"
             app:layout_constraintStart_toStartOf="@+id/edit_profile_local_government_area_value_textview"
             app:layout_constraintTop_toBottomOf="@+id/edit_profile_local_government_area_value_textview" />
 
         <TextView
             android:id="@+id/edit_profile_state_value_textview"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/width_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_10dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:fontFamily="@font/poppins"
             android:text="@string/all_state_text"
+            android:layout_marginTop="@dimen/margin_15dp"
             android:textAlignment="viewEnd"
             android:textColor="@color/menu_text_color"
+            app:layout_constraintStart_toStartOf="@+id/edit_profile_state_textview"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_state_textview"
             android:textSize="@dimen/text_size_14sp"
-            app:layout_constraintEnd_toEndOf="@+id/edit_profile_name_of_union_value_textview"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/edit_profile_state_textview"
-            app:layout_constraintTop_toTopOf="@+id/edit_profile_state_textview" />
+            />
 
         <Button
             android:id="@+id/edit_profile_account_save_changes_button"
@@ -421,13 +415,12 @@
             android:layout_marginBottom="@dimen/margin_30dp"
             android:backgroundTint="@color/deep_sky_blue"
             android:fontFamily="@font/poppins_bold"
-            android:maxWidth="@dimen/width_200dp"
             android:text="@string/payment_options_fragment_save_changes_text"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/edit_profile_state_value_textview"
+            app:layout_constraintEnd_toEndOf="@+id/edit_profile_number_of_employees_value_textview"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/edit_profile_state_textview"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_state_textview"
+            app:layout_constraintTop_toBottomOf="@+id/edit_profile_state_value_textview"
             app:layout_constraintVertical_bias="0.226" />
 
 

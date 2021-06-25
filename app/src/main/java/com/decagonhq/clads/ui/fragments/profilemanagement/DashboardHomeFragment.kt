@@ -1,5 +1,6 @@
 package com.decagonhq.clads.ui.fragments.profilemanagement
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -47,6 +48,10 @@ class DashboardHomeFragment : Fragment() {
         clientsAdapter = HomeFragmentClientsRecyclerAdapter(clientList)
         clientsRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         clientsRecyclerView.adapter = clientsAdapter
+
+        val intent = Intent()
+        val name = intent.getStringExtra("name")
+        binding.homeFragmentAccountNameTextView.text = name
     }
 
     private fun populateClient() {

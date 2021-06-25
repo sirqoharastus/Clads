@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:lineHeight="@dimen/line_height_27sp"
-        android:text="Resources"
+        android:text="@string/articles_fragment_resources_text"
         android:textColor="@color/navy_blue"
         android:textFontWeight="700"
         android:textSize="@dimen/text_size_20sp"
@@ -24,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065"></TextView>
+        app:layout_constraintVertical_bias="0.065" />
 
     <TextView
         android:id="@+id/fragment_articles_articles_publication_text_view"

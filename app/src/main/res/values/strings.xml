@@ -356,6 +356,11 @@
     <string name="fragment_delivery_address_list_there_is_no_delivery_address_for_this_client_text">There is no delivery address for this client</string>
     <string name="save_button_text">Save</string>
     <string name="fragment_add_measurement_this_floating_action_button_adds_a_new_fragment_text">This floating action button adds a new fragment</string>
+    <string name="login_fragment_progress_bar_text">progress bar</string>
+    <string name="login_frament_login_token_text">loginToken</string>
+    <string name="login_fragment_login_successful_text">Login Successful</string>
+    <string name="login_fragment_invalid_email_and_password_text">Invalid Email and password combination</string>
+    <string name="login_fragment_email_does_not_exist_text">Email does not exist in database</string>
     <string name="articles_publications">Articles/Publications</string>
     <string name="view_individual_video_screen_recyclerview_how_to_perfectly_sew_adire_text">How to perfectly sew adire</string>
     <string name="view_individual_video_screen_recyclerview_1_hour_30_mins_text">1 hour 30 mins</string>
@@ -382,4 +387,7 @@
     <string name="share_with">"Share with "</string>
     <string name="photo_description">Enter photo description</string>
     <string name="image_of_a_clock">Image of a clock</string>
+    <string name="article_recycler_view_article_text">Article</string>
+    <string name="article_recyclerview_stitching_neatly_text">Stitching neatly</string>
+    <string name="articles_fragment_resources_text">Resources</string>
 </resources>

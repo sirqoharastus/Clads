@@ -7,30 +7,30 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
-    android:padding="7dp"
+    android:padding="@dimen/padding_6dp"
     >
 
 
     <ImageView
         android:id="@+id/article_recycler_view_item_layout_image_view"
-        android:layout_width="106sp"
-        android:layout_height="140sp"
+        android:layout_width="@dimen/width_106dp"
+        android:layout_height="@dimen/height_140dp"
         android:background="@drawable/article_recycler_view_image_view_background"
-        android:text="Article"
+        android:text="@string/article_recycler_view_article_text"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/article_recycler_view_item_layout_article_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/margin_4dp"
         android:fontFamily="@font/poppins"
         android:lineHeight="@dimen/text_size_16sp"
-        android:text="Stitching neatly"
+        android:text="@string/article_recyclerview_stitching_neatly_text"
         android:textColor="@color/menu_text_color"
         android:textFontWeight="700"
         android:textSize="@dimen/text_size_11sp"

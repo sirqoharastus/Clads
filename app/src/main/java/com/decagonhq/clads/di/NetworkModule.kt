@@ -1,5 +1,6 @@
 package com.decagonhq.clads.di
 
+import com.decagonhq.clads.service.remoteserviceapi.UserLoginServiceApi
 import com.decagonhq.clads.service.remoteserviceapi.UserRegistrationServiceApi
 import com.decagonhq.clads.utils.BASE_URL
 import com.google.gson.Gson
@@ -47,4 +48,9 @@ object NetworkModule {
     @Singleton
     fun provideUserRegistrationService(retrofit: Retrofit): UserRegistrationServiceApi =
         retrofit.create(UserRegistrationServiceApi::class.java)
+
+    @Singleton
+    @Provides
+    fun providesUserLoginService(retrofit: Retrofit): UserLoginServiceApi =
+        retrofit.create(UserLoginServiceApi::class.java)
 }

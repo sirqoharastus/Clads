@@ -136,7 +136,7 @@ class SignupChoicesFragment : Fragment() {
     }
 
     companion object {
-        private var REQUEST_SIGN_IN = 100
+        var REQUEST_SIGN_IN = 100
     }
 
     override fun onDestroy() {

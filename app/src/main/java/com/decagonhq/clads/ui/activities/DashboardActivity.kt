@@ -20,14 +20,22 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.ActivityDashboardBinding
+import com.decagonhq.clads.utils.SharedPreferenceManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
+    private lateinit var navigationView: NavigationView
+    @Inject
+    lateinit var sharedPreferenceManager: SharedPreferenceManager
+
     private lateinit var bottomNav: BottomNavigationView
     private lateinit var toolbarProfileImage: ImageView
     private lateinit var toolbarNotificationIcon: ImageView
@@ -97,6 +105,19 @@ class DashboardActivity : AppCompatActivity() {
             true
         }
 
+        navigationView = binding.dashboardActivityNavigationView
+        navigationView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.logoutFragment -> {
+                    sharedPreferenceManager.clearSharedPreference()
+                    this.finish()
+                    return@setNavigationItemSelectedListener true
+                }
+                else -> {
+                    return@setNavigationItemSelectedListener true
+                }
+            }
+        }
         addOnDestinationChangedListener()
     }
 

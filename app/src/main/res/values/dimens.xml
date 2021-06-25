@@ -156,10 +156,18 @@
     <dimen name="margin_54dp">54dp</dimen>
     <dimen name="padding_30dp">30dp</dimen>
     <dimen name="margin_118dp">118dp</dimen>
+    <dimen name="recycler_view_height">574dp</dimen>
+
+
+
+    <dimen name="margin_31dp">31dp</dimen>
     <dimen name="margin_220dp">220dp</dimen>
     <dimen name="margin_200dp">200dp</dimen>
     <dimen name="recycler_view_image_view_width">180dp</dimen>
     <dimen name="recycler_view_image_view_height">250dp</dimen>
+    <dimen name="width_106dp">106dp</dimen>
+    <dimen name="height_140dp">140dp</dimen>
+    <dimen name="padding_20dp">20dp</dimen>
 
     <integer name="number_0">0</integer>
     <integer name="number_1">1</integer>

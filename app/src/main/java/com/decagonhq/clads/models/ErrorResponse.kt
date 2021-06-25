@@ -1,5 +1,5 @@
 package com.decagonhq.clads.models
 
-class ErrorResponse (
+class ErrorResponse(
     val message: String?
-    )
+)

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_individual_video_screen_recyclerview_layout_cardview"
+            android:layout_width="134dp"
+            android:layout_height="@dimen/width_200dp"
+            app:cardCornerRadius="@dimen/margin_8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/view_individual_video_screen_recyclerview_layout_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fragment_clients_list_male_imageview"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:src="@drawable/exoplayer_thumbnail_overlay"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="59dp"
+                    android:layout_height="54dp"
+                    android:src="@drawable/exoplayer_thumbnail_play_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/view_individual_video_screen_recyclerview_layout_video_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12dp"
+            android:text="@string/view_individual_video_screen_recyclerview_how_to_perfectly_sew_adire_text"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/text_size_12sp"
+            app:layout_constraintStart_toStartOf="@+id/view_individual_video_screen_recyclerview_layout_cardview"
+            app:layout_constraintTop_toBottomOf="@+id/view_individual_video_screen_recyclerview_layout_cardview" />
+
+        <ImageView
+            android:id="@+id/view_individual_video_screen_recyclerview_time_vector_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_7dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/view_individual_video_screen_recyclerview_time_vector_image"
+            android:tintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/view_individual_video_screen_recyclerview_layout_video_title_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/view_individual_video_screen_recyclerview_layout_video_title_text_view" />
+
+        <TextView
+            android:id="@+id/view_individual_video_screen_recyclerview_video_length_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_individual_video_screen_recyclerview_1_hour_30_mins_text"
+            android:textColor="@color/menu_text_color"
+            android:textSize="@dimen/text_size_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_individual_video_screen_recyclerview_time_vector_image"
+            app:layout_constraintEnd_toEndOf="@+id/view_individual_video_screen_recyclerview_layout_video_title_text_view"
+            app:layout_constraintHorizontal_bias="0.23"
+            app:layout_constraintStart_toEndOf="@+id/view_individual_video_screen_recyclerview_time_vector_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+

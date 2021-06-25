@@ -1,7 +1,6 @@
 package com.decagonhq.clads.utils
 
 import com.decagonhq.clads.models.ApiGenericResponseClass
-import com.decagonhq.clads.models.UserRegistrationResponse
 import okhttp3.ResponseBody
 import retrofit2.Converter
 import retrofit2.Response

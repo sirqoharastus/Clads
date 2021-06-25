@@ -46,5 +46,11 @@
          <item name="android:textSize" >20sp</item>
 
      </style>
+<style name="PlayVideoFragment" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!-- Step 1 change navigation bar color -->
+    <item name="android:navigationBarColor"> @android:color/transparent</item>
+    <!-- Step 2 change navigation bar color -->
+    <item name="android:statusBarColor"> @android:color/transparent</item>
+</style>
 
 </resources>

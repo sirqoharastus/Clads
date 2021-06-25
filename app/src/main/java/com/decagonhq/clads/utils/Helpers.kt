@@ -40,7 +40,6 @@ fun Fragment.handleApiError(
                         Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_SHORT)
                             .show()
                         // showSnackBar(requireView(), errorMessage)
-
                     } else {
                         Toast.makeText(
                             requireContext(),
@@ -53,7 +52,6 @@ fun Fragment.handleApiError(
             } catch (e: Exception) {
                 Toast.makeText(requireContext(), "Bad request. Check input again.", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 }
@@ -89,7 +87,6 @@ fun Fragment.handleApiError(
     }
 }
 
-
 fun Activity.handleApiError(
     failure: Resource.Failure,
     retrofit: Retrofit,
@@ -98,7 +95,8 @@ fun Activity.handleApiError(
     val errorUtils = ErrorUtils(retrofit)
     when {
         failure.isNetworkError -> {
-            Toast.makeText(applicationContext, "Connection time out or bad network connection. Try again", Toast.LENGTH_SHORT
+            Toast.makeText(
+                applicationContext, "Connection time out or bad network connection. Try again", Toast.LENGTH_SHORT
             ).show()
         }
         else -> {
@@ -114,7 +112,7 @@ fun Activity.handleApiError(
     }
 }
 
-fun Fragment.logOut( activity: Activity) {
+fun Fragment.logOut(activity: Activity) {
     Intent(activity, AuthActivity::class.java).also {
         startActivity(it)
         requireActivity().finish()

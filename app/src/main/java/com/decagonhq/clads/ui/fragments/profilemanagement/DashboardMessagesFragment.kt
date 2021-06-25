@@ -41,7 +41,7 @@ class DashboardMessagesFragment : Fragment() {
             MessagesList("Abdul", "Salawu", clientMessage),
             MessagesList("Hope", "Omoruyi", clientMessage)
         )
-        // Recyclerview layout manage
+        // Recyclerview layout manager
         messageRecyclerView = binding.fragmentDashboardMessagesRecyclerview
         messagesListAdapter = MessagesListAdapter(messagesList)
         messageRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)

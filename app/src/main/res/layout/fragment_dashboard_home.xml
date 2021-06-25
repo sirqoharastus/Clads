@@ -22,7 +22,6 @@
         android:background="@drawable/card_details_background"
         android:elevation="@dimen/margin_10dp"
         android:paddingStart="@dimen/margin_20dp"
-        android:paddingEnd="@dimen/margin_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -73,7 +72,7 @@
             android:contentDescription="@string/dashboard_home_image_of_a_wallet"
             android:src="@drawable/home_fragment_wallet"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.968"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/home_fragment_account_name_text_view"
             app:layout_constraintTop_toTopOf="parent" />
 

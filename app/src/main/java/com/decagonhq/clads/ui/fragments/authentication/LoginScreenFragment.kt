@@ -25,7 +25,6 @@ import com.decagonhq.clads.ui.activities.DashboardActivity
 import com.decagonhq.clads.ui.dialogs.ProgressBarDialogFragment
 import com.decagonhq.clads.ui.fragments.authentication.SignupChoicesFragment.Companion.REQUEST_SIGN_IN
 import com.decagonhq.clads.utils.*
-import com.decagonhq.clads.utils.handleApiError
 import com.decagonhq.clads.viewmodels.UserLoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -189,7 +188,7 @@ class LoginScreenFragment : Fragment() {
             if (account != null) {
                 val tokenFromGoogle = account.idToken.toString()
 
-                userLoginViewModel.loginWithGoogle("Bearer $tokenFromGoogle", UserRole("Tailor"))
+                userLoginViewModel.loginWithGoogle("Bearer $tokenFromGoogle", UserRole(getString(R.string.login_Screen_fragment_tailor_text)))
                 val progressBarDialog = ProgressBarDialogFragment()
                 progressBarDialog.show(
                     requireActivity().supportFragmentManager,
@@ -236,7 +235,7 @@ class LoginScreenFragment : Fragment() {
 
     // this function is used to programmatically change the color style of a text in the layout file
     private fun textSpan() {
-        val spannableString = SpannableString("New User? SignUp for free")
+        val spannableString = SpannableString(getString(R.string.login_screen_fragment_new_user_sign_up_text))
         val fcolor = ForegroundColorSpan(Color.WHITE)
         spannableString.setSpan(fcolor, 10, 25, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
         newUserTextview.text = spannableString

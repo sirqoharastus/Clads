@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profile_management_nav_graph"
-    app:startDestination="@id/dashboardhomeFragment">
+    app:startDestination="@id/articlesFragment">
 
     <activity
         android:id="@+id/dashboard_activity"
@@ -118,6 +118,17 @@
     </fragment>
 
     <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/readArticlesFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ReadArticlesFragment"
+        android:label="fragment_read_articles"
+        tools:layout="@layout/fragment_read_articles" />
+
+    <fragment
         android:id="@+id/resource"
         android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourceFragment"
         android:label="fragment_resource"
@@ -129,6 +140,7 @@
             android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"
             app:destination="@id/resourcesAllVideosFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/viewIndividualVideoWithExoplayerScreenFragment"
         android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ViewIndividualVideoWithExoplayerScreenFragment"

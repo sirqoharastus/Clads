@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_articles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_11dp"
+    tools:context=".ui.fragments.resourcesmanagement.ArticlesFragment">
+
+
+    <TextView
+        android:id="@+id/fragment_articles_resources_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/line_height_27sp"
+        android:text="Resources"
+        android:textColor="@color/navy_blue"
+        android:textFontWeight="700"
+        android:textSize="@dimen/text_size_20sp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_articles_articles_publication_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"></TextView>
+
+    <TextView
+        android:id="@+id/fragment_articles_articles_publication_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_12dp"
+        android:fontFamily="@font/roboto"
+        android:lineHeight="@dimen/text_size_15sp"
+        android:text="@string/articles_publications"
+        android:textColor="@color/black"
+        android:textFontWeight="400"
+        android:textSize="@dimen/margin_13dp"
+        app:layout_constraintBottom_toTopOf="@+id/article_fragment_recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/article_fragment_recycler_view"
+        android:foregroundGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/recycler_view_height"
+        android:layout_margin="@dimen/margin_5dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.814"
+        tools:listitem="@layout/article_recycler_view_item_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,9 +24,8 @@ import com.decagonhq.clads.models.UserRole
 import com.decagonhq.clads.ui.activities.DashboardActivity
 import com.decagonhq.clads.ui.dialogs.ProgressBarDialogFragment
 import com.decagonhq.clads.ui.fragments.authentication.SignupChoicesFragment.Companion.REQUEST_SIGN_IN
-import com.decagonhq.clads.utils.LoginScreenFragmentValidator
-import com.decagonhq.clads.utils.Resource
-import com.decagonhq.clads.utils.SharedPreferenceManager
+import com.decagonhq.clads.utils.*
+import com.decagonhq.clads.utils.handleApiError
 import com.decagonhq.clads.viewmodels.UserLoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -36,6 +35,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.android.material.textfield.TextInputEditText
 import dagger.hilt.android.AndroidEntryPoint
+import retrofit2.Retrofit
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -48,8 +48,12 @@ class LoginScreenFragment : Fragment() {
     private lateinit var loginButton: Button
     private lateinit var googleSignInClient: GoogleSignInClient
     private val userLoginViewModel: UserLoginViewModel by viewModels()
+
     @Inject
     lateinit var sharedPreferenceManager: SharedPreferenceManager
+
+    @Inject
+    lateinit var retrofit: Retrofit
 
     private var _binding: FragmentLoginScreenBinding? = null
     private val binding get() = _binding!!
@@ -124,26 +128,38 @@ class LoginScreenFragment : Fragment() {
             }
         }
     }
+
     // function to login the user with email
     private fun loginUser(user: UserLogin) {
         userLoginViewModel.loginUser(user)
         val progressBarDialogFragment = ProgressBarDialogFragment()
-        progressBarDialogFragment.show(requireActivity().supportFragmentManager, getString(R.string.login_fragment_progress_bar_text))
+        progressBarDialogFragment.show(
+            requireActivity().supportFragmentManager,
+            getString(R.string.login_fragment_progress_bar_text)
+        )
         userLoginViewModel.loginResponseLiveData.observe(
             viewLifecycleOwner,
             {
                 when (it) {
                     is Resource.Success -> {
                         val result = it.value.payload
-                        sharedPreferenceManager.saveToSharedPreference(getString(R.string.login_frament_login_token_text), result)
-                        Toast.makeText(requireContext(), getString(R.string.login_fragment_login_successful_text), Toast.LENGTH_SHORT).show()
+                        sharedPreferenceManager.saveToSharedPreference(
+                            getString(R.string.login_frament_login_token_text),
+                            result
+                        )
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.login_fragment_login_successful_text),
+                            Toast.LENGTH_SHORT
+                        ).show()
                         progressBarDialogFragment.dismiss()
                         val intent = Intent(requireContext(), DashboardActivity::class.java)
                         startActivity(intent)
+                        requireActivity().finish()
+
                     }
                     is Resource.Failure -> {
-                        Toast.makeText(requireContext(), it.errorBody.toString(), Toast.LENGTH_SHORT)
-                            .show()
+                        handleApiErrors(it, retrofit, requireView())
                         progressBarDialogFragment.dismiss()
                     }
                 }
@@ -165,6 +181,7 @@ class LoginScreenFragment : Fragment() {
             handleSignInResult(task)
         }
     }
+
     // handles the event of the result from launching the google sign in intent
     private fun handleSignInResult(task: Task<GoogleSignInAccount>) {
         try {
@@ -174,7 +191,10 @@ class LoginScreenFragment : Fragment() {
 
                 userLoginViewModel.loginWithGoogle("Bearer $tokenFromGoogle", UserRole("Tailor"))
                 val progressBarDialog = ProgressBarDialogFragment()
-                progressBarDialog.show(requireActivity().supportFragmentManager, getString(R.string.login_fragment_progress_bar_text))
+                progressBarDialog.show(
+                    requireActivity().supportFragmentManager,
+                    getString(R.string.login_fragment_progress_bar_text)
+                )
 
                 userLoginViewModel.loginWithGoogleLiveData.observe(
                     viewLifecycleOwner,
@@ -183,7 +203,10 @@ class LoginScreenFragment : Fragment() {
                             is Resource.Success -> {
                                 if (it.value.status == 200) {
                                     val tokenFromEndpoint = it.value.payload
-                                    sharedPreferenceManager.saveToSharedPreference(getString(R.string.login_frament_login_token_text), tokenFromEndpoint)
+                                    sharedPreferenceManager.saveToSharedPreference(
+                                        getString(R.string.login_frament_login_token_text),
+                                        tokenFromEndpoint
+                                    )
                                     Toast.makeText(
                                         requireContext(),
                                         tokenFromEndpoint,
@@ -191,40 +214,20 @@ class LoginScreenFragment : Fragment() {
                                     ).show()
                                     Timber.d("$it")
                                     progressBarDialog.dismiss()
-                                    val intent = Intent(requireContext(), DashboardActivity::class.java)
-                                    Toast.makeText(
-                                        requireContext(),
-                                        getString(R.string.login_fragment_login_successful_text),
-                                        Toast.LENGTH_SHORT
-                                    ).show()
+                                    val intent =
+                                        Intent(requireContext(), DashboardActivity::class.java)
+                                    requireView().snackbar(getString(R.string.login_fragment_login_successful_text))
                                     startActivity(intent)
-                                } else {
-                                    progressBarDialog.dismiss()
-                                    Toast.makeText(
-                                        requireContext(),
-                                        getString(R.string.login_fragment_invalid_email_and_password_text),
-                                        Toast.LENGTH_SHORT
-                                    ).show()
                                 }
                             }
                             is Resource.Failure -> {
-                                Toast.makeText(
-                                    requireContext(),
-                                    it.errorBody.toString(),
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                                handleApiErrors(it, retrofit, requireView())
                                 progressBarDialog.dismiss()
                                 Timber.d("${it.errorBody}")
                             }
                         }
                     }
                 )
-            } else {
-                Toast.makeText(
-                    requireContext(),
-                    getString(R.string.login_fragment_email_does_not_exist_text),
-                    Toast.LENGTH_SHORT
-                ).show()
             }
         } catch (e: ApiException) {
             Log.d(TAG, "signInResult:failed code=" + e.statusCode)

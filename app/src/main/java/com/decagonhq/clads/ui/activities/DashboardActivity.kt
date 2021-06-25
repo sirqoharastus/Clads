@@ -1,11 +1,13 @@
 package com.decagonhq.clads.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -19,6 +21,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.ActivityDashboardBinding
 import com.decagonhq.clads.utils.SharedPreferenceManager
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -32,6 +37,8 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var navigationView: NavigationView
     @Inject
     lateinit var sharedPreferenceManager: SharedPreferenceManager
+    private lateinit var googleSignInClient: GoogleSignInClient
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +48,13 @@ class DashboardActivity : AppCompatActivity() {
         // and set it to navController with findNavController method
         val navHostFragment = supportFragmentManager.findFragmentById(dashBoardActivityBinding.dashboardActivityAppBar.navHostFragmentContainer.id) as NavHostFragment
         navController = navHostFragment.findNavController()
+        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(applicationContext, googleSignInOptions)
+
 
         val bottomNav = dashBoardActivityBinding.dashboardActivityAppBar.bottomNavigationView
         bottomNav.setupWithNavController(navController)
@@ -66,7 +80,10 @@ class DashboardActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.logoutFragment -> {
                     sharedPreferenceManager.clearSharedPreference()
+                    googleSignInClient.signOut()
                     this.finish()
+                    val intent = Intent(this , AuthActivity::class.java)
+                    startActivity(intent)
                     return@setNavigationItemSelectedListener true
                 }
                 else -> {

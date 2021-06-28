@@ -1,9 +1,7 @@
 package com.decagonhq.clads.utils
 
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.decagonhq.clads.ui.fragments.authentication.LoginScreenFragment
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Retrofit
 
@@ -18,13 +16,12 @@ fun Fragment.handleApiErrors(
         failure.isNetworkError -> requireView().snackbar(
             "Please check your internet connection",
         )
-
         else -> {
             try {
                 val error = failure.errorBody?.let { it1 -> errorResponseUtil.parseError(it1) }
-                val errorMessage = error?.errors?.message
+                val errorMessage = error?.message
                 if (errorMessage != null) {
-                    Toast.makeText(requireContext(), "$errorMessage", Toast.LENGTH_SHORT).show()
+                    requireView().snackbar(errorMessage)
                 } else {
                     requireView().snackbar("Something went wrong!... Retry")
                 }

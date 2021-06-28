@@ -1,7 +1,6 @@
 package com.decagonhq.clads.utils
 
 import com.decagonhq.clads.models.ApiGenericResponseClass
-import com.decagonhq.clads.models.UserRegistrationResponse
 import okhttp3.ResponseBody
 import retrofit2.Converter
 import retrofit2.Response
@@ -18,7 +17,7 @@ class ErrorUtils @Inject constructor(var retrofit: Retrofit) {
             converter.convert(response.errorBody()!!)!!
         } catch (e: IOException) {
             Timber.d(e.message)
-            return ApiGenericResponseClass("Please enter valid credentials", null, null)
+            return ApiGenericResponseClass(ERROR_MESSAGE, NULL_STRING, 69)
         }
     }
 }

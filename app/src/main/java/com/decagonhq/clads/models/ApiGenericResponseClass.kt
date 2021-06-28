@@ -1,8 +1,7 @@
 package com.decagonhq.clads.models
 
 data class ApiGenericResponseClass<T> (
-        val title: String?,
-        val errors: ErrorResponse?,
-        val data: T?
-
+        val message: String,
+        val payload: T,
+        val status: Int
 )

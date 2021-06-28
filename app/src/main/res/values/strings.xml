@@ -364,4 +364,5 @@
     <string name="login_fragment_email_does_not_exist_text">Email does not exist in database</string>
     <string name="login_Screen_fragment_tailor_text">Tailor</string>
     <string name="login_screen_fragment_new_user_sign_up_text">New User? SignUp for free</string>
+    <string name="registration_successful_text">Registration Completed</string>
 </resources>

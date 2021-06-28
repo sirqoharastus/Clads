@@ -146,18 +146,15 @@ class LoginScreenFragment : Fragment() {
                             getString(R.string.login_frament_login_token_text),
                             result
                         )
-                        Toast.makeText(
-                            requireContext(),
-                            getString(R.string.login_fragment_login_successful_text),
-                            Toast.LENGTH_SHORT
-                        ).show()
                         progressBarDialogFragment.dismiss()
                         val intent = Intent(requireContext(), DashboardActivity::class.java)
                         startActivity(intent)
+                        requireView().snackbar(getString(R.string.login_fragment_login_successful_text))
                         requireActivity().finish()
 
                     }
                     is Resource.Failure -> {
+                        Log.d("ERROR_RESPONSE", "loginUser: $it")
                         handleApiErrors(it, retrofit, requireView())
                         progressBarDialogFragment.dismiss()
                     }
@@ -188,7 +185,10 @@ class LoginScreenFragment : Fragment() {
             if (account != null) {
                 val tokenFromGoogle = account.idToken.toString()
 
-                userLoginViewModel.loginWithGoogle("Bearer $tokenFromGoogle", UserRole(getString(R.string.login_Screen_fragment_tailor_text)))
+                userLoginViewModel.loginWithGoogle(
+                    "Bearer $tokenFromGoogle",
+                    UserRole(getString(R.string.login_Screen_fragment_tailor_text))
+                )
                 val progressBarDialog = ProgressBarDialogFragment()
                 progressBarDialog.show(
                     requireActivity().supportFragmentManager,
@@ -206,11 +206,6 @@ class LoginScreenFragment : Fragment() {
                                         getString(R.string.login_frament_login_token_text),
                                         tokenFromEndpoint
                                     )
-                                    Toast.makeText(
-                                        requireContext(),
-                                        tokenFromEndpoint,
-                                        Toast.LENGTH_SHORT
-                                    ).show()
                                     Timber.d("$it")
                                     progressBarDialog.dismiss()
                                     val intent =
@@ -235,7 +230,8 @@ class LoginScreenFragment : Fragment() {
 
     // this function is used to programmatically change the color style of a text in the layout file
     private fun textSpan() {
-        val spannableString = SpannableString(getString(R.string.login_screen_fragment_new_user_sign_up_text))
+        val spannableString =
+            SpannableString(getString(R.string.login_screen_fragment_new_user_sign_up_text))
         val fcolor = ForegroundColorSpan(Color.WHITE)
         spannableString.setSpan(fcolor, 10, 25, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
         newUserTextview.text = spannableString

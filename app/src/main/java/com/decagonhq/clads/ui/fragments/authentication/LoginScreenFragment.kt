@@ -13,7 +13,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -24,7 +23,11 @@ import com.decagonhq.clads.models.UserRole
 import com.decagonhq.clads.ui.activities.DashboardActivity
 import com.decagonhq.clads.ui.dialogs.ProgressBarDialogFragment
 import com.decagonhq.clads.ui.fragments.authentication.SignupChoicesFragment.Companion.REQUEST_SIGN_IN
-import com.decagonhq.clads.utils.*
+import com.decagonhq.clads.utils.LoginScreenFragmentValidator
+import com.decagonhq.clads.utils.Resource
+import com.decagonhq.clads.utils.SharedPreferenceManager
+import com.decagonhq.clads.utils.handleApiErrors
+import com.decagonhq.clads.utils.snackbar
 import com.decagonhq.clads.viewmodels.UserLoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -151,7 +154,6 @@ class LoginScreenFragment : Fragment() {
                         startActivity(intent)
                         requireView().snackbar(getString(R.string.login_fragment_login_successful_text))
                         requireActivity().finish()
-
                     }
                     is Resource.Failure -> {
                         Log.d("ERROR_RESPONSE", "loginUser: $it")

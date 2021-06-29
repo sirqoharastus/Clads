@@ -8,8 +8,7 @@
     <activity
         android:id="@+id/dashboard_activity"
         android:name="com.decagonhq.clads.ui.activities.DashboardActivity"
-        android:label="Profile"
-        tools:layout="@layout/activity_dashboard" />
+        android:label="Profile" />
 
     <fragment
         android:id="@+id/dashboardhomeFragment"
@@ -24,44 +23,43 @@
             android:id="@+id/action_dashboardhomeFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
         <action
-            android:id="@+id/action_dashboardhomeFragment_to_dashboardMediaFragment"
-            app:destination="@id/dashboardMediaFragment" />
-        <action
-            android:id="@+id/action_dashboardhomeFragment_to_dashboardMessagesFragment"
-            app:destination="@id/dashboardMessagesFragment" />
-        <action
-            android:id="@+id/action_dashboardhomeFragment_to_suscriptionFragment"
+            android:id="@+id/action_dashboardhomeFragment_to_subscriptionFragment"
             app:destination="@id/suscriptionFragment" />
         <action
             android:id="@+id/action_dashboardhomeFragment_to_resourceFragment"
-            app:destination="@id/resourceFragment" />
+            app:destination="@id/resource" />
     </fragment>
+
     <fragment
         android:id="@+id/dashboardMessagesFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.DashboardMessagesFragment"
         android:label="Messages"
-        tools:layout="@layout/fragment_dashboard_messages" >
-        <action
-            android:id="@+id/action_dashboardMessagesFragment_to_dashboardMediaFragment"
-            app:destination="@id/dashboardMediaFragment" />
-        <action
-            android:id="@+id/action_dashboardMessagesFragment_to_dashboardhomeFragment"
-            app:destination="@id/dashboardhomeFragment" />
+        tools:layout="@layout/fragment_dashboard_messages" />
 
-
-    </fragment>
     <fragment
         android:id="@+id/dashboardMediaFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.DashboardMediaFragment"
-        android:label="Media"
-        tools:layout="@layout/fragment_dashboard_media" >
+        android:label="Photo Gallery"
+        tools:layout="@layout/fragment_dashboard_media">
         <action
-            android:id="@+id/action_dashboardMediaFragment_to_dashboardhomeFragment"
-            app:destination="@id/dashboardhomeFragment" />
+            android:id="@+id/action_dashboardMediaFragment_to_mediaDetailFragment"
+            app:destination="@id/mediaDetailFragment" />
         <action
-            android:id="@+id/action_dashboardMediaFragment_to_dashboardMessagesFragment"
-            app:destination="@id/dashboardMessagesFragment" />
+            android:id="@+id/action_dashboardMediaFragment_to_mediaUploadFragment"
+            app:destination="@id/mediaUploadFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/mediaUploadFragment"
+        android:name="com.decagonhq.clads.ui.fragments.profilemanagement.MediaUploadFragment"
+        android:label="Photo Gallery"
+        tools:layout="@layout/fragment_media_upload">
+        <argument android:name="imageUri" />
+        <action
+            android:id="@+id/action_mediaUploadFragment_to_dashboardMediaFragment"
+            app:destination="@id/dashboardMediaFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.EditProfileFragment"
@@ -99,8 +97,7 @@
         android:id="@+id/addMeasurementFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.AddMeasurementFragment"
         android:label="Add Measurement"
-        tools:layout="@layout/fragment_add_measurement" >
-    </fragment>
+        tools:layout="@layout/fragment_add_measurement" />
     <fragment
         android:id="@+id/addDeliveryAddressFragment"
         android:name="com.decagonhq.clads.ui.fragments.profilemanagement.AddDeliveryAddressFragment"
@@ -121,8 +118,63 @@
     </fragment>
 
     <fragment
-        android:id="@+id/resourceFragment"
-        android:name="com.decagonhq.clads.ui.fragments.profilemanagement.ResourceFragment"
+        android:id="@+id/articlesFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/readArticlesFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ReadArticlesFragment"
+        android:label="fragment_read_articles"
+        tools:layout="@layout/fragment_read_articles" />
+
+    <fragment
+        android:id="@+id/resource"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourceFragment"
         android:label="fragment_resource"
-        tools:layout="@layout/fragment_resource" />
-</navigation>
+        tools:layout="@layout/fragment_resource" >
+        <action
+            android:id="@+id/action_resourceFragment_to_viewIndividualVideoWithExoplayerScreenFragment"
+            app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />
+        <action
+            android:id="@+id/action_resourceFragment_to_resourcesAllVideosFragment"
+            app:destination="@id/resourcesAllVideosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewIndividualVideoWithExoplayerScreenFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ViewIndividualVideoWithExoplayerScreenFragment"
+        android:label="fragment_view_individual_video_with_exoplayer_screen"
+        tools:layout="@layout/fragment_view_individual_video_with_exoplayer_screen" >
+        <argument
+            android:name="videoUrl"
+            app:argType="string" />
+    </fragment>
+
+<fragment
+        android:id="@+id/resourcesAllVideosFragment"
+        android:name="com.decagonhq.clads.ui.fragments.resourcesmanagement.ResourcesAllVideosFragment"
+        android:label="fragment_resources_all_videos"
+        tools:layout="@layout/fragment_resources_all_videos" >
+    <action
+        android:id="@+id/action_resourcesAllVideosFragment_to_viewIndividualVideoWithExoplayerScreenFragment"
+        app:destination="@id/viewIndividualVideoWithExoplayerScreenFragment" />
+</fragment>
+
+    <fragment
+        android:id="@+id/mediaDetailFragment"
+        android:name="com.decagonhq.clads.ui.fragments.profilemanagement.MediaDetailFragment"
+        android:label="Image"
+        tools:layout="@layout/fragment_media_detail">
+        <argument android:name="imageUri" />
+        <argument
+            android:name="imageCaption"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_mediaDetailFragment_to_dashboardMediaFragment"
+            app:destination="@id/dashboardMediaFragment"
+            app:popUpTo="@id/dashboardMediaFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    </navigation>

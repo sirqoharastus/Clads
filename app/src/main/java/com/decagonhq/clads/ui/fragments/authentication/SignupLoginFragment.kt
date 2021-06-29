@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagonhq.clads.R
@@ -45,7 +44,6 @@ class SignupLoginFragment : Fragment() {
             findNavController().navigate(R.id.action_signup_login_fragment_to_fragment_login_screen)
         }
     }
-
 
     override fun onStart() {
         super.onStart()

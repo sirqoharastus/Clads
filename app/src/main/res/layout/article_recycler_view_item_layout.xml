@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/article_recycler_view_item_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/padding_6dp"
+    >
+
+
+    <ImageView
+        android:id="@+id/article_recycler_view_item_layout_image_view"
+        android:layout_width="@dimen/width_106dp"
+        android:layout_height="@dimen/height_140dp"
+        android:background="@drawable/article_recycler_view_image_view_background"
+        android:text="@string/article_recycler_view_article_text"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/article_recycler_view_item_layout_article_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:fontFamily="@font/poppins"
+        android:lineHeight="@dimen/text_size_16sp"
+        android:text="@string/article_recyclerview_stitching_neatly_text"
+        android:textColor="@color/menu_text_color"
+        android:textFontWeight="700"
+        android:textSize="@dimen/text_size_11sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/article_recycler_view_item_layout_image_view" />
+
+    <TextView
+        android:id="@+id/article_recycler_view_item_layout_author_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_1dp"
+        android:fontFamily="@font/poppins"
+        android:text="By Nathan Maro"
+        android:textFontWeight="400"
+        android:textSize="@dimen/text_size_12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/article_recycler_view_item_layout_article_name_text_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

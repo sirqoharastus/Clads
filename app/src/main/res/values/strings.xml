@@ -11,6 +11,7 @@
 
     //string resources for fragment login screen
 
+    <string name="media_url_mp3">https://storage.googleapis.com/exoplayer-test-media-0/Jazz_In_Paris.mp3</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_login_screen_welcome_back">Welcome back</string>
@@ -62,10 +63,7 @@
     <string name="signup_choices_fragment_signup_with_google">Signup with Google</string>
     <string name="signup_choices_fragment_sign_up_with_email">Sign up with email</string>
     <string name="signup_choices_fragment_sign_up_with_phone_number">Sign up with phone number</string>
-    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
-
-    <!--    <string name="signup_choices_fragment_have_an_account_login_text">Have an account? Login</string>-->
 
     <string name="signup_choices_fragment_login">Login</string>
     <string name="signup_choices_fragment_a_logo_of_the_app">A logo of the app</string>
@@ -308,7 +306,7 @@
     <string name="weeks">Weeks</string>
     <string name="months">Months</string>
     <string name="ok">OK</string>
-    <string name="tool_bar_default_title">Hi,Ijeoma</string>
+    <string name="tool_bar_default_title">Hi, Ijeoma</string>
     <string name="add_specialty">Add specialty</string>
     <string name="add_button_text">Add</string>
     <string name="add_specialty_textfield">Add Specialty</string>
@@ -329,7 +327,7 @@
     <string name="fragment_specialty_quality_assurance_text">Quality Assurance</string>
     <string name="fragment_specialty_obioma_trained_and_certified_text">Obioma trained and certified</string>
     <string name="fragment_specialty_measurement_options">Measurement Options</string>
-    <string name="resource_fragment_resource_textview">Resource Fragment</string>
+    <string name="resource_fragment_resource_textview">Resource</string>
     <string name="drawer_layout_edit_profile_button">Edit Profile</string>
     <string name="drawer_layout_profile_name">Ijeoma Ibukun Babangida</string>
     <string name="fragment_add_client_client_account_text">Client Account</string>
@@ -350,6 +348,7 @@
     <string name="bottom_navigation_menu_media_item_title">Media</string>
     <string name="bottom_navigation_menu_messages_item_title">Messages</string>
     <string name="fragment_messages_message_text_view">Messages</string>
+    <string name="dashboard_media_fragment_no_photo">You have no photo in your gallery</string>
     <string name="fragment_add_client_add_client_text_view">Add Client</string>
     <string name="edit_measurement">Edit Measurement</string>
     <string name="_47">47</string>
@@ -365,4 +364,34 @@
     <string name="login_Screen_fragment_tailor_text">Tailor</string>
     <string name="login_screen_fragment_new_user_sign_up_text">New User? SignUp for free</string>
     <string name="registration_successful_text">Registration Completed</string>
+
+    <string name="articles_publications">Articles/Publications</string>
+    <string name="view_individual_video_screen_recyclerview_how_to_perfectly_sew_adire_text">How to perfectly sew adire</string>
+    <string name="view_individual_video_screen_recyclerview_1_hour_30_mins_text">1 hour 30 mins</string>
+    <string name="fragment_view_individual_video_with_exoplayer_video_date_text">Posted 1 month ago</string>
+    <string name="resources_fragment_video_thumbnail">Image thumbnail of a video</string>
+    <string name="resources_recyclerview_text">How to perfectly sew adire</string>
+    <string name="resources_fragment_timestamp">1 hour 30 mins</string>
+    <string name="resource_video_clock_image_description">Image of a clock</string>
+    <string name="resource_article_image_description">Image of an Article</string>
+    <string name="resource_article_text_title">Stitching neatly</string>
+    <string name="resource_article_text_author">By Nathan Maro</string>
+    <string name="fragment_resources_text">Resources</string>
+    <string name="fragement_resources_text">Resources</string>
+    <string name="resources_all_videos_text">Videos</string>
+    <string name="resources_view_all_text">View all</string>
+    <string name="resources_article_publications_text">Article/Publications</string>
+
+    <string name="photo_gallery_recycler_view">Photo Gallery Recycler View</string>
+    <string name="no_photo_icon">No photo icon</string>
+    <string name="dashboard_media_fragment_menu_share">Share</string>
+    <string name="dashboard_media_fragment_menu_edit">Edit</string>
+    <string name="dashboard_media_fragment_menu_delete">Delete</string>
+    <string name="image_detail_view_description">Image Detail view</string>
+    <string name="share_with">"Share with "</string>
+    <string name="photo_description">Enter photo description</string>
+    <string name="image_of_a_clock">Image of a clock</string>
+    <string name="article_recycler_view_article_text">Article</string>
+    <string name="article_recyclerview_stitching_neatly_text">Stitching neatly</string>
+    <string name="articles_fragment_resources_text">Resources</string>
 </resources>

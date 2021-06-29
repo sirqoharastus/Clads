@@ -25,7 +25,6 @@ class DashboardHomeFragment : Fragment() {
     private val binding
         get() = _binding!!
 
-    //
     private lateinit var clientList: ArrayList<ClientsList>
     private lateinit var clientsAdapter: HomeFragmentClientsRecyclerAdapter
     private lateinit var clientsRecyclerView: RecyclerView

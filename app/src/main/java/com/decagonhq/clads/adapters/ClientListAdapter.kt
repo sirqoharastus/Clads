@@ -11,9 +11,9 @@ import java.util.Random
 
 class ClientListAdapter : RecyclerView.Adapter<ClientListAdapter.ClientListViewHolder>() {
 
-    var clients = mutableListOf<ClientDetailsDataClass>()
+    private var clients = mutableListOf<ClientDetailsDataClass>()
     // this function is responsible for setting up the list to be displayed in the recyclerview
-    private fun setClientData(clients: MutableList<ClientDetailsDataClass>) {
+    fun setClientData(clients: MutableList<ClientDetailsDataClass>) {
         this.clients = clients
     }
     inner class ClientListViewHolder(val binding: FragmentClientsListRecyclerviewLayoutBinding) :

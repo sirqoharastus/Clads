@@ -8,13 +8,17 @@ import androidx.fragment.app.Fragment
 import com.decagonhq.clads.databinding.FragmentResourceBinding
 
 class ResourceFragment : Fragment() {
-
+    var _binding: FragmentResourceBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return FragmentResourceBinding.inflate(inflater).root
+        _binding = FragmentResourceBinding.inflate(
+            inflater, container, false
+        )
+        return binding.root
     }
 }

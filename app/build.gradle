@@ -24,7 +24,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
         dataBinding = true
     }
@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-    def androidx_test="1.1.0"
+    def androidx_test = "1.1.0"
 
     //Default Dependencies
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin_version"
@@ -136,4 +136,11 @@ dependencies {
     //CircleImageView
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
+    // Exoplayer library
+    implementation "com.google.android.exoplayer:exoplayer-core:$versions.exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-dash:$versions.exoplayer_version"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$versions.exoplayer_version"
+
+    // exoplayer
+    implementation "com.google.android.exoplayer:exoplayer:$versions.exoplayer_version"
 }

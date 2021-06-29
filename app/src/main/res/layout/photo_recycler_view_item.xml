@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp"
+    android:clickable="true"
+    android:background="@color/light_sky_blue"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:padding="@dimen/padding_10dp">
+
+    <ImageView
+        android:id="@+id/photo_recyclerview_imageview"
+        android:layout_width="@dimen/recycler_view_image_view_width"
+        android:layout_height="@dimen/recycler_view_image_view_height"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/tailor_photo" />
+
+    <TextView
+        android:id="@+id/photo_recyclerview_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photo_recyclerview_imageview"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:padding="@dimen/padding_4dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16sp"
+        android:textAlignment="center"
+        tools:text="Fine Man Suit" />
+
+</RelativeLayout>

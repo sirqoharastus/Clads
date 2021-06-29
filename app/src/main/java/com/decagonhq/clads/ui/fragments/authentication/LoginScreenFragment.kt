@@ -26,8 +26,8 @@ import com.decagonhq.clads.ui.fragments.authentication.SignupChoicesFragment.Com
 import com.decagonhq.clads.utils.LoginScreenFragmentValidator
 import com.decagonhq.clads.utils.Resource
 import com.decagonhq.clads.utils.SharedPreferenceManager
-import com.decagonhq.clads.utils.handleApiErrors
 import com.decagonhq.clads.utils.snackbar
+import com.decagonhq.clads.utils.handleApiErrors
 import com.decagonhq.clads.viewmodels.UserLoginViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount

@@ -394,4 +394,7 @@
     <string name="article_recycler_view_article_text">Article</string>
     <string name="article_recyclerview_stitching_neatly_text">Stitching neatly</string>
     <string name="articles_fragment_resources_text">Resources</string>
+    <string name="logout_alert_dialog_message">Are you sure you want to logout?</string>
+    <string name="alert_dialog_positive_button_text">Yes</string>
+    <string name="alert_dialog_no_text">No</string>
 </resources>

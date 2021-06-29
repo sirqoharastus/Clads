@@ -7,6 +7,7 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
@@ -35,6 +36,7 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
     private lateinit var navigationView: NavigationView
+
     @Inject
     lateinit var sharedPreferenceManager: SharedPreferenceManager
     private lateinit var googleSignInClient: GoogleSignInClient
@@ -118,11 +120,23 @@ class DashboardActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.logoutFragment -> {
-                    sharedPreferenceManager.clearSharedPreference()
-                    googleSignInClient.signOut()
-                    this.finish()
-                    val intent = Intent(this, AuthActivity::class.java)
-                    startActivity(intent)
+                    val alertDialog = AlertDialog.Builder(this)
+                    alertDialog.setMessage(getString(R.string.logout_alert_dialog_message))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(R.string.alert_dialog_positive_button_text)) { alertDialog, which ->
+                            sharedPreferenceManager.clearSharedPreference()
+                            googleSignInClient.signOut()
+                            this.finish()
+                            val intent = Intent(this, AuthActivity::class.java)
+                            startActivity(intent)
+                            alertDialog.dismiss()
+                        }
+                        .setNegativeButton(getString(R.string.alert_dialog_no_text)) { alertDialog, which ->
+                            alertDialog.dismiss()
+                        }
+                    alertDialog.create()
+                    alertDialog.show()
+
                     return@setNavigationItemSelectedListener true
                 }
                 R.id.clientsListFragment -> {

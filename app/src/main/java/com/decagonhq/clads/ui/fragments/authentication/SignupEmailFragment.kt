@@ -16,8 +16,12 @@ import com.decagonhq.clads.databinding.FragmentSignupEmailBinding
 import com.decagonhq.clads.models.User
 import com.decagonhq.clads.utils.Resource
 import com.decagonhq.clads.utils.SignUpEmailFragmentValidator
+import com.decagonhq.clads.utils.handleApiErrors
+import com.decagonhq.clads.utils.snackbar
 import com.decagonhq.clads.viewmodels.UserRegistrationViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import retrofit2.Retrofit
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SignupEmailFragment : Fragment() {
@@ -25,6 +29,8 @@ class SignupEmailFragment : Fragment() {
     private var _binding: FragmentSignupEmailBinding? = null
     private val binding get() = _binding!!
     private val userRegistrationViewModel: UserRegistrationViewModel by viewModels()
+    @Inject
+    lateinit var retrofit: Retrofit
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -185,13 +191,13 @@ class SignupEmailFragment : Fragment() {
                         val result = it.value.payload
 
                         Toast.makeText(requireContext(), result, Toast.LENGTH_SHORT).show()
+                        requireView().snackbar(getString(R.string.registration_successful_text))
 
                         findNavController().navigate(R.id.action_signupEmailFragment_to_emailVerificationFragment)
                     }
 
                     is Resource.Failure -> {
-                        Toast.makeText(requireContext(), "NOT WORRRKIING", Toast.LENGTH_SHORT)
-                            .show()
+                        handleApiErrors(it, retrofit, requireView())
                     }
                 }
             }

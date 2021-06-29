@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.decagonhq.clads.R
@@ -14,6 +13,7 @@ import com.decagonhq.clads.ui.activities.DashboardActivity
 import com.decagonhq.clads.utils.SharedPreferenceManager
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 @AndroidEntryPoint
 class SignupLoginFragment : Fragment() {
     // Declare binding variable
@@ -45,14 +45,16 @@ class SignupLoginFragment : Fragment() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val userToken = sharedPreferenceManager.loadFromSharedPreference(getString(R.string.login_frament_login_token_text))
+    override fun onStart() {
+        super.onStart()
+
+        val userToken =
+            sharedPreferenceManager.loadFromSharedPreference(getString(R.string.login_frament_login_token_text))
         if (userToken != null) {
             if (userToken.isNotEmpty()) {
-                Toast.makeText(requireContext(), "$userToken", Toast.LENGTH_SHORT).show()
                 val intent = Intent(requireContext(), DashboardActivity::class.java)
                 startActivity(intent)
+                requireActivity().finish()
             }
         }
     }

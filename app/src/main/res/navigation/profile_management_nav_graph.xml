@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/profile_management_nav_graph"
-    app:startDestination="@id/articlesFragment">
+    app:startDestination="@id/dashboardhomeFragment">
 
     <activity
         android:id="@+id/dashboard_activity"

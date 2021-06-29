@@ -17,8 +17,7 @@ class ErrorUtils @Inject constructor(var retrofit: Retrofit) {
             converter.convert(response.errorBody()!!)!!
         } catch (e: IOException) {
             Timber.d(e.message)
-            return ApiGenericResponseClass("Please enter valid credentials", null, null)
-//            converter.convert(response.errorBody())!!
+            return ApiGenericResponseClass(ERROR_MESSAGE, NULL_STRING, 69)
         }
     }
 }

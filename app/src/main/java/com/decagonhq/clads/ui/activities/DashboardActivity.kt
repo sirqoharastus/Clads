@@ -1,12 +1,13 @@
 package com.decagonhq.clads.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
@@ -15,12 +16,14 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.decagonhq.clads.R
 import com.decagonhq.clads.databinding.ActivityDashboardBinding
 import com.decagonhq.clads.utils.SharedPreferenceManager
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,8 +36,10 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
     private lateinit var navigationView: NavigationView
+
     @Inject
     lateinit var sharedPreferenceManager: SharedPreferenceManager
+    private lateinit var googleSignInClient: GoogleSignInClient
 
     private lateinit var bottomNav: BottomNavigationView
     private lateinit var toolbarProfileImage: ImageView
@@ -77,6 +82,12 @@ class DashboardActivity : AppCompatActivity() {
         ) as NavHostFragment
 
         navController = navHostFragment.findNavController()
+        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(applicationContext, googleSignInOptions)
 
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
 
@@ -109,8 +120,39 @@ class DashboardActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.logoutFragment -> {
-                    sharedPreferenceManager.clearSharedPreference()
-                    this.finish()
+                    val alertDialog = AlertDialog.Builder(this)
+                    alertDialog.setMessage(getString(R.string.logout_alert_dialog_message))
+                        .setCancelable(false)
+                        .setPositiveButton(getString(R.string.alert_dialog_positive_button_text)) { alertDialog, which ->
+                            sharedPreferenceManager.clearSharedPreference()
+                            googleSignInClient.signOut()
+                            this.finish()
+                            val intent = Intent(this, AuthActivity::class.java)
+                            startActivity(intent)
+                            alertDialog.dismiss()
+                        }
+                        .setNegativeButton(getString(R.string.alert_dialog_no_text)) { alertDialog, which ->
+                            alertDialog.dismiss()
+                        }
+                    alertDialog.create()
+                    alertDialog.show()
+
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.clientsListFragment -> {
+                    findNavController(R.id.nav_host_fragment_container).navigate(R.id.clientsListFragment)
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.resource -> {
+                    findNavController(R.id.nav_host_fragment_container).navigate(R.id.resource)
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    return@setNavigationItemSelectedListener true
+                }
+
+                R.id.suscriptionFragment -> {
+                    findNavController(R.id.nav_host_fragment_container).navigate(R.id.suscriptionFragment)
+                    drawerLayout.closeDrawer(GravityCompat.START)
                     return@setNavigationItemSelectedListener true
                 }
                 else -> {
@@ -172,17 +214,8 @@ class DashboardActivity : AppCompatActivity() {
             appBarConfiguration
         )
 
-        binding.dashboardActivityNavigationView.setupWithNavController(navController)
-
         binding.dashboardActivityAppBar.bottomNavigationView
             .setupWithNavController(navController)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (R.id.logoutFragment == item.itemId) {
-            return false
-        }
-        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {

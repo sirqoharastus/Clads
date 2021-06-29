@@ -361,6 +361,10 @@
     <string name="login_fragment_login_successful_text">Login Successful</string>
     <string name="login_fragment_invalid_email_and_password_text">Invalid Email and password combination</string>
     <string name="login_fragment_email_does_not_exist_text">Email does not exist in database</string>
+    <string name="login_Screen_fragment_tailor_text">Tailor</string>
+    <string name="login_screen_fragment_new_user_sign_up_text">New User? SignUp for free</string>
+    <string name="registration_successful_text">Registration Completed</string>
+
     <string name="articles_publications">Articles/Publications</string>
     <string name="view_individual_video_screen_recyclerview_how_to_perfectly_sew_adire_text">How to perfectly sew adire</string>
     <string name="view_individual_video_screen_recyclerview_1_hour_30_mins_text">1 hour 30 mins</string>
@@ -390,4 +394,7 @@
     <string name="article_recycler_view_article_text">Article</string>
     <string name="article_recyclerview_stitching_neatly_text">Stitching neatly</string>
     <string name="articles_fragment_resources_text">Resources</string>
+    <string name="logout_alert_dialog_message">Are you sure you want to logout?</string>
+    <string name="alert_dialog_positive_button_text">Yes</string>
+    <string name="alert_dialog_no_text">No</string>
 </resources>
